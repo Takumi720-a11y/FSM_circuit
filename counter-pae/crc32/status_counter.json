@@ -1,0 +1,18 @@
+{
+  "benchmark": "crc32",
+  "status": "OK",
+  "stage": "pae",
+  "instructions": 234,
+  "states": 234,
+  "elapsed_seconds": 76.027,
+  "reason": "",
+  "directory": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/crc32",
+  "optimized_rtl": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/crc32/crc32_counter_fsm.sv",
+  "verilog_ready": true,
+  "map_circuit": "crc32_counter_9b2c558d97d8",
+  "fsm_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/counter/20261023T055649.553613Z-pae/FSM/crc32_counter.v",
+  "pae41_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/counter/20261023T055649.553613Z-pae/4-1-PAE/crc32_counter.v",
+  "pae41_cells": 747,
+  "pae43_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/counter/20261023T055649.553613Z-pae/4-3-PAE_OBFF/crc32_counter.v",
+  "pae43_cells": 582
+}

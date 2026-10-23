@@ -1,0 +1,18 @@
+{
+  "benchmark": "huffbench",
+  "status": "OK",
+  "stage": "pae",
+  "instructions": 704,
+  "states": 704,
+  "elapsed_seconds": 132.351,
+  "reason": "",
+  "directory": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/huffbench",
+  "optimized_rtl": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/huffbench/huffbench_counter_fsm.sv",
+  "verilog_ready": true,
+  "map_circuit": "huffbench_counter_04ccd7363e91",
+  "fsm_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/counter/20261023T055649.553613Z-pae/FSM/huffbench_counter.v",
+  "pae41_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/counter/20261023T055649.553613Z-pae/4-1-PAE/huffbench_counter.v",
+  "pae41_cells": 1996,
+  "pae43_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/counter/20261023T055649.553613Z-pae/4-3-PAE_OBFF/huffbench_counter.v",
+  "pae43_cells": 1348
+}

@@ -1,0 +1,18 @@
+{
+  "benchmark": "nettle-aes",
+  "status": "OK",
+  "stage": "pae",
+  "instructions": 1229,
+  "states": 1229,
+  "elapsed_seconds": 206.265,
+  "reason": "",
+  "directory": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/nettle-aes",
+  "optimized_rtl": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/nettle-aes/nettle-aes_counter_fsm.sv",
+  "verilog_ready": true,
+  "map_circuit": "nettle-aes_counter_798f57ca4827",
+  "fsm_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/counter/20261023T055649.553613Z-pae/FSM/nettle-aes_counter.v",
+  "pae41_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/counter/20261023T055649.553613Z-pae/4-1-PAE/nettle-aes_counter.v",
+  "pae41_cells": 3104,
+  "pae43_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/counter/20261023T055649.553613Z-pae/4-3-PAE_OBFF/nettle-aes_counter.v",
+  "pae43_cells": 2100
+}

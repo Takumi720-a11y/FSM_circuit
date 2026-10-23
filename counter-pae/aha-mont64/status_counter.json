@@ -1,0 +1,18 @@
+{
+  "benchmark": "aha-mont64",
+  "status": "OK",
+  "stage": "pae",
+  "instructions": 829,
+  "states": 829,
+  "elapsed_seconds": 139.021,
+  "reason": "",
+  "directory": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/aha-mont64",
+  "optimized_rtl": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/aha-mont64/aha-mont64_counter_fsm.sv",
+  "verilog_ready": true,
+  "map_circuit": "aha-mont64_counter_93380ecfa927",
+  "fsm_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/counter/20261023T055649.553613Z-pae/FSM/aha-mont64_counter.v",
+  "pae41_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/counter/20261023T055649.553613Z-pae/4-1-PAE/aha-mont64_counter.v",
+  "pae41_cells": 2370,
+  "pae43_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/counter/20261023T055649.553613Z-pae/4-3-PAE_OBFF/aha-mont64_counter.v",
+  "pae43_cells": 1668
+}

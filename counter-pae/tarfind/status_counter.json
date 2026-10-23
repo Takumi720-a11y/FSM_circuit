@@ -1,0 +1,18 @@
+{
+  "benchmark": "tarfind",
+  "status": "OK",
+  "stage": "pae",
+  "instructions": 282,
+  "states": 282,
+  "elapsed_seconds": 86.071,
+  "reason": "",
+  "directory": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/tarfind",
+  "optimized_rtl": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/tarfind/tarfind_counter_fsm.sv",
+  "verilog_ready": true,
+  "map_circuit": "tarfind_counter_b72c62f05b00",
+  "fsm_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/counter/20261023T055649.553613Z-pae/FSM/tarfind_counter.v",
+  "pae41_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/counter/20261023T055649.553613Z-pae/4-1-PAE/tarfind_counter.v",
+  "pae41_cells": 966,
+  "pae43_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/counter/20261023T055649.553613Z-pae/4-3-PAE_OBFF/tarfind_counter.v",
+  "pae43_cells": 688
+}

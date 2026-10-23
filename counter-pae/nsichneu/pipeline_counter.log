@@ -1,0 +1,1595 @@
+$ riscv64-unknown-elf-gcc -march=rv32im_zicsr -mabi=ilp32 -ffreestanding -DCPU_MHZ=1 -DWARMUP_HEAT=0 -DGLOBAL_SCALE_FACTOR=1 -O2 -I /home/c3165/ibex_src/benchmarks/embench_ibex -I /home/c3165/ibex_src/benchmarks/embench-iot/support -I /home/c3165/ibex_src/benchmarks/embench-iot/src/nsichneu -S /home/c3165/ibex_src/benchmarks/embench-iot/support/main.c -o /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/nsichneu/00-main_counter.s
+$ riscv64-unknown-elf-gcc -march=rv32im_zicsr -mabi=ilp32 -ffreestanding -DCPU_MHZ=1 -DWARMUP_HEAT=0 -DGLOBAL_SCALE_FACTOR=1 -O2 -I /home/c3165/ibex_src/benchmarks/embench_ibex -I /home/c3165/ibex_src/benchmarks/embench-iot/support -I /home/c3165/ibex_src/benchmarks/embench-iot/src/nsichneu -S /home/c3165/ibex_src/benchmarks/embench-iot/support/beebsc.c -o /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/nsichneu/01-beebsc_counter.s
+$ riscv64-unknown-elf-gcc -march=rv32im_zicsr -mabi=ilp32 -ffreestanding -DCPU_MHZ=1 -DWARMUP_HEAT=0 -DGLOBAL_SCALE_FACTOR=1 -O2 -I /home/c3165/ibex_src/benchmarks/embench_ibex -I /home/c3165/ibex_src/benchmarks/embench-iot/support -I /home/c3165/ibex_src/benchmarks/embench-iot/src/nsichneu -S /home/c3165/ibex_src/benchmarks/embench_ibex/boardsupport.c -o /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/nsichneu/02-boardsupport_counter.s
+$ riscv64-unknown-elf-gcc -march=rv32im_zicsr -mabi=ilp32 -ffreestanding -DCPU_MHZ=1 -DWARMUP_HEAT=0 -DGLOBAL_SCALE_FACTOR=1 -O2 -I /home/c3165/ibex_src/benchmarks/embench_ibex -I /home/c3165/ibex_src/benchmarks/embench-iot/support -I /home/c3165/ibex_src/benchmarks/embench-iot/src/nsichneu -S /home/c3165/ibex_src/benchmarks/embench-iot/src/nsichneu/libnsichneu.c -o /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/nsichneu/03-libnsichneu_counter.s
+$ riscv64-unknown-elf-gcc -march=rv32im_zicsr -mabi=ilp32 -ffreestanding -DCPU_MHZ=1 -DWARMUP_HEAT=0 -DGLOBAL_SCALE_FACTOR=1 -O2 -I /home/c3165/ibex_src/benchmarks/embench_ibex -I /home/c3165/ibex_src/benchmarks/embench-iot/support -I /home/c3165/ibex_src/benchmarks/embench-iot/src/nsichneu /home/c3165/ibex_src/benchmarks/coremark/port/startup.s /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/nsichneu/00-main_counter.s /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/nsichneu/01-beebsc_counter.s /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/nsichneu/02-boardsupport_counter.s /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/nsichneu/03-libnsichneu_counter.s -nostartfiles -nostdlib -T /home/c3165/ibex_src/benchmarks/coremark/port/link.ld -Wl,-Map=link_counter.map -o /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/nsichneu/nsichneu_counter.elf
+$ riscv64-unknown-elf-objdump -d /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/nsichneu/nsichneu_counter.elf
+$ python3 /home/c3165/ibex_src/benchmarks/gen_fsm_counter_ver.py /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/nsichneu/nsichneu_counter.dump /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/nsichneu/nsichneu_counter_fsm.sv
+Total instructions: 5190
+Generated: /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/nsichneu/nsichneu_counter_fsm.sv
+PC map: /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/nsichneu/nsichneu_counter_fsm_pcmap.txt (5190 entries)
+Counter RTL compatibility: remove variable-width casts and correct output spelling
+$ sv2v --top=fsm_dec /home/c3165/ibex_src/ibex_rtl/ibex_pkg.sv /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/nsichneu/nsichneu_counter_fsm.sv
+$ yosys -s prepare_counter.ys
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2025  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.52 (git sha1 fee39a3284c90249e1d9684cf6944ffbbcbb8f90)
+
+-- Executing script file `prepare_counter.ys' --
+
+1. Executing Verilog-2005 frontend: fsm_dec_counter.v
+Parsing Verilog input from `fsm_dec_counter.v' to AST representation.
+Generating RTLIL representation for module `\fsm_dec'.
+Warning: Deep recursion in AST simplifier.
+Does this design contain overly long or deeply nested expressions, or excessive recursion?
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \fsm_dec
+
+2.2. Analyzing design hierarchy..
+Top module:  \fsm_dec
+Removed 0 unused modules.
+Renaming module \fsm_dec to \top.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\top.$proc$fsm_dec_counter.v:266$9892'.
+Cleaned up 1 empty switch.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$fsm_dec_counter.v:67766$9895 in module top.
+Marked 652 switch rules as full_case in process $proc$fsm_dec_counter.v:266$9892 in module top.
+Marked 1 switch rules as full_case in process $proc$fsm_dec_counter.v:261$10 in module top.
+Marked 1 switch rules as full_case in process $proc$fsm_dec_counter.v:256$6 in module top.
+Marked 2 switch rules as full_case in process $proc$fsm_dec_counter.v:246$4 in module top.
+Marked 1 switch rules as full_case in process $proc$fsm_dec_counter.v:239$1 in module top.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 30 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_ni in `\top.$proc$fsm_dec_counter.v:67766$9895'.
+Found async reset \rst_ni in `\top.$proc$fsm_dec_counter.v:261$10'.
+Found async reset \rst_ni in `\top.$proc$fsm_dec_counter.v:256$6'.
+Found async reset \rst_ni in `\top.$proc$fsm_dec_counter.v:246$4'.
+Found async reset \rst_ni in `\top.$proc$fsm_dec_counter.v:239$1'.
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~657 debug messages>
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\top.$proc$fsm_dec_counter.v:0$9898'.
+Creating decoders for process `\top.$proc$fsm_dec_counter.v:67766$9895'.
+     1/2: $0\imd_val_q[67:0] [67:34]
+     2/2: $0\imd_val_q[67:0] [33:0]
+Creating decoders for process `\top.$proc$fsm_dec_counter.v:266$9892'.
+     1/676: $652\state_d[12:0]
+     2/676: $651\state_d[12:0]
+     3/676: $650\state_d[12:0]
+     4/676: $649\state_d[12:0]
+     5/676: $648\state_d[12:0]
+     6/676: $647\state_d[12:0]
+     7/676: $646\state_d[12:0]
+     8/676: $645\state_d[12:0]
+     9/676: $644\state_d[12:0]
+    10/676: $643\state_d[12:0]
+    11/676: $642\state_d[12:0]
+    12/676: $641\state_d[12:0]
+    13/676: $640\state_d[12:0]
+    14/676: $639\state_d[12:0]
+    15/676: $638\state_d[12:0]
+    16/676: $637\state_d[12:0]
+    17/676: $636\state_d[12:0]
+    18/676: $635\state_d[12:0]
+    19/676: $634\state_d[12:0]
+    20/676: $633\state_d[12:0]
+    21/676: $632\state_d[12:0]
+    22/676: $631\state_d[12:0]
+    23/676: $630\state_d[12:0]
+    24/676: $629\state_d[12:0]
+    25/676: $628\state_d[12:0]
+    26/676: $627\state_d[12:0]
+    27/676: $626\state_d[12:0]
+    28/676: $625\state_d[12:0]
+    29/676: $624\state_d[12:0]
+    30/676: $623\state_d[12:0]
+    31/676: $622\state_d[12:0]
+    32/676: $621\state_d[12:0]
+    33/676: $620\state_d[12:0]
+    34/676: $619\state_d[12:0]
+    35/676: $618\state_d[12:0]
+    36/676: $617\state_d[12:0]
+    37/676: $616\state_d[12:0]
+    38/676: $615\state_d[12:0]
+    39/676: $614\state_d[12:0]
+    40/676: $613\state_d[12:0]
+    41/676: $612\state_d[12:0]
+    42/676: $611\state_d[12:0]
+    43/676: $610\state_d[12:0]
+    44/676: $609\state_d[12:0]
+    45/676: $608\state_d[12:0]
+    46/676: $607\state_d[12:0]
+    47/676: $606\state_d[12:0]
+    48/676: $605\state_d[12:0]
+    49/676: $604\state_d[12:0]
+    50/676: $603\state_d[12:0]
+    51/676: $602\state_d[12:0]
+    52/676: $601\state_d[12:0]
+    53/676: $600\state_d[12:0]
+    54/676: $599\state_d[12:0]
+    55/676: $598\state_d[12:0]
+    56/676: $597\state_d[12:0]
+    57/676: $596\state_d[12:0]
+    58/676: $595\state_d[12:0]
+    59/676: $594\state_d[12:0]
+    60/676: $593\state_d[12:0]
+    61/676: $592\state_d[12:0]
+    62/676: $591\state_d[12:0]
+    63/676: $590\state_d[12:0]
+    64/676: $589\state_d[12:0]
+    65/676: $588\state_d[12:0]
+    66/676: $587\state_d[12:0]
+    67/676: $586\state_d[12:0]
+    68/676: $585\state_d[12:0]
+    69/676: $584\state_d[12:0]
+    70/676: $583\state_d[12:0]
+    71/676: $582\state_d[12:0]
+    72/676: $581\state_d[12:0]
+    73/676: $580\state_d[12:0]
+    74/676: $579\state_d[12:0]
+    75/676: $578\state_d[12:0]
+    76/676: $577\state_d[12:0]
+    77/676: $576\state_d[12:0]
+    78/676: $575\state_d[12:0]
+    79/676: $574\state_d[12:0]
+    80/676: $573\state_d[12:0]
+    81/676: $572\state_d[12:0]
+    82/676: $571\state_d[12:0]
+    83/676: $570\state_d[12:0]
+    84/676: $569\state_d[12:0]
+    85/676: $568\state_d[12:0]
+    86/676: $567\state_d[12:0]
+    87/676: $566\state_d[12:0]
+    88/676: $565\state_d[12:0]
+    89/676: $564\state_d[12:0]
+    90/676: $563\state_d[12:0]
+    91/676: $562\state_d[12:0]
+    92/676: $561\state_d[12:0]
+    93/676: $560\state_d[12:0]
+    94/676: $559\state_d[12:0]
+    95/676: $558\state_d[12:0]
+    96/676: $557\state_d[12:0]
+    97/676: $556\state_d[12:0]
+    98/676: $555\state_d[12:0]
+    99/676: $554\state_d[12:0]
+   100/676: $553\state_d[12:0]
+   101/676: $552\state_d[12:0]
+   102/676: $551\state_d[12:0]
+   103/676: $550\state_d[12:0]
+   104/676: $549\state_d[12:0]
+   105/676: $548\state_d[12:0]
+   106/676: $547\state_d[12:0]
+   107/676: $546\state_d[12:0]
+   108/676: $545\state_d[12:0]
+   109/676: $544\state_d[12:0]
+   110/676: $543\state_d[12:0]
+   111/676: $542\state_d[12:0]
+   112/676: $541\state_d[12:0]
+   113/676: $540\state_d[12:0]
+   114/676: $539\state_d[12:0]
+   115/676: $538\state_d[12:0]
+   116/676: $537\state_d[12:0]
+   117/676: $536\state_d[12:0]
+   118/676: $535\state_d[12:0]
+   119/676: $534\state_d[12:0]
+   120/676: $533\state_d[12:0]
+   121/676: $532\state_d[12:0]
+   122/676: $531\state_d[12:0]
+   123/676: $530\state_d[12:0]
+   124/676: $529\state_d[12:0]
+   125/676: $528\state_d[12:0]
+   126/676: $527\state_d[12:0]
+   127/676: $526\state_d[12:0]
+   128/676: $525\state_d[12:0]
+   129/676: $524\state_d[12:0]
+   130/676: $523\state_d[12:0]
+   131/676: $522\state_d[12:0]
+   132/676: $521\state_d[12:0]
+   133/676: $520\state_d[12:0]
+   134/676: $519\state_d[12:0]
+   135/676: $518\state_d[12:0]
+   136/676: $517\state_d[12:0]
+   137/676: $516\state_d[12:0]
+   138/676: $515\state_d[12:0]
+   139/676: $514\state_d[12:0]
+   140/676: $513\state_d[12:0]
+   141/676: $512\state_d[12:0]
+   142/676: $511\state_d[12:0]
+   143/676: $510\state_d[12:0]
+   144/676: $509\state_d[12:0]
+   145/676: $508\state_d[12:0]
+   146/676: $507\state_d[12:0]
+   147/676: $506\state_d[12:0]
+   148/676: $505\state_d[12:0]
+   149/676: $504\state_d[12:0]
+   150/676: $503\state_d[12:0]
+   151/676: $502\state_d[12:0]
+   152/676: $501\state_d[12:0]
+   153/676: $500\state_d[12:0]
+   154/676: $499\state_d[12:0]
+   155/676: $498\state_d[12:0]
+   156/676: $497\state_d[12:0]
+   157/676: $496\state_d[12:0]
+   158/676: $495\state_d[12:0]
+   159/676: $494\state_d[12:0]
+   160/676: $493\state_d[12:0]
+   161/676: $492\state_d[12:0]
+   162/676: $491\state_d[12:0]
+   163/676: $490\state_d[12:0]
+   164/676: $489\state_d[12:0]
+   165/676: $488\state_d[12:0]
+   166/676: $487\state_d[12:0]
+   167/676: $486\state_d[12:0]
+   168/676: $485\state_d[12:0]
+   169/676: $484\state_d[12:0]
+   170/676: $483\state_d[12:0]
+   171/676: $482\state_d[12:0]
+   172/676: $481\state_d[12:0]
+   173/676: $480\state_d[12:0]
+   174/676: $479\state_d[12:0]
+   175/676: $478\state_d[12:0]
+   176/676: $477\state_d[12:0]
+   177/676: $476\state_d[12:0]
+   178/676: $475\state_d[12:0]
+   179/676: $474\state_d[12:0]
+   180/676: $473\state_d[12:0]
+   181/676: $472\state_d[12:0]
+   182/676: $471\state_d[12:0]
+   183/676: $470\state_d[12:0]
+   184/676: $469\state_d[12:0]
+   185/676: $468\state_d[12:0]
+   186/676: $467\state_d[12:0]
+   187/676: $466\state_d[12:0]
+   188/676: $465\state_d[12:0]
+   189/676: $464\state_d[12:0]
+   190/676: $463\state_d[12:0]
+   191/676: $462\state_d[12:0]
+   192/676: $461\state_d[12:0]
+   193/676: $460\state_d[12:0]
+   194/676: $459\state_d[12:0]
+   195/676: $458\state_d[12:0]
+   196/676: $457\state_d[12:0]
+   197/676: $456\state_d[12:0]
+   198/676: $455\state_d[12:0]
+   199/676: $454\state_d[12:0]
+   200/676: $453\state_d[12:0]
+   201/676: $452\state_d[12:0]
+   202/676: $451\state_d[12:0]
+   203/676: $450\state_d[12:0]
+   204/676: $449\state_d[12:0]
+   205/676: $448\state_d[12:0]
+   206/676: $447\state_d[12:0]
+   207/676: $446\state_d[12:0]
+   208/676: $445\state_d[12:0]
+   209/676: $444\state_d[12:0]
+   210/676: $443\state_d[12:0]
+   211/676: $442\state_d[12:0]
+   212/676: $441\state_d[12:0]
+   213/676: $440\state_d[12:0]
+   214/676: $439\state_d[12:0]
+   215/676: $438\state_d[12:0]
+   216/676: $437\state_d[12:0]
+   217/676: $436\state_d[12:0]
+   218/676: $435\state_d[12:0]
+   219/676: $434\state_d[12:0]
+   220/676: $433\state_d[12:0]
+   221/676: $432\state_d[12:0]
+   222/676: $431\state_d[12:0]
+   223/676: $430\state_d[12:0]
+   224/676: $429\state_d[12:0]
+   225/676: $428\state_d[12:0]
+   226/676: $427\state_d[12:0]
+   227/676: $426\state_d[12:0]
+   228/676: $425\state_d[12:0]
+   229/676: $424\state_d[12:0]
+   230/676: $423\state_d[12:0]
+   231/676: $422\state_d[12:0]
+   232/676: $421\state_d[12:0]
+   233/676: $420\state_d[12:0]
+   234/676: $419\state_d[12:0]
+   235/676: $418\state_d[12:0]
+   236/676: $417\state_d[12:0]
+   237/676: $416\state_d[12:0]
+   238/676: $415\state_d[12:0]
+   239/676: $414\state_d[12:0]
+   240/676: $413\state_d[12:0]
+   241/676: $412\state_d[12:0]
+   242/676: $411\state_d[12:0]
+   243/676: $410\state_d[12:0]
+   244/676: $409\state_d[12:0]
+   245/676: $408\state_d[12:0]
+   246/676: $407\state_d[12:0]
+   247/676: $406\state_d[12:0]
+   248/676: $405\state_d[12:0]
+   249/676: $404\state_d[12:0]
+   250/676: $403\state_d[12:0]
+   251/676: $402\state_d[12:0]
+   252/676: $401\state_d[12:0]
+   253/676: $400\state_d[12:0]
+   254/676: $399\state_d[12:0]
+   255/676: $398\state_d[12:0]
+   256/676: $397\state_d[12:0]
+   257/676: $396\state_d[12:0]
+   258/676: $395\state_d[12:0]
+   259/676: $394\state_d[12:0]
+   260/676: $393\state_d[12:0]
+   261/676: $392\state_d[12:0]
+   262/676: $391\state_d[12:0]
+   263/676: $390\state_d[12:0]
+   264/676: $389\state_d[12:0]
+   265/676: $388\state_d[12:0]
+   266/676: $387\state_d[12:0]
+   267/676: $386\state_d[12:0]
+   268/676: $385\state_d[12:0]
+   269/676: $384\state_d[12:0]
+   270/676: $383\state_d[12:0]
+   271/676: $382\state_d[12:0]
+   272/676: $381\state_d[12:0]
+   273/676: $380\state_d[12:0]
+   274/676: $379\state_d[12:0]
+   275/676: $378\state_d[12:0]
+   276/676: $377\state_d[12:0]
+   277/676: $376\state_d[12:0]
+   278/676: $375\state_d[12:0]
+   279/676: $374\state_d[12:0]
+   280/676: $373\state_d[12:0]
+   281/676: $372\state_d[12:0]
+   282/676: $371\state_d[12:0]
+   283/676: $370\state_d[12:0]
+   284/676: $369\state_d[12:0]
+   285/676: $368\state_d[12:0]
+   286/676: $367\state_d[12:0]
+   287/676: $366\state_d[12:0]
+   288/676: $365\state_d[12:0]
+   289/676: $364\state_d[12:0]
+   290/676: $363\state_d[12:0]
+   291/676: $362\state_d[12:0]
+   292/676: $361\state_d[12:0]
+   293/676: $360\state_d[12:0]
+   294/676: $359\state_d[12:0]
+   295/676: $358\state_d[12:0]
+   296/676: $357\state_d[12:0]
+   297/676: $356\state_d[12:0]
+   298/676: $355\state_d[12:0]
+   299/676: $354\state_d[12:0]
+   300/676: $353\state_d[12:0]
+   301/676: $352\state_d[12:0]
+   302/676: $351\state_d[12:0]
+   303/676: $350\state_d[12:0]
+   304/676: $349\state_d[12:0]
+   305/676: $348\state_d[12:0]
+   306/676: $347\state_d[12:0]
+   307/676: $346\state_d[12:0]
+   308/676: $345\state_d[12:0]
+   309/676: $344\state_d[12:0]
+   310/676: $343\state_d[12:0]
+   311/676: $342\state_d[12:0]
+   312/676: $341\state_d[12:0]
+   313/676: $340\state_d[12:0]
+   314/676: $339\state_d[12:0]
+   315/676: $338\state_d[12:0]
+   316/676: $337\state_d[12:0]
+   317/676: $336\state_d[12:0]
+   318/676: $335\state_d[12:0]
+   319/676: $334\state_d[12:0]
+   320/676: $333\state_d[12:0]
+   321/676: $332\state_d[12:0]
+   322/676: $331\state_d[12:0]
+   323/676: $330\state_d[12:0]
+   324/676: $329\state_d[12:0]
+   325/676: $328\state_d[12:0]
+   326/676: $327\state_d[12:0]
+   327/676: $326\state_d[12:0]
+   328/676: $325\state_d[12:0]
+   329/676: $324\state_d[12:0]
+   330/676: $323\state_d[12:0]
+   331/676: $322\state_d[12:0]
+   332/676: $321\state_d[12:0]
+   333/676: $320\state_d[12:0]
+   334/676: $319\state_d[12:0]
+   335/676: $318\state_d[12:0]
+   336/676: $317\state_d[12:0]
+   337/676: $316\state_d[12:0]
+   338/676: $315\state_d[12:0]
+   339/676: $314\state_d[12:0]
+   340/676: $313\state_d[12:0]
+   341/676: $312\state_d[12:0]
+   342/676: $311\state_d[12:0]
+   343/676: $310\state_d[12:0]
+   344/676: $309\state_d[12:0]
+   345/676: $308\state_d[12:0]
+   346/676: $307\state_d[12:0]
+   347/676: $306\state_d[12:0]
+   348/676: $305\state_d[12:0]
+   349/676: $304\state_d[12:0]
+   350/676: $303\state_d[12:0]
+   351/676: $302\state_d[12:0]
+   352/676: $301\state_d[12:0]
+   353/676: $300\state_d[12:0]
+   354/676: $299\state_d[12:0]
+   355/676: $298\state_d[12:0]
+   356/676: $297\state_d[12:0]
+   357/676: $296\state_d[12:0]
+   358/676: $295\state_d[12:0]
+   359/676: $294\state_d[12:0]
+   360/676: $293\state_d[12:0]
+   361/676: $292\state_d[12:0]
+   362/676: $291\state_d[12:0]
+   363/676: $290\state_d[12:0]
+   364/676: $289\state_d[12:0]
+   365/676: $288\state_d[12:0]
+   366/676: $287\state_d[12:0]
+   367/676: $286\state_d[12:0]
+   368/676: $285\state_d[12:0]
+   369/676: $284\state_d[12:0]
+   370/676: $283\state_d[12:0]
+   371/676: $282\state_d[12:0]
+   372/676: $281\state_d[12:0]
+   373/676: $280\state_d[12:0]
+   374/676: $279\state_d[12:0]
+   375/676: $278\state_d[12:0]
+   376/676: $277\state_d[12:0]
+   377/676: $276\state_d[12:0]
+   378/676: $275\state_d[12:0]
+   379/676: $274\state_d[12:0]
+   380/676: $273\state_d[12:0]
+   381/676: $272\state_d[12:0]
+   382/676: $271\state_d[12:0]
+   383/676: $270\state_d[12:0]
+   384/676: $269\state_d[12:0]
+   385/676: $268\state_d[12:0]
+   386/676: $267\state_d[12:0]
+   387/676: $266\state_d[12:0]
+   388/676: $265\state_d[12:0]
+   389/676: $264\state_d[12:0]
+   390/676: $263\state_d[12:0]
+   391/676: $262\state_d[12:0]
+   392/676: $261\state_d[12:0]
+   393/676: $260\state_d[12:0]
+   394/676: $259\state_d[12:0]
+   395/676: $258\state_d[12:0]
+   396/676: $257\state_d[12:0]
+   397/676: $256\state_d[12:0]
+   398/676: $255\state_d[12:0]
+   399/676: $254\state_d[12:0]
+   400/676: $253\state_d[12:0]
+   401/676: $252\state_d[12:0]
+   402/676: $251\state_d[12:0]
+   403/676: $250\state_d[12:0]
+   404/676: $249\state_d[12:0]
+   405/676: $248\state_d[12:0]
+   406/676: $247\state_d[12:0]
+   407/676: $246\state_d[12:0]
+   408/676: $245\state_d[12:0]
+   409/676: $244\state_d[12:0]
+   410/676: $243\state_d[12:0]
+   411/676: $242\state_d[12:0]
+   412/676: $241\state_d[12:0]
+   413/676: $240\state_d[12:0]
+   414/676: $239\state_d[12:0]
+   415/676: $238\state_d[12:0]
+   416/676: $237\state_d[12:0]
+   417/676: $236\state_d[12:0]
+   418/676: $235\state_d[12:0]
+   419/676: $234\state_d[12:0]
+   420/676: $233\state_d[12:0]
+   421/676: $232\state_d[12:0]
+   422/676: $231\state_d[12:0]
+   423/676: $230\state_d[12:0]
+   424/676: $229\state_d[12:0]
+   425/676: $228\state_d[12:0]
+   426/676: $227\state_d[12:0]
+   427/676: $226\state_d[12:0]
+   428/676: $225\state_d[12:0]
+   429/676: $224\state_d[12:0]
+   430/676: $223\state_d[12:0]
+   431/676: $222\state_d[12:0]
+   432/676: $221\state_d[12:0]
+   433/676: $220\state_d[12:0]
+   434/676: $219\state_d[12:0]
+   435/676: $218\state_d[12:0]
+   436/676: $217\state_d[12:0]
+   437/676: $216\state_d[12:0]
+   438/676: $215\state_d[12:0]
+   439/676: $214\state_d[12:0]
+   440/676: $213\state_d[12:0]
+   441/676: $212\state_d[12:0]
+   442/676: $211\state_d[12:0]
+   443/676: $210\state_d[12:0]
+   444/676: $209\state_d[12:0]
+   445/676: $208\state_d[12:0]
+   446/676: $207\state_d[12:0]
+   447/676: $206\state_d[12:0]
+   448/676: $205\state_d[12:0]
+   449/676: $204\state_d[12:0]
+   450/676: $203\state_d[12:0]
+   451/676: $202\state_d[12:0]
+   452/676: $201\state_d[12:0]
+   453/676: $200\state_d[12:0]
+   454/676: $199\state_d[12:0]
+   455/676: $198\state_d[12:0]
+   456/676: $197\state_d[12:0]
+   457/676: $196\state_d[12:0]
+   458/676: $195\state_d[12:0]
+   459/676: $194\state_d[12:0]
+   460/676: $193\state_d[12:0]
+   461/676: $192\state_d[12:0]
+   462/676: $191\state_d[12:0]
+   463/676: $190\state_d[12:0]
+   464/676: $189\state_d[12:0]
+   465/676: $188\state_d[12:0]
+   466/676: $187\state_d[12:0]
+   467/676: $186\state_d[12:0]
+   468/676: $185\state_d[12:0]
+   469/676: $184\state_d[12:0]
+   470/676: $183\state_d[12:0]
+   471/676: $182\state_d[12:0]
+   472/676: $181\state_d[12:0]
+   473/676: $180\state_d[12:0]
+   474/676: $179\state_d[12:0]
+   475/676: $178\state_d[12:0]
+   476/676: $177\state_d[12:0]
+   477/676: $176\state_d[12:0]
+   478/676: $175\state_d[12:0]
+   479/676: $174\state_d[12:0]
+   480/676: $173\state_d[12:0]
+   481/676: $172\state_d[12:0]
+   482/676: $171\state_d[12:0]
+   483/676: $170\state_d[12:0]
+   484/676: $169\state_d[12:0]
+   485/676: $168\state_d[12:0]
+   486/676: $167\state_d[12:0]
+   487/676: $166\state_d[12:0]
+   488/676: $165\state_d[12:0]
+   489/676: $164\state_d[12:0]
+   490/676: $163\state_d[12:0]
+   491/676: $162\state_d[12:0]
+   492/676: $161\state_d[12:0]
+   493/676: $160\state_d[12:0]
+   494/676: $159\state_d[12:0]
+   495/676: $158\state_d[12:0]
+   496/676: $157\state_d[12:0]
+   497/676: $156\state_d[12:0]
+   498/676: $155\state_d[12:0]
+   499/676: $154\state_d[12:0]
+   500/676: $153\state_d[12:0]
+   501/676: $152\state_d[12:0]
+   502/676: $151\state_d[12:0]
+   503/676: $150\state_d[12:0]
+   504/676: $149\state_d[12:0]
+   505/676: $148\state_d[12:0]
+   506/676: $147\state_d[12:0]
+   507/676: $146\state_d[12:0]
+   508/676: $145\state_d[12:0]
+   509/676: $144\state_d[12:0]
+   510/676: $143\state_d[12:0]
+   511/676: $142\state_d[12:0]
+   512/676: $141\state_d[12:0]
+   513/676: $140\state_d[12:0]
+   514/676: $139\state_d[12:0]
+   515/676: $138\state_d[12:0]
+   516/676: $137\state_d[12:0]
+   517/676: $136\state_d[12:0]
+   518/676: $135\state_d[12:0]
+   519/676: $134\state_d[12:0]
+   520/676: $133\state_d[12:0]
+   521/676: $132\state_d[12:0]
+   522/676: $131\state_d[12:0]
+   523/676: $130\state_d[12:0]
+   524/676: $129\state_d[12:0]
+   525/676: $128\state_d[12:0]
+   526/676: $127\state_d[12:0]
+   527/676: $126\state_d[12:0]
+   528/676: $125\state_d[12:0]
+   529/676: $124\state_d[12:0]
+   530/676: $123\state_d[12:0]
+   531/676: $122\state_d[12:0]
+   532/676: $121\state_d[12:0]
+   533/676: $120\state_d[12:0]
+   534/676: $119\state_d[12:0]
+   535/676: $118\state_d[12:0]
+   536/676: $117\state_d[12:0]
+   537/676: $116\state_d[12:0]
+   538/676: $115\state_d[12:0]
+   539/676: $114\state_d[12:0]
+   540/676: $113\state_d[12:0]
+   541/676: $112\state_d[12:0]
+   542/676: $111\state_d[12:0]
+   543/676: $110\state_d[12:0]
+   544/676: $109\state_d[12:0]
+   545/676: $108\state_d[12:0]
+   546/676: $107\state_d[12:0]
+   547/676: $106\state_d[12:0]
+   548/676: $105\state_d[12:0]
+   549/676: $104\state_d[12:0]
+   550/676: $103\state_d[12:0]
+   551/676: $102\state_d[12:0]
+   552/676: $101\state_d[12:0]
+   553/676: $100\state_d[12:0]
+   554/676: $99\state_d[12:0]
+   555/676: $98\state_d[12:0]
+   556/676: $97\state_d[12:0]
+   557/676: $96\state_d[12:0]
+   558/676: $95\state_d[12:0]
+   559/676: $94\state_d[12:0]
+   560/676: $93\state_d[12:0]
+   561/676: $92\state_d[12:0]
+   562/676: $91\state_d[12:0]
+   563/676: $90\state_d[12:0]
+   564/676: $89\state_d[12:0]
+   565/676: $88\state_d[12:0]
+   566/676: $87\state_d[12:0]
+   567/676: $86\state_d[12:0]
+   568/676: $85\state_d[12:0]
+   569/676: $84\state_d[12:0]
+   570/676: $83\state_d[12:0]
+   571/676: $82\state_d[12:0]
+   572/676: $81\state_d[12:0]
+   573/676: $80\state_d[12:0]
+   574/676: $79\state_d[12:0]
+   575/676: $78\state_d[12:0]
+   576/676: $77\state_d[12:0]
+   577/676: $76\state_d[12:0]
+   578/676: $75\state_d[12:0]
+   579/676: $74\state_d[12:0]
+   580/676: $73\state_d[12:0]
+   581/676: $72\state_d[12:0]
+   582/676: $71\state_d[12:0]
+   583/676: $70\state_d[12:0]
+   584/676: $69\state_d[12:0]
+   585/676: $68\state_d[12:0]
+   586/676: $67\state_d[12:0]
+   587/676: $66\state_d[12:0]
+   588/676: $65\state_d[12:0]
+   589/676: $64\state_d[12:0]
+   590/676: $63\state_d[12:0]
+   591/676: $62\state_d[12:0]
+   592/676: $61\state_d[12:0]
+   593/676: $60\state_d[12:0]
+   594/676: $59\state_d[12:0]
+   595/676: $58\state_d[12:0]
+   596/676: $57\state_d[12:0]
+   597/676: $56\state_d[12:0]
+   598/676: $55\state_d[12:0]
+   599/676: $54\state_d[12:0]
+   600/676: $53\state_d[12:0]
+   601/676: $52\state_d[12:0]
+   602/676: $51\state_d[12:0]
+   603/676: $50\state_d[12:0]
+   604/676: $49\state_d[12:0]
+   605/676: $48\state_d[12:0]
+   606/676: $47\state_d[12:0]
+   607/676: $46\state_d[12:0]
+   608/676: $45\state_d[12:0]
+   609/676: $44\state_d[12:0]
+   610/676: $43\state_d[12:0]
+   611/676: $42\state_d[12:0]
+   612/676: $41\state_d[12:0]
+   613/676: $40\state_d[12:0]
+   614/676: $39\state_d[12:0]
+   615/676: $38\state_d[12:0]
+   616/676: $37\state_d[12:0]
+   617/676: $36\state_d[12:0]
+   618/676: $35\state_d[12:0]
+   619/676: $34\state_d[12:0]
+   620/676: $33\state_d[12:0]
+   621/676: $32\state_d[12:0]
+   622/676: $31\state_d[12:0]
+   623/676: $30\state_d[12:0]
+   624/676: $29\state_d[12:0]
+   625/676: $28\state_d[12:0]
+   626/676: $27\state_d[12:0]
+   627/676: $26\state_d[12:0]
+   628/676: $25\state_d[12:0]
+   629/676: $24\state_d[12:0]
+   630/676: $23\state_d[12:0]
+   631/676: $22\state_d[12:0]
+   632/676: $21\state_d[12:0]
+   633/676: $20\state_d[12:0]
+   634/676: $19\state_d[12:0]
+   635/676: $18\state_d[12:0]
+   636/676: $17\state_d[12:0]
+   637/676: $16\state_d[12:0]
+   638/676: $15\state_d[12:0]
+   639/676: $14\state_d[12:0]
+   640/676: $13\state_d[12:0]
+   641/676: $12\state_d[12:0]
+   642/676: $11\state_d[12:0]
+   643/676: $10\state_d[12:0]
+   644/676: $9\state_d[12:0]
+   645/676: $8\state_d[12:0]
+   646/676: $7\state_d[12:0]
+   647/676: $6\state_d[12:0]
+   648/676: $5\state_d[12:0]
+   649/676: $4\state_d[12:0]
+   650/676: $3\state_d[12:0]
+   651/676: $2\state_d[12:0]
+   652/676: $1\instr_type_wb_o[1:0]
+   653/676: $1\en_wb_o[0:0]
+   654/676: $1\rf_wdata_id_o[31:0]
+   655/676: $1\rf_we_id_o[0:0]
+   656/676: $1\rf_waddr_id_o[4:0]
+   657/676: $1\alu_operand_b_ex_o[31:0]
+   658/676: $1\state_d[12:0]
+   659/676: $1\rf_ren_b_o[0:0]
+   660/676: $1\rf_ren_a_o[0:0]
+   661/676: $1\rf_raddr_b_o[4:0]
+   662/676: $1\rf_raddr_a_o[4:0]
+   663/676: $1\expecting_load_resp_o[0:0]
+   664/676: $1\lsu_wdata_o[31:0]
+   665/676: $1\lsu_sign_ext_o[0:0]
+   666/676: $1\lsu_type_o[1:0]
+   667/676: $1\lsu_we_o[0:0]
+   668/676: $1\lsu_req_o[0:0]
+   669/676: $1\multdiv_operand_b_ex_o[31:0]
+   670/676: $1\multdiv_operand_a_ex_o[31:0]
+   671/676: $1\multdiv_signed_mode_ex_o[1:0]
+   672/676: $1\multdiv_operator_ex_o[1:0]
+   673/676: $1\mult_sel_ex_o[0:0]
+   674/676: $1\mult_en_ex_o[0:0]
+   675/676: $1\alu_operand_a_ex_o[31:0]
+   676/676: $1\alu_operator_ex_o[6:0]
+Creating decoders for process `\top.$proc$fsm_dec_counter.v:261$10'.
+     1/1: $0\state_q[12:0]
+Creating decoders for process `\top.$proc$fsm_dec_counter.v:256$6'.
+     1/1: $0\rf_waddr_latch[4:0]
+Creating decoders for process `\top.$proc$fsm_dec_counter.v:246$4'.
+     1/1: $0\lsu_req_sent[0:0]
+Creating decoders for process `\top.$proc$fsm_dec_counter.v:239$1'.
+     1/1: $0\state_q_prev[12:0]
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\top.\_sv2v_0' from process `\top.$proc$fsm_dec_counter.v:0$9898'.
+No latch inferred for signal `\top.\alu_operator_ex_o' from process `\top.$proc$fsm_dec_counter.v:266$9892'.
+No latch inferred for signal `\top.\alu_operand_a_ex_o' from process `\top.$proc$fsm_dec_counter.v:266$9892'.
+No latch inferred for signal `\top.\alu_operand_b_ex_o' from process `\top.$proc$fsm_dec_counter.v:266$9892'.
+No latch inferred for signal `\top.\mult_en_ex_o' from process `\top.$proc$fsm_dec_counter.v:266$9892'.
+No latch inferred for signal `\top.\div_en_ex_o' from process `\top.$proc$fsm_dec_counter.v:266$9892'.
+No latch inferred for signal `\top.\mult_sel_ex_o' from process `\top.$proc$fsm_dec_counter.v:266$9892'.
+No latch inferred for signal `\top.\div_sel_ex_o' from process `\top.$proc$fsm_dec_counter.v:266$9892'.
+No latch inferred for signal `\top.\multdiv_operator_ex_o' from process `\top.$proc$fsm_dec_counter.v:266$9892'.
+No latch inferred for signal `\top.\multdiv_signed_mode_ex_o' from process `\top.$proc$fsm_dec_counter.v:266$9892'.
+No latch inferred for signal `\top.\multdiv_operand_a_ex_o' from process `\top.$proc$fsm_dec_counter.v:266$9892'.
+No latch inferred for signal `\top.\multdiv_operand_b_ex_o' from process `\top.$proc$fsm_dec_counter.v:266$9892'.
+No latch inferred for signal `\top.\lsu_req_o' from process `\top.$proc$fsm_dec_counter.v:266$9892'.
+No latch inferred for signal `\top.\lsu_we_o' from process `\top.$proc$fsm_dec_counter.v:266$9892'.
+No latch inferred for signal `\top.\lsu_type_o' from process `\top.$proc$fsm_dec_counter.v:266$9892'.
+No latch inferred for signal `\top.\lsu_sign_ext_o' from process `\top.$proc$fsm_dec_counter.v:266$9892'.
+No latch inferred for signal `\top.\lsu_wdata_o' from process `\top.$proc$fsm_dec_counter.v:266$9892'.
+No latch inferred for signal `\top.\expecting_load_resp_o' from process `\top.$proc$fsm_dec_counter.v:266$9892'.
+No latch inferred for signal `\top.\rf_raddr_a_o' from process `\top.$proc$fsm_dec_counter.v:266$9892'.
+No latch inferred for signal `\top.\rf_raddr_b_o' from process `\top.$proc$fsm_dec_counter.v:266$9892'.
+No latch inferred for signal `\top.\rf_ren_a_o' from process `\top.$proc$fsm_dec_counter.v:266$9892'.
+No latch inferred for signal `\top.\rf_ren_b_o' from process `\top.$proc$fsm_dec_counter.v:266$9892'.
+No latch inferred for signal `\top.\rf_waddr_id_o' from process `\top.$proc$fsm_dec_counter.v:266$9892'.
+No latch inferred for signal `\top.\rf_wdata_id_o' from process `\top.$proc$fsm_dec_counter.v:266$9892'.
+No latch inferred for signal `\top.\rf_we_id_o' from process `\top.$proc$fsm_dec_counter.v:266$9892'.
+No latch inferred for signal `\top.\rf_rd_a_wb_match_o' from process `\top.$proc$fsm_dec_counter.v:266$9892'.
+No latch inferred for signal `\top.\rf_rd_b_wb_match_o' from process `\top.$proc$fsm_dec_counter.v:266$9892'.
+No latch inferred for signal `\top.\en_wb_o' from process `\top.$proc$fsm_dec_counter.v:266$9892'.
+No latch inferred for signal `\top.\instr_type_wb_o' from process `\top.$proc$fsm_dec_counter.v:266$9892'.
+No latch inferred for signal `\top.\state_d' from process `\top.$proc$fsm_dec_counter.v:266$9892'.
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\top.\imd_val_q' using process `\top.$proc$fsm_dec_counter.v:67766$9895'.
+  created $adff cell `$procdff$2360359' with positive edge clock and positive level reset.
+Creating register for signal `\top.\state_q' using process `\top.$proc$fsm_dec_counter.v:261$10'.
+  created $adff cell `$procdff$2360364' with positive edge clock and positive level reset.
+Creating register for signal `\top.\rf_waddr_latch' using process `\top.$proc$fsm_dec_counter.v:256$6'.
+  created $adff cell `$procdff$2360369' with positive edge clock and positive level reset.
+Creating register for signal `\top.\lsu_req_sent' using process `\top.$proc$fsm_dec_counter.v:246$4'.
+  created $adff cell `$procdff$2360374' with positive edge clock and positive level reset.
+Creating register for signal `\top.\state_q_prev' using process `\top.$proc$fsm_dec_counter.v:239$1'.
+  created $adff cell `$procdff$2360379' with positive edge clock and positive level reset.
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `top.$proc$fsm_dec_counter.v:0$9898'.
+Found and cleaned up 1 empty switch in `\top.$proc$fsm_dec_counter.v:67766$9895'.
+Removing empty process `top.$proc$fsm_dec_counter.v:67766$9895'.
+Found and cleaned up 652 empty switches in `\top.$proc$fsm_dec_counter.v:266$9892'.
+Removing empty process `top.$proc$fsm_dec_counter.v:266$9892'.
+Found and cleaned up 1 empty switch in `\top.$proc$fsm_dec_counter.v:261$10'.
+Removing empty process `top.$proc$fsm_dec_counter.v:261$10'.
+Found and cleaned up 1 empty switch in `\top.$proc$fsm_dec_counter.v:256$6'.
+Removing empty process `top.$proc$fsm_dec_counter.v:256$6'.
+Found and cleaned up 2 empty switches in `\top.$proc$fsm_dec_counter.v:246$4'.
+Removing empty process `top.$proc$fsm_dec_counter.v:246$4'.
+Removing empty process `top.$proc$fsm_dec_counter.v:239$1'.
+Cleaned up 657 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~16 debug messages>
+
+4. Executing OPT pass (performing simple optimizations).
+
+4.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+4.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~151269 debug messages>
+Removed a total of 50423 cells.
+
+4.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$1672195.
+    dead port 2/2 on $mux $procmux$1667493.
+    dead port 2/2 on $mux $procmux$1662794.
+    dead port 2/2 on $mux $procmux$1658097.
+    dead port 2/2 on $mux $procmux$1653404.
+    dead port 2/2 on $mux $procmux$1648714.
+    dead port 2/2 on $mux $procmux$1644026.
+    dead port 2/2 on $mux $procmux$1639342.
+    dead port 2/2 on $mux $procmux$1634661.
+    dead port 2/2 on $mux $procmux$1629982.
+    dead port 2/2 on $mux $procmux$1625307.
+    dead port 2/2 on $mux $procmux$1620635.
+    dead port 2/2 on $mux $procmux$1615965.
+    dead port 2/2 on $mux $procmux$1611299.
+    dead port 2/2 on $mux $procmux$1606636.
+    dead port 2/2 on $mux $procmux$1601975.
+    dead port 2/2 on $mux $procmux$1597318.
+    dead port 2/2 on $mux $procmux$1592664.
+    dead port 2/2 on $mux $procmux$1588012.
+    dead port 2/2 on $mux $procmux$1583364.
+    dead port 2/2 on $mux $procmux$1578719.
+    dead port 2/2 on $mux $procmux$1574076.
+    dead port 2/2 on $mux $procmux$1569437.
+    dead port 2/2 on $mux $procmux$1564801.
+    dead port 2/2 on $mux $procmux$1560167.
+    dead port 2/2 on $mux $procmux$1555537.
+    dead port 2/2 on $mux $procmux$1550910.
+    dead port 2/2 on $mux $procmux$1546285.
+    dead port 2/2 on $mux $procmux$1541664.
+    dead port 2/2 on $mux $procmux$1537046.
+    dead port 2/2 on $mux $procmux$1532430.
+    dead port 2/2 on $mux $procmux$1527818.
+    dead port 2/2 on $mux $procmux$1523209.
+    dead port 2/2 on $mux $procmux$1518602.
+    dead port 2/2 on $mux $procmux$1513999.
+    dead port 2/2 on $mux $procmux$1509399.
+    dead port 2/2 on $mux $procmux$1504801.
+    dead port 2/2 on $mux $procmux$1500207.
+    dead port 2/2 on $mux $procmux$1495616.
+    dead port 2/2 on $mux $procmux$1491027.
+    dead port 2/2 on $mux $procmux$1486442.
+    dead port 2/2 on $mux $procmux$1481860.
+    dead port 2/2 on $mux $procmux$1477280.
+    dead port 2/2 on $mux $procmux$1472704.
+    dead port 2/2 on $mux $procmux$1468131.
+    dead port 2/2 on $mux $procmux$1463560.
+    dead port 2/2 on $mux $procmux$1458993.
+    dead port 2/2 on $mux $procmux$1454429.
+    dead port 2/2 on $mux $procmux$1449867.
+    dead port 2/2 on $mux $procmux$1445309.
+    dead port 2/2 on $mux $procmux$1440754.
+    dead port 2/2 on $mux $procmux$1436201.
+    dead port 2/2 on $mux $procmux$1431652.
+    dead port 2/2 on $mux $procmux$1427106.
+    dead port 2/2 on $mux $procmux$1422562.
+    dead port 2/2 on $mux $procmux$1418022.
+    dead port 2/2 on $mux $procmux$1413485.
+    dead port 2/2 on $mux $procmux$1408950.
+    dead port 2/2 on $mux $procmux$1404419.
+    dead port 2/2 on $mux $procmux$1399891.
+    dead port 2/2 on $mux $procmux$1395365.
+    dead port 2/2 on $mux $procmux$1390843.
+    dead port 2/2 on $mux $procmux$1386324.
+    dead port 2/2 on $mux $procmux$1381807.
+    dead port 2/2 on $mux $procmux$1377294.
+    dead port 2/2 on $mux $procmux$1372784.
+    dead port 2/2 on $mux $procmux$1368276.
+    dead port 2/2 on $mux $procmux$1363772.
+    dead port 2/2 on $mux $procmux$1359271.
+    dead port 2/2 on $mux $procmux$1354772.
+    dead port 2/2 on $mux $procmux$1350277.
+    dead port 2/2 on $mux $procmux$1345785.
+    dead port 2/2 on $mux $procmux$1341295.
+    dead port 2/2 on $mux $procmux$1336809.
+    dead port 2/2 on $mux $procmux$1332326.
+    dead port 2/2 on $mux $procmux$1327845.
+    dead port 2/2 on $mux $procmux$1323368.
+    dead port 2/2 on $mux $procmux$1318894.
+    dead port 2/2 on $mux $procmux$1314422.
+    dead port 2/2 on $mux $procmux$1309954.
+    dead port 2/2 on $mux $procmux$1305489.
+    dead port 2/2 on $mux $procmux$1301026.
+    dead port 2/2 on $mux $procmux$1296567.
+    dead port 2/2 on $mux $procmux$1292111.
+    dead port 2/2 on $mux $procmux$1287657.
+    dead port 2/2 on $mux $procmux$1283207.
+    dead port 2/2 on $mux $procmux$1278760.
+    dead port 2/2 on $mux $procmux$1274315.
+    dead port 2/2 on $mux $procmux$1269874.
+    dead port 2/2 on $mux $procmux$1265436.
+    dead port 2/2 on $mux $procmux$1261000.
+    dead port 2/2 on $mux $procmux$1256568.
+    dead port 2/2 on $mux $procmux$1252139.
+    dead port 2/2 on $mux $procmux$1247712.
+    dead port 2/2 on $mux $procmux$1243289.
+    dead port 2/2 on $mux $procmux$1238869.
+    dead port 2/2 on $mux $procmux$1234451.
+    dead port 2/2 on $mux $procmux$1230037.
+    dead port 2/2 on $mux $procmux$1225626.
+    dead port 2/2 on $mux $procmux$1221217.
+    dead port 2/2 on $mux $procmux$1216812.
+    dead port 2/2 on $mux $procmux$1212410.
+    dead port 2/2 on $mux $procmux$1208010.
+    dead port 2/2 on $mux $procmux$1203614.
+    dead port 2/2 on $mux $procmux$1199221.
+    dead port 2/2 on $mux $procmux$1194830.
+    dead port 2/2 on $mux $procmux$1190443.
+    dead port 2/2 on $mux $procmux$1186059.
+    dead port 2/2 on $mux $procmux$1181677.
+    dead port 2/2 on $mux $procmux$1177299.
+    dead port 2/2 on $mux $procmux$1172924.
+    dead port 2/2 on $mux $procmux$1168551.
+    dead port 2/2 on $mux $procmux$1164182.
+    dead port 2/2 on $mux $procmux$1159816.
+    dead port 2/2 on $mux $procmux$1155452.
+    dead port 2/2 on $mux $procmux$1151092.
+    dead port 2/2 on $mux $procmux$1146735.
+    dead port 2/2 on $mux $procmux$1142380.
+    dead port 2/2 on $mux $procmux$1138029.
+    dead port 2/2 on $mux $procmux$1133681.
+    dead port 2/2 on $mux $procmux$1129335.
+    dead port 2/2 on $mux $procmux$1124993.
+    dead port 2/2 on $mux $procmux$1120654.
+    dead port 2/2 on $mux $procmux$1116317.
+    dead port 2/2 on $mux $procmux$1111984.
+    dead port 2/2 on $mux $procmux$1107654.
+    dead port 2/2 on $mux $procmux$1103326.
+    dead port 2/2 on $mux $procmux$1099002.
+    dead port 2/2 on $mux $procmux$1094681.
+    dead port 2/2 on $mux $procmux$1090362.
+    dead port 2/2 on $mux $procmux$1086047.
+    dead port 2/2 on $mux $procmux$1081735.
+    dead port 2/2 on $mux $procmux$1077425.
+    dead port 2/2 on $mux $procmux$1073119.
+    dead port 2/2 on $mux $procmux$1068816.
+    dead port 2/2 on $mux $procmux$1064515.
+    dead port 2/2 on $mux $procmux$1060218.
+    dead port 2/2 on $mux $procmux$1055924.
+    dead port 2/2 on $mux $procmux$1051632.
+    dead port 2/2 on $mux $procmux$1047344.
+    dead port 2/2 on $mux $procmux$1043059.
+    dead port 2/2 on $mux $procmux$1038776.
+    dead port 2/2 on $mux $procmux$1034497.
+    dead port 2/2 on $mux $procmux$1030221.
+    dead port 2/2 on $mux $procmux$1025947.
+    dead port 2/2 on $mux $procmux$1021677.
+    dead port 2/2 on $mux $procmux$1017410.
+    dead port 2/2 on $mux $procmux$1013145.
+    dead port 2/2 on $mux $procmux$1008884.
+    dead port 2/2 on $mux $procmux$1004626.
+    dead port 2/2 on $mux $procmux$1000370.
+    dead port 2/2 on $mux $procmux$996118.
+    dead port 2/2 on $mux $procmux$991869.
+    dead port 2/2 on $mux $procmux$987622.
+    dead port 2/2 on $mux $procmux$983379.
+    dead port 2/2 on $mux $procmux$979139.
+    dead port 2/2 on $mux $procmux$974901.
+    dead port 2/2 on $mux $procmux$970667.
+    dead port 2/2 on $mux $procmux$966436.
+    dead port 2/2 on $mux $procmux$962207.
+    dead port 2/2 on $mux $procmux$957982.
+    dead port 2/2 on $mux $procmux$953760.
+    dead port 2/2 on $mux $procmux$949540.
+    dead port 2/2 on $mux $procmux$945324.
+    dead port 2/2 on $mux $procmux$941111.
+    dead port 2/2 on $mux $procmux$936900.
+    dead port 2/2 on $mux $procmux$932693.
+    dead port 2/2 on $mux $procmux$928489.
+    dead port 2/2 on $mux $procmux$924287.
+    dead port 2/2 on $mux $procmux$920089.
+    dead port 2/2 on $mux $procmux$915894.
+    dead port 2/2 on $mux $procmux$911701.
+    dead port 2/2 on $mux $procmux$907512.
+    dead port 2/2 on $mux $procmux$903326.
+    dead port 2/2 on $mux $procmux$899142.
+    dead port 2/2 on $mux $procmux$894962.
+    dead port 2/2 on $mux $procmux$890785.
+    dead port 2/2 on $mux $procmux$886610.
+    dead port 2/2 on $mux $procmux$882439.
+    dead port 2/2 on $mux $procmux$878271.
+    dead port 2/2 on $mux $procmux$874105.
+    dead port 2/2 on $mux $procmux$869943.
+    dead port 2/2 on $mux $procmux$865783.
+    dead port 2/2 on $mux $procmux$861625.
+    dead port 2/2 on $mux $procmux$857471.
+    dead port 2/2 on $mux $procmux$853319.
+    dead port 2/2 on $mux $procmux$849169.
+    dead port 2/2 on $mux $procmux$845023.
+    dead port 2/2 on $mux $procmux$840879.
+    dead port 2/2 on $mux $procmux$836737.
+    dead port 2/2 on $mux $procmux$832599.
+    dead port 2/2 on $mux $procmux$828463.
+    dead port 2/2 on $mux $procmux$824329.
+    dead port 2/2 on $mux $procmux$820199.
+    dead port 2/2 on $mux $procmux$816071.
+    dead port 2/2 on $mux $procmux$811945.
+    dead port 2/2 on $mux $procmux$807823.
+    dead port 2/2 on $mux $procmux$803703.
+    dead port 2/2 on $mux $procmux$799585.
+    dead port 2/2 on $mux $procmux$795471.
+    dead port 2/2 on $mux $procmux$791359.
+    dead port 2/2 on $mux $procmux$787249.
+    dead port 2/2 on $mux $procmux$783143.
+    dead port 2/2 on $mux $procmux$779039.
+    dead port 2/2 on $mux $procmux$774937.
+    dead port 2/2 on $mux $procmux$770839.
+    dead port 2/2 on $mux $procmux$766743.
+    dead port 2/2 on $mux $procmux$762649.
+    dead port 2/2 on $mux $procmux$758559.
+    dead port 2/2 on $mux $procmux$754471.
+    dead port 2/2 on $mux $procmux$750385.
+    dead port 2/2 on $mux $procmux$746303.
+    dead port 2/2 on $mux $procmux$742223.
+    dead port 2/2 on $mux $procmux$738145.
+    dead port 2/2 on $mux $procmux$734071.
+    dead port 2/2 on $mux $procmux$729999.
+    dead port 2/2 on $mux $procmux$725929.
+    dead port 2/2 on $mux $procmux$721863.
+    dead port 2/2 on $mux $procmux$717799.
+    dead port 2/2 on $mux $procmux$713737.
+    dead port 2/2 on $mux $procmux$709679.
+    dead port 2/2 on $mux $procmux$705623.
+    dead port 2/2 on $mux $procmux$701569.
+    dead port 2/2 on $mux $procmux$697519.
+    dead port 2/2 on $mux $procmux$693471.
+    dead port 2/2 on $mux $procmux$689425.
+    dead port 2/2 on $mux $procmux$685383.
+    dead port 2/2 on $mux $procmux$681343.
+    dead port 2/2 on $mux $procmux$677305.
+    dead port 2/2 on $mux $procmux$673271.
+    dead port 2/2 on $mux $procmux$669239.
+    dead port 2/2 on $mux $procmux$665209.
+    dead port 2/2 on $mux $procmux$661183.
+    dead port 2/2 on $mux $procmux$657159.
+    dead port 2/2 on $mux $procmux$653137.
+    dead port 2/2 on $mux $procmux$649119.
+    dead port 2/2 on $mux $procmux$645103.
+    dead port 2/2 on $mux $procmux$641089.
+    dead port 2/2 on $mux $procmux$637079.
+    dead port 2/2 on $mux $procmux$633071.
+    dead port 2/2 on $mux $procmux$629065.
+    dead port 2/2 on $mux $procmux$625063.
+    dead port 2/2 on $mux $procmux$621063.
+    dead port 2/2 on $mux $procmux$617065.
+    dead port 2/2 on $mux $procmux$613071.
+    dead port 2/2 on $mux $procmux$609079.
+    dead port 2/2 on $mux $procmux$605089.
+    dead port 2/2 on $mux $procmux$601103.
+    dead port 2/2 on $mux $procmux$597119.
+    dead port 2/2 on $mux $procmux$593137.
+    dead port 2/2 on $mux $procmux$589159.
+    dead port 2/2 on $mux $procmux$585183.
+    dead port 2/2 on $mux $procmux$581209.
+    dead port 2/2 on $mux $procmux$577239.
+    dead port 2/2 on $mux $procmux$573271.
+    dead port 2/2 on $mux $procmux$569305.
+    dead port 2/2 on $mux $procmux$565343.
+    dead port 2/2 on $mux $procmux$561383.
+    dead port 2/2 on $mux $procmux$557425.
+    dead port 2/2 on $mux $procmux$553471.
+    dead port 2/2 on $mux $procmux$549519.
+    dead port 2/2 on $mux $procmux$545569.
+    dead port 2/2 on $mux $procmux$541623.
+    dead port 2/2 on $mux $procmux$537679.
+    dead port 2/2 on $mux $procmux$533737.
+    dead port 2/2 on $mux $procmux$529799.
+    dead port 2/2 on $mux $procmux$525863.
+    dead port 2/2 on $mux $procmux$521929.
+    dead port 2/2 on $mux $procmux$517999.
+    dead port 2/2 on $mux $procmux$514071.
+    dead port 2/2 on $mux $procmux$510146.
+    dead port 2/2 on $mux $procmux$506229.
+    dead port 2/2 on $mux $procmux$502315.
+    dead port 2/2 on $mux $procmux$498428.
+    dead port 2/2 on $mux $procmux$494544.
+    dead port 2/2 on $mux $procmux$490685.
+    dead port 2/2 on $mux $procmux$486829.
+    dead port 2/2 on $mux $procmux$483000.
+    dead port 2/2 on $mux $procmux$479174.
+    dead port 2/2 on $mux $procmux$475375.
+    dead port 2/2 on $mux $procmux$471579.
+    dead port 2/2 on $mux $procmux$467810.
+    dead port 2/2 on $mux $procmux$464044.
+    dead port 2/2 on $mux $procmux$460303.
+    dead port 2/2 on $mux $procmux$456565.
+    dead port 2/2 on $mux $procmux$452854.
+    dead port 2/2 on $mux $procmux$449146.
+    dead port 2/2 on $mux $procmux$445463.
+    dead port 2/2 on $mux $procmux$441783.
+    dead port 2/2 on $mux $procmux$438130.
+    dead port 2/2 on $mux $procmux$434480.
+    dead port 2/2 on $mux $procmux$430857.
+    dead port 2/2 on $mux $procmux$427237.
+    dead port 2/2 on $mux $procmux$423644.
+    dead port 2/2 on $mux $procmux$420054.
+    dead port 2/2 on $mux $procmux$416489.
+    dead port 2/2 on $mux $procmux$412927.
+    dead port 2/2 on $mux $procmux$409392.
+    dead port 2/2 on $mux $procmux$405860.
+    dead port 2/2 on $mux $procmux$402353.
+    dead port 2/2 on $mux $procmux$398849.
+    dead port 2/2 on $mux $procmux$395372.
+    dead port 2/2 on $mux $procmux$391898.
+    dead port 2/2 on $mux $procmux$388451.
+    dead port 2/2 on $mux $procmux$385007.
+    dead port 2/2 on $mux $procmux$381590.
+    dead port 2/2 on $mux $procmux$378176.
+    dead port 2/2 on $mux $procmux$374787.
+    dead port 2/2 on $mux $procmux$371401.
+    dead port 2/2 on $mux $procmux$368042.
+    dead port 2/2 on $mux $procmux$364686.
+    dead port 2/2 on $mux $procmux$361355.
+    dead port 2/2 on $mux $procmux$358027.
+    dead port 2/2 on $mux $procmux$354726.
+    dead port 2/2 on $mux $procmux$351428.
+    dead port 2/2 on $mux $procmux$348157.
+    dead port 2/2 on $mux $procmux$344889.
+    dead port 2/2 on $mux $procmux$341648.
+    dead port 2/2 on $mux $procmux$338410.
+    dead port 2/2 on $mux $procmux$335199.
+    dead port 2/2 on $mux $procmux$331991.
+    dead port 2/2 on $mux $procmux$328810.
+    dead port 2/2 on $mux $procmux$325632.
+    dead port 2/2 on $mux $procmux$322481.
+    dead port 2/2 on $mux $procmux$319333.
+    dead port 2/2 on $mux $procmux$316212.
+    dead port 2/2 on $mux $procmux$313094.
+    dead port 2/2 on $mux $procmux$310003.
+    dead port 2/2 on $mux $procmux$306915.
+    dead port 2/2 on $mux $procmux$303854.
+    dead port 2/2 on $mux $procmux$300796.
+    dead port 2/2 on $mux $procmux$297763.
+    dead port 2/2 on $mux $procmux$294734.
+    dead port 2/2 on $mux $procmux$291733.
+    dead port 2/2 on $mux $procmux$288736.
+    dead port 2/2 on $mux $procmux$285765.
+    dead port 2/2 on $mux $procmux$282798.
+    dead port 2/2 on $mux $procmux$279859.
+    dead port 2/2 on $mux $procmux$276924.
+    dead port 2/2 on $mux $procmux$274017.
+    dead port 2/2 on $mux $procmux$271114.
+    dead port 2/2 on $mux $procmux$268239.
+    dead port 2/2 on $mux $procmux$265368.
+    dead port 2/2 on $mux $procmux$262525.
+    dead port 2/2 on $mux $procmux$259686.
+    dead port 2/2 on $mux $procmux$256875.
+    dead port 2/2 on $mux $procmux$254068.
+    dead port 2/2 on $mux $procmux$251287.
+    dead port 2/2 on $mux $procmux$248510.
+    dead port 2/2 on $mux $procmux$245761.
+    dead port 2/2 on $mux $procmux$243016.
+    dead port 2/2 on $mux $procmux$240297.
+    dead port 2/2 on $mux $procmux$237582.
+    dead port 2/2 on $mux $procmux$234895.
+    dead port 2/2 on $mux $procmux$232212.
+    dead port 2/2 on $mux $procmux$229555.
+    dead port 2/2 on $mux $procmux$226902.
+    dead port 2/2 on $mux $procmux$224277.
+    dead port 2/2 on $mux $procmux$221656.
+    dead port 2/2 on $mux $procmux$219061.
+    dead port 2/2 on $mux $procmux$216470.
+    dead port 2/2 on $mux $procmux$213907.
+    dead port 2/2 on $mux $procmux$211348.
+    dead port 2/2 on $mux $procmux$208817.
+    dead port 2/2 on $mux $procmux$206290.
+    dead port 2/2 on $mux $procmux$203791.
+    dead port 2/2 on $mux $procmux$201296.
+    dead port 2/2 on $mux $procmux$198827.
+    dead port 2/2 on $mux $procmux$196362.
+    dead port 2/2 on $mux $procmux$193925.
+    dead port 2/2 on $mux $procmux$191492.
+    dead port 2/2 on $mux $procmux$189085.
+    dead port 2/2 on $mux $procmux$186682.
+    dead port 2/2 on $mux $procmux$184307.
+    dead port 2/2 on $mux $procmux$181936.
+    dead port 2/2 on $mux $procmux$179593.
+    dead port 2/2 on $mux $procmux$177254.
+    dead port 2/2 on $mux $procmux$174943.
+    dead port 2/2 on $mux $procmux$172636.
+    dead port 2/2 on $mux $procmux$170357.
+    dead port 2/2 on $mux $procmux$168082.
+    dead port 2/2 on $mux $procmux$165835.
+    dead port 2/2 on $mux $procmux$163592.
+    dead port 2/2 on $mux $procmux$161375.
+    dead port 2/2 on $mux $procmux$159162.
+    dead port 2/2 on $mux $procmux$156977.
+    dead port 2/2 on $mux $procmux$154796.
+    dead port 2/2 on $mux $procmux$152641.
+    dead port 2/2 on $mux $procmux$150490.
+    dead port 2/2 on $mux $procmux$148367.
+    dead port 2/2 on $mux $procmux$146248.
+    dead port 2/2 on $mux $procmux$144155.
+    dead port 2/2 on $mux $procmux$142066.
+    dead port 2/2 on $mux $procmux$140005.
+    dead port 2/2 on $mux $procmux$137948.
+    dead port 2/2 on $mux $procmux$135917.
+    dead port 2/2 on $mux $procmux$133912.
+    dead port 2/2 on $mux $procmux$131933.
+    dead port 2/2 on $mux $procmux$129980.
+    dead port 2/2 on $mux $procmux$128053.
+    dead port 2/2 on $mux $procmux$126152.
+    dead port 2/2 on $mux $procmux$124277.
+    dead port 2/2 on $mux $procmux$122406.
+    dead port 2/2 on $mux $procmux$120561.
+    dead port 2/2 on $mux $procmux$118720.
+    dead port 2/2 on $mux $procmux$116905.
+    dead port 2/2 on $mux $procmux$115094.
+    dead port 2/2 on $mux $procmux$113309.
+    dead port 2/2 on $mux $procmux$111528.
+    dead port 2/2 on $mux $procmux$109773.
+    dead port 2/2 on $mux $procmux$108022.
+    dead port 2/2 on $mux $procmux$106297.
+    dead port 2/2 on $mux $procmux$104576.
+    dead port 2/2 on $mux $procmux$102881.
+    dead port 2/2 on $mux $procmux$101190.
+    dead port 2/2 on $mux $procmux$99525.
+    dead port 2/2 on $mux $procmux$97864.
+    dead port 2/2 on $mux $procmux$96229.
+    dead port 2/2 on $mux $procmux$94598.
+    dead port 2/2 on $mux $procmux$92993.
+    dead port 2/2 on $mux $procmux$91392.
+    dead port 2/2 on $mux $procmux$89817.
+    dead port 2/2 on $mux $procmux$88246.
+    dead port 2/2 on $mux $procmux$86701.
+    dead port 2/2 on $mux $procmux$85160.
+    dead port 2/2 on $mux $procmux$83645.
+    dead port 2/2 on $mux $procmux$82134.
+    dead port 2/2 on $mux $procmux$80649.
+    dead port 2/2 on $mux $procmux$79168.
+    dead port 2/2 on $mux $procmux$77713.
+    dead port 2/2 on $mux $procmux$76262.
+    dead port 2/2 on $mux $procmux$74837.
+    dead port 2/2 on $mux $procmux$73416.
+    dead port 2/2 on $mux $procmux$72021.
+    dead port 2/2 on $mux $procmux$70630.
+    dead port 2/2 on $mux $procmux$69265.
+    dead port 2/2 on $mux $procmux$67904.
+    dead port 2/2 on $mux $procmux$66569.
+    dead port 2/2 on $mux $procmux$65238.
+    dead port 2/2 on $mux $procmux$63933.
+    dead port 2/2 on $mux $procmux$62632.
+    dead port 2/2 on $mux $procmux$61357.
+    dead port 2/2 on $mux $procmux$60086.
+    dead port 2/2 on $mux $procmux$58841.
+    dead port 2/2 on $mux $procmux$57600.
+    dead port 2/2 on $mux $procmux$56385.
+    dead port 2/2 on $mux $procmux$55174.
+    dead port 2/2 on $mux $procmux$53989.
+    dead port 2/2 on $mux $procmux$52808.
+    dead port 2/2 on $mux $procmux$51653.
+    dead port 2/2 on $mux $procmux$50502.
+    dead port 2/2 on $mux $procmux$49379.
+    dead port 2/2 on $mux $procmux$48260.
+    dead port 2/2 on $mux $procmux$47169.
+    dead port 2/2 on $mux $procmux$46082.
+    dead port 2/2 on $mux $procmux$45023.
+    dead port 2/2 on $mux $procmux$43968.
+    dead port 2/2 on $mux $procmux$42941.
+    dead port 2/2 on $mux $procmux$41918.
+    dead port 2/2 on $mux $procmux$40923.
+    dead port 2/2 on $mux $procmux$39932.
+    dead port 2/2 on $mux $procmux$38969.
+    dead port 2/2 on $mux $procmux$38010.
+    dead port 2/2 on $mux $procmux$37079.
+    dead port 2/2 on $mux $procmux$36152.
+    dead port 2/2 on $mux $procmux$35253.
+    dead port 2/2 on $mux $procmux$34358.
+    dead port 2/2 on $mux $procmux$33491.
+    dead port 2/2 on $mux $procmux$32628.
+    dead port 2/2 on $mux $procmux$31793.
+    dead port 2/2 on $mux $procmux$30962.
+    dead port 2/2 on $mux $procmux$30159.
+    dead port 2/2 on $mux $procmux$29360.
+    dead port 2/2 on $mux $procmux$28589.
+    dead port 2/2 on $mux $procmux$27822.
+    dead port 2/2 on $mux $procmux$27083.
+    dead port 2/2 on $mux $procmux$26348.
+    dead port 2/2 on $mux $procmux$25641.
+    dead port 2/2 on $mux $procmux$24938.
+    dead port 2/2 on $mux $procmux$24263.
+    dead port 2/2 on $mux $procmux$23592.
+    dead port 2/2 on $mux $procmux$22949.
+    dead port 2/2 on $mux $procmux$22310.
+    dead port 2/2 on $mux $procmux$21699.
+    dead port 2/2 on $mux $procmux$21092.
+    dead port 2/2 on $mux $procmux$20513.
+    dead port 2/2 on $mux $procmux$19938.
+    dead port 2/2 on $mux $procmux$19391.
+    dead port 2/2 on $mux $procmux$18848.
+    dead port 2/2 on $mux $procmux$18333.
+    dead port 2/2 on $mux $procmux$17822.
+    dead port 2/2 on $mux $procmux$17339.
+    dead port 2/2 on $mux $procmux$16860.
+    dead port 2/2 on $mux $procmux$16409.
+    dead port 2/2 on $mux $procmux$15962.
+    dead port 2/2 on $mux $procmux$15543.
+    dead port 2/2 on $mux $procmux$15128.
+    dead port 2/2 on $mux $procmux$14739.
+    dead port 2/2 on $mux $procmux$14354.
+    dead port 2/2 on $mux $procmux$13997.
+    dead port 2/2 on $mux $procmux$13644.
+    dead port 2/2 on $mux $procmux$13317.
+    dead port 2/2 on $mux $procmux$12994.
+    dead port 2/2 on $mux $procmux$12699.
+    dead port 2/2 on $mux $procmux$12408.
+    dead port 2/2 on $mux $procmux$12143.
+    dead port 2/2 on $mux $procmux$11882.
+    dead port 2/2 on $mux $procmux$11649.
+    dead port 2/2 on $mux $procmux$11420.
+    dead port 2/2 on $mux $procmux$11217.
+    dead port 2/2 on $mux $procmux$11018.
+    dead port 2/2 on $mux $procmux$10847.
+    dead port 2/2 on $mux $procmux$10680.
+    dead port 2/2 on $mux $procmux$10541.
+    dead port 2/2 on $mux $procmux$10406.
+    dead port 2/2 on $mux $procmux$10299.
+    dead port 2/2 on $mux $procmux$10196.
+    dead port 2/2 on $mux $procmux$10145.
+    dead port 2/2 on $mux $procmux$10098.
+    dead port 2/2 on $mux $procmux$10056.
+    dead port 2/2 on $mux $procmux$10027.
+    dead port 2/2 on $mux $procmux$10002.
+    dead port 2/2 on $mux $procmux$9981.
+    dead port 2/2 on $mux $procmux$9961.
+    dead port 2/2 on $mux $procmux$9943.
+    dead port 2/2 on $mux $procmux$9927.
+    dead port 2/2 on $mux $procmux$9913.
+    dead port 2/2 on $mux $procmux$2279248.
+    dead port 2/2 on $mux $procmux$2274059.
+    dead port 2/2 on $mux $procmux$2268909.
+    dead port 2/2 on $mux $procmux$2263778.
+    dead port 2/2 on $mux $procmux$2258655.
+    dead port 2/2 on $mux $procmux$2253536.
+    dead port 2/2 on $mux $procmux$2248427.
+    dead port 2/2 on $mux $procmux$2243327.
+    dead port 2/2 on $mux $procmux$2238228.
+    dead port 2/2 on $mux $procmux$2233134.
+    dead port 2/2 on $mux $procmux$2228045.
+    dead port 2/2 on $mux $procmux$2222965.
+    dead port 2/2 on $mux $procmux$2217889.
+    dead port 2/2 on $mux $procmux$2212818.
+    dead port 2/2 on $mux $procmux$2207767.
+    dead port 2/2 on $mux $procmux$2202735.
+    dead port 2/2 on $mux $procmux$2197705.
+    dead port 2/2 on $mux $procmux$2192679.
+    dead port 2/2 on $mux $procmux$2187656.
+    dead port 2/2 on $mux $procmux$2182635.
+    dead port 2/2 on $mux $procmux$2177618.
+    dead port 2/2 on $mux $procmux$2172604.
+    dead port 2/2 on $mux $procmux$2167592.
+    dead port 2/2 on $mux $procmux$2162584.
+    dead port 2/2 on $mux $procmux$2157579.
+    dead port 2/2 on $mux $procmux$2152576.
+    dead port 2/2 on $mux $procmux$2147577.
+    dead port 2/2 on $mux $procmux$2142581.
+    dead port 2/2 on $mux $procmux$2137587.
+    dead port 2/2 on $mux $procmux$2132597.
+    dead port 2/2 on $mux $procmux$2127610.
+    dead port 2/2 on $mux $procmux$2122625.
+    dead port 2/2 on $mux $procmux$2117644.
+    dead port 2/2 on $mux $procmux$2112666.
+    dead port 2/2 on $mux $procmux$2107690.
+    dead port 2/2 on $mux $procmux$2102718.
+    dead port 2/2 on $mux $procmux$2097749.
+    dead port 2/2 on $mux $procmux$2092782.
+    dead port 2/2 on $mux $procmux$2087819.
+    dead port 2/2 on $mux $procmux$2082859.
+    dead port 2/2 on $mux $procmux$2077901.
+    dead port 2/2 on $mux $procmux$2072947.
+    dead port 2/2 on $mux $procmux$2067996.
+    dead port 2/2 on $mux $procmux$2063047.
+    dead port 2/2 on $mux $procmux$2058102.
+    dead port 2/2 on $mux $procmux$2053160.
+    dead port 2/2 on $mux $procmux$2048220.
+    dead port 2/2 on $mux $procmux$2043284.
+    dead port 2/2 on $mux $procmux$2038351.
+    dead port 2/2 on $mux $procmux$2033420.
+    dead port 2/2 on $mux $procmux$2028493.
+    dead port 2/2 on $mux $procmux$2023569.
+    dead port 2/2 on $mux $procmux$2018647.
+    dead port 2/2 on $mux $procmux$2013729.
+    dead port 2/2 on $mux $procmux$2008814.
+    dead port 2/2 on $mux $procmux$2003901.
+    dead port 2/2 on $mux $procmux$1998992.
+    dead port 2/2 on $mux $procmux$1994086.
+    dead port 2/2 on $mux $procmux$1989182.
+    dead port 2/2 on $mux $procmux$1984282.
+    dead port 2/2 on $mux $procmux$1979385.
+    dead port 2/2 on $mux $procmux$1974490.
+    dead port 2/2 on $mux $procmux$1969599.
+    dead port 2/2 on $mux $procmux$1964711.
+    dead port 2/2 on $mux $procmux$1959825.
+    dead port 2/2 on $mux $procmux$1954943.
+    dead port 2/2 on $mux $procmux$1950064.
+    dead port 2/2 on $mux $procmux$1945187.
+    dead port 2/2 on $mux $procmux$1940314.
+    dead port 2/2 on $mux $procmux$1935444.
+    dead port 2/2 on $mux $procmux$1930576.
+    dead port 2/2 on $mux $procmux$1925712.
+    dead port 2/2 on $mux $procmux$1920851.
+    dead port 2/2 on $mux $procmux$1915992.
+    dead port 2/2 on $mux $procmux$1911137.
+    dead port 2/2 on $mux $procmux$1906285.
+    dead port 2/2 on $mux $procmux$1901435.
+    dead port 2/2 on $mux $procmux$1896589.
+    dead port 2/2 on $mux $procmux$1891746.
+    dead port 2/2 on $mux $procmux$1886905.
+    dead port 2/2 on $mux $procmux$1882068.
+    dead port 2/2 on $mux $procmux$1877234.
+    dead port 2/2 on $mux $procmux$1872402.
+    dead port 2/2 on $mux $procmux$1867574.
+    dead port 2/2 on $mux $procmux$1862749.
+    dead port 2/2 on $mux $procmux$1857926.
+    dead port 2/2 on $mux $procmux$1853107.
+    dead port 2/2 on $mux $procmux$1848291.
+    dead port 2/2 on $mux $procmux$1843477.
+    dead port 2/2 on $mux $procmux$1838667.
+    dead port 2/2 on $mux $procmux$1833860.
+    dead port 2/2 on $mux $procmux$1829055.
+    dead port 2/2 on $mux $procmux$1824254.
+    dead port 2/2 on $mux $procmux$1819456.
+    dead port 2/2 on $mux $procmux$1814660.
+    dead port 2/2 on $mux $procmux$1809868.
+    dead port 2/2 on $mux $procmux$1805079.
+    dead port 2/2 on $mux $procmux$1800292.
+    dead port 2/2 on $mux $procmux$1795509.
+    dead port 2/2 on $mux $procmux$1790729.
+    dead port 2/2 on $mux $procmux$1785951.
+    dead port 2/2 on $mux $procmux$1781177.
+    dead port 2/2 on $mux $procmux$1776406.
+    dead port 2/2 on $mux $procmux$1771637.
+    dead port 2/2 on $mux $procmux$1766872.
+    dead port 2/2 on $mux $procmux$1762110.
+    dead port 2/2 on $mux $procmux$1757350.
+    dead port 2/2 on $mux $procmux$1752594.
+    dead port 2/2 on $mux $procmux$1747841.
+    dead port 2/2 on $mux $procmux$1743090.
+    dead port 2/2 on $mux $procmux$1738343.
+    dead port 2/2 on $mux $procmux$1733599.
+    dead port 2/2 on $mux $procmux$1728857.
+    dead port 2/2 on $mux $procmux$1724119.
+    dead port 2/2 on $mux $procmux$1719384.
+    dead port 2/2 on $mux $procmux$1714651.
+    dead port 2/2 on $mux $procmux$1709922.
+    dead port 2/2 on $mux $procmux$1705196.
+    dead port 2/2 on $mux $procmux$1700472.
+    dead port 2/2 on $mux $procmux$1695752.
+    dead port 2/2 on $mux $procmux$1691035.
+    dead port 2/2 on $mux $procmux$1686320.
+    dead port 2/2 on $mux $procmux$1681609.
+    dead port 2/2 on $mux $procmux$1676901.
+Removed 651 multiplexer ports.
+<suppressed ~26 debug messages>
+
+4.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+    New ctrl vector for $pmux cell $procmux$2339195: $auto$opt_reduce.cc:137:opt_pmux$2360381
+    New ctrl vector for $pmux cell $procmux$2359301: { $auto$opt_reduce.cc:137:opt_pmux$2360397 $procmux$2360339_CMP $procmux$2360338_CMP $auto$opt_reduce.cc:137:opt_pmux$2360395 $procmux$2360334_CMP $procmux$2360332_CMP $auto$opt_reduce.cc:137:opt_pmux$2360393 $auto$opt_reduce.cc:137:opt_pmux$2360391 $auto$opt_reduce.cc:137:opt_pmux$2360389 $auto$opt_reduce.cc:137:opt_pmux$2360387 $auto$opt_reduce.cc:137:opt_pmux$2360385 $auto$opt_reduce.cc:137:opt_pmux$2360383 }
+    New ctrl vector for $pmux cell $procmux$2309000: { $procmux$2360326_CMP $procmux$2358183_CMP $auto$opt_reduce.cc:137:opt_pmux$2360429 $auto$opt_reduce.cc:137:opt_pmux$2360427 $auto$opt_reduce.cc:137:opt_pmux$2360425 $auto$opt_reduce.cc:137:opt_pmux$2360423 $auto$opt_reduce.cc:137:opt_pmux$2360421 $auto$opt_reduce.cc:137:opt_pmux$2360419 $auto$opt_reduce.cc:137:opt_pmux$2360417 $auto$opt_reduce.cc:137:opt_pmux$2360415 $auto$opt_reduce.cc:137:opt_pmux$2360413 $auto$opt_reduce.cc:137:opt_pmux$2360411 $auto$opt_reduce.cc:137:opt_pmux$2360409 $auto$opt_reduce.cc:137:opt_pmux$2360407 $auto$opt_reduce.cc:137:opt_pmux$2360405 $auto$opt_reduce.cc:137:opt_pmux$2360403 $auto$opt_reduce.cc:137:opt_pmux$2360401 $auto$opt_reduce.cc:137:opt_pmux$2360399 }
+    New ctrl vector for $pmux cell $procmux$2313724: $auto$opt_reduce.cc:137:opt_pmux$2360431
+    New ctrl vector for $pmux cell $procmux$2317988: $auto$opt_reduce.cc:137:opt_pmux$2360433
+    New ctrl vector for $pmux cell $procmux$2287597: { $procmux$2300322_CMP $auto$opt_reduce.cc:137:opt_pmux$2360469 $auto$opt_reduce.cc:137:opt_pmux$2360467 $auto$opt_reduce.cc:137:opt_pmux$2360465 $auto$opt_reduce.cc:137:opt_pmux$2360463 $auto$opt_reduce.cc:137:opt_pmux$2360461 $auto$opt_reduce.cc:137:opt_pmux$2360459 $auto$opt_reduce.cc:137:opt_pmux$2360457 $auto$opt_reduce.cc:137:opt_pmux$2360455 $auto$opt_reduce.cc:137:opt_pmux$2360453 $auto$opt_reduce.cc:137:opt_pmux$2360451 $auto$opt_reduce.cc:137:opt_pmux$2360449 $auto$opt_reduce.cc:137:opt_pmux$2360447 $auto$opt_reduce.cc:137:opt_pmux$2360445 $auto$opt_reduce.cc:137:opt_pmux$2360443 $auto$opt_reduce.cc:137:opt_pmux$2360441 $auto$opt_reduce.cc:137:opt_pmux$2360439 $auto$opt_reduce.cc:137:opt_pmux$2360437 $auto$opt_reduce.cc:137:opt_pmux$2360435 }
+    New ctrl vector for $pmux cell $procmux$2302386: $auto$opt_reduce.cc:137:opt_pmux$2360471
+    New ctrl vector for $pmux cell $procmux$2307119: { $auto$opt_reduce.cc:137:opt_pmux$2360495 $procmux$2360333_CMP $procmux$2360325_CMP $auto$opt_reduce.cc:137:opt_pmux$2360493 $procmux$2359195_CMP $auto$opt_reduce.cc:137:opt_pmux$2360491 $procmux$2359944_CMP $auto$opt_reduce.cc:137:opt_pmux$2360489 $auto$opt_reduce.cc:137:opt_pmux$2360487 $auto$opt_reduce.cc:137:opt_pmux$2360485 $auto$opt_reduce.cc:137:opt_pmux$2360483 $auto$opt_reduce.cc:137:opt_pmux$2360481 $auto$opt_reduce.cc:137:opt_pmux$2360479 $auto$opt_reduce.cc:137:opt_pmux$2360477 $auto$opt_reduce.cc:137:opt_pmux$2360475 $auto$opt_reduce.cc:137:opt_pmux$2360473 }
+    New ctrl vector for $pmux cell $procmux$2321245: $auto$opt_reduce.cc:137:opt_pmux$2360497
+    New ctrl vector for $pmux cell $procmux$2316249: $auto$opt_reduce.cc:137:opt_pmux$2360499
+    New ctrl vector for $pmux cell $procmux$2280992: $auto$opt_reduce.cc:137:opt_pmux$2360501
+    New ctrl vector for $pmux cell $procmux$2285973: $auto$opt_reduce.cc:137:opt_pmux$2360503
+    New ctrl vector for $pmux cell $procmux$2320503: $auto$opt_reduce.cc:137:opt_pmux$2360505
+    New ctrl vector for $pmux cell $procmux$2290957: { $procmux$2300476_CMP $procmux$2359291_CMP $procmux$2359289_CMP $procmux$2359285_CMP $procmux$2300446_CMP $procmux$2359277_CMP $procmux$2300443_CMP $procmux$2359276_CMP $auto$opt_reduce.cc:137:opt_pmux$2360561 $auto$opt_reduce.cc:137:opt_pmux$2360559 $auto$opt_reduce.cc:137:opt_pmux$2360557 $auto$opt_reduce.cc:137:opt_pmux$2360555 $auto$opt_reduce.cc:137:opt_pmux$2360553 $auto$opt_reduce.cc:137:opt_pmux$2360551 $auto$opt_reduce.cc:137:opt_pmux$2360549 $procmux$2295354_CMP $procmux$2354644_CMP $auto$opt_reduce.cc:137:opt_pmux$2360547 $auto$opt_reduce.cc:137:opt_pmux$2360545 $auto$opt_reduce.cc:137:opt_pmux$2360543 $auto$opt_reduce.cc:137:opt_pmux$2360541 $auto$opt_reduce.cc:137:opt_pmux$2360539 $auto$opt_reduce.cc:137:opt_pmux$2360537 $auto$opt_reduce.cc:137:opt_pmux$2360535 $auto$opt_reduce.cc:137:opt_pmux$2360533 $auto$opt_reduce.cc:137:opt_pmux$2360531 $auto$opt_reduce.cc:137:opt_pmux$2360529 $auto$opt_reduce.cc:137:opt_pmux$2360527 $auto$opt_reduce.cc:137:opt_pmux$2360525 $auto$opt_reduce.cc:137:opt_pmux$2360523 $auto$opt_reduce.cc:137:opt_pmux$2360521 $auto$opt_reduce.cc:137:opt_pmux$2360519 $auto$opt_reduce.cc:137:opt_pmux$2360517 $auto$opt_reduce.cc:137:opt_pmux$2360515 $auto$opt_reduce.cc:137:opt_pmux$2360513 $auto$opt_reduce.cc:137:opt_pmux$2360511 $auto$opt_reduce.cc:137:opt_pmux$2360509 $auto$opt_reduce.cc:137:opt_pmux$2360507 }
+    New ctrl vector for $pmux cell $procmux$2315507: $auto$opt_reduce.cc:137:opt_pmux$2360563
+    New ctrl vector for $pmux cell $procmux$2295286: { $procmux$2360345_CMP $procmux$2300467_CMP $procmux$2300466_CMP $procmux$2300465_CMP $procmux$2300462_CMP $procmux$2300461_CMP $procmux$2300459_CMP $procmux$2300458_CMP $procmux$2300457_CMP $procmux$2300455_CMP $procmux$2300453_CMP $procmux$2360340_CMP $procmux$2300422_CMP $procmux$2360337_CMP $procmux$2360335_CMP $procmux$2360334_CMP $procmux$2360332_CMP $procmux$2360331_CMP $procmux$2360330_CMP $procmux$2360329_CMP $procmux$2360328_CMP $auto$opt_reduce.cc:137:opt_pmux$2360763 $procmux$2360327_CMP $procmux$2360326_CMP $procmux$2360325_CMP $procmux$2360324_CMP $procmux$2300331_CMP $procmux$2360323_CMP $procmux$2360322_CMP $procmux$2360321_CMP $procmux$2300306_CMP $procmux$2360320_CMP $procmux$2360319_CMP $procmux$2360318_CMP $procmux$2300297_CMP $procmux$2360317_CMP $procmux$2360316_CMP $procmux$2360315_CMP $procmux$2300288_CMP $procmux$2360314_CMP $procmux$2360313_CMP $procmux$2360312_CMP $procmux$2300279_CMP $procmux$2360311_CMP $procmux$2360310_CMP $procmux$2360309_CMP $procmux$2300270_CMP $procmux$2360308_CMP $procmux$2360307_CMP $procmux$2360306_CMP $procmux$2300261_CMP $procmux$2360305_CMP $procmux$2360304_CMP $procmux$2360303_CMP $procmux$2300252_CMP $procmux$2360302_CMP $procmux$2360301_CMP $procmux$2360300_CMP $procmux$2300243_CMP $procmux$2360299_CMP $procmux$2360298_CMP $procmux$2360297_CMP $procmux$2300234_CMP $procmux$2360296_CMP $procmux$2360295_CMP $procmux$2360294_CMP $procmux$2300225_CMP $procmux$2360293_CMP $procmux$2360292_CMP $procmux$2360291_CMP $procmux$2300216_CMP $procmux$2360290_CMP $procmux$2360289_CMP $procmux$2360288_CMP $procmux$2300207_CMP $procmux$2360287_CMP $procmux$2360286_CMP $procmux$2360285_CMP $procmux$2300198_CMP $procmux$2360284_CMP $procmux$2360283_CMP $procmux$2360282_CMP $procmux$2300189_CMP $procmux$2360281_CMP $procmux$2360280_CMP $procmux$2360279_CMP $procmux$2300180_CMP $procmux$2360278_CMP $procmux$2360277_CMP $procmux$2360276_CMP $procmux$2300171_CMP $procmux$2360275_CMP $procmux$2360274_CMP $procmux$2360273_CMP $procmux$2300162_CMP $procmux$2360272_CMP $procmux$2360271_CMP $procmux$2360270_CMP $procmux$2300153_CMP $procmux$2360269_CMP $procmux$2360268_CMP $procmux$2360267_CMP $procmux$2300144_CMP $procmux$2360266_CMP $procmux$2360265_CMP $procmux$2360264_CMP $procmux$2300135_CMP $procmux$2360263_CMP $procmux$2360262_CMP $procmux$2360261_CMP $procmux$2300126_CMP $procmux$2360260_CMP $procmux$2360259_CMP $procmux$2360258_CMP $procmux$2300117_CMP $procmux$2360257_CMP $procmux$2360256_CMP $procmux$2360255_CMP $procmux$2300108_CMP $procmux$2360254_CMP $procmux$2360253_CMP $procmux$2360252_CMP $procmux$2300099_CMP $procmux$2360251_CMP $procmux$2360250_CMP $procmux$2360249_CMP $procmux$2300090_CMP $procmux$2360248_CMP $procmux$2360247_CMP $procmux$2360246_CMP $procmux$2300081_CMP $procmux$2360245_CMP $procmux$2360244_CMP $procmux$2360243_CMP $procmux$2300072_CMP $procmux$2360242_CMP $procmux$2360241_CMP $procmux$2360240_CMP $procmux$2300063_CMP $procmux$2360239_CMP $procmux$2360238_CMP $procmux$2360237_CMP $procmux$2300054_CMP $procmux$2360236_CMP $procmux$2360235_CMP $procmux$2360234_CMP $procmux$2300045_CMP $procmux$2360233_CMP $procmux$2360232_CMP $procmux$2360231_CMP $procmux$2300036_CMP $procmux$2360230_CMP $procmux$2360229_CMP $procmux$2360228_CMP $procmux$2300027_CMP $procmux$2360227_CMP $procmux$2360226_CMP $procmux$2360225_CMP $procmux$2300018_CMP $procmux$2360224_CMP $procmux$2360223_CMP $procmux$2360222_CMP $procmux$2300009_CMP $procmux$2360221_CMP $procmux$2360220_CMP $procmux$2360219_CMP $procmux$2300000_CMP $procmux$2360218_CMP $procmux$2360217_CMP $procmux$2360216_CMP $procmux$2299991_CMP $procmux$2360215_CMP $procmux$2360214_CMP $procmux$2360213_CMP $procmux$2299982_CMP $procmux$2360212_CMP $procmux$2360211_CMP $procmux$2360210_CMP $procmux$2299973_CMP $procmux$2360209_CMP $procmux$2360208_CMP $procmux$2360207_CMP $procmux$2299964_CMP $procmux$2360206_CMP $procmux$2360205_CMP $procmux$2360204_CMP $procmux$2299955_CMP $procmux$2360203_CMP $procmux$2360202_CMP $procmux$2360201_CMP $procmux$2299946_CMP $procmux$2360200_CMP $procmux$2360199_CMP $procmux$2360198_CMP $procmux$2299937_CMP $procmux$2360197_CMP $procmux$2360196_CMP $procmux$2360195_CMP $procmux$2299928_CMP $procmux$2360194_CMP $procmux$2360193_CMP $procmux$2360192_CMP $procmux$2299919_CMP $procmux$2360191_CMP $procmux$2360190_CMP $procmux$2360189_CMP $procmux$2299910_CMP $procmux$2360188_CMP $procmux$2360187_CMP $procmux$2360186_CMP $procmux$2299901_CMP $procmux$2360185_CMP $procmux$2360184_CMP $procmux$2360183_CMP $procmux$2299892_CMP $procmux$2360182_CMP $procmux$2360181_CMP $procmux$2360180_CMP $procmux$2299883_CMP $procmux$2360179_CMP $procmux$2360178_CMP $procmux$2360177_CMP $procmux$2299874_CMP $procmux$2360176_CMP $procmux$2360175_CMP $procmux$2360174_CMP $procmux$2299865_CMP $procmux$2360173_CMP $procmux$2360172_CMP $procmux$2360171_CMP $procmux$2299856_CMP $procmux$2360170_CMP $procmux$2360169_CMP $procmux$2360168_CMP $procmux$2299847_CMP $procmux$2360167_CMP $procmux$2360166_CMP $procmux$2360165_CMP $procmux$2299838_CMP $procmux$2360164_CMP $procmux$2360163_CMP $procmux$2360162_CMP $procmux$2299829_CMP $procmux$2360161_CMP $procmux$2360160_CMP $procmux$2360159_CMP $procmux$2299820_CMP $procmux$2360158_CMP $procmux$2360157_CMP $procmux$2360156_CMP $procmux$2299811_CMP $procmux$2360155_CMP $procmux$2360154_CMP $procmux$2360153_CMP $procmux$2299802_CMP $procmux$2360152_CMP $procmux$2360151_CMP $procmux$2360150_CMP $procmux$2299793_CMP $procmux$2360149_CMP $procmux$2360148_CMP $procmux$2360147_CMP $procmux$2299784_CMP $procmux$2360146_CMP $procmux$2360145_CMP $procmux$2360144_CMP $procmux$2299775_CMP $procmux$2360143_CMP $procmux$2360142_CMP $procmux$2360141_CMP $procmux$2299766_CMP $procmux$2360140_CMP $procmux$2360139_CMP $procmux$2360138_CMP $procmux$2299757_CMP $procmux$2360137_CMP $procmux$2360136_CMP $procmux$2360135_CMP $procmux$2299748_CMP $procmux$2360134_CMP $procmux$2360133_CMP $procmux$2360132_CMP $procmux$2299739_CMP $procmux$2360131_CMP $procmux$2360130_CMP $procmux$2360129_CMP $procmux$2299730_CMP $procmux$2360128_CMP $procmux$2360127_CMP $procmux$2360126_CMP $procmux$2299721_CMP $procmux$2360125_CMP $procmux$2360124_CMP $procmux$2360123_CMP $procmux$2299712_CMP $procmux$2360122_CMP $procmux$2360121_CMP $procmux$2360120_CMP $procmux$2299703_CMP $procmux$2360119_CMP $procmux$2360118_CMP $procmux$2360117_CMP $procmux$2299694_CMP $procmux$2360116_CMP $procmux$2360115_CMP $procmux$2360114_CMP $procmux$2299685_CMP $procmux$2360113_CMP $procmux$2360112_CMP $procmux$2360111_CMP $procmux$2299676_CMP $procmux$2360110_CMP $procmux$2360109_CMP $procmux$2360108_CMP $procmux$2299667_CMP $procmux$2360107_CMP $procmux$2360106_CMP $procmux$2360105_CMP $procmux$2299658_CMP $procmux$2360104_CMP $procmux$2360103_CMP $procmux$2360102_CMP $procmux$2299649_CMP $procmux$2360101_CMP $procmux$2360100_CMP $procmux$2360099_CMP $procmux$2299640_CMP $procmux$2360098_CMP $procmux$2360097_CMP $procmux$2360096_CMP $procmux$2299631_CMP $procmux$2360095_CMP $procmux$2360094_CMP $procmux$2360093_CMP $procmux$2299622_CMP $procmux$2360092_CMP $procmux$2360091_CMP $procmux$2360090_CMP $procmux$2299613_CMP $procmux$2360089_CMP $procmux$2360088_CMP $procmux$2360087_CMP $procmux$2299604_CMP $procmux$2360086_CMP $procmux$2360085_CMP $procmux$2360084_CMP $procmux$2299595_CMP $procmux$2360083_CMP $procmux$2360082_CMP $procmux$2360081_CMP $procmux$2299586_CMP $procmux$2360080_CMP $procmux$2360079_CMP $procmux$2360078_CMP $procmux$2299577_CMP $procmux$2360077_CMP $procmux$2360076_CMP $procmux$2360075_CMP $procmux$2299568_CMP $procmux$2360074_CMP $procmux$2360073_CMP $procmux$2360072_CMP $procmux$2299559_CMP $procmux$2360071_CMP $procmux$2360070_CMP $procmux$2360069_CMP $procmux$2299550_CMP $procmux$2360068_CMP $procmux$2360067_CMP $procmux$2360066_CMP $procmux$2299541_CMP $procmux$2360065_CMP $procmux$2360064_CMP $procmux$2360063_CMP $procmux$2299532_CMP $procmux$2360062_CMP $procmux$2360061_CMP $procmux$2360060_CMP $procmux$2299523_CMP $procmux$2360059_CMP $procmux$2360058_CMP $procmux$2360057_CMP $procmux$2299514_CMP $procmux$2360056_CMP $procmux$2360055_CMP $procmux$2360054_CMP $procmux$2299505_CMP $procmux$2360053_CMP $procmux$2360052_CMP $procmux$2360051_CMP $procmux$2299496_CMP $procmux$2360050_CMP $procmux$2360049_CMP $procmux$2360048_CMP $procmux$2299487_CMP $procmux$2360047_CMP $procmux$2360046_CMP $procmux$2360045_CMP $procmux$2299478_CMP $procmux$2360044_CMP $procmux$2360043_CMP $procmux$2360042_CMP $procmux$2299469_CMP $procmux$2360041_CMP $procmux$2360040_CMP $procmux$2360039_CMP $procmux$2299460_CMP $procmux$2360038_CMP $procmux$2360037_CMP $procmux$2360036_CMP $procmux$2299451_CMP $procmux$2360035_CMP $procmux$2360034_CMP $procmux$2360033_CMP $procmux$2360032_CMP $procmux$2360031_CMP $procmux$2360030_CMP $procmux$2360029_CMP $procmux$2360028_CMP $procmux$2360027_CMP $procmux$2360026_CMP $procmux$2360025_CMP $procmux$2360024_CMP $procmux$2360023_CMP $procmux$2360022_CMP $procmux$2360021_CMP $procmux$2360020_CMP $procmux$2360019_CMP $procmux$2360018_CMP $procmux$2360017_CMP $procmux$2360016_CMP $procmux$2360015_CMP $procmux$2360014_CMP $procmux$2360013_CMP $procmux$2360012_CMP $procmux$2360011_CMP $procmux$2360010_CMP $procmux$2360009_CMP $procmux$2360008_CMP $procmux$2360007_CMP $procmux$2360006_CMP $procmux$2360005_CMP $procmux$2360004_CMP $procmux$2360003_CMP $procmux$2360002_CMP $procmux$2360001_CMP $procmux$2360000_CMP $procmux$2359999_CMP $procmux$2359998_CMP $procmux$2359997_CMP $procmux$2359996_CMP $procmux$2359995_CMP $procmux$2359994_CMP $procmux$2359993_CMP $procmux$2359992_CMP $procmux$2359991_CMP $procmux$2359990_CMP $procmux$2359989_CMP $procmux$2359988_CMP $procmux$2359987_CMP $procmux$2359986_CMP $procmux$2359985_CMP $procmux$2359984_CMP $procmux$2359983_CMP $procmux$2359982_CMP $procmux$2359981_CMP $procmux$2359980_CMP $procmux$2359979_CMP $procmux$2359978_CMP $procmux$2359977_CMP $procmux$2359976_CMP $procmux$2359975_CMP $procmux$2359974_CMP $procmux$2359973_CMP $procmux$2359972_CMP $procmux$2359971_CMP $procmux$2359970_CMP $procmux$2359969_CMP $procmux$2359968_CMP $procmux$2359967_CMP $procmux$2359966_CMP $procmux$2359965_CMP $procmux$2359964_CMP $procmux$2359963_CMP $procmux$2359962_CMP $procmux$2359961_CMP $procmux$2359960_CMP $procmux$2359959_CMP $procmux$2359958_CMP $procmux$2359957_CMP $procmux$2359956_CMP $procmux$2359955_CMP $procmux$2359954_CMP $procmux$2359953_CMP $procmux$2359952_CMP $procmux$2359951_CMP $procmux$2359950_CMP $procmux$2359949_CMP $procmux$2359948_CMP $procmux$2359947_CMP $procmux$2359946_CMP $procmux$2359945_CMP $procmux$2299208_CMP $procmux$2359944_CMP $procmux$2299205_CMP $procmux$2359943_CMP $procmux$2359942_CMP $procmux$2299171_CMP $procmux$2359938_CMP $procmux$2359937_CMP $procmux$2299143_CMP $procmux$2359933_CMP $procmux$2359932_CMP $procmux$2299113_CMP $procmux$2359928_CMP $procmux$2359927_CMP $procmux$2299083_CMP $procmux$2359923_CMP $procmux$2359922_CMP $procmux$2299053_CMP $procmux$2359918_CMP $procmux$2359917_CMP $procmux$2299025_CMP $procmux$2359913_CMP $procmux$2359912_CMP $procmux$2298995_CMP $procmux$2359908_CMP $procmux$2359907_CMP $procmux$2298967_CMP $procmux$2359903_CMP $procmux$2359902_CMP $procmux$2298937_CMP $procmux$2359898_CMP $procmux$2359897_CMP $procmux$2298907_CMP $procmux$2359893_CMP $procmux$2359892_CMP $procmux$2298877_CMP $procmux$2359888_CMP $procmux$2359887_CMP $procmux$2298849_CMP $procmux$2359883_CMP $procmux$2359882_CMP $procmux$2298819_CMP $procmux$2359878_CMP $procmux$2359877_CMP $procmux$2298791_CMP $procmux$2359873_CMP $procmux$2359872_CMP $procmux$2298761_CMP $procmux$2359868_CMP $procmux$2359867_CMP $procmux$2298731_CMP $procmux$2359863_CMP $procmux$2359862_CMP $procmux$2298701_CMP $procmux$2359858_CMP $procmux$2359857_CMP $procmux$2298673_CMP $procmux$2359853_CMP $procmux$2359852_CMP $procmux$2298643_CMP $procmux$2359848_CMP $procmux$2359847_CMP $procmux$2298615_CMP $procmux$2359843_CMP $procmux$2359842_CMP $procmux$2298585_CMP $procmux$2359838_CMP $procmux$2359837_CMP $procmux$2298555_CMP $procmux$2359833_CMP $procmux$2359832_CMP $procmux$2298525_CMP $procmux$2359828_CMP $procmux$2359827_CMP $procmux$2298495_CMP $procmux$2359823_CMP $procmux$2359822_CMP $procmux$2298465_CMP $procmux$2359818_CMP $procmux$2359817_CMP $procmux$2298435_CMP $procmux$2359813_CMP $procmux$2359812_CMP $procmux$2298405_CMP $procmux$2359808_CMP $procmux$2359807_CMP $procmux$2298375_CMP $procmux$2359803_CMP $procmux$2359802_CMP $procmux$2298345_CMP $procmux$2359798_CMP $procmux$2359797_CMP $procmux$2298317_CMP $procmux$2359793_CMP $procmux$2359792_CMP $auto$opt_reduce.cc:137:opt_pmux$2360761 $procmux$2359788_CMP $procmux$2359787_CMP $auto$opt_reduce.cc:137:opt_pmux$2360759 $procmux$2359783_CMP $procmux$2359782_CMP $auto$opt_reduce.cc:137:opt_pmux$2360757 $procmux$2359778_CMP $procmux$2359777_CMP $auto$opt_reduce.cc:137:opt_pmux$2360755 $procmux$2359773_CMP $procmux$2359772_CMP $auto$opt_reduce.cc:137:opt_pmux$2360753 $procmux$2359768_CMP $procmux$2359767_CMP $auto$opt_reduce.cc:137:opt_pmux$2360751 $procmux$2359763_CMP $procmux$2359762_CMP $auto$opt_reduce.cc:137:opt_pmux$2360749 $procmux$2359758_CMP $procmux$2359757_CMP $auto$opt_reduce.cc:137:opt_pmux$2360747 $procmux$2359753_CMP $procmux$2359752_CMP $auto$opt_reduce.cc:137:opt_pmux$2360745 $procmux$2359748_CMP $procmux$2359747_CMP $auto$opt_reduce.cc:137:opt_pmux$2360743 $procmux$2359743_CMP $procmux$2359742_CMP $auto$opt_reduce.cc:137:opt_pmux$2360741 $procmux$2359738_CMP $procmux$2359737_CMP $auto$opt_reduce.cc:137:opt_pmux$2360739 $procmux$2359733_CMP $procmux$2359732_CMP $auto$opt_reduce.cc:137:opt_pmux$2360737 $procmux$2359728_CMP $procmux$2359727_CMP $auto$opt_reduce.cc:137:opt_pmux$2360735 $procmux$2359723_CMP $procmux$2359722_CMP $auto$opt_reduce.cc:137:opt_pmux$2360733 $procmux$2359718_CMP $procmux$2359717_CMP $auto$opt_reduce.cc:137:opt_pmux$2360731 $procmux$2359713_CMP $procmux$2359712_CMP $auto$opt_reduce.cc:137:opt_pmux$2360729 $procmux$2359708_CMP $procmux$2359707_CMP $auto$opt_reduce.cc:137:opt_pmux$2360727 $procmux$2359703_CMP $procmux$2359702_CMP $auto$opt_reduce.cc:137:opt_pmux$2360725 $procmux$2359698_CMP $procmux$2359697_CMP $auto$opt_reduce.cc:137:opt_pmux$2360723 $procmux$2359693_CMP $procmux$2359692_CMP $auto$opt_reduce.cc:137:opt_pmux$2360721 $procmux$2359688_CMP $procmux$2359687_CMP $auto$opt_reduce.cc:137:opt_pmux$2360719 $procmux$2359683_CMP $procmux$2359682_CMP $auto$opt_reduce.cc:137:opt_pmux$2360717 $procmux$2359678_CMP $procmux$2359677_CMP $auto$opt_reduce.cc:137:opt_pmux$2360715 $procmux$2359673_CMP $procmux$2359672_CMP $auto$opt_reduce.cc:137:opt_pmux$2360713 $procmux$2359668_CMP $procmux$2359667_CMP $auto$opt_reduce.cc:137:opt_pmux$2360711 $procmux$2359663_CMP $procmux$2359662_CMP $auto$opt_reduce.cc:137:opt_pmux$2360709 $procmux$2359658_CMP $procmux$2359657_CMP $auto$opt_reduce.cc:137:opt_pmux$2360707 $procmux$2359653_CMP $procmux$2359652_CMP $auto$opt_reduce.cc:137:opt_pmux$2360705 $procmux$2359648_CMP $procmux$2359647_CMP $auto$opt_reduce.cc:137:opt_pmux$2360703 $procmux$2359643_CMP $procmux$2359642_CMP $auto$opt_reduce.cc:137:opt_pmux$2360701 $procmux$2359638_CMP $procmux$2359637_CMP $auto$opt_reduce.cc:137:opt_pmux$2360699 $procmux$2359633_CMP $auto$opt_reduce.cc:137:opt_pmux$2360697 $procmux$2359628_CMP $auto$opt_reduce.cc:137:opt_pmux$2360695 $procmux$2359623_CMP $auto$opt_reduce.cc:137:opt_pmux$2360693 $procmux$2359618_CMP $auto$opt_reduce.cc:137:opt_pmux$2360691 $procmux$2359613_CMP $auto$opt_reduce.cc:137:opt_pmux$2360689 $procmux$2359608_CMP $auto$opt_reduce.cc:137:opt_pmux$2360687 $procmux$2359603_CMP $procmux$2359602_CMP $auto$opt_reduce.cc:137:opt_pmux$2360685 $procmux$2359598_CMP $procmux$2359597_CMP $auto$opt_reduce.cc:137:opt_pmux$2360683 $procmux$2359593_CMP $procmux$2359592_CMP $auto$opt_reduce.cc:137:opt_pmux$2360681 $procmux$2359588_CMP $procmux$2359587_CMP $auto$opt_reduce.cc:137:opt_pmux$2360679 $procmux$2359583_CMP $procmux$2359582_CMP $auto$opt_reduce.cc:137:opt_pmux$2360677 $procmux$2359578_CMP $procmux$2359577_CMP $auto$opt_reduce.cc:137:opt_pmux$2360675 $procmux$2359573_CMP $procmux$2359572_CMP $auto$opt_reduce.cc:137:opt_pmux$2360673 $procmux$2359568_CMP $procmux$2359567_CMP $auto$opt_reduce.cc:137:opt_pmux$2360671 $procmux$2359563_CMP $procmux$2359562_CMP $auto$opt_reduce.cc:137:opt_pmux$2360669 $procmux$2359558_CMP $procmux$2359557_CMP $auto$opt_reduce.cc:137:opt_pmux$2360667 $procmux$2359553_CMP $procmux$2359552_CMP $auto$opt_reduce.cc:137:opt_pmux$2360665 $procmux$2359548_CMP $procmux$2359547_CMP $auto$opt_reduce.cc:137:opt_pmux$2360663 $procmux$2359543_CMP $procmux$2359542_CMP $auto$opt_reduce.cc:137:opt_pmux$2360661 $procmux$2359538_CMP $procmux$2359537_CMP $auto$opt_reduce.cc:137:opt_pmux$2360659 $procmux$2359533_CMP $procmux$2359532_CMP $auto$opt_reduce.cc:137:opt_pmux$2360657 $procmux$2359528_CMP $procmux$2359527_CMP $auto$opt_reduce.cc:137:opt_pmux$2360655 $procmux$2359523_CMP $procmux$2359522_CMP $auto$opt_reduce.cc:137:opt_pmux$2360653 $procmux$2359518_CMP $procmux$2359517_CMP $auto$opt_reduce.cc:137:opt_pmux$2360651 $procmux$2359513_CMP $procmux$2359512_CMP $auto$opt_reduce.cc:137:opt_pmux$2360649 $procmux$2359508_CMP $procmux$2359507_CMP $auto$opt_reduce.cc:137:opt_pmux$2360647 $procmux$2359503_CMP $procmux$2359502_CMP $auto$opt_reduce.cc:137:opt_pmux$2360645 $procmux$2359498_CMP $procmux$2359497_CMP $auto$opt_reduce.cc:137:opt_pmux$2360643 $procmux$2359493_CMP $procmux$2359492_CMP $auto$opt_reduce.cc:137:opt_pmux$2360641 $procmux$2359488_CMP $procmux$2359487_CMP $auto$opt_reduce.cc:137:opt_pmux$2360639 $procmux$2359483_CMP $procmux$2359482_CMP $auto$opt_reduce.cc:137:opt_pmux$2360637 $procmux$2359478_CMP $procmux$2359477_CMP $auto$opt_reduce.cc:137:opt_pmux$2360635 $procmux$2359473_CMP $procmux$2359472_CMP $auto$opt_reduce.cc:137:opt_pmux$2360633 $procmux$2359468_CMP $procmux$2359467_CMP $auto$opt_reduce.cc:137:opt_pmux$2360631 $procmux$2359463_CMP $procmux$2359462_CMP $auto$opt_reduce.cc:137:opt_pmux$2360629 $procmux$2359458_CMP $procmux$2359457_CMP $auto$opt_reduce.cc:137:opt_pmux$2360627 $procmux$2359453_CMP $procmux$2359452_CMP $auto$opt_reduce.cc:137:opt_pmux$2360625 $procmux$2359448_CMP $procmux$2359447_CMP $auto$opt_reduce.cc:137:opt_pmux$2360623 $procmux$2359443_CMP $procmux$2359442_CMP $auto$opt_reduce.cc:137:opt_pmux$2360621 $procmux$2359438_CMP $procmux$2359437_CMP $auto$opt_reduce.cc:137:opt_pmux$2360619 $procmux$2359433_CMP $procmux$2359432_CMP $auto$opt_reduce.cc:137:opt_pmux$2360617 $procmux$2359428_CMP $procmux$2359427_CMP $auto$opt_reduce.cc:137:opt_pmux$2360615 $procmux$2359423_CMP $procmux$2359422_CMP $auto$opt_reduce.cc:137:opt_pmux$2360613 $procmux$2359418_CMP $procmux$2359417_CMP $auto$opt_reduce.cc:137:opt_pmux$2360611 $procmux$2359413_CMP $procmux$2359412_CMP $auto$opt_reduce.cc:137:opt_pmux$2360609 $procmux$2359408_CMP $procmux$2359407_CMP $auto$opt_reduce.cc:137:opt_pmux$2360607 $procmux$2359403_CMP $procmux$2359402_CMP $auto$opt_reduce.cc:137:opt_pmux$2360605 $procmux$2359398_CMP $procmux$2359397_CMP $auto$opt_reduce.cc:137:opt_pmux$2360603 $procmux$2359393_CMP $procmux$2359392_CMP $auto$opt_reduce.cc:137:opt_pmux$2360601 $procmux$2359388_CMP $procmux$2359387_CMP $auto$opt_reduce.cc:137:opt_pmux$2360599 $procmux$2359383_CMP $procmux$2359382_CMP $auto$opt_reduce.cc:137:opt_pmux$2360597 $procmux$2359378_CMP $procmux$2359377_CMP $auto$opt_reduce.cc:137:opt_pmux$2360595 $procmux$2359373_CMP $procmux$2359372_CMP $auto$opt_reduce.cc:137:opt_pmux$2360593 $procmux$2359368_CMP $procmux$2359367_CMP $auto$opt_reduce.cc:137:opt_pmux$2360591 $procmux$2359363_CMP $procmux$2359362_CMP $auto$opt_reduce.cc:137:opt_pmux$2360589 $procmux$2359358_CMP $procmux$2359357_CMP $auto$opt_reduce.cc:137:opt_pmux$2360587 $procmux$2359353_CMP $procmux$2359352_CMP $auto$opt_reduce.cc:137:opt_pmux$2360585 $procmux$2359348_CMP $procmux$2359347_CMP $auto$opt_reduce.cc:137:opt_pmux$2360583 $procmux$2359343_CMP $procmux$2359342_CMP $auto$opt_reduce.cc:137:opt_pmux$2360581 $procmux$2359338_CMP $procmux$2359337_CMP $auto$opt_reduce.cc:137:opt_pmux$2360579 $procmux$2359333_CMP $procmux$2359332_CMP $auto$opt_reduce.cc:137:opt_pmux$2360577 $procmux$2359328_CMP $procmux$2359327_CMP $auto$opt_reduce.cc:137:opt_pmux$2360575 $procmux$2359323_CMP $procmux$2359322_CMP $auto$opt_reduce.cc:137:opt_pmux$2360573 $procmux$2359318_CMP $procmux$2359317_CMP $auto$opt_reduce.cc:137:opt_pmux$2360571 $auto$opt_reduce.cc:137:opt_pmux$2360569 $procmux$2359313_CMP $procmux$2359312_CMP $procmux$2359311_CMP $procmux$2359309_CMP $procmux$2359308_CMP $procmux$2359307_CMP $procmux$2359306_CMP $procmux$2359305_CMP $procmux$2359304_CMP $procmux$2359303_CMP $procmux$2359302_CMP $auto$opt_reduce.cc:137:opt_pmux$2360567 $auto$opt_reduce.cc:137:opt_pmux$2360565 $procmux$2295287_CMP }
+    New ctrl vector for $pmux cell $procmux$2300492: $auto$opt_reduce.cc:137:opt_pmux$2360765
+    New ctrl vector for $pmux cell $procmux$2279256: $auto$opt_reduce.cc:137:opt_pmux$2360767
+    New ctrl vector for $pmux cell $procmux$2284349: $auto$opt_reduce.cc:137:opt_pmux$2360769
+    New ctrl vector for $pmux cell $procmux$2354597: { $procmux$2359292_CMP $procmux$2359290_CMP $auto$opt_reduce.cc:137:opt_pmux$2360771 }
+    New ctrl vector for $pmux cell $procmux$2354590: $auto$opt_reduce.cc:137:opt_pmux$2360773
+    New ctrl vector for $pmux cell $procmux$2349488: $auto$opt_reduce.cc:137:opt_pmux$2360775
+  Optimizing cells in module \top.
+Performed a total of 22 changes.
+
+4.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~21 debug messages>
+Removed a total of 7 cells.
+
+4.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$2360369 ($adff) from module top (D = \rf_waddr_id_o, Q = \rf_waddr_latch).
+Adding EN signal on $procdff$2360359 ($adff) from module top (D = \imd_val_d_ex_i [67:34], Q = \imd_val_q [67:34]).
+Adding EN signal on $procdff$2360359 ($adff) from module top (D = \imd_val_d_ex_i [33:0], Q = \imd_val_q [33:0]).
+Adding EN signal on $procdff$2360374 ($adff) from module top (D = $procmux$2360353_Y, Q = \lsu_req_sent).
+Adding EN signal on $procdff$2360364 ($adff) from module top (D = \state_d, Q = \state_q).
+
+4.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 10 unused cells and 52487 unused wires.
+<suppressed ~12 debug messages>
+
+4.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+4.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~21 debug messages>
+
+4.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+4.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+4.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+4.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+4.16. Finished OPT passes. (There is nothing left to do.)
+
+5. Executing CHECK pass (checking for obvious problems).
+Checking module top...
+Found and reported 0 problems.
+
+6. Executing Verilog backend.
+
+6.1. Executing BMUXMAP pass.
+
+6.2. Executing DEMUXMAP pass.
+Dumping module `\top'.
+
+Warnings: 1 unique messages, 1 total
+End of script. Logfile hash: 510a5e476d, CPU: user 41.00s system 0.16s, MEM: 447.91 MB peak
+Yosys 0.52 (git sha1 fee39a3284c90249e1d9684cf6944ffbbcbb8f90)
+Time spent: 73% 1x proc_mux (29 sec), 11% 2x read_verilog (4 sec), ...
+$ bash map_new_circuit_counter.sh EmbenchFSM --seq nsichneu_counter_8a71f5bb938b
+======== nsichneu_counter_8a71f5bb938b ========
+Warning: Encountered `parallel_case' comment! Such legacy hot comments are supported by Yosys, but are not part of any formal language specification. Using the Verilog `parallel_case' attribute or the SystemVerilog `unique' or `priority' keywords is recommended!
+  [AIG]     ok
+Warning: Encountered `parallel_case' comment! Such legacy hot comments are supported by Yosys, but are not part of any formal language specification. Using the Verilog `parallel_case' attribute or the SystemVerilog `unique' or `priority' keywords is recommended!
+  [4-1-PAE] ok
+Warning: Encountered `parallel_case' comment! Such legacy hot comments are supported by Yosys, but are not part of any formal language specification. Using the Verilog `parallel_case' attribute or the SystemVerilog `unique' or `priority' keywords is recommended!
+  [4-LUT]   ok

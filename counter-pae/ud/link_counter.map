@@ -1,0 +1,113 @@
+
+There are no discarded input sections
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ROM              0x00000080         0x0000ff80         xr
+RAM              0x00010000         0x00010000         rw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD /tmp/ccG1cwo6.o
+LOAD /tmp/cc5QIGxE.o
+LOAD /tmp/ccuS13jo.o
+LOAD /tmp/ccg75lND.o
+LOAD /tmp/ccDsoOLZ.o
+
+.text           0x00000080      0x6f0
+ *(.text*)
+ .text          0x00000080       0x30 /tmp/ccG1cwo6.o
+                0x00000080                _start
+ .text          0x000000b0        0x0 /tmp/cc5QIGxE.o
+ .text.startup  0x000000b0       0x40 /tmp/cc5QIGxE.o
+                0x000000b0                main
+ .text          0x000000f0      0x1bc /tmp/ccuS13jo.o
+                0x000000f0                rand_beebs
+                0x00000124                srand_beebs
+                0x00000130                init_heap_beebs
+                0x0000015c                check_heap_beebs
+                0x0000017c                malloc_beebs
+                0x000001e4                calloc_beebs
+                0x00000228                realloc_beebs
+                0x000002a8                free_beebs
+ .text          0x000002ac       0x14 /tmp/ccg75lND.o
+                0x000002ac                initialise_board
+                0x000002b0                start_trigger
+                0x000002b8                stop_trigger
+ .text          0x000002c0      0x4b0 /tmp/ccDsoOLZ.o
+                0x000002c0                verify_benchmark
+                0x00000348                initialise_benchmark
+                0x0000034c                ludcmp
+                0x00000758                warm_caches
+                0x00000764                benchmark
+
+.rela.dyn       0x00000770        0x0
+ .rela.text     0x00000770        0x0 /tmp/ccG1cwo6.o
+
+.data           0x00010000       0x50
+ *(.rodata*)
+ .rodata        0x00010000       0x50 /tmp/ccDsoOLZ.o
+ *(.srodata*)
+ *(.data*)
+ .data          0x00010050        0x0 /tmp/ccG1cwo6.o
+ .data          0x00010050        0x0 /tmp/cc5QIGxE.o
+ .data          0x00010050        0x0 /tmp/ccuS13jo.o
+ .data          0x00010050        0x0 /tmp/ccg75lND.o
+ .data          0x00010050        0x0 /tmp/ccDsoOLZ.o
+ *(.sdata*)
+
+.bss            0x00010050      0x6f4
+                0x00010050                        _bss_start = .
+ *(.bss*)
+ .bss           0x00010050        0x0 /tmp/ccG1cwo6.o
+ .bss           0x00010050        0x0 /tmp/cc5QIGxE.o
+ .bss           0x00010050        0x0 /tmp/ccuS13jo.o
+ .bss           0x00010050        0x0 /tmp/ccg75lND.o
+ .bss           0x00010050      0x6e0 /tmp/ccDsoOLZ.o
+                0x00010050                x
+                0x000100a0                b
+                0x000100f0                a
+ *(.sbss*)
+ .sbss          0x00010730       0x10 /tmp/ccuS13jo.o
+ .sbss          0x00010740        0x4 /tmp/ccDsoOLZ.o
+                0x00010740                chkerr
+ *(COMMON)
+                0x00010744                        _bss_end = .
+                0x00020000                        _stack_top = 0x20000
+OUTPUT(/home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/ud/ud_counter.elf elf32-littleriscv)
+
+.riscv.attributes
+                0x00000000       0x33
+ .riscv.attributes
+                0x00000000       0x31 /tmp/ccG1cwo6.o
+ .riscv.attributes
+                0x00000031       0x33 /tmp/cc5QIGxE.o
+ .riscv.attributes
+                0x00000064       0x33 /tmp/ccuS13jo.o
+ .riscv.attributes
+                0x00000097       0x33 /tmp/ccg75lND.o
+ .riscv.attributes
+                0x000000ca       0x33 /tmp/ccDsoOLZ.o
+
+.comment        0x00000000       0x18
+ .comment       0x00000000       0x18 /tmp/cc5QIGxE.o
+                                 0x19 (size before relaxing)
+ .comment       0x00000018        0x0 /tmp/ccuS13jo.o
+                                 0x19 (size before relaxing)
+ .comment       0x00000018        0x0 /tmp/ccg75lND.o
+                                 0x19 (size before relaxing)
+ .comment       0x00000018        0x0 /tmp/ccDsoOLZ.o
+                                 0x19 (size before relaxing)
+
+.note.GNU-stack
+                0x00000000        0x0
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/cc5QIGxE.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccuS13jo.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccg75lND.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccDsoOLZ.o

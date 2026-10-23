@@ -1,0 +1,18 @@
+{
+  "benchmark": "nettle-sha256",
+  "status": "OK",
+  "stage": "pae",
+  "instructions": 1913,
+  "states": 1913,
+  "elapsed_seconds": 523.545,
+  "reason": "",
+  "directory": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/nettle-sha256",
+  "optimized_rtl": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/nettle-sha256/nettle-sha256_counter_fsm.sv",
+  "verilog_ready": true,
+  "map_circuit": "nettle-sha256_counter_04aac1d689ad",
+  "fsm_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/counter/20261023T055649.553613Z-pae/FSM/nettle-sha256_counter.v",
+  "pae41_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/counter/20261023T055649.553613Z-pae/4-1-PAE/nettle-sha256_counter.v",
+  "pae41_cells": 5400,
+  "pae43_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/counter/20261023T055649.553613Z-pae/4-3-PAE_OBFF/nettle-sha256_counter.v",
+  "pae43_cells": 3699
+}

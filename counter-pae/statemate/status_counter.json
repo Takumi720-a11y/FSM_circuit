@@ -1,0 +1,18 @@
+{
+  "benchmark": "statemate",
+  "status": "OK",
+  "stage": "pae",
+  "instructions": 1751,
+  "states": 1751,
+  "elapsed_seconds": 360.353,
+  "reason": "",
+  "directory": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/statemate",
+  "optimized_rtl": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/statemate/statemate_counter_fsm.sv",
+  "verilog_ready": true,
+  "map_circuit": "statemate_counter_6d0910340d3d",
+  "fsm_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/counter/20261023T055649.553613Z-pae/FSM/statemate_counter.v",
+  "pae41_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/counter/20261023T055649.553613Z-pae/4-1-PAE/statemate_counter.v",
+  "pae41_cells": 4100,
+  "pae43_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/counter/20261023T055649.553613Z-pae/4-3-PAE_OBFF/statemate_counter.v",
+  "pae43_cells": 2834
+}

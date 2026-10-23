@@ -1,0 +1,18 @@
+{
+  "benchmark": "matmult-int",
+  "status": "OK",
+  "stage": "pae",
+  "instructions": 369,
+  "states": 369,
+  "elapsed_seconds": 90.315,
+  "reason": "",
+  "directory": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/matmult-int",
+  "optimized_rtl": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/matmult-int/matmult-int_counter_fsm.sv",
+  "verilog_ready": true,
+  "map_circuit": "matmult-int_counter_1a014a0f6951",
+  "fsm_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/counter/20261023T055649.553613Z-pae/FSM/matmult-int_counter.v",
+  "pae41_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/counter/20261023T055649.553613Z-pae/4-1-PAE/matmult-int_counter.v",
+  "pae41_cells": 1156,
+  "pae43_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/counter/20261023T055649.553613Z-pae/4-3-PAE_OBFF/matmult-int_counter.v",
+  "pae43_cells": 820
+}

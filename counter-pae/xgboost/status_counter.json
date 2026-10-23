@@ -1,0 +1,18 @@
+{
+  "benchmark": "xgboost",
+  "status": "OK",
+  "stage": "pae",
+  "instructions": 314,
+  "states": 314,
+  "elapsed_seconds": 82.55,
+  "reason": "",
+  "directory": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/xgboost",
+  "optimized_rtl": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/xgboost/xgboost_counter_fsm.sv",
+  "verilog_ready": true,
+  "map_circuit": "xgboost_counter_04d44484ac61",
+  "fsm_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/counter/20261023T055649.553613Z-pae/FSM/xgboost_counter.v",
+  "pae41_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/counter/20261023T055649.553613Z-pae/4-1-PAE/xgboost_counter.v",
+  "pae41_cells": 1014,
+  "pae43_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/counter/20261023T055649.553613Z-pae/4-3-PAE_OBFF/xgboost_counter.v",
+  "pae43_cells": 714
+}

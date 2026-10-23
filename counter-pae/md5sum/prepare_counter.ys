@@ -1,0 +1,7 @@
+read_verilog -noautowire fsm_dec_counter.v
+hierarchy -check -top fsm_dec
+rename fsm_dec top
+proc
+opt
+check -assert
+write_verilog -noattr top_counter.v

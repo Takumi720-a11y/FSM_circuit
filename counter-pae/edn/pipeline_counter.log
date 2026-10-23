@@ -1,0 +1,370 @@
+$ riscv64-unknown-elf-gcc -march=rv32im_zicsr -mabi=ilp32 -ffreestanding -DCPU_MHZ=1 -DWARMUP_HEAT=0 -DGLOBAL_SCALE_FACTOR=1 -O2 -I /home/c3165/ibex_src/benchmarks/embench_ibex -I /home/c3165/ibex_src/benchmarks/embench-iot/support -I /home/c3165/ibex_src/benchmarks/embench-iot/src/edn -S /home/c3165/ibex_src/benchmarks/embench-iot/support/main.c -o /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/edn/00-main_counter.s
+$ riscv64-unknown-elf-gcc -march=rv32im_zicsr -mabi=ilp32 -ffreestanding -DCPU_MHZ=1 -DWARMUP_HEAT=0 -DGLOBAL_SCALE_FACTOR=1 -O2 -I /home/c3165/ibex_src/benchmarks/embench_ibex -I /home/c3165/ibex_src/benchmarks/embench-iot/support -I /home/c3165/ibex_src/benchmarks/embench-iot/src/edn -S /home/c3165/ibex_src/benchmarks/embench-iot/support/beebsc.c -o /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/edn/01-beebsc_counter.s
+$ riscv64-unknown-elf-gcc -march=rv32im_zicsr -mabi=ilp32 -ffreestanding -DCPU_MHZ=1 -DWARMUP_HEAT=0 -DGLOBAL_SCALE_FACTOR=1 -O2 -I /home/c3165/ibex_src/benchmarks/embench_ibex -I /home/c3165/ibex_src/benchmarks/embench-iot/support -I /home/c3165/ibex_src/benchmarks/embench-iot/src/edn -S /home/c3165/ibex_src/benchmarks/embench_ibex/boardsupport.c -o /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/edn/02-boardsupport_counter.s
+$ riscv64-unknown-elf-gcc -march=rv32im_zicsr -mabi=ilp32 -ffreestanding -DCPU_MHZ=1 -DWARMUP_HEAT=0 -DGLOBAL_SCALE_FACTOR=1 -O2 -I /home/c3165/ibex_src/benchmarks/embench_ibex -I /home/c3165/ibex_src/benchmarks/embench-iot/support -I /home/c3165/ibex_src/benchmarks/embench-iot/src/edn -S /home/c3165/ibex_src/benchmarks/embench-iot/src/edn/libedn.c -o /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/edn/03-libedn_counter.s
+$ riscv64-unknown-elf-gcc -march=rv32im_zicsr -mabi=ilp32 -ffreestanding -DCPU_MHZ=1 -DWARMUP_HEAT=0 -DGLOBAL_SCALE_FACTOR=1 -O2 -I /home/c3165/ibex_src/benchmarks/embench_ibex -I /home/c3165/ibex_src/benchmarks/embench-iot/support -I /home/c3165/ibex_src/benchmarks/embench-iot/src/edn /home/c3165/ibex_src/benchmarks/coremark/port/startup.s /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/edn/00-main_counter.s /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/edn/01-beebsc_counter.s /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/edn/02-boardsupport_counter.s /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/edn/03-libedn_counter.s -nostartfiles -nostdlib -T /home/c3165/ibex_src/benchmarks/coremark/port/link.ld -Wl,-Map=link_counter.map -o /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/edn/edn_counter.elf
+$ riscv64-unknown-elf-objdump -d /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/edn/edn_counter.elf
+$ python3 /home/c3165/ibex_src/benchmarks/gen_fsm_counter_ver.py /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/edn/edn_counter.dump /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/edn/edn_counter_fsm.sv
+Total instructions: 728
+Generated: /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/edn/edn_counter_fsm.sv
+PC map: /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/edn/edn_counter_fsm_pcmap.txt (728 entries)
+Counter RTL compatibility: remove variable-width casts and correct output spelling
+$ sv2v --top=fsm_dec /home/c3165/ibex_src/ibex_rtl/ibex_pkg.sv /home/c3165/ibex_src/benchmarks/build_fsm_pae/counter-49124ea037d0/20261023T055649.553613Z-pae/edn/edn_counter_fsm.sv
+$ yosys -s prepare_counter.ys
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2025  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.52 (git sha1 fee39a3284c90249e1d9684cf6944ffbbcbb8f90)
+
+-- Executing script file `prepare_counter.ys' --
+
+1. Executing Verilog-2005 frontend: fsm_dec_counter.v
+Parsing Verilog input from `fsm_dec_counter.v' to AST representation.
+Generating RTLIL representation for module `\fsm_dec'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \fsm_dec
+
+2.2. Analyzing design hierarchy..
+Top module:  \fsm_dec
+Removed 0 unused modules.
+Renaming module \fsm_dec to \top.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\top.$proc$fsm_dec_counter.v:266$916'.
+Cleaned up 1 empty switch.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$fsm_dec_counter.v:9237$919 in module top.
+Marked 40 switch rules as full_case in process $proc$fsm_dec_counter.v:266$916 in module top.
+Marked 1 switch rules as full_case in process $proc$fsm_dec_counter.v:261$10 in module top.
+Marked 1 switch rules as full_case in process $proc$fsm_dec_counter.v:256$6 in module top.
+Marked 2 switch rules as full_case in process $proc$fsm_dec_counter.v:246$4 in module top.
+Marked 1 switch rules as full_case in process $proc$fsm_dec_counter.v:239$1 in module top.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 30 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_ni in `\top.$proc$fsm_dec_counter.v:9237$919'.
+Found async reset \rst_ni in `\top.$proc$fsm_dec_counter.v:261$10'.
+Found async reset \rst_ni in `\top.$proc$fsm_dec_counter.v:256$6'.
+Found async reset \rst_ni in `\top.$proc$fsm_dec_counter.v:246$4'.
+Found async reset \rst_ni in `\top.$proc$fsm_dec_counter.v:239$1'.
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~45 debug messages>
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\top.$proc$fsm_dec_counter.v:0$922'.
+Creating decoders for process `\top.$proc$fsm_dec_counter.v:9237$919'.
+     1/2: $0\imd_val_q[67:0] [67:34]
+     2/2: $0\imd_val_q[67:0] [33:0]
+Creating decoders for process `\top.$proc$fsm_dec_counter.v:266$916'.
+     1/64: $40\state_d[9:0]
+     2/64: $39\state_d[9:0]
+     3/64: $38\state_d[9:0]
+     4/64: $37\state_d[9:0]
+     5/64: $36\state_d[9:0]
+     6/64: $35\state_d[9:0]
+     7/64: $34\state_d[9:0]
+     8/64: $33\state_d[9:0]
+     9/64: $32\state_d[9:0]
+    10/64: $31\state_d[9:0]
+    11/64: $30\state_d[9:0]
+    12/64: $29\state_d[9:0]
+    13/64: $28\state_d[9:0]
+    14/64: $27\state_d[9:0]
+    15/64: $26\state_d[9:0]
+    16/64: $25\state_d[9:0]
+    17/64: $24\state_d[9:0]
+    18/64: $23\state_d[9:0]
+    19/64: $22\state_d[9:0]
+    20/64: $21\state_d[9:0]
+    21/64: $20\state_d[9:0]
+    22/64: $19\state_d[9:0]
+    23/64: $18\state_d[9:0]
+    24/64: $17\state_d[9:0]
+    25/64: $16\state_d[9:0]
+    26/64: $15\state_d[9:0]
+    27/64: $14\state_d[9:0]
+    28/64: $13\state_d[9:0]
+    29/64: $12\state_d[9:0]
+    30/64: $11\state_d[9:0]
+    31/64: $10\state_d[9:0]
+    32/64: $9\state_d[9:0]
+    33/64: $8\state_d[9:0]
+    34/64: $7\state_d[9:0]
+    35/64: $6\state_d[9:0]
+    36/64: $5\state_d[9:0]
+    37/64: $4\state_d[9:0]
+    38/64: $3\state_d[9:0]
+    39/64: $2\state_d[9:0]
+    40/64: $1\instr_type_wb_o[1:0]
+    41/64: $1\en_wb_o[0:0]
+    42/64: $1\rf_wdata_id_o[31:0]
+    43/64: $1\rf_we_id_o[0:0]
+    44/64: $1\rf_waddr_id_o[4:0]
+    45/64: $1\alu_operand_b_ex_o[31:0]
+    46/64: $1\state_d[9:0]
+    47/64: $1\rf_ren_b_o[0:0]
+    48/64: $1\rf_ren_a_o[0:0]
+    49/64: $1\rf_raddr_b_o[4:0]
+    50/64: $1\rf_raddr_a_o[4:0]
+    51/64: $1\expecting_load_resp_o[0:0]
+    52/64: $1\lsu_wdata_o[31:0]
+    53/64: $1\lsu_sign_ext_o[0:0]
+    54/64: $1\lsu_type_o[1:0]
+    55/64: $1\lsu_we_o[0:0]
+    56/64: $1\lsu_req_o[0:0]
+    57/64: $1\multdiv_operand_b_ex_o[31:0]
+    58/64: $1\multdiv_operand_a_ex_o[31:0]
+    59/64: $1\multdiv_signed_mode_ex_o[1:0]
+    60/64: $1\multdiv_operator_ex_o[1:0]
+    61/64: $1\mult_sel_ex_o[0:0]
+    62/64: $1\mult_en_ex_o[0:0]
+    63/64: $1\alu_operand_a_ex_o[31:0]
+    64/64: $1\alu_operator_ex_o[6:0]
+Creating decoders for process `\top.$proc$fsm_dec_counter.v:261$10'.
+     1/1: $0\state_q[9:0]
+Creating decoders for process `\top.$proc$fsm_dec_counter.v:256$6'.
+     1/1: $0\rf_waddr_latch[4:0]
+Creating decoders for process `\top.$proc$fsm_dec_counter.v:246$4'.
+     1/1: $0\lsu_req_sent[0:0]
+Creating decoders for process `\top.$proc$fsm_dec_counter.v:239$1'.
+     1/1: $0\state_q_prev[9:0]
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\top.\_sv2v_0' from process `\top.$proc$fsm_dec_counter.v:0$922'.
+No latch inferred for signal `\top.\alu_operator_ex_o' from process `\top.$proc$fsm_dec_counter.v:266$916'.
+No latch inferred for signal `\top.\alu_operand_a_ex_o' from process `\top.$proc$fsm_dec_counter.v:266$916'.
+No latch inferred for signal `\top.\alu_operand_b_ex_o' from process `\top.$proc$fsm_dec_counter.v:266$916'.
+No latch inferred for signal `\top.\mult_en_ex_o' from process `\top.$proc$fsm_dec_counter.v:266$916'.
+No latch inferred for signal `\top.\div_en_ex_o' from process `\top.$proc$fsm_dec_counter.v:266$916'.
+No latch inferred for signal `\top.\mult_sel_ex_o' from process `\top.$proc$fsm_dec_counter.v:266$916'.
+No latch inferred for signal `\top.\div_sel_ex_o' from process `\top.$proc$fsm_dec_counter.v:266$916'.
+No latch inferred for signal `\top.\multdiv_operator_ex_o' from process `\top.$proc$fsm_dec_counter.v:266$916'.
+No latch inferred for signal `\top.\multdiv_signed_mode_ex_o' from process `\top.$proc$fsm_dec_counter.v:266$916'.
+No latch inferred for signal `\top.\multdiv_operand_a_ex_o' from process `\top.$proc$fsm_dec_counter.v:266$916'.
+No latch inferred for signal `\top.\multdiv_operand_b_ex_o' from process `\top.$proc$fsm_dec_counter.v:266$916'.
+No latch inferred for signal `\top.\lsu_req_o' from process `\top.$proc$fsm_dec_counter.v:266$916'.
+No latch inferred for signal `\top.\lsu_we_o' from process `\top.$proc$fsm_dec_counter.v:266$916'.
+No latch inferred for signal `\top.\lsu_type_o' from process `\top.$proc$fsm_dec_counter.v:266$916'.
+No latch inferred for signal `\top.\lsu_sign_ext_o' from process `\top.$proc$fsm_dec_counter.v:266$916'.
+No latch inferred for signal `\top.\lsu_wdata_o' from process `\top.$proc$fsm_dec_counter.v:266$916'.
+No latch inferred for signal `\top.\expecting_load_resp_o' from process `\top.$proc$fsm_dec_counter.v:266$916'.
+No latch inferred for signal `\top.\rf_raddr_a_o' from process `\top.$proc$fsm_dec_counter.v:266$916'.
+No latch inferred for signal `\top.\rf_raddr_b_o' from process `\top.$proc$fsm_dec_counter.v:266$916'.
+No latch inferred for signal `\top.\rf_ren_a_o' from process `\top.$proc$fsm_dec_counter.v:266$916'.
+No latch inferred for signal `\top.\rf_ren_b_o' from process `\top.$proc$fsm_dec_counter.v:266$916'.
+No latch inferred for signal `\top.\rf_waddr_id_o' from process `\top.$proc$fsm_dec_counter.v:266$916'.
+No latch inferred for signal `\top.\rf_wdata_id_o' from process `\top.$proc$fsm_dec_counter.v:266$916'.
+No latch inferred for signal `\top.\rf_we_id_o' from process `\top.$proc$fsm_dec_counter.v:266$916'.
+No latch inferred for signal `\top.\rf_rd_a_wb_match_o' from process `\top.$proc$fsm_dec_counter.v:266$916'.
+No latch inferred for signal `\top.\rf_rd_b_wb_match_o' from process `\top.$proc$fsm_dec_counter.v:266$916'.
+No latch inferred for signal `\top.\en_wb_o' from process `\top.$proc$fsm_dec_counter.v:266$916'.
+No latch inferred for signal `\top.\instr_type_wb_o' from process `\top.$proc$fsm_dec_counter.v:266$916'.
+No latch inferred for signal `\top.\state_d' from process `\top.$proc$fsm_dec_counter.v:266$916'.
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\top.\imd_val_q' using process `\top.$proc$fsm_dec_counter.v:9237$919'.
+  created $adff cell `$procdff$25815' with positive edge clock and positive level reset.
+Creating register for signal `\top.\state_q' using process `\top.$proc$fsm_dec_counter.v:261$10'.
+  created $adff cell `$procdff$25820' with positive edge clock and positive level reset.
+Creating register for signal `\top.\rf_waddr_latch' using process `\top.$proc$fsm_dec_counter.v:256$6'.
+  created $adff cell `$procdff$25825' with positive edge clock and positive level reset.
+Creating register for signal `\top.\lsu_req_sent' using process `\top.$proc$fsm_dec_counter.v:246$4'.
+  created $adff cell `$procdff$25830' with positive edge clock and positive level reset.
+Creating register for signal `\top.\state_q_prev' using process `\top.$proc$fsm_dec_counter.v:239$1'.
+  created $adff cell `$procdff$25835' with positive edge clock and positive level reset.
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `top.$proc$fsm_dec_counter.v:0$922'.
+Found and cleaned up 1 empty switch in `\top.$proc$fsm_dec_counter.v:9237$919'.
+Removing empty process `top.$proc$fsm_dec_counter.v:9237$919'.
+Found and cleaned up 40 empty switches in `\top.$proc$fsm_dec_counter.v:266$916'.
+Removing empty process `top.$proc$fsm_dec_counter.v:266$916'.
+Found and cleaned up 1 empty switch in `\top.$proc$fsm_dec_counter.v:261$10'.
+Removing empty process `top.$proc$fsm_dec_counter.v:261$10'.
+Found and cleaned up 1 empty switch in `\top.$proc$fsm_dec_counter.v:256$6'.
+Removing empty process `top.$proc$fsm_dec_counter.v:256$6'.
+Found and cleaned up 2 empty switches in `\top.$proc$fsm_dec_counter.v:246$4'.
+Removing empty process `top.$proc$fsm_dec_counter.v:246$4'.
+Removing empty process `top.$proc$fsm_dec_counter.v:239$1'.
+Cleaned up 45 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~16 debug messages>
+
+4. Executing OPT pass (performing simple optimizations).
+
+4.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+4.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~19395 debug messages>
+Removed a total of 6465 cells.
+
+4.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$16443.
+    dead port 2/2 on $mux $procmux$15716.
+    dead port 2/2 on $mux $procmux$15028.
+    dead port 2/2 on $mux $procmux$14359.
+    dead port 2/2 on $mux $procmux$13698.
+    dead port 2/2 on $mux $procmux$13041.
+    dead port 2/2 on $mux $procmux$12394.
+    dead port 2/2 on $mux $procmux$11756.
+    dead port 2/2 on $mux $procmux$11119.
+    dead port 2/2 on $mux $procmux$10487.
+    dead port 2/2 on $mux $procmux$9860.
+    dead port 2/2 on $mux $procmux$9242.
+    dead port 2/2 on $mux $procmux$8628.
+    dead port 2/2 on $mux $procmux$8019.
+    dead port 2/2 on $mux $procmux$7439.
+    dead port 2/2 on $mux $procmux$6873.
+    dead port 2/2 on $mux $procmux$6324.
+    dead port 2/2 on $mux $procmux$5781.
+    dead port 2/2 on $mux $procmux$5264.
+    dead port 2/2 on $mux $procmux$4755.
+    dead port 2/2 on $mux $procmux$4258.
+    dead port 2/2 on $mux $procmux$3777.
+    dead port 2/2 on $mux $procmux$3324.
+    dead port 2/2 on $mux $procmux$2923.
+    dead port 2/2 on $mux $procmux$2647.
+    dead port 2/2 on $mux $procmux$2390.
+    dead port 2/2 on $mux $procmux$2153.
+    dead port 2/2 on $mux $procmux$1963.
+    dead port 2/2 on $mux $procmux$1788.
+    dead port 2/2 on $mux $procmux$1627.
+    dead port 2/2 on $mux $procmux$1478.
+    dead port 2/2 on $mux $procmux$1341.
+    dead port 2/2 on $mux $procmux$1235.
+    dead port 2/2 on $mux $procmux$1145.
+    dead port 2/2 on $mux $procmux$1060.
+    dead port 2/2 on $mux $procmux$1020.
+    dead port 2/2 on $mux $procmux$990.
+    dead port 2/2 on $mux $procmux$961.
+    dead port 2/2 on $mux $procmux$938.
+Removed 39 multiplexer ports.
+<suppressed ~26 debug messages>
+
+4.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+    New ctrl vector for $pmux cell $procmux$21678: $auto$opt_reduce.cc:137:opt_pmux$25837
+    New ctrl vector for $pmux cell $procmux$16579: $auto$opt_reduce.cc:137:opt_pmux$25839
+    New ctrl vector for $pmux cell $procmux$22271: $auto$opt_reduce.cc:137:opt_pmux$25841
+    New ctrl vector for $pmux cell $procmux$20874: { $auto$opt_reduce.cc:137:opt_pmux$25897 $auto$opt_reduce.cc:137:opt_pmux$25895 $auto$opt_reduce.cc:137:opt_pmux$25893 $procmux$25317_CMP $auto$opt_reduce.cc:137:opt_pmux$25891 $auto$opt_reduce.cc:137:opt_pmux$25889 $auto$opt_reduce.cc:137:opt_pmux$25887 $auto$opt_reduce.cc:137:opt_pmux$25885 $auto$opt_reduce.cc:137:opt_pmux$25883 $auto$opt_reduce.cc:137:opt_pmux$25881 $auto$opt_reduce.cc:137:opt_pmux$25879 $auto$opt_reduce.cc:137:opt_pmux$25877 $auto$opt_reduce.cc:137:opt_pmux$25875 $auto$opt_reduce.cc:137:opt_pmux$25873 $auto$opt_reduce.cc:137:opt_pmux$25871 $auto$opt_reduce.cc:137:opt_pmux$25869 $auto$opt_reduce.cc:137:opt_pmux$25867 $auto$opt_reduce.cc:137:opt_pmux$25865 $auto$opt_reduce.cc:137:opt_pmux$25863 $auto$opt_reduce.cc:137:opt_pmux$25861 $auto$opt_reduce.cc:137:opt_pmux$25859 $auto$opt_reduce.cc:137:opt_pmux$25857 $auto$opt_reduce.cc:137:opt_pmux$25855 $auto$opt_reduce.cc:137:opt_pmux$25853 $auto$opt_reduce.cc:137:opt_pmux$25851 $auto$opt_reduce.cc:137:opt_pmux$25849 $auto$opt_reduce.cc:137:opt_pmux$25847 $auto$opt_reduce.cc:137:opt_pmux$25845 $auto$opt_reduce.cc:137:opt_pmux$25843 }
+    New ctrl vector for $pmux cell $procmux$16451: $auto$opt_reduce.cc:137:opt_pmux$25899
+    New ctrl vector for $pmux cell $procmux$21514: $auto$opt_reduce.cc:137:opt_pmux$25901
+    New ctrl vector for $pmux cell $procmux$19741: $auto$opt_reduce.cc:137:opt_pmux$25903
+    New ctrl vector for $pmux cell $procmux$17952: { $auto$opt_reduce.cc:137:opt_pmux$25961 $auto$opt_reduce.cc:137:opt_pmux$25959 $auto$opt_reduce.cc:137:opt_pmux$25957 $auto$opt_reduce.cc:137:opt_pmux$25955 $auto$opt_reduce.cc:137:opt_pmux$25953 $auto$opt_reduce.cc:137:opt_pmux$25951 $auto$opt_reduce.cc:137:opt_pmux$25949 $auto$opt_reduce.cc:137:opt_pmux$25947 $auto$opt_reduce.cc:137:opt_pmux$25945 $auto$opt_reduce.cc:137:opt_pmux$25943 $auto$opt_reduce.cc:137:opt_pmux$25941 $auto$opt_reduce.cc:137:opt_pmux$25939 $auto$opt_reduce.cc:137:opt_pmux$25937 $auto$opt_reduce.cc:137:opt_pmux$25935 $auto$opt_reduce.cc:137:opt_pmux$25933 $auto$opt_reduce.cc:137:opt_pmux$25931 $auto$opt_reduce.cc:137:opt_pmux$25929 $auto$opt_reduce.cc:137:opt_pmux$25927 $auto$opt_reduce.cc:137:opt_pmux$25925 $auto$opt_reduce.cc:137:opt_pmux$25923 $auto$opt_reduce.cc:137:opt_pmux$25921 $auto$opt_reduce.cc:137:opt_pmux$25919 $auto$opt_reduce.cc:137:opt_pmux$25917 $auto$opt_reduce.cc:137:opt_pmux$25915 $auto$opt_reduce.cc:137:opt_pmux$25913 $auto$opt_reduce.cc:137:opt_pmux$25911 $auto$opt_reduce.cc:137:opt_pmux$25909 $auto$opt_reduce.cc:137:opt_pmux$25907 $auto$opt_reduce.cc:137:opt_pmux$25905 }
+    New ctrl vector for $pmux cell $procmux$22165: $auto$opt_reduce.cc:137:opt_pmux$25963
+    New ctrl vector for $pmux cell $procmux$17120: $auto$opt_reduce.cc:137:opt_pmux$25965
+    New ctrl vector for $pmux cell $procmux$19991: $auto$opt_reduce.cc:137:opt_pmux$25967
+    New ctrl vector for $pmux cell $procmux$18494: { $procmux$19737_CMP $procmux$25675_CMP $procmux$25673_CMP $procmux$25669_CMP $procmux$19707_CMP $procmux$25661_CMP $procmux$25660_CMP $auto$opt_reduce.cc:137:opt_pmux$26091 $auto$opt_reduce.cc:137:opt_pmux$26089 $auto$opt_reduce.cc:137:opt_pmux$26087 $auto$opt_reduce.cc:137:opt_pmux$26085 $auto$opt_reduce.cc:137:opt_pmux$26083 $procmux$19563_CMP $procmux$25560_CMP $procmux$25546_CMP $procmux$25543_CMP $procmux$25542_CMP $procmux$25474_CMP $auto$opt_reduce.cc:137:opt_pmux$26081 $procmux$25458_CMP $procmux$25422_CMP $auto$opt_reduce.cc:137:opt_pmux$26079 $procmux$25416_CMP $procmux$25415_CMP $procmux$25414_CMP $procmux$25397_CMP $auto$opt_reduce.cc:137:opt_pmux$26077 $auto$opt_reduce.cc:137:opt_pmux$26075 $auto$opt_reduce.cc:137:opt_pmux$26073 $auto$opt_reduce.cc:137:opt_pmux$26071 $procmux$25339_CMP $procmux$25319_CMP $procmux$25316_CMP $procmux$25315_CMP $auto$opt_reduce.cc:137:opt_pmux$26069 $auto$opt_reduce.cc:137:opt_pmux$26067 $procmux$25310_CMP $procmux$25309_CMP $auto$opt_reduce.cc:137:opt_pmux$26065 $auto$opt_reduce.cc:137:opt_pmux$26063 $auto$opt_reduce.cc:137:opt_pmux$26061 $auto$opt_reduce.cc:137:opt_pmux$26059 $auto$opt_reduce.cc:137:opt_pmux$26057 $auto$opt_reduce.cc:137:opt_pmux$26055 $auto$opt_reduce.cc:137:opt_pmux$26053 $auto$opt_reduce.cc:137:opt_pmux$26051 $auto$opt_reduce.cc:137:opt_pmux$26049 $auto$opt_reduce.cc:137:opt_pmux$26047 $auto$opt_reduce.cc:137:opt_pmux$26045 $auto$opt_reduce.cc:137:opt_pmux$26043 $auto$opt_reduce.cc:137:opt_pmux$26041 $auto$opt_reduce.cc:137:opt_pmux$26039 $procmux$19239_CMP $procmux$25283_CMP $procmux$25272_CMP $procmux$25271_CMP $procmux$25270_CMP $procmux$25269_CMP $procmux$25268_CMP $auto$opt_reduce.cc:137:opt_pmux$26037 $auto$opt_reduce.cc:137:opt_pmux$26035 $auto$opt_reduce.cc:137:opt_pmux$26033 $auto$opt_reduce.cc:137:opt_pmux$26031 $auto$opt_reduce.cc:137:opt_pmux$26029 $procmux$25195_CMP $procmux$25194_CMP $procmux$25193_CMP $auto$opt_reduce.cc:137:opt_pmux$26027 $procmux$25178_CMP $auto$opt_reduce.cc:137:opt_pmux$26025 $auto$opt_reduce.cc:137:opt_pmux$26023 $auto$opt_reduce.cc:137:opt_pmux$26021 $auto$opt_reduce.cc:137:opt_pmux$26019 $auto$opt_reduce.cc:137:opt_pmux$26017 $auto$opt_reduce.cc:137:opt_pmux$26015 $auto$opt_reduce.cc:137:opt_pmux$26013 $auto$opt_reduce.cc:137:opt_pmux$26011 $auto$opt_reduce.cc:137:opt_pmux$26009 $auto$opt_reduce.cc:137:opt_pmux$26007 $auto$opt_reduce.cc:137:opt_pmux$26005 $auto$opt_reduce.cc:137:opt_pmux$26003 $auto$opt_reduce.cc:137:opt_pmux$26001 $auto$opt_reduce.cc:137:opt_pmux$25999 $procmux$25149_CMP $auto$opt_reduce.cc:137:opt_pmux$25997 $procmux$19068_CMP $procmux$25142_CMP $auto$opt_reduce.cc:137:opt_pmux$25995 $auto$opt_reduce.cc:137:opt_pmux$25993 $auto$opt_reduce.cc:137:opt_pmux$25991 $auto$opt_reduce.cc:137:opt_pmux$25989 $auto$opt_reduce.cc:137:opt_pmux$25987 $auto$opt_reduce.cc:137:opt_pmux$25985 $auto$opt_reduce.cc:137:opt_pmux$25983 $auto$opt_reduce.cc:137:opt_pmux$25981 $auto$opt_reduce.cc:137:opt_pmux$25979 $procmux$25116_CMP $auto$opt_reduce.cc:137:opt_pmux$25977 $auto$opt_reduce.cc:137:opt_pmux$25975 $procmux$19019_CMP $procmux$25111_CMP $auto$opt_reduce.cc:137:opt_pmux$25973 $auto$opt_reduce.cc:137:opt_pmux$25971 $procmux$19014_CMP $procmux$25108_CMP $auto$opt_reduce.cc:137:opt_pmux$25969 }
+    New ctrl vector for $pmux cell $procmux$20628: { $procmux$25771_CMP $auto$opt_reduce.cc:137:opt_pmux$26145 $auto$opt_reduce.cc:137:opt_pmux$26143 $auto$opt_reduce.cc:137:opt_pmux$26141 $auto$opt_reduce.cc:137:opt_pmux$26139 $auto$opt_reduce.cc:137:opt_pmux$26137 $auto$opt_reduce.cc:137:opt_pmux$26135 $auto$opt_reduce.cc:137:opt_pmux$26133 $auto$opt_reduce.cc:137:opt_pmux$26131 $auto$opt_reduce.cc:137:opt_pmux$26129 $auto$opt_reduce.cc:137:opt_pmux$26127 $auto$opt_reduce.cc:137:opt_pmux$26125 $auto$opt_reduce.cc:137:opt_pmux$26123 $auto$opt_reduce.cc:137:opt_pmux$26121 $auto$opt_reduce.cc:137:opt_pmux$26119 $auto$opt_reduce.cc:137:opt_pmux$26117 $auto$opt_reduce.cc:137:opt_pmux$26115 $auto$opt_reduce.cc:137:opt_pmux$26113 $auto$opt_reduce.cc:137:opt_pmux$26111 $auto$opt_reduce.cc:137:opt_pmux$26109 $auto$opt_reduce.cc:137:opt_pmux$26107 $auto$opt_reduce.cc:137:opt_pmux$26105 $auto$opt_reduce.cc:137:opt_pmux$26103 $auto$opt_reduce.cc:137:opt_pmux$26101 $auto$opt_reduce.cc:137:opt_pmux$26099 $auto$opt_reduce.cc:137:opt_pmux$26097 $auto$opt_reduce.cc:137:opt_pmux$26095 $auto$opt_reduce.cc:137:opt_pmux$26093 }
+    New ctrl vector for $pmux cell $procmux$25105: { $procmux$25676_CMP $procmux$25674_CMP $auto$opt_reduce.cc:137:opt_pmux$26147 }
+    New ctrl vector for $pmux cell $procmux$21907: { $auto$opt_reduce.cc:137:opt_pmux$26151 $auto$opt_reduce.cc:137:opt_pmux$26149 }
+    New ctrl vector for $pmux cell $procmux$25068: $auto$opt_reduce.cc:137:opt_pmux$26153
+    New ctrl vector for $pmux cell $procmux$25686: { $procmux$25795_CMP $procmux$25794_CMP $auto$opt_reduce.cc:137:opt_pmux$26169 $procmux$25790_CMP $procmux$25788_CMP $auto$opt_reduce.cc:137:opt_pmux$26167 $auto$opt_reduce.cc:137:opt_pmux$26165 $auto$opt_reduce.cc:137:opt_pmux$26163 $auto$opt_reduce.cc:137:opt_pmux$26161 $auto$opt_reduce.cc:137:opt_pmux$26159 $auto$opt_reduce.cc:137:opt_pmux$26157 $auto$opt_reduce.cc:137:opt_pmux$26155 }
+    New ctrl vector for $pmux cell $procmux$24928: $auto$opt_reduce.cc:137:opt_pmux$26171
+    New ctrl vector for $pmux cell $procmux$17536: $auto$opt_reduce.cc:137:opt_pmux$26173
+    New ctrl vector for $pmux cell $procmux$24059: $auto$opt_reduce.cc:137:opt_pmux$26175
+    New ctrl vector for $pmux cell $procmux$19009: { $procmux$25801_CMP $procmux$19728_CMP $procmux$19727_CMP $procmux$19726_CMP $procmux$19723_CMP $procmux$19722_CMP $procmux$19720_CMP $procmux$19719_CMP $procmux$19718_CMP $procmux$19716_CMP $procmux$19714_CMP $procmux$25796_CMP $procmux$19683_CMP $procmux$25793_CMP $procmux$25791_CMP $procmux$25790_CMP $procmux$25788_CMP $procmux$25787_CMP $procmux$25786_CMP $procmux$25785_CMP $procmux$25784_CMP $auto$opt_reduce.cc:137:opt_pmux$26183 $procmux$25783_CMP $procmux$25782_CMP $procmux$25781_CMP $procmux$25779_CMP $procmux$25778_CMP $procmux$25777_CMP $procmux$25775_CMP $procmux$25774_CMP $procmux$25771_CMP $procmux$25768_CMP $procmux$25764_CMP $procmux$25760_CMP $procmux$25758_CMP $procmux$25708_CMP $procmux$25707_CMP $procmux$19259_CMP $procmux$25706_CMP $procmux$25705_CMP $procmux$25704_CMP $procmux$25703_CMP $procmux$25700_CMP $procmux$25699_CMP $procmux$19134_CMP $procmux$19130_CMP $procmux$25694_CMP $procmux$19101_CMP $procmux$19095_CMP $procmux$25693_CMP $procmux$25692_CMP $auto$opt_reduce.cc:137:opt_pmux$26181 $procmux$25691_CMP $procmux$25690_CMP $procmux$25689_CMP $procmux$25688_CMP $auto$opt_reduce.cc:137:opt_pmux$26179 $procmux$25687_CMP $auto$opt_reduce.cc:137:opt_pmux$26177 $procmux$19010_CMP }
+    New ctrl vector for $pmux cell $procmux$21784: $auto$opt_reduce.cc:137:opt_pmux$26185
+  Optimizing cells in module \top.
+Performed a total of 22 changes.
+
+4.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~21 debug messages>
+Removed a total of 7 cells.
+
+4.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$25825 ($adff) from module top (D = \rf_waddr_id_o, Q = \rf_waddr_latch).
+Adding EN signal on $procdff$25815 ($adff) from module top (D = \imd_val_d_ex_i [67:34], Q = \imd_val_q [67:34]).
+Adding EN signal on $procdff$25815 ($adff) from module top (D = \imd_val_d_ex_i [33:0], Q = \imd_val_q [33:0]).
+Adding EN signal on $procdff$25830 ($adff) from module top (D = $procmux$25809_Y, Q = \lsu_req_sent).
+Adding EN signal on $procdff$25820 ($adff) from module top (D = \state_d, Q = \state_q).
+
+4.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 10 unused cells and 6693 unused wires.
+<suppressed ~12 debug messages>
+
+4.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+4.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~21 debug messages>
+
+4.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+4.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+4.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+4.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+4.16. Finished OPT passes. (There is nothing left to do.)
+
+5. Executing CHECK pass (checking for obvious problems).
+Checking module top...
+Found and reported 0 problems.
+
+6. Executing Verilog backend.
+
+6.1. Executing BMUXMAP pass.
+
+6.2. Executing DEMUXMAP pass.
+Dumping module `\top'.
+
+End of script. Logfile hash: ff2e23c724, CPU: user 0.85s system 0.03s, MEM: 68.28 MB peak
+Yosys 0.52 (git sha1 fee39a3284c90249e1d9684cf6944ffbbcbb8f90)
+Time spent: 34% 1x proc_mux (0 sec), 21% 2x read_verilog (0 sec), ...
+$ bash map_new_circuit_counter.sh EmbenchFSM --seq edn_counter_e3ca1a190001
+======== edn_counter_e3ca1a190001 ========
+Warning: Encountered `parallel_case' comment! Such legacy hot comments are supported by Yosys, but are not part of any formal language specification. Using the Verilog `parallel_case' attribute or the SystemVerilog `unique' or `priority' keywords is recommended!
+  [AIG]     ok
+Warning: Encountered `parallel_case' comment! Such legacy hot comments are supported by Yosys, but are not part of any formal language specification. Using the Verilog `parallel_case' attribute or the SystemVerilog `unique' or `priority' keywords is recommended!
+  [4-1-PAE] ok
+Warning: Encountered `parallel_case' comment! Such legacy hot comments are supported by Yosys, but are not part of any formal language specification. Using the Verilog `parallel_case' attribute or the SystemVerilog `unique' or `priority' keywords is recommended!
+  [4-LUT]   ok
+  [4-3-PAE_OBFF] ok  (順序(強制), PA2PAE=pa2pae_ob_only.py)
+完了: TechMapResult/EmbenchFSM/{AIG,4-1-PAE,LUT,4-3-PAE|4-3-PAE_OBFF,PA}/{eblif,verilog}
