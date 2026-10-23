@@ -1,0 +1,17 @@
+{
+  "schema": "fsm-profile-measurement-v1",
+  "benchmark": "aha-mont64",
+  "program_id": "6f0866a4c43920e69654da91e21a1a486680a255f5c9a1c6db1f00c5e4df1f5d",
+  "table_id": "8915a0efd272ced44d5559f7c3881a9a60219a7795eeabb386e3fe367278d4d8",
+  "command": [
+    "python3",
+    "/home/c3165/ibex_src/benchmarks/fsm_pae/profile_ibex.py"
+  ],
+  "baseline_sha256": "c1ed4c0f826d31a41e7df6c56f7ad9072df1cc5d2fd42ac290ff76dd93d15eaa",
+  "elf_sha256": "f640e8e13b3b8fa63ad874d616b010c5d554ff9a193b5d6eb7e987a264412d6a",
+  "source_file": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/aha-mont64/profile_label_inst_Gray02.json",
+  "source_sha256": "cada0a51f5210e628347f93aa88b49fdc546676b22c26e3f4f94683848b7d471",
+  "measured_transitions": 5129555,
+  "sampling": "cycles",
+  "note": "External command is responsible for real RTL execution and workload completion; state switching is not a whole-circuit power measurement."
+}

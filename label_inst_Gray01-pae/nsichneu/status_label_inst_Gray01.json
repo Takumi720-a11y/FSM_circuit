@@ -1,0 +1,22 @@
+{
+  "benchmark": "nsichneu",
+  "status": "FAILED",
+  "stage": "pae",
+  "instructions": 5190,
+  "states": 5190,
+  "elapsed_seconds": 1907.143,
+  "reason": "timeout after 1800.0s",
+  "directory": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray01-bbe342696727/20261022T004046.678086Z-pae/nsichneu",
+  "program_json": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray01-bbe342696727/20261022T004046.678086Z-pae/nsichneu/program_label_inst_Gray01.json",
+  "baseline_rtl": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray01-bbe342696727/20261022T004046.678086Z-pae/nsichneu/nsichneu_label_inst_Gray01_baseline.sv",
+  "profile_json": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray01-bbe342696727/20261022T004046.678086Z-pae/nsichneu/profile_label_inst_Gray01.json",
+  "label_codes_json": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray01-bbe342696727/20261022T004046.678086Z-pae/nsichneu/label_codes_label_inst_Gray01.json",
+  "state_flips_before": 5670168,
+  "state_flips_after": 4376480,
+  "optimized_rtl": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray01-bbe342696727/20261022T004046.678086Z-pae/nsichneu/nsichneu_label_inst_Gray01_fsm.sv",
+  "verilog_ready": true,
+  "map_circuit": "nsichneu_label_inst_Gray01_ccdbae50d157",
+  "fsm_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/label_inst_Gray01/20261022T004046.678086Z-pae/FSM/nsichneu_label_inst_Gray01.v",
+  "pae41_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/label_inst_Gray01/20261022T004046.678086Z-pae/4-1-PAE/nsichneu_label_inst_Gray01.v",
+  "pae41_cells": 15796
+}

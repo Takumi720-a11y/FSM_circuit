@@ -1,0 +1,2 @@
+#!/bin/sh
+exec /mnt/c/Users/c3165/ibex_src/benchmarks/../../PAE-Mapper-main/TECHMAP/bin/python "$@"

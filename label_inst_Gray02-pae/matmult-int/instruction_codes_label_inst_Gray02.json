@@ -1,0 +1,860 @@
+{
+  "schema": "fsm-instruction-codes-v1",
+  "program_id": "6a2d59f8dc4a36fdce6f17b403d540c5cce74895ba777a91ee0a49d325022b66",
+  "table_id": "24ed5e349a12487145577386b97206693ddc37f97fc838b2817996b0f92f6698",
+  "b": 5,
+  "profile_id": "a1c2f89ee6167bb089fdefceb9027829a4246a75c32fb051cec2c8d5047c2e49",
+  "algorithm": "gray-within-region-pair-swap-v1",
+  "objective": "measured-transitions",
+  "instruction_codes": {
+    "S0": 0,
+    "S1": 1,
+    "S2": 3,
+    "S3": 7,
+    "S4": 6,
+    "S5": 2,
+    "S6": 0,
+    "S7": 1,
+    "S8": 3,
+    "S9": 2,
+    "S10": 0,
+    "S11": 0,
+    "S12": 0,
+    "S13": 1,
+    "S14": 3,
+    "S15": 2,
+    "S16": 7,
+    "S17": 6,
+    "S18": 4,
+    "S19": 5,
+    "S20": 12,
+    "S21": 13,
+    "S22": 15,
+    "S23": 14,
+    "S24": 10,
+    "S25": 11,
+    "S26": 9,
+    "S27": 8,
+    "S28": 0,
+    "S29": 1,
+    "S30": 3,
+    "S31": 2,
+    "S32": 6,
+    "S33": 7,
+    "S34": 5,
+    "S35": 4,
+    "S36": 12,
+    "S37": 13,
+    "S38": 15,
+    "S39": 14,
+    "S40": 10,
+    "S41": 0,
+    "S42": 1,
+    "S43": 3,
+    "S44": 0,
+    "S45": 1,
+    "S46": 3,
+    "S47": 2,
+    "S48": 6,
+    "S49": 7,
+    "S50": 5,
+    "S51": 4,
+    "S52": 12,
+    "S53": 13,
+    "S54": 0,
+    "S55": 0,
+    "S56": 1,
+    "S57": 3,
+    "S58": 2,
+    "S59": 6,
+    "S60": 7,
+    "S61": 5,
+    "S62": 4,
+    "S63": 0,
+    "S64": 1,
+    "S65": 3,
+    "S66": 2,
+    "S67": 6,
+    "S68": 7,
+    "S69": 5,
+    "S70": 4,
+    "S71": 12,
+    "S72": 13,
+    "S73": 15,
+    "S74": 14,
+    "S75": 10,
+    "S76": 11,
+    "S77": 0,
+    "S78": 1,
+    "S79": 0,
+    "S80": 1,
+    "S81": 3,
+    "S82": 2,
+    "S83": 6,
+    "S84": 7,
+    "S85": 5,
+    "S86": 4,
+    "S87": 0,
+    "S88": 1,
+    "S89": 0,
+    "S90": 1,
+    "S91": 3,
+    "S92": 2,
+    "S93": 6,
+    "S94": 7,
+    "S95": 5,
+    "S96": 4,
+    "S97": 12,
+    "S98": 13,
+    "S99": 0,
+    "S100": 1,
+    "S101": 3,
+    "S102": 0,
+    "S103": 1,
+    "S104": 3,
+    "S105": 2,
+    "S106": 0,
+    "S107": 1,
+    "S108": 3,
+    "S109": 2,
+    "S110": 6,
+    "S111": 7,
+    "S112": 5,
+    "S113": 4,
+    "S114": 12,
+    "S115": 13,
+    "S116": 15,
+    "S117": 14,
+    "S118": 10,
+    "S119": 11,
+    "S120": 0,
+    "S121": 1,
+    "S122": 3,
+    "S123": 2,
+    "S124": 6,
+    "S125": 0,
+    "S126": 1,
+    "S127": 3,
+    "S128": 2,
+    "S129": 6,
+    "S130": 0,
+    "S131": 1,
+    "S132": 3,
+    "S133": 2,
+    "S134": 6,
+    "S135": 7,
+    "S136": 0,
+    "S137": 1,
+    "S138": 0,
+    "S139": 0,
+    "S140": 0,
+    "S141": 1,
+    "S142": 0,
+    "S143": 1,
+    "S144": 0,
+    "S145": 1,
+    "S146": 3,
+    "S147": 0,
+    "S148": 1,
+    "S149": 3,
+    "S150": 0,
+    "S151": 1,
+    "S152": 3,
+    "S153": 2,
+    "S154": 6,
+    "S155": 7,
+    "S156": 5,
+    "S157": 4,
+    "S158": 12,
+    "S159": 13,
+    "S160": 15,
+    "S161": 14,
+    "S162": 10,
+    "S163": 11,
+    "S164": 9,
+    "S165": 8,
+    "S166": 24,
+    "S167": 25,
+    "S168": 27,
+    "S169": 0,
+    "S170": 1,
+    "S171": 3,
+    "S172": 7,
+    "S173": 6,
+    "S174": 2,
+    "S175": 0,
+    "S176": 1,
+    "S177": 3,
+    "S178": 7,
+    "S179": 6,
+    "S180": 2,
+    "S181": 0,
+    "S182": 1,
+    "S183": 3,
+    "S184": 2,
+    "S185": 0,
+    "S186": 1,
+    "S187": 3,
+    "S188": 2,
+    "S189": 6,
+    "S190": 7,
+    "S191": 5,
+    "S192": 4,
+    "S193": 12,
+    "S194": 13,
+    "S195": 9,
+    "S196": 11,
+    "S197": 10,
+    "S198": 14,
+    "S199": 15,
+    "S200": 0,
+    "S201": 0,
+    "S202": 1,
+    "S203": 3,
+    "S204": 2,
+    "S205": 6,
+    "S206": 7,
+    "S207": 5,
+    "S208": 4,
+    "S209": 12,
+    "S210": 13,
+    "S211": 15,
+    "S212": 14,
+    "S213": 10,
+    "S214": 11,
+    "S215": 9,
+    "S216": 8,
+    "S217": 24,
+    "S218": 25,
+    "S219": 27,
+    "S220": 26,
+    "S221": 30,
+    "S222": 31,
+    "S223": 29,
+    "S224": 28,
+    "S225": 20,
+    "S226": 21,
+    "S227": 23,
+    "S228": 22,
+    "S229": 18,
+    "S230": 0,
+    "S231": 0,
+    "S232": 1,
+    "S233": 0,
+    "S234": 1,
+    "S235": 3,
+    "S236": 2,
+    "S237": 6,
+    "S238": 7,
+    "S239": 5,
+    "S240": 0,
+    "S241": 1,
+    "S242": 3,
+    "S243": 2,
+    "S244": 6,
+    "S245": 7,
+    "S246": 5,
+    "S247": 13,
+    "S248": 12,
+    "S249": 4,
+    "S250": 15,
+    "S251": 14,
+    "S252": 10,
+    "S253": 11,
+    "S254": 9,
+    "S255": 8,
+    "S256": 24,
+    "S257": 25,
+    "S258": 27,
+    "S259": 26,
+    "S260": 30,
+    "S261": 31,
+    "S262": 29,
+    "S263": 28,
+    "S264": 20,
+    "S265": 21,
+    "S266": 23,
+    "S267": 0,
+    "S268": 0,
+    "S269": 1,
+    "S270": 3,
+    "S271": 2,
+    "S272": 6,
+    "S273": 7,
+    "S274": 5,
+    "S275": 4,
+    "S276": 12,
+    "S277": 0,
+    "S278": 1,
+    "S279": 3,
+    "S280": 0,
+    "S281": 1,
+    "S282": 3,
+    "S283": 2,
+    "S284": 6,
+    "S285": 7,
+    "S286": 5,
+    "S287": 4,
+    "S288": 12,
+    "S289": 0,
+    "S290": 0,
+    "S291": 1,
+    "S292": 3,
+    "S293": 2,
+    "S294": 6,
+    "S295": 7,
+    "S296": 5,
+    "S297": 4,
+    "S298": 12,
+    "S299": 13,
+    "S300": 15,
+    "S301": 14,
+    "S302": 10,
+    "S303": 8,
+    "S304": 9,
+    "S305": 11,
+    "S306": 27,
+    "S307": 25,
+    "S308": 24,
+    "S309": 26,
+    "S310": 30,
+    "S311": 31,
+    "S312": 29,
+    "S313": 28,
+    "S314": 20,
+    "S315": 0,
+    "S316": 0,
+    "S317": 1,
+    "S318": 3,
+    "S319": 2,
+    "S320": 6,
+    "S321": 7,
+    "S322": 5,
+    "S323": 4,
+    "S324": 12,
+    "S325": 13,
+    "S326": 15,
+    "S327": 14,
+    "S328": 10,
+    "S329": 8,
+    "S330": 9,
+    "S331": 11,
+    "S332": 24,
+    "S333": 25,
+    "S334": 27,
+    "S335": 0,
+    "S336": 1,
+    "S337": 3,
+    "S338": 2,
+    "S339": 6,
+    "S340": 0,
+    "S341": 1,
+    "S342": 3,
+    "S343": 2,
+    "S344": 6,
+    "S345": 7,
+    "S346": 5,
+    "S347": 4,
+    "S348": 12,
+    "S349": 13,
+    "S350": 9,
+    "S351": 11,
+    "S352": 15,
+    "S353": 14,
+    "S354": 10,
+    "S355": 8,
+    "S356": 0,
+    "S357": 1,
+    "S358": 3,
+    "S359": 7,
+    "S360": 6,
+    "S361": 2,
+    "S362": 5,
+    "S363": 4,
+    "S364": 12,
+    "S365": 0,
+    "S366": 1,
+    "S367": 3,
+    "S368": 2
+  },
+  "regions": {
+    "R0": {
+      "kind": "complex",
+      "reasons": [
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R1": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R2": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R3": {
+      "kind": "complex",
+      "reasons": [
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R4": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "interior-return-address",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R5": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R6": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R7": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R8": {
+      "kind": "complex",
+      "reasons": [
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R9": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R10": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R11": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R12": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R13": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R14": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "interior-return-address",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R15": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R16": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R17": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "interior-return-address",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R18": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R19": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R20": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R21": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R22": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R23": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R24": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R25": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R26": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R27": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R28": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R29": {
+      "kind": "complex",
+      "reasons": [
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R30": {
+      "kind": "complex",
+      "reasons": [
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R31": {
+      "kind": "complex",
+      "reasons": [
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R32": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R33": {
+      "kind": "complex",
+      "reasons": [
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R34": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R35": {
+      "kind": "complex",
+      "reasons": [
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R36": {
+      "kind": "complex",
+      "reasons": [
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R37": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R38": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "interior-return-address",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R39": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R40": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "interior-return-address",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R41": {
+      "kind": "complex",
+      "reasons": [
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R42": {
+      "kind": "complex",
+      "reasons": [
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R43": {
+      "kind": "complex",
+      "reasons": [
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R44": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R45": {
+      "kind": "complex",
+      "reasons": [
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R46": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R47": {
+      "kind": "complex",
+      "reasons": [
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R48": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R49": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R50": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    }
+  },
+  "settings": {
+    "max_swaps": 100,
+    "max_evaluations": 200000,
+    "entry_code": 0,
+    "code_pool": "initial Gray codes per region"
+  },
+  "metrics": {
+    "instruction_flips_before": 2883012,
+    "instruction_flips_after": 2846736,
+    "transitions": 4447996,
+    "before": {
+      "intra-sequential": {
+        "transitions": 2434857,
+        "instruction_flips": 2434857
+      },
+      "inter-region": {
+        "transitions": 32318,
+        "instruction_flips": 80033
+      },
+      "hold": {
+        "transitions": 1648836,
+        "instruction_flips": 0
+      },
+      "intra-jump": {
+        "transitions": 331985,
+        "instruction_flips": 368122
+      }
+    },
+    "after": {
+      "intra-sequential": {
+        "transitions": 2434857,
+        "instruction_flips": 2434861
+      },
+      "inter-region": {
+        "transitions": 32318,
+        "instruction_flips": 48669
+      },
+      "hold": {
+        "transitions": 1648836,
+        "instruction_flips": 0
+      },
+      "intra-jump": {
+        "transitions": 331985,
+        "instruction_flips": 363206
+      }
+    }
+  },
+  "search": {
+    "swaps": 15,
+    "evaluations": 33536,
+    "stop": "local-optimum",
+    "changes": [
+      {
+        "source": "S195",
+        "target": "S199",
+        "delta": -28158
+      },
+      {
+        "source": "S359",
+        "target": "S361",
+        "delta": -3196
+      },
+      {
+        "source": "S178",
+        "target": "S180",
+        "delta": -1560
+      },
+      {
+        "source": "S196",
+        "target": "S198",
+        "delta": -1560
+      },
+      {
+        "source": "S303",
+        "target": "S305",
+        "delta": -720
+      },
+      {
+        "source": "S329",
+        "target": "S331",
+        "delta": -720
+      },
+      {
+        "source": "S350",
+        "target": "S354",
+        "delta": -194
+      },
+      {
+        "source": "S172",
+        "target": "S174",
+        "delta": -78
+      },
+      {
+        "source": "S247",
+        "target": "S249",
+        "delta": -78
+      },
+      {
+        "source": "S3",
+        "target": "S5",
+        "delta": -2
+      },
+      {
+        "source": "S16",
+        "target": "S17",
+        "delta": -2
+      },
+      {
+        "source": "S18",
+        "target": "S19",
+        "delta": -2
+      },
+      {
+        "source": "S306",
+        "target": "S308",
+        "delta": -2
+      },
+      {
+        "source": "S351",
+        "target": "S353",
+        "delta": -2
+      },
+      {
+        "source": "S352",
+        "target": "S354",
+        "delta": -2
+      }
+    ]
+  },
+  "caveat": "Static unit-edge scores or supplied-profile flips only; not whole-circuit power or unseen-input guarantee"
+}

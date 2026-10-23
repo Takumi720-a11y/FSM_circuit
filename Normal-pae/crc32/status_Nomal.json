@@ -1,0 +1,14 @@
+{
+  "benchmark": "crc32",
+  "status": "OK",
+  "stage": "pae",
+  "instructions": 234,
+  "states": 234,
+  "elapsed_seconds": 108.245,
+  "reason": "",
+  "directory": "/mnt/c/Users/c3165/ibex_src/benchmarks/build_fsm_pae/Nomal-f2c2a76fe961/20261017T003057.818723Z-pae/crc32",
+  "map_circuit": "crc32_Nomal_4587e75b9563",
+  "fsm_verilog": "/mnt/c/Users/c3165/ibex_src/benchmarks/results_fsm_pae/Nomal/20261017T003057.818723Z-pae/FSM/crc32_Nomal.v",
+  "pae41_verilog": "/mnt/c/Users/c3165/ibex_src/benchmarks/results_fsm_pae/Nomal/20261017T003057.818723Z-pae/4-1-PAE/crc32_Nomal.v",
+  "pae43_verilog": "/mnt/c/Users/c3165/ibex_src/benchmarks/results_fsm_pae/Nomal/20261017T003057.818723Z-pae/4-3-PAE_OBFF/crc32_Nomal.v"
+}

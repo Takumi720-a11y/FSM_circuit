@@ -1,0 +1,14 @@
+{
+  "benchmark": "slre",
+  "status": "OK",
+  "stage": "pae",
+  "instructions": 1176,
+  "states": 1176,
+  "elapsed_seconds": 630.371,
+  "reason": "",
+  "directory": "/mnt/c/Users/c3165/ibex_src/benchmarks/build_fsm_pae/Nomal-f2c2a76fe961/20261017T003057.818723Z-pae/slre",
+  "map_circuit": "slre_Nomal_5bf8aceb46a6",
+  "fsm_verilog": "/mnt/c/Users/c3165/ibex_src/benchmarks/results_fsm_pae/Nomal/20261017T003057.818723Z-pae/FSM/slre_Nomal.v",
+  "pae41_verilog": "/mnt/c/Users/c3165/ibex_src/benchmarks/results_fsm_pae/Nomal/20261017T003057.818723Z-pae/4-1-PAE/slre_Nomal.v",
+  "pae43_verilog": "/mnt/c/Users/c3165/ibex_src/benchmarks/results_fsm_pae/Nomal/20261017T003057.818723Z-pae/4-3-PAE_OBFF/slre_Nomal.v"
+}

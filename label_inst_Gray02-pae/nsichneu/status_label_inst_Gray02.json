@@ -1,0 +1,23 @@
+{
+  "benchmark": "nsichneu",
+  "status": "FAILED",
+  "stage": "pae",
+  "instructions": 5190,
+  "states": 5190,
+  "elapsed_seconds": 1907.608,
+  "reason": "timeout after 1800.0s",
+  "directory": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/nsichneu",
+  "program_json": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/nsichneu/program_label_inst_Gray02.json",
+  "baseline_rtl": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/nsichneu/nsichneu_label_inst_Gray02_baseline.sv",
+  "profile_json": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/nsichneu/profile_label_inst_Gray02.json",
+  "label_codes_json": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/nsichneu/label_codes_label_inst_Gray02.json",
+  "instruction_codes_json": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/nsichneu/instruction_codes_label_inst_Gray02.json",
+  "state_flips_before": 4425716,
+  "state_flips_after": 3119706,
+  "optimized_rtl": "/home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/nsichneu/nsichneu_label_inst_Gray02_fsm.sv",
+  "verilog_ready": true,
+  "map_circuit": "nsichneu_label_inst_Gray02_b2e54004fdc9",
+  "fsm_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/label_inst_Gray02/20261022T053546.835967Z-pae/FSM/nsichneu_label_inst_Gray02.v",
+  "pae41_verilog": "/home/c3165/ibex_src/benchmarks/results_fsm_pae/label_inst_Gray02/20261022T053546.835967Z-pae/4-1-PAE/nsichneu_label_inst_Gray02.v",
+  "pae41_cells": 16227
+}

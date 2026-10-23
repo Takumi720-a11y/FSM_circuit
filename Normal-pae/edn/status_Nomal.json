@@ -1,0 +1,14 @@
+{
+  "benchmark": "edn",
+  "status": "OK",
+  "stage": "pae",
+  "instructions": 728,
+  "states": 728,
+  "elapsed_seconds": 283.511,
+  "reason": "",
+  "directory": "/mnt/c/Users/c3165/ibex_src/benchmarks/build_fsm_pae/Nomal-f2c2a76fe961/20261017T003057.818723Z-pae/edn",
+  "map_circuit": "edn_Nomal_93e4f526d332",
+  "fsm_verilog": "/mnt/c/Users/c3165/ibex_src/benchmarks/results_fsm_pae/Nomal/20261017T003057.818723Z-pae/FSM/edn_Nomal.v",
+  "pae41_verilog": "/mnt/c/Users/c3165/ibex_src/benchmarks/results_fsm_pae/Nomal/20261017T003057.818723Z-pae/4-1-PAE/edn_Nomal.v",
+  "pae43_verilog": "/mnt/c/Users/c3165/ibex_src/benchmarks/results_fsm_pae/Nomal/20261017T003057.818723Z-pae/4-3-PAE_OBFF/edn_Nomal.v"
+}

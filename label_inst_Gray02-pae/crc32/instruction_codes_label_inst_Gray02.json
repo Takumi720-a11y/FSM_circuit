@@ -1,0 +1,597 @@
+{
+  "schema": "fsm-instruction-codes-v1",
+  "program_id": "9fad5e7f8a86845e39e3d0bfae82b2620f7d24325c68a8ca8bf8f3a43a28642f",
+  "table_id": "a0aae817d9c7720d2412c4e86c5f539da9035d5c5cedeeb958fb39f591e08110",
+  "b": 5,
+  "profile_id": "a75e0dc23a727a144868f6921c9792874ba581b50705b160288ce21e76c15c46",
+  "algorithm": "gray-within-region-pair-swap-v1",
+  "objective": "measured-transitions",
+  "instruction_codes": {
+    "S0": 0,
+    "S1": 1,
+    "S2": 3,
+    "S3": 7,
+    "S4": 6,
+    "S5": 2,
+    "S6": 0,
+    "S7": 1,
+    "S8": 3,
+    "S9": 2,
+    "S10": 0,
+    "S11": 0,
+    "S12": 0,
+    "S13": 1,
+    "S14": 3,
+    "S15": 2,
+    "S16": 6,
+    "S17": 7,
+    "S18": 4,
+    "S19": 5,
+    "S20": 12,
+    "S21": 13,
+    "S22": 15,
+    "S23": 14,
+    "S24": 10,
+    "S25": 11,
+    "S26": 9,
+    "S27": 8,
+    "S28": 0,
+    "S29": 1,
+    "S30": 3,
+    "S31": 2,
+    "S32": 6,
+    "S33": 7,
+    "S34": 5,
+    "S35": 4,
+    "S36": 12,
+    "S37": 13,
+    "S38": 15,
+    "S39": 14,
+    "S40": 10,
+    "S41": 0,
+    "S42": 1,
+    "S43": 3,
+    "S44": 0,
+    "S45": 1,
+    "S46": 3,
+    "S47": 2,
+    "S48": 6,
+    "S49": 7,
+    "S50": 5,
+    "S51": 4,
+    "S52": 12,
+    "S53": 13,
+    "S54": 0,
+    "S55": 0,
+    "S56": 1,
+    "S57": 3,
+    "S58": 2,
+    "S59": 6,
+    "S60": 7,
+    "S61": 5,
+    "S62": 4,
+    "S63": 0,
+    "S64": 1,
+    "S65": 3,
+    "S66": 2,
+    "S67": 6,
+    "S68": 7,
+    "S69": 5,
+    "S70": 4,
+    "S71": 12,
+    "S72": 13,
+    "S73": 15,
+    "S74": 14,
+    "S75": 10,
+    "S76": 11,
+    "S77": 0,
+    "S78": 1,
+    "S79": 0,
+    "S80": 1,
+    "S81": 3,
+    "S82": 2,
+    "S83": 6,
+    "S84": 7,
+    "S85": 5,
+    "S86": 4,
+    "S87": 0,
+    "S88": 1,
+    "S89": 0,
+    "S90": 1,
+    "S91": 3,
+    "S92": 2,
+    "S93": 6,
+    "S94": 7,
+    "S95": 5,
+    "S96": 4,
+    "S97": 12,
+    "S98": 13,
+    "S99": 0,
+    "S100": 1,
+    "S101": 3,
+    "S102": 0,
+    "S103": 1,
+    "S104": 3,
+    "S105": 2,
+    "S106": 0,
+    "S107": 1,
+    "S108": 3,
+    "S109": 2,
+    "S110": 6,
+    "S111": 7,
+    "S112": 5,
+    "S113": 4,
+    "S114": 12,
+    "S115": 13,
+    "S116": 15,
+    "S117": 14,
+    "S118": 10,
+    "S119": 11,
+    "S120": 0,
+    "S121": 1,
+    "S122": 3,
+    "S123": 2,
+    "S124": 6,
+    "S125": 0,
+    "S126": 1,
+    "S127": 3,
+    "S128": 2,
+    "S129": 6,
+    "S130": 0,
+    "S131": 1,
+    "S132": 3,
+    "S133": 2,
+    "S134": 6,
+    "S135": 7,
+    "S136": 0,
+    "S137": 1,
+    "S138": 0,
+    "S139": 0,
+    "S140": 0,
+    "S141": 1,
+    "S142": 0,
+    "S143": 1,
+    "S144": 0,
+    "S145": 1,
+    "S146": 3,
+    "S147": 2,
+    "S148": 6,
+    "S149": 7,
+    "S150": 5,
+    "S151": 4,
+    "S152": 12,
+    "S153": 13,
+    "S154": 15,
+    "S155": 14,
+    "S156": 10,
+    "S157": 11,
+    "S158": 9,
+    "S159": 0,
+    "S160": 0,
+    "S161": 1,
+    "S162": 3,
+    "S163": 2,
+    "S164": 0,
+    "S165": 11,
+    "S166": 3,
+    "S167": 2,
+    "S168": 6,
+    "S169": 7,
+    "S170": 5,
+    "S171": 13,
+    "S172": 12,
+    "S173": 4,
+    "S174": 15,
+    "S175": 14,
+    "S176": 10,
+    "S177": 8,
+    "S178": 9,
+    "S179": 27,
+    "S180": 24,
+    "S181": 25,
+    "S182": 1,
+    "S183": 0,
+    "S184": 1,
+    "S185": 3,
+    "S186": 2,
+    "S187": 6,
+    "S188": 7,
+    "S189": 5,
+    "S190": 4,
+    "S191": 0,
+    "S192": 1,
+    "S193": 3,
+    "S194": 2,
+    "S195": 6,
+    "S196": 0,
+    "S197": 1,
+    "S198": 3,
+    "S199": 2,
+    "S200": 6,
+    "S201": 7,
+    "S202": 5,
+    "S203": 4,
+    "S204": 12,
+    "S205": 0,
+    "S206": 1,
+    "S207": 3,
+    "S208": 2,
+    "S209": 6,
+    "S210": 7,
+    "S211": 5,
+    "S212": 4,
+    "S213": 12,
+    "S214": 13,
+    "S215": 15,
+    "S216": 14,
+    "S217": 10,
+    "S218": 11,
+    "S219": 9,
+    "S220": 8,
+    "S221": 24,
+    "S222": 0,
+    "S223": 0,
+    "S224": 1,
+    "S225": 3,
+    "S226": 0,
+    "S227": 1,
+    "S228": 3,
+    "S229": 0,
+    "S230": 1,
+    "S231": 3,
+    "S232": 2,
+    "S233": 6
+  },
+  "regions": {
+    "R0": {
+      "kind": "complex",
+      "reasons": [
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R1": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R2": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R3": {
+      "kind": "complex",
+      "reasons": [
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R4": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "interior-return-address",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R5": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R6": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R7": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R8": {
+      "kind": "complex",
+      "reasons": [
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R9": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R10": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R11": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R12": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R13": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R14": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "interior-return-address",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R15": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R16": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R17": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "interior-return-address",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R18": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R19": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R20": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R21": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R22": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R23": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R24": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R25": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R26": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R27": {
+      "kind": "complex",
+      "reasons": [
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R28": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "interior-return-address",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R29": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "interior-return-address",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R30": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R31": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R32": {
+      "kind": "complex",
+      "reasons": [
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R33": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "interior-return-address",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R34": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R35": {
+      "kind": "complex",
+      "reasons": [
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R36": {
+      "kind": "complex",
+      "reasons": [
+        "unresolved-indirect-entry-possible"
+      ]
+    },
+    "R37": {
+      "kind": "complex",
+      "reasons": [
+        "branch-call-or-dynamic-exit",
+        "unresolved-indirect-entry-possible"
+      ]
+    }
+  },
+  "settings": {
+    "max_swaps": 100,
+    "max_evaluations": 200000,
+    "entry_code": 0,
+    "code_pool": "initial Gray codes per region"
+  },
+  "metrics": {
+    "instruction_flips_before": 4527900,
+    "instruction_flips_after": 3831918,
+    "transitions": 4876585,
+    "before": {
+      "intra-sequential": {
+        "transitions": 3483036,
+        "instruction_flips": 3483036
+      },
+      "inter-region": {
+        "transitions": 349033,
+        "instruction_flips": 523130
+      },
+      "hold": {
+        "transitions": 870602,
+        "instruction_flips": 0
+      },
+      "intra-jump": {
+        "transitions": 173914,
+        "instruction_flips": 521734
+      }
+    },
+    "after": {
+      "intra-sequential": {
+        "transitions": 3483036,
+        "instruction_flips": 3483379
+      },
+      "inter-region": {
+        "transitions": 349033,
+        "instruction_flips": 174625
+      },
+      "hold": {
+        "transitions": 870602,
+        "instruction_flips": 0
+      },
+      "intra-jump": {
+        "transitions": 173914,
+        "instruction_flips": 173914
+      }
+    }
+  },
+  "search": {
+    "swaps": 6,
+    "evaluations": 6377,
+    "stop": "local-optimum",
+    "changes": [
+      {
+        "source": "S165",
+        "target": "S177",
+        "delta": -348158
+      },
+      {
+        "source": "S171",
+        "target": "S173",
+        "delta": -347480
+      },
+      {
+        "source": "S177",
+        "target": "S179",
+        "delta": -338
+      },
+      {
+        "source": "S3",
+        "target": "S5",
+        "delta": -2
+      },
+      {
+        "source": "S18",
+        "target": "S19",
+        "delta": -2
+      },
+      {
+        "source": "S179",
+        "target": "S182",
+        "delta": -2
+      }
+    ]
+  },
+  "caveat": "Static unit-edge scores or supplied-profile flips only; not whole-circuit power or unseen-input guarantee"
+}

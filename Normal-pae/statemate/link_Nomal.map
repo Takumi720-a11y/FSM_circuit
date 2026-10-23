@@ -1,0 +1,219 @@
+
+There are no discarded input sections
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ROM              0x00000080         0x0000ff80         xr
+RAM              0x00010000         0x00010000         rw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD /tmp/ccmi0wQJ.o
+LOAD /tmp/ccA5i0kK.o
+LOAD /tmp/cch4ODoj.o
+LOAD /tmp/ccAUrfHJ.o
+LOAD /tmp/ccP7B3F1.o
+
+.text           0x00000080     0x1b5c
+ *(.text*)
+ .text          0x00000080       0x30 /tmp/ccmi0wQJ.o
+                0x00000080                _start
+ .text          0x000000b0        0x0 /tmp/ccA5i0kK.o
+ .text.startup  0x000000b0       0x40 /tmp/ccA5i0kK.o
+                0x000000b0                main
+ .text          0x000000f0      0x1bc /tmp/cch4ODoj.o
+                0x000000f0                rand_beebs
+                0x00000124                srand_beebs
+                0x00000130                init_heap_beebs
+                0x0000015c                check_heap_beebs
+                0x0000017c                malloc_beebs
+                0x000001e4                calloc_beebs
+                0x00000228                realloc_beebs
+                0x000002a8                free_beebs
+ .text          0x000002ac       0x14 /tmp/ccAUrfHJ.o
+                0x000002ac                initialise_board
+                0x000002b0                start_trigger
+                0x000002b8                stop_trigger
+ .text          0x000002c0     0x191c /tmp/ccP7B3F1.o
+                0x00000e14                interface
+                0x00000f28                init
+                0x00000fc4                generic_KINDERSICHERUNG_CTRL
+                0x00000fd8                generic_FH_TUERMODUL_CTRL
+                0x00001008                generic_EINKLEMMSCHUTZ_CTRL
+                0x000010a8                generic_BLOCK_ERKENNUNG_CTRL
+                0x00001240                FH_DU
+                0x00001a28                warm_caches
+                0x00001a34                benchmark
+                0x00001a5c                initialise_benchmark
+                0x00001a60                verify_benchmark
+
+.rela.dyn       0x00001bdc        0x0
+ .rela.text     0x00001bdc        0x0 /tmp/ccmi0wQJ.o
+
+.data           0x00010000        0x0
+ *(.rodata*)
+ *(.srodata*)
+ *(.data*)
+ .data          0x00010000        0x0 /tmp/ccmi0wQJ.o
+ .data          0x00010000        0x0 /tmp/ccA5i0kK.o
+ .data          0x00010000        0x0 /tmp/cch4ODoj.o
+ .data          0x00010000        0x0 /tmp/ccAUrfHJ.o
+ .data          0x00010000        0x0 /tmp/ccP7B3F1.o
+ *(.sdata*)
+
+.bss            0x00010000      0x108
+                0x00010000                        _bss_start = .
+ *(.bss*)
+ .bss           0x00010000        0x0 /tmp/ccmi0wQJ.o
+ .bss           0x00010000        0x0 /tmp/ccA5i0kK.o
+ .bss           0x00010000        0x0 /tmp/cch4ODoj.o
+ .bss           0x00010000        0x0 /tmp/ccAUrfHJ.o
+ .bss           0x00010000       0x40 /tmp/ccP7B3F1.o
+ *(.sbss*)
+ .sbss          0x00010040       0x10 /tmp/cch4ODoj.o
+ .sbss          0x00010050       0xb8 /tmp/ccP7B3F1.o
+                0x00010050                BLOCK_ERKENNUNG_CTRL_BLOCK_ERKENNUNG_CTRL_next_state
+                0x00010051                BEWEGUNG_BLOCK_ERKENNUNG_CTRL_next_state
+                0x00010052                EINKLEMMSCHUTZ_CTRL_EINKLEMMSCHUTZ_CTRL_next_state
+                0x00010053                FH_STEUERUNG_DUMMY_FH_STEUERUNG_DUMMY_next_state
+                0x00010054                SCHLIESSEN_FH_TUERMODUL_CTRL_next_state
+                0x00010055                OEFFNEN_FH_TUERMODUL_CTRL_next_state
+                0x00010056                MANUELL_SCHLIESSEN_FH_TUERMODUL_CTRL_next_state
+                0x00010057                TIPP_SCHLIESSEN_FH_TUERMODUL_CTRL_next_state
+                0x00010058                INITIALISIERT_FH_TUERMODUL_CTRL_next_state
+                0x00010059                WIEDERHOLSPERRE_FH_TUERMODUL_CTRL_next_state
+                0x0001005a                A_FH_TUERMODUL_CTRL_next_state
+                0x0001005b                B_FH_TUERMODUL_CTRL_next_state
+                0x0001005c                KINDERSICHERUNG_CTRL_KINDERSICHERUNG_CTRL_next_state
+                0x0001005d                MEC_KINDERSICHERUNG_CTRL_next_state
+                0x0001005e                ZENTRAL_KINDERSICHERUNG_CTRL_next_state
+                0x0001005f                NICHT_INITIALISIERT_NICHT_INITIALISIERT_next_state
+                0x00010060                step
+                0x00010061                stable
+                0x00010064                time
+                0x00010068                FH_DU__MFHA_old
+                0x00010069                FH_DU__MFHA_copy
+                0x0001006a                FH_DU__MFHA
+                0x0001006b                FH_DU__MFHZ_old
+                0x0001006c                FH_DU__MFHZ_copy
+                0x0001006d                FH_DU__MFHZ
+                0x0001006e                FH_DU__BLOCK_old
+                0x0001006f                FH_DU__BLOCK_copy
+                0x00010070                FH_DU__BLOCK
+                0x00010071                FH_DU__DOOR_ID
+                0x00010072                FH_DU__S_FH_AUFDISC
+                0x00010073                FH_DU__S_FH_ZUDISC
+                0x00010074                FH_DU__S_FH_TMBFAUFDISC_old
+                0x00010075                FH_DU__S_FH_TMBFAUFDISC
+                0x00010076                FH_DU__S_FH_TMBFZUDISC_old
+                0x00010077                FH_DU__S_FH_TMBFZUDISC
+                0x00010078                FH_DU__S_FH_TMBFZUCAN_old
+                0x00010079                FH_DU__S_FH_TMBFZUCAN_copy
+                0x0001007a                FH_DU__S_FH_TMBFZUCAN
+                0x0001007b                FH_DU__S_FH_TMBFAUFCAN_old
+                0x0001007c                FH_DU__S_FH_TMBFAUFCAN_copy
+                0x0001007d                FH_DU__S_FH_TMBFAUFCAN
+                0x0001007e                FH_DU__EKS_LEISTE_AKTIV_old
+                0x0001007f                FH_DU__EKS_LEISTE_AKTIV
+                0x00010080                FH_DU__FT
+                0x00010081                FH_DU__S_FH_FTAUF
+                0x00010082                FH_DU__S_FH_FTZU
+                0x00010083                FH_DU__KL_50
+                0x00010084                FH_TUERMODUL__COM_CLOSE
+                0x00010085                FH_TUERMODUL__COM_OPEN
+                0x00010086                FH_TUERMODUL__EKS_LEISTE_AKTIV_old
+                0x00010087                FH_TUERMODUL__EKS_LEISTE_AKTIV
+                0x00010088                FH_TUERMODUL__MFHA_old
+                0x00010089                FH_TUERMODUL__MFHA_copy
+                0x0001008a                FH_TUERMODUL__MFHA
+                0x0001008b                FH_TUERMODUL__MFHZ_old
+                0x0001008c                FH_TUERMODUL__MFHZ_copy
+                0x0001008d                FH_TUERMODUL__MFHZ
+                0x0001008e                FH_TUERMODUL__SFHA_old
+                0x0001008f                FH_TUERMODUL__SFHA_copy
+                0x00010090                FH_TUERMODUL__SFHA
+                0x00010091                FH_TUERMODUL__SFHZ_old
+                0x00010092                FH_TUERMODUL__SFHZ_copy
+                0x00010093                FH_TUERMODUL__SFHZ
+                0x00010094                FH_TUERMODUL__FT
+                0x00010095                FH_TUERMODUL__BLOCK_old
+                0x00010096                FH_TUERMODUL__BLOCK_copy
+                0x00010097                FH_TUERMODUL__BLOCK
+                0x00010098                FH_TUERMODUL__KL_50
+                0x00010099                FH_TUERMODUL__SFHA_MEC_old
+                0x0001009a                FH_TUERMODUL__SFHA_MEC
+                0x0001009b                FH_TUERMODUL__SFHA_ZENTRAL_old
+                0x0001009c                FH_TUERMODUL__SFHA_ZENTRAL
+                0x0001009d                FH_TUERMODUL__SFHZ_MEC_old
+                0x0001009e                FH_TUERMODUL__SFHZ_MEC
+                0x0001009f                FH_TUERMODUL__SFHZ_ZENTRAL_old
+                0x000100a0                FH_TUERMODUL__SFHZ_ZENTRAL
+                0x000100a1                FH_TUERMODUL_CTRL__FT
+                0x000100a2                FH_TUERMODUL_CTRL__INREVERS1_copy
+                0x000100a3                FH_TUERMODUL_CTRL__INREVERS1
+                0x000100a4                FH_TUERMODUL_CTRL__INREVERS2_copy
+                0x000100a5                FH_TUERMODUL_CTRL__INREVERS2
+                0x000100a8                BLOCK_ERKENNUNG_CTRL__N_old
+                0x000100ac                BLOCK_ERKENNUNG_CTRL__N_copy
+                0x000100b0                BLOCK_ERKENNUNG_CTRL__N
+                0x000100b4                BLOCK_ERKENNUNG_CTRL__I_EIN_MAX_copy
+                0x000100b8                BLOCK_ERKENNUNG_CTRL__I_EIN_MAX
+                0x000100bc                FH_DU__I_EIN_old
+                0x000100c0                FH_DU__I_EIN
+                0x000100c4                FH_DU__POSITION
+                0x000100c8                FH_DU__MFH_copy
+                0x000100cc                FH_DU__MFH
+                0x000100d0                FH_TUERMODUL__I_EIN_old
+                0x000100d4                FH_TUERMODUL__I_EIN
+                0x000100d8                FH_TUERMODUL__POSITION
+                0x000100dc                sc_FH_TUERMODUL_CTRL_1739_10
+                0x000100e0                sc_FH_TUERMODUL_CTRL_1781_10
+                0x000100e4                FH_TUERMODUL_CTRL__N_old
+                0x000100e8                FH_TUERMODUL_CTRL__N_copy
+                0x000100ec                FH_TUERMODUL_CTRL__N
+                0x000100f0                sc_FH_TUERMODUL_CTRL_2329_1
+                0x000100f4                sc_FH_TUERMODUL_CTRL_2352_1
+                0x000100f8                sc_FH_TUERMODUL_CTRL_2375_2
+                0x000100fc                tm_entered_WIEDERHOLSPERRE_FH_TUERMODUL_CTRL
+                0x00010100                tm_entered_WIEDERHOLSPERRE_FH_TUERMODUL_CTRLexited_BEREIT_FH_TUERMODUL_CTRL
+                0x00010104                tm_entered_EINSCHALTSTROM_MESSEN_BLOCK_ERKENNUNG_CTRLch_BLOCK_ERKENNUNG_CTRL__N_copy
+ *(COMMON)
+                0x00010108                        _bss_end = .
+                0x00020000                        _stack_top = 0x20000
+OUTPUT(/mnt/c/Users/c3165/ibex_src/benchmarks/build_fsm_pae/Nomal-f2c2a76fe961/20261017T003057.818723Z-pae/statemate/statemate_Nomal.elf elf32-littleriscv)
+
+.riscv.attributes
+                0x00000000       0x33
+ .riscv.attributes
+                0x00000000       0x31 /tmp/ccmi0wQJ.o
+ .riscv.attributes
+                0x00000031       0x33 /tmp/ccA5i0kK.o
+ .riscv.attributes
+                0x00000064       0x33 /tmp/cch4ODoj.o
+ .riscv.attributes
+                0x00000097       0x33 /tmp/ccAUrfHJ.o
+ .riscv.attributes
+                0x000000ca       0x33 /tmp/ccP7B3F1.o
+
+.comment        0x00000000       0x18
+ .comment       0x00000000       0x18 /tmp/ccA5i0kK.o
+                                 0x19 (size before relaxing)
+ .comment       0x00000018        0x0 /tmp/cch4ODoj.o
+                                 0x19 (size before relaxing)
+ .comment       0x00000018        0x0 /tmp/ccAUrfHJ.o
+                                 0x19 (size before relaxing)
+ .comment       0x00000018        0x0 /tmp/ccP7B3F1.o
+                                 0x19 (size before relaxing)
+
+.note.GNU-stack
+                0x00000000        0x0
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccA5i0kK.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/cch4ODoj.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccAUrfHJ.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccP7B3F1.o

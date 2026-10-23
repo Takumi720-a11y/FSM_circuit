@@ -1,0 +1,14 @@
+{
+  "benchmark": "aha-mont64",
+  "status": "OK",
+  "stage": "pae",
+  "instructions": 829,
+  "states": 829,
+  "elapsed_seconds": 339.194,
+  "reason": "",
+  "directory": "/mnt/c/Users/c3165/ibex_src/benchmarks/build_fsm_pae/Nomal-f2c2a76fe961/20261017T003057.818723Z-pae/aha-mont64",
+  "map_circuit": "aha-mont64_Nomal_2f691425e41d",
+  "fsm_verilog": "/mnt/c/Users/c3165/ibex_src/benchmarks/results_fsm_pae/Nomal/20261017T003057.818723Z-pae/FSM/aha-mont64_Nomal.v",
+  "pae41_verilog": "/mnt/c/Users/c3165/ibex_src/benchmarks/results_fsm_pae/Nomal/20261017T003057.818723Z-pae/4-1-PAE/aha-mont64_Nomal.v",
+  "pae43_verilog": "/mnt/c/Users/c3165/ibex_src/benchmarks/results_fsm_pae/Nomal/20261017T003057.818723Z-pae/4-3-PAE_OBFF/aha-mont64_Nomal.v"
+}

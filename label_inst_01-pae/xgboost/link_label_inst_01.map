@@ -1,0 +1,126 @@
+
+There are no discarded input sections
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ROM              0x00000080         0x0000ff80         xr
+RAM              0x00010000         0x00010000         rw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD /tmp/ccySV3ob.o
+LOAD /tmp/cchQdUwV.o
+LOAD /tmp/ccqEvyWS.o
+LOAD /tmp/ccdgOMsa.o
+LOAD /tmp/ccjGwNvD.o
+LOAD /tmp/ccHANzdD.o
+
+.text           0x00000080      0x4e8
+ *(.text*)
+ .text          0x00000080       0x30 /tmp/ccySV3ob.o
+                0x00000080                _start
+ .text          0x000000b0        0x0 /tmp/cchQdUwV.o
+ .text.startup  0x000000b0       0x40 /tmp/cchQdUwV.o
+                0x000000b0                main
+ .text          0x000000f0      0x1bc /tmp/ccqEvyWS.o
+                0x000000f0                rand_beebs
+                0x00000124                srand_beebs
+                0x00000130                init_heap_beebs
+                0x0000015c                check_heap_beebs
+                0x0000017c                malloc_beebs
+                0x000001e4                calloc_beebs
+                0x00000228                realloc_beebs
+                0x000002a8                free_beebs
+ .text          0x000002ac       0x14 /tmp/ccdgOMsa.o
+                0x000002ac                initialise_board
+                0x000002b0                start_trigger
+                0x000002b8                stop_trigger
+ .text          0x000002c0       0xf0 /tmp/ccjGwNvD.o
+                0x00000394                warm_caches
+                0x00000398                benchmark
+                0x000003a0                initialise_benchmark
+                0x000003a4                verify_benchmark
+ .text          0x000003b0      0x1b8 /tmp/ccHANzdD.o
+                0x000003b0                predict
+
+.rela.dyn       0x00000568        0x0
+ .rela.text     0x00000568        0x0 /tmp/ccySV3ob.o
+
+.data           0x00010000     0x9a87
+ *(.rodata*)
+ .rodata        0x00010000     0x9a87 /tmp/ccHANzdD.o
+                0x00010000                tree_sizes
+                0x00010190                Y_test
+                0x00010210                X_test
+                0x00012210                leaf_values
+                0x00013b68                right_children
+                0x00015330                left_children
+                0x00016af8                comparison_values
+                0x000182c0                comparison_idxs
+ *(.srodata*)
+ *(.data*)
+ .data          0x00019a87        0x0 /tmp/ccySV3ob.o
+ .data          0x00019a87        0x0 /tmp/cchQdUwV.o
+ .data          0x00019a87        0x0 /tmp/ccqEvyWS.o
+ .data          0x00019a87        0x0 /tmp/ccdgOMsa.o
+ .data          0x00019a87        0x0 /tmp/ccjGwNvD.o
+ .data          0x00019a87        0x0 /tmp/ccHANzdD.o
+ *(.sdata*)
+
+.bss            0x00019a88       0x10
+                0x00019a88                        _bss_start = .
+ *(.bss*)
+ .bss           0x00019a88        0x0 /tmp/ccySV3ob.o
+ .bss           0x00019a88        0x0 /tmp/cchQdUwV.o
+ .bss           0x00019a88        0x0 /tmp/ccqEvyWS.o
+ .bss           0x00019a88        0x0 /tmp/ccdgOMsa.o
+ .bss           0x00019a88        0x0 /tmp/ccjGwNvD.o
+ .bss           0x00019a88        0x0 /tmp/ccHANzdD.o
+ *(.sbss*)
+ .sbss          0x00019a88       0x10 /tmp/ccqEvyWS.o
+ *(COMMON)
+                0x00019a98                        _bss_end = .
+                0x00020000                        _stack_top = 0x20000
+OUTPUT(/home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_01-84a80ace1398/20261021T031436.425187Z-pae/xgboost/xgboost_label_inst_01.elf elf32-littleriscv)
+
+.riscv.attributes
+                0x00000000       0x33
+ .riscv.attributes
+                0x00000000       0x31 /tmp/ccySV3ob.o
+ .riscv.attributes
+                0x00000031       0x33 /tmp/cchQdUwV.o
+ .riscv.attributes
+                0x00000064       0x33 /tmp/ccqEvyWS.o
+ .riscv.attributes
+                0x00000097       0x33 /tmp/ccdgOMsa.o
+ .riscv.attributes
+                0x000000ca       0x33 /tmp/ccjGwNvD.o
+ .riscv.attributes
+                0x000000fd       0x33 /tmp/ccHANzdD.o
+
+.comment        0x00000000       0x18
+ .comment       0x00000000       0x18 /tmp/cchQdUwV.o
+                                 0x19 (size before relaxing)
+ .comment       0x00000018        0x0 /tmp/ccqEvyWS.o
+                                 0x19 (size before relaxing)
+ .comment       0x00000018        0x0 /tmp/ccdgOMsa.o
+                                 0x19 (size before relaxing)
+ .comment       0x00000018        0x0 /tmp/ccjGwNvD.o
+                                 0x19 (size before relaxing)
+ .comment       0x00000018        0x0 /tmp/ccHANzdD.o
+                                 0x19 (size before relaxing)
+
+.note.GNU-stack
+                0x00000000        0x0
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/cchQdUwV.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccqEvyWS.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccdgOMsa.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccjGwNvD.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccHANzdD.o

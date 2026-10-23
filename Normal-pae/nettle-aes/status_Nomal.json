@@ -1,0 +1,14 @@
+{
+  "benchmark": "nettle-aes",
+  "status": "OK",
+  "stage": "pae",
+  "instructions": 1229,
+  "states": 1229,
+  "elapsed_seconds": 572.837,
+  "reason": "",
+  "directory": "/mnt/c/Users/c3165/ibex_src/benchmarks/build_fsm_pae/Nomal-f2c2a76fe961/20261017T003057.818723Z-pae/nettle-aes",
+  "map_circuit": "nettle-aes_Nomal_6e82803cd435",
+  "fsm_verilog": "/mnt/c/Users/c3165/ibex_src/benchmarks/results_fsm_pae/Nomal/20261017T003057.818723Z-pae/FSM/nettle-aes_Nomal.v",
+  "pae41_verilog": "/mnt/c/Users/c3165/ibex_src/benchmarks/results_fsm_pae/Nomal/20261017T003057.818723Z-pae/4-1-PAE/nettle-aes_Nomal.v",
+  "pae43_verilog": "/mnt/c/Users/c3165/ibex_src/benchmarks/results_fsm_pae/Nomal/20261017T003057.818723Z-pae/4-3-PAE_OBFF/nettle-aes_Nomal.v"
+}

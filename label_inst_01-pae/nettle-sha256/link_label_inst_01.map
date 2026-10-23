@@ -1,0 +1,119 @@
+
+There are no discarded input sections
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ROM              0x00000080         0x0000ff80         xr
+RAM              0x00010000         0x00010000         rw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD /tmp/cc4YutVe.o
+LOAD /tmp/ccCR0Pdr.o
+LOAD /tmp/ccdTQNrA.o
+LOAD /tmp/ccQJEzch.o
+LOAD /tmp/ccRLheie.o
+
+.text           0x00000080     0x1de4
+ *(.text*)
+ .text          0x00000080       0x30 /tmp/cc4YutVe.o
+                0x00000080                _start
+ .text          0x000000b0        0x0 /tmp/ccCR0Pdr.o
+ .text.startup  0x000000b0       0x40 /tmp/ccCR0Pdr.o
+                0x000000b0                main
+ .text          0x000000f0      0x1bc /tmp/ccdTQNrA.o
+                0x000000f0                rand_beebs
+                0x00000124                srand_beebs
+                0x00000130                init_heap_beebs
+                0x0000015c                check_heap_beebs
+                0x0000017c                malloc_beebs
+                0x000001e4                calloc_beebs
+                0x00000228                realloc_beebs
+                0x000002a8                free_beebs
+ .text          0x000002ac       0x14 /tmp/ccQJEzch.o
+                0x000002ac                initialise_board
+                0x000002b0                start_trigger
+                0x000002b8                stop_trigger
+ .text          0x000002c0     0x1ba4 /tmp/ccRLheie.o
+                0x000002c0                sha256_init
+                0x00000300                _nettle_write_be32
+                0x00000390                _nettle_sha256_compress
+                0x00001944                sha256_update
+                0x00001c58                sha256_digest
+                0x00001df0                verify_benchmark
+                0x00001e30                initialise_benchmark
+                0x00001e34                warm_caches
+                0x00001e40                benchmark
+
+.rela.dyn       0x00001e64        0x0
+ .rela.text     0x00001e64        0x0 /tmp/cc4YutVe.o
+
+.data           0x00010000      0x19c
+ *(.rodata*)
+ .rodata.str1.4
+                0x00010000        0x7 /tmp/ccRLheie.o
+ *fill*         0x00010007        0x1 
+ .rodata        0x00010008      0x13c /tmp/ccRLheie.o
+                0x00010128                nettle_sha256
+ *(.srodata*)
+ *(.data*)
+ .data          0x00010144        0x0 /tmp/cc4YutVe.o
+ .data          0x00010144        0x0 /tmp/ccCR0Pdr.o
+ .data          0x00010144        0x0 /tmp/ccdTQNrA.o
+ .data          0x00010144        0x0 /tmp/ccQJEzch.o
+ .data          0x00010144       0x58 /tmp/ccRLheie.o
+                0x00010144                msg
+                0x0001017c                hash
+ *(.sdata*)
+
+.bss            0x0001019c       0x30
+                0x0001019c                        _bss_start = .
+ *(.bss*)
+ .bss           0x0001019c        0x0 /tmp/cc4YutVe.o
+ .bss           0x0001019c        0x0 /tmp/ccCR0Pdr.o
+ .bss           0x0001019c        0x0 /tmp/ccdTQNrA.o
+ .bss           0x0001019c        0x0 /tmp/ccQJEzch.o
+ .bss           0x0001019c       0x20 /tmp/ccRLheie.o
+                0x0001019c                buffer
+ *(.sbss*)
+ .sbss          0x000101bc       0x10 /tmp/ccdTQNrA.o
+ *(COMMON)
+                0x000101cc                        _bss_end = .
+                0x00020000                        _stack_top = 0x20000
+OUTPUT(/home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_01-84a80ace1398/20261021T031436.425187Z-pae/nettle-sha256/nettle-sha256_label_inst_01.elf elf32-littleriscv)
+
+.riscv.attributes
+                0x00000000       0x33
+ .riscv.attributes
+                0x00000000       0x31 /tmp/cc4YutVe.o
+ .riscv.attributes
+                0x00000031       0x33 /tmp/ccCR0Pdr.o
+ .riscv.attributes
+                0x00000064       0x33 /tmp/ccdTQNrA.o
+ .riscv.attributes
+                0x00000097       0x33 /tmp/ccQJEzch.o
+ .riscv.attributes
+                0x000000ca       0x33 /tmp/ccRLheie.o
+
+.comment        0x00000000       0x18
+ .comment       0x00000000       0x18 /tmp/ccCR0Pdr.o
+                                 0x19 (size before relaxing)
+ .comment       0x00000018        0x0 /tmp/ccdTQNrA.o
+                                 0x19 (size before relaxing)
+ .comment       0x00000018        0x0 /tmp/ccQJEzch.o
+                                 0x19 (size before relaxing)
+ .comment       0x00000018        0x0 /tmp/ccRLheie.o
+                                 0x19 (size before relaxing)
+
+.note.GNU-stack
+                0x00000000        0x0
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccCR0Pdr.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccdTQNrA.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccQJEzch.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccRLheie.o

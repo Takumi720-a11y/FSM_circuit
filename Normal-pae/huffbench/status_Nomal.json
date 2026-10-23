@@ -1,0 +1,14 @@
+{
+  "benchmark": "huffbench",
+  "status": "OK",
+  "stage": "pae",
+  "instructions": 704,
+  "states": 704,
+  "elapsed_seconds": 267.21,
+  "reason": "",
+  "directory": "/mnt/c/Users/c3165/ibex_src/benchmarks/build_fsm_pae/Nomal-f2c2a76fe961/20261017T003057.818723Z-pae/huffbench",
+  "map_circuit": "huffbench_Nomal_8e5d67cc5f21",
+  "fsm_verilog": "/mnt/c/Users/c3165/ibex_src/benchmarks/results_fsm_pae/Nomal/20261017T003057.818723Z-pae/FSM/huffbench_Nomal.v",
+  "pae41_verilog": "/mnt/c/Users/c3165/ibex_src/benchmarks/results_fsm_pae/Nomal/20261017T003057.818723Z-pae/4-1-PAE/huffbench_Nomal.v",
+  "pae43_verilog": "/mnt/c/Users/c3165/ibex_src/benchmarks/results_fsm_pae/Nomal/20261017T003057.818723Z-pae/4-3-PAE_OBFF/huffbench_Nomal.v"
+}

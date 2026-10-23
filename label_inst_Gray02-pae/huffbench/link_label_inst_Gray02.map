@@ -1,0 +1,108 @@
+
+There are no discarded input sections
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ROM              0x00000080         0x0000ff80         xr
+RAM              0x00010000         0x00010000         rw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD /tmp/ccN5eZaA.o
+LOAD /tmp/ccDv26I4.o
+LOAD /tmp/ccsqjK0A.o
+LOAD /tmp/ccwvdQie.o
+LOAD /tmp/ccQHAnOK.o
+
+.text           0x00000080      0xb00
+ *(.text*)
+ .text          0x00000080       0x30 /tmp/ccN5eZaA.o
+                0x00000080                _start
+ .text          0x000000b0        0x0 /tmp/ccDv26I4.o
+ .text.startup  0x000000b0       0x40 /tmp/ccDv26I4.o
+                0x000000b0                main
+ .text          0x000000f0      0x1bc /tmp/ccsqjK0A.o
+                0x000000f0                rand_beebs
+                0x00000124                srand_beebs
+                0x00000130                init_heap_beebs
+                0x0000015c                check_heap_beebs
+                0x0000017c                malloc_beebs
+                0x000001e4                calloc_beebs
+                0x00000228                realloc_beebs
+                0x000002a8                free_beebs
+ .text          0x000002ac       0x14 /tmp/ccwvdQie.o
+                0x000002ac                initialise_board
+                0x000002b0                start_trigger
+                0x000002b8                stop_trigger
+ .text          0x000002c0      0x8c0 /tmp/ccQHAnOK.o
+                0x00000380                compdecomp
+                0x00000b0c                verify_benchmark
+                0x00000b4c                initialise_benchmark
+                0x00000b50                warm_caches
+                0x00000b5c                benchmark
+
+.rela.dyn       0x00000b80        0x0
+ .rela.text     0x00000b80        0x0 /tmp/ccN5eZaA.o
+
+.data           0x00010000      0x1f4
+ *(.rodata*)
+ .rodata        0x00010000      0x1f4 /tmp/ccQHAnOK.o
+ *(.srodata*)
+ *(.data*)
+ .data          0x000101f4        0x0 /tmp/ccN5eZaA.o
+ .data          0x000101f4        0x0 /tmp/ccDv26I4.o
+ .data          0x000101f4        0x0 /tmp/ccsqjK0A.o
+ .data          0x000101f4        0x0 /tmp/ccwvdQie.o
+ .data          0x000101f4        0x0 /tmp/ccQHAnOK.o
+ *(.sdata*)
+
+.bss            0x00010200     0x2210
+                0x00010200                        _bss_start = .
+ *(.bss*)
+ .bss           0x00010200        0x0 /tmp/ccN5eZaA.o
+ .bss           0x00010200        0x0 /tmp/ccDv26I4.o
+ .bss           0x00010200        0x0 /tmp/ccsqjK0A.o
+ .bss           0x00010200        0x0 /tmp/ccwvdQie.o
+ .bss           0x00010200     0x2200 /tmp/ccQHAnOK.o
+ *(.sbss*)
+ .sbss          0x00012400       0x10 /tmp/ccsqjK0A.o
+ *(COMMON)
+                0x00012410                        _bss_end = .
+                0x00020000                        _stack_top = 0x20000
+OUTPUT(/home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/huffbench/huffbench_label_inst_Gray02.elf elf32-littleriscv)
+
+.riscv.attributes
+                0x00000000       0x33
+ .riscv.attributes
+                0x00000000       0x31 /tmp/ccN5eZaA.o
+ .riscv.attributes
+                0x00000031       0x33 /tmp/ccDv26I4.o
+ .riscv.attributes
+                0x00000064       0x33 /tmp/ccsqjK0A.o
+ .riscv.attributes
+                0x00000097       0x33 /tmp/ccwvdQie.o
+ .riscv.attributes
+                0x000000ca       0x33 /tmp/ccQHAnOK.o
+
+.comment        0x00000000       0x18
+ .comment       0x00000000       0x18 /tmp/ccDv26I4.o
+                                 0x19 (size before relaxing)
+ .comment       0x00000018        0x0 /tmp/ccsqjK0A.o
+                                 0x19 (size before relaxing)
+ .comment       0x00000018        0x0 /tmp/ccwvdQie.o
+                                 0x19 (size before relaxing)
+ .comment       0x00000018        0x0 /tmp/ccQHAnOK.o
+                                 0x19 (size before relaxing)
+
+.note.GNU-stack
+                0x00000000        0x0
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccDv26I4.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccsqjK0A.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccwvdQie.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccQHAnOK.o

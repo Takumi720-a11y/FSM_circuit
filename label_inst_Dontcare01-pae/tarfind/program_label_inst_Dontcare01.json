@@ -1,0 +1,5724 @@
+{
+  "schema": "fsm-state-table-v1",
+  "program_id": "ac28ef9fa9732648dbddd7b4b6add4475407051a875d7d5b732e6b76b9e76f39",
+  "table_id": "c646c1a791de5e87c5a860933865ac49cd1350cfdef2d485a7b2dc914fd4b8c5",
+  "source": {
+    "instructions": [
+      [
+        128,
+        "lui",
+        "sp,0x20"
+      ],
+      [
+        132,
+        "addi",
+        "sp,sp,-16"
+      ],
+      [
+        136,
+        "auipc",
+        "t0,0x10"
+      ],
+      [
+        140,
+        "addi",
+        "t0,t0,-136"
+      ],
+      [
+        144,
+        "auipc",
+        "t1,0x12"
+      ],
+      [
+        148,
+        "addi",
+        "t1,t1,676"
+      ],
+      [
+        152,
+        "bge",
+        "t0,t1,a8 <bss_done>"
+      ],
+      [
+        156,
+        "sw",
+        "zero,0(t0)"
+      ],
+      [
+        160,
+        "addi",
+        "t0,t0,4"
+      ],
+      [
+        164,
+        "j",
+        "98 <bss_loop>"
+      ],
+      [
+        168,
+        "jal",
+        "b0 <main>"
+      ],
+      [
+        172,
+        "j",
+        "ac <loop>"
+      ],
+      [
+        176,
+        "addi",
+        "sp,sp,-32"
+      ],
+      [
+        180,
+        "sw",
+        "ra,28(sp)"
+      ],
+      [
+        184,
+        "jal",
+        "2ac <initialise_board>"
+      ],
+      [
+        188,
+        "jal",
+        "4d8 <initialise_benchmark>"
+      ],
+      [
+        192,
+        "li",
+        "a0,0"
+      ],
+      [
+        196,
+        "jal",
+        "4c0 <warm_caches>"
+      ],
+      [
+        200,
+        "jal",
+        "2b0 <start_trigger>"
+      ],
+      [
+        204,
+        "jal",
+        "4cc <benchmark>"
+      ],
+      [
+        208,
+        "sw",
+        "a0,12(sp)"
+      ],
+      [
+        212,
+        "jal",
+        "2b8 <stop_trigger>"
+      ],
+      [
+        216,
+        "lw",
+        "a0,12(sp)"
+      ],
+      [
+        220,
+        "jal",
+        "4dc <verify_benchmark>"
+      ],
+      [
+        224,
+        "lw",
+        "ra,28(sp)"
+      ],
+      [
+        228,
+        "seqz",
+        "a0,a0"
+      ],
+      [
+        232,
+        "addi",
+        "sp,sp,32"
+      ],
+      [
+        236,
+        "ret",
+        ""
+      ],
+      [
+        240,
+        "lui",
+        "a4,0x12"
+      ],
+      [
+        244,
+        "lw",
+        "a0,816(a4)"
+      ],
+      [
+        248,
+        "lui",
+        "a5,0x41c65"
+      ],
+      [
+        252,
+        "addi",
+        "a5,a5,-403"
+      ],
+      [
+        256,
+        "mul",
+        "a0,a0,a5"
+      ],
+      [
+        260,
+        "lui",
+        "a5,0x3"
+      ],
+      [
+        264,
+        "addi",
+        "a5,a5,57"
+      ],
+      [
+        268,
+        "add",
+        "a0,a0,a5"
+      ],
+      [
+        272,
+        "slli",
+        "a0,a0,0x1"
+      ],
+      [
+        276,
+        "srli",
+        "a0,a0,0x1"
+      ],
+      [
+        280,
+        "sw",
+        "a0,816(a4)"
+      ],
+      [
+        284,
+        "srli",
+        "a0,a0,0x10"
+      ],
+      [
+        288,
+        "ret",
+        ""
+      ],
+      [
+        292,
+        "lui",
+        "a5,0x12"
+      ],
+      [
+        296,
+        "sw",
+        "a0,816(a5)"
+      ],
+      [
+        300,
+        "ret",
+        ""
+      ],
+      [
+        304,
+        "andi",
+        "a5,a1,3"
+      ],
+      [
+        308,
+        "bnez",
+        "a5,158 <init_heap_beebs+0x28>"
+      ],
+      [
+        312,
+        "add",
+        "a1,a0,a1"
+      ],
+      [
+        316,
+        "lui",
+        "a3,0x12"
+      ],
+      [
+        320,
+        "lui",
+        "a4,0x12"
+      ],
+      [
+        324,
+        "lui",
+        "a5,0x12"
+      ],
+      [
+        328,
+        "sw",
+        "a1,808(a3)"
+      ],
+      [
+        332,
+        "sw",
+        "a0,812(a4)"
+      ],
+      [
+        336,
+        "sw",
+        "zero,804(a5)"
+      ],
+      [
+        340,
+        "ret",
+        ""
+      ],
+      [
+        344,
+        "j",
+        "158 <init_heap_beebs+0x28>"
+      ],
+      [
+        348,
+        "lui",
+        "a5,0x12"
+      ],
+      [
+        352,
+        "lw",
+        "a4,804(a5)"
+      ],
+      [
+        356,
+        "lui",
+        "a5,0x12"
+      ],
+      [
+        360,
+        "lw",
+        "a5,808(a5)"
+      ],
+      [
+        364,
+        "add",
+        "a0,a0,a4"
+      ],
+      [
+        368,
+        "sltu",
+        "a0,a5,a0"
+      ],
+      [
+        372,
+        "xori",
+        "a0,a0,1"
+      ],
+      [
+        376,
+        "ret",
+        ""
+      ],
+      [
+        380,
+        "mv",
+        "a5,a0"
+      ],
+      [
+        384,
+        "beqz",
+        "a0,1dc <malloc_beebs+0x60>"
+      ],
+      [
+        388,
+        "lui",
+        "a2,0x12"
+      ],
+      [
+        392,
+        "lw",
+        "a0,812(a2)"
+      ],
+      [
+        396,
+        "lui",
+        "a3,0x12"
+      ],
+      [
+        400,
+        "lw",
+        "a1,804(a3)"
+      ],
+      [
+        404,
+        "add",
+        "a4,a0,a5"
+      ],
+      [
+        408,
+        "andi",
+        "a6,a4,3"
+      ],
+      [
+        412,
+        "add",
+        "a5,a5,a1"
+      ],
+      [
+        416,
+        "bnez",
+        "a6,1bc <malloc_beebs+0x40>"
+      ],
+      [
+        420,
+        "lui",
+        "a1,0x12"
+      ],
+      [
+        424,
+        "lw",
+        "a1,808(a1)"
+      ],
+      [
+        428,
+        "sw",
+        "a5,804(a3)"
+      ],
+      [
+        432,
+        "bltu",
+        "a1,a4,1dc <malloc_beebs+0x60>"
+      ],
+      [
+        436,
+        "sw",
+        "a4,812(a2)"
+      ],
+      [
+        440,
+        "ret",
+        ""
+      ],
+      [
+        444,
+        "li",
+        "a1,4"
+      ],
+      [
+        448,
+        "sub",
+        "a1,a1,a6"
+      ],
+      [
+        452,
+        "add",
+        "a5,a5,a1"
+      ],
+      [
+        456,
+        "add",
+        "a4,a4,a1"
+      ],
+      [
+        460,
+        "lui",
+        "a1,0x12"
+      ],
+      [
+        464,
+        "lw",
+        "a1,808(a1)"
+      ],
+      [
+        468,
+        "sw",
+        "a5,804(a3)"
+      ],
+      [
+        472,
+        "bgeu",
+        "a1,a4,1b4 <malloc_beebs+0x38>"
+      ],
+      [
+        476,
+        "li",
+        "a0,0"
+      ],
+      [
+        480,
+        "ret",
+        ""
+      ],
+      [
+        484,
+        "addi",
+        "sp,sp,-16"
+      ],
+      [
+        488,
+        "sw",
+        "s0,8(sp)"
+      ],
+      [
+        492,
+        "mul",
+        "s0,a0,a1"
+      ],
+      [
+        496,
+        "sw",
+        "ra,12(sp)"
+      ],
+      [
+        500,
+        "mv",
+        "a0,s0"
+      ],
+      [
+        504,
+        "jal",
+        "17c <malloc_beebs>"
+      ],
+      [
+        508,
+        "beqz",
+        "a0,218 <calloc_beebs+0x34>"
+      ],
+      [
+        512,
+        "beqz",
+        "s0,218 <calloc_beebs+0x34>"
+      ],
+      [
+        516,
+        "add",
+        "a1,a0,s0"
+      ],
+      [
+        520,
+        "mv",
+        "a5,a0"
+      ],
+      [
+        524,
+        "addi",
+        "a5,a5,1"
+      ],
+      [
+        528,
+        "sb",
+        "zero,-1(a5)"
+      ],
+      [
+        532,
+        "bne",
+        "a5,a1,20c <calloc_beebs+0x28>"
+      ],
+      [
+        536,
+        "lw",
+        "ra,12(sp)"
+      ],
+      [
+        540,
+        "lw",
+        "s0,8(sp)"
+      ],
+      [
+        544,
+        "addi",
+        "sp,sp,16"
+      ],
+      [
+        548,
+        "ret",
+        ""
+      ],
+      [
+        552,
+        "beqz",
+        "a0,2a0 <realloc_beebs+0x78>"
+      ],
+      [
+        556,
+        "addi",
+        "sp,sp,-16"
+      ],
+      [
+        560,
+        "sw",
+        "s0,8(sp)"
+      ],
+      [
+        564,
+        "mv",
+        "s0,a0"
+      ],
+      [
+        568,
+        "mv",
+        "a0,a1"
+      ],
+      [
+        572,
+        "sw",
+        "s1,4(sp)"
+      ],
+      [
+        576,
+        "sw",
+        "ra,12(sp)"
+      ],
+      [
+        580,
+        "mv",
+        "s1,a1"
+      ],
+      [
+        584,
+        "jal",
+        "17c <malloc_beebs>"
+      ],
+      [
+        588,
+        "beqz",
+        "a0,288 <realloc_beebs+0x60>"
+      ],
+      [
+        592,
+        "mv",
+        "a5,s0"
+      ],
+      [
+        596,
+        "add",
+        "a2,s0,s1"
+      ],
+      [
+        600,
+        "mv",
+        "a4,a0"
+      ],
+      [
+        604,
+        "beqz",
+        "s1,274 <realloc_beebs+0x4c>"
+      ],
+      [
+        608,
+        "lbu",
+        "a3,0(a5)"
+      ],
+      [
+        612,
+        "addi",
+        "a5,a5,1"
+      ],
+      [
+        616,
+        "addi",
+        "a4,a4,1"
+      ],
+      [
+        620,
+        "sb",
+        "a3,-1(a4)"
+      ],
+      [
+        624,
+        "bne",
+        "a5,a2,260 <realloc_beebs+0x38>"
+      ],
+      [
+        628,
+        "lw",
+        "ra,12(sp)"
+      ],
+      [
+        632,
+        "lw",
+        "s0,8(sp)"
+      ],
+      [
+        636,
+        "lw",
+        "s1,4(sp)"
+      ],
+      [
+        640,
+        "addi",
+        "sp,sp,16"
+      ],
+      [
+        644,
+        "ret",
+        ""
+      ],
+      [
+        648,
+        "lw",
+        "ra,12(sp)"
+      ],
+      [
+        652,
+        "lw",
+        "s0,8(sp)"
+      ],
+      [
+        656,
+        "lw",
+        "s1,4(sp)"
+      ],
+      [
+        660,
+        "li",
+        "a0,0"
+      ],
+      [
+        664,
+        "addi",
+        "sp,sp,16"
+      ],
+      [
+        668,
+        "ret",
+        ""
+      ],
+      [
+        672,
+        "li",
+        "a0,0"
+      ],
+      [
+        676,
+        "ret",
+        ""
+      ],
+      [
+        680,
+        "ret",
+        ""
+      ],
+      [
+        684,
+        "ret",
+        ""
+      ],
+      [
+        688,
+        "nop",
+        ""
+      ],
+      [
+        692,
+        "ret",
+        ""
+      ],
+      [
+        696,
+        "nop",
+        ""
+      ],
+      [
+        700,
+        "ret",
+        ""
+      ],
+      [
+        704,
+        "addi",
+        "sp,sp,-80"
+      ],
+      [
+        708,
+        "sw",
+        "s8,40(sp)"
+      ],
+      [
+        712,
+        "sw",
+        "ra,76(sp)"
+      ],
+      [
+        716,
+        "sw",
+        "s0,72(sp)"
+      ],
+      [
+        720,
+        "sw",
+        "a0,4(sp)"
+      ],
+      [
+        724,
+        "mv",
+        "s8,a1"
+      ],
+      [
+        728,
+        "beqz",
+        "a1,4a4 <benchmark_body+0x1e4>"
+      ],
+      [
+        732,
+        "lui",
+        "a4,0x2"
+      ],
+      [
+        736,
+        "mv",
+        "a5,a4"
+      ],
+      [
+        740,
+        "sw",
+        "s2,64(sp)"
+      ],
+      [
+        744,
+        "addi",
+        "a4,a4,803"
+      ],
+      [
+        748,
+        "lui",
+        "s2,0x4ec4f"
+      ],
+      [
+        752,
+        "addi",
+        "a5,a5,1060"
+      ],
+      [
+        756,
+        "sw",
+        "s3,60(sp)"
+      ],
+      [
+        760,
+        "sw",
+        "s5,52(sp)"
+      ],
+      [
+        764,
+        "sw",
+        "s10,32(sp)"
+      ],
+      [
+        768,
+        "sw",
+        "s1,68(sp)"
+      ],
+      [
+        772,
+        "sw",
+        "s4,56(sp)"
+      ],
+      [
+        776,
+        "sw",
+        "s6,48(sp)"
+      ],
+      [
+        780,
+        "sw",
+        "s7,44(sp)"
+      ],
+      [
+        784,
+        "sw",
+        "s9,36(sp)"
+      ],
+      [
+        788,
+        "sw",
+        "s11,28(sp)"
+      ],
+      [
+        792,
+        "sw",
+        "a4,12(sp)"
+      ],
+      [
+        796,
+        "sw",
+        "a5,8(sp)"
+      ],
+      [
+        800,
+        "addi",
+        "s2,s2,-945"
+      ],
+      [
+        804,
+        "li",
+        "s10,0"
+      ],
+      [
+        808,
+        "li",
+        "s5,48"
+      ],
+      [
+        812,
+        "li",
+        "s3,26"
+      ],
+      [
+        816,
+        "li",
+        "s11,0"
+      ],
+      [
+        820,
+        "lui",
+        "a5,0x10"
+      ],
+      [
+        824,
+        "lui",
+        "a1,0x2"
+      ],
+      [
+        828,
+        "mv",
+        "a0,a5"
+      ],
+      [
+        832,
+        "addi",
+        "a1,a1,804"
+      ],
+      [
+        836,
+        "jal",
+        "130 <init_heap_beebs>"
+      ],
+      [
+        840,
+        "lui",
+        "a0,0x2"
+      ],
+      [
+        844,
+        "addi",
+        "a0,a0,803"
+      ],
+      [
+        848,
+        "jal",
+        "17c <malloc_beebs>"
+      ],
+      [
+        852,
+        "lw",
+        "a5,8(sp)"
+      ],
+      [
+        856,
+        "mv",
+        "s7,a0"
+      ],
+      [
+        860,
+        "addi",
+        "s1,a0,5"
+      ],
+      [
+        864,
+        "add",
+        "s6,a0,a5"
+      ],
+      [
+        868,
+        "addi",
+        "s0,a0,257"
+      ],
+      [
+        872,
+        "mv",
+        "s4,a0"
+      ],
+      [
+        876,
+        "mv",
+        "a5,s4"
+      ],
+      [
+        880,
+        "addi",
+        "a5,a5,1"
+      ],
+      [
+        884,
+        "sb",
+        "zero,-1(a5)"
+      ],
+      [
+        888,
+        "bne",
+        "a5,s0,370 <benchmark_body+0xb0>"
+      ],
+      [
+        892,
+        "sb",
+        "s5,-101(s0)"
+      ],
+      [
+        896,
+        "mv",
+        "s9,s4"
+      ],
+      [
+        900,
+        "jal",
+        "f0 <rand_beebs>"
+      ],
+      [
+        904,
+        "mulh",
+        "a5,a0,s2"
+      ],
+      [
+        908,
+        "srai",
+        "a3,a0,0x1f"
+      ],
+      [
+        912,
+        "addi",
+        "s9,s9,1"
+      ],
+      [
+        916,
+        "srai",
+        "a5,a5,0x3"
+      ],
+      [
+        920,
+        "sub",
+        "a5,a5,a3"
+      ],
+      [
+        924,
+        "mul",
+        "a5,a5,s3"
+      ],
+      [
+        928,
+        "sub",
+        "a0,a0,a5"
+      ],
+      [
+        932,
+        "addi",
+        "a0,a0,65"
+      ],
+      [
+        936,
+        "sb",
+        "a0,-1(s9)"
+      ],
+      [
+        940,
+        "bne",
+        "s9,s1,384 <benchmark_body+0xc4>"
+      ],
+      [
+        944,
+        "sb",
+        "s5,-133(s0)"
+      ],
+      [
+        948,
+        "addi",
+        "s0,s0,257"
+      ],
+      [
+        952,
+        "addi",
+        "s4,s4,257"
+      ],
+      [
+        956,
+        "addi",
+        "s1,s9,258"
+      ],
+      [
+        960,
+        "bne",
+        "s0,s6,36c <benchmark_body+0xac>"
+      ],
+      [
+        964,
+        "lui",
+        "a0,0x1"
+      ],
+      [
+        968,
+        "lw",
+        "a5,12(sp)"
+      ],
+      [
+        972,
+        "mv",
+        "a7,a0"
+      ],
+      [
+        976,
+        "addi",
+        "a7,a7,1558"
+      ],
+      [
+        980,
+        "addi",
+        "a0,a0,273"
+      ],
+      [
+        984,
+        "add",
+        "a0,s7,a0"
+      ],
+      [
+        988,
+        "add",
+        "a7,s7,a7"
+      ],
+      [
+        992,
+        "li",
+        "s0,0"
+      ],
+      [
+        996,
+        "add",
+        "a6,s7,a5"
+      ],
+      [
+        1000,
+        "mv",
+        "a1,s7"
+      ],
+      [
+        1004,
+        "lbu",
+        "a4,0(a1)"
+      ],
+      [
+        1008,
+        "mv",
+        "a3,a1"
+      ],
+      [
+        1012,
+        "mv",
+        "a5,a0"
+      ],
+      [
+        1016,
+        "bnez",
+        "a4,40c <benchmark_body+0x14c>"
+      ],
+      [
+        1020,
+        "j",
+        "48c <benchmark_body+0x1cc>"
+      ],
+      [
+        1024,
+        "bne",
+        "a2,a4,41c <benchmark_body+0x15c>"
+      ],
+      [
+        1028,
+        "lbu",
+        "a4,0(a3)"
+      ],
+      [
+        1032,
+        "beqz",
+        "a4,48c <benchmark_body+0x1cc>"
+      ],
+      [
+        1036,
+        "lbu",
+        "a2,0(a5)"
+      ],
+      [
+        1040,
+        "addi",
+        "a3,a3,1"
+      ],
+      [
+        1044,
+        "addi",
+        "a5,a5,1"
+      ],
+      [
+        1048,
+        "bnez",
+        "a2,400 <benchmark_body+0x140>"
+      ],
+      [
+        1052,
+        "addi",
+        "a1,a1,257"
+      ],
+      [
+        1056,
+        "bne",
+        "a6,a1,3ec <benchmark_body+0x12c>"
+      ],
+      [
+        1060,
+        "addi",
+        "a0,a0,257"
+      ],
+      [
+        1064,
+        "bne",
+        "a0,a7,3e8 <benchmark_body+0x128>"
+      ],
+      [
+        1068,
+        "mv",
+        "a0,s7"
+      ],
+      [
+        1072,
+        "addi",
+        "s11,s11,1"
+      ],
+      [
+        1076,
+        "jal",
+        "2a8 <free_beebs>"
+      ],
+      [
+        1080,
+        "bne",
+        "s8,s11,334 <benchmark_body+0x74>"
+      ],
+      [
+        1084,
+        "lw",
+        "a5,4(sp)"
+      ],
+      [
+        1088,
+        "addi",
+        "s10,s10,1"
+      ],
+      [
+        1092,
+        "bne",
+        "a5,s10,330 <benchmark_body+0x70>"
+      ],
+      [
+        1096,
+        "lw",
+        "s1,68(sp)"
+      ],
+      [
+        1100,
+        "lw",
+        "s2,64(sp)"
+      ],
+      [
+        1104,
+        "lw",
+        "s3,60(sp)"
+      ],
+      [
+        1108,
+        "lw",
+        "s4,56(sp)"
+      ],
+      [
+        1112,
+        "lw",
+        "s5,52(sp)"
+      ],
+      [
+        1116,
+        "lw",
+        "s6,48(sp)"
+      ],
+      [
+        1120,
+        "lw",
+        "s7,44(sp)"
+      ],
+      [
+        1124,
+        "lw",
+        "s9,36(sp)"
+      ],
+      [
+        1128,
+        "lw",
+        "s10,32(sp)"
+      ],
+      [
+        1132,
+        "lw",
+        "s11,28(sp)"
+      ],
+      [
+        1136,
+        "lw",
+        "ra,76(sp)"
+      ],
+      [
+        1140,
+        "addi",
+        "a0,s0,-5"
+      ],
+      [
+        1144,
+        "lw",
+        "s0,72(sp)"
+      ],
+      [
+        1148,
+        "lw",
+        "s8,40(sp)"
+      ],
+      [
+        1152,
+        "seqz",
+        "a0,a0"
+      ],
+      [
+        1156,
+        "addi",
+        "sp,sp,80"
+      ],
+      [
+        1160,
+        "ret",
+        ""
+      ],
+      [
+        1164,
+        "lbu",
+        "a5,0(a5)"
+      ],
+      [
+        1168,
+        "bnez",
+        "a5,41c <benchmark_body+0x15c>"
+      ],
+      [
+        1172,
+        "addi",
+        "a0,a0,257"
+      ],
+      [
+        1176,
+        "addi",
+        "s0,s0,1"
+      ],
+      [
+        1180,
+        "bne",
+        "a0,a7,3e8 <benchmark_body+0x128>"
+      ],
+      [
+        1184,
+        "j",
+        "42c <benchmark_body+0x16c>"
+      ],
+      [
+        1188,
+        "lw",
+        "a5,4(sp)"
+      ],
+      [
+        1192,
+        "addi",
+        "s8,s8,1"
+      ],
+      [
+        1196,
+        "beq",
+        "a5,s8,470 <benchmark_body+0x1b0>"
+      ],
+      [
+        1200,
+        "lw",
+        "a5,4(sp)"
+      ],
+      [
+        1204,
+        "addi",
+        "s8,s8,1"
+      ],
+      [
+        1208,
+        "bne",
+        "a5,s8,4a4 <benchmark_body+0x1e4>"
+      ],
+      [
+        1212,
+        "j",
+        "470 <benchmark_body+0x1b0>"
+      ],
+      [
+        1216,
+        "mv",
+        "a1,a0"
+      ],
+      [
+        1220,
+        "li",
+        "a0,1"
+      ],
+      [
+        1224,
+        "j",
+        "2c0 <benchmark_body>"
+      ],
+      [
+        1228,
+        "li",
+        "a1,1"
+      ],
+      [
+        1232,
+        "li",
+        "a0,46"
+      ],
+      [
+        1236,
+        "j",
+        "2c0 <benchmark_body>"
+      ],
+      [
+        1240,
+        "ret",
+        ""
+      ],
+      [
+        1244,
+        "addi",
+        "a0,a0,-1"
+      ],
+      [
+        1248,
+        "seqz",
+        "a0,a0"
+      ],
+      [
+        1252,
+        "ret",
+        ""
+      ]
+    ],
+    "labels": {
+      "128": [
+        "_start"
+      ],
+      "152": [
+        "bss_loop"
+      ],
+      "168": [
+        "bss_done"
+      ],
+      "172": [
+        "loop"
+      ],
+      "176": [
+        "main"
+      ],
+      "240": [
+        "rand_beebs"
+      ],
+      "292": [
+        "srand_beebs"
+      ],
+      "304": [
+        "init_heap_beebs"
+      ],
+      "348": [
+        "check_heap_beebs"
+      ],
+      "380": [
+        "malloc_beebs"
+      ],
+      "484": [
+        "calloc_beebs"
+      ],
+      "552": [
+        "realloc_beebs"
+      ],
+      "680": [
+        "free_beebs"
+      ],
+      "684": [
+        "initialise_board"
+      ],
+      "688": [
+        "start_trigger"
+      ],
+      "696": [
+        "stop_trigger"
+      ],
+      "704": [
+        "benchmark_body"
+      ],
+      "1216": [
+        "warm_caches"
+      ],
+      "1228": [
+        "benchmark"
+      ],
+      "1240": [
+        "initialise_benchmark"
+      ],
+      "1244": [
+        "verify_benchmark"
+      ]
+    },
+    "function_entries": []
+  },
+  "boundaries": "all",
+  "instructions": {
+    "S0": {
+      "pc": 128,
+      "mnemonic": "lui",
+      "operands": "sp,0x20"
+    },
+    "S1": {
+      "pc": 132,
+      "mnemonic": "addi",
+      "operands": "sp,sp,-16"
+    },
+    "S2": {
+      "pc": 136,
+      "mnemonic": "auipc",
+      "operands": "t0,0x10"
+    },
+    "S3": {
+      "pc": 140,
+      "mnemonic": "addi",
+      "operands": "t0,t0,-136"
+    },
+    "S4": {
+      "pc": 144,
+      "mnemonic": "auipc",
+      "operands": "t1,0x12"
+    },
+    "S5": {
+      "pc": 148,
+      "mnemonic": "addi",
+      "operands": "t1,t1,676"
+    },
+    "S6": {
+      "pc": 152,
+      "mnemonic": "bge",
+      "operands": "t0,t1,a8 <bss_done>"
+    },
+    "S7": {
+      "pc": 156,
+      "mnemonic": "sw",
+      "operands": "zero,0(t0)"
+    },
+    "S8": {
+      "pc": 160,
+      "mnemonic": "addi",
+      "operands": "t0,t0,4"
+    },
+    "S9": {
+      "pc": 164,
+      "mnemonic": "j",
+      "operands": "98 <bss_loop>"
+    },
+    "S10": {
+      "pc": 168,
+      "mnemonic": "jal",
+      "operands": "b0 <main>"
+    },
+    "S11": {
+      "pc": 172,
+      "mnemonic": "j",
+      "operands": "ac <loop>"
+    },
+    "S12": {
+      "pc": 176,
+      "mnemonic": "addi",
+      "operands": "sp,sp,-32"
+    },
+    "S13": {
+      "pc": 180,
+      "mnemonic": "sw",
+      "operands": "ra,28(sp)"
+    },
+    "S14": {
+      "pc": 184,
+      "mnemonic": "jal",
+      "operands": "2ac <initialise_board>"
+    },
+    "S15": {
+      "pc": 188,
+      "mnemonic": "jal",
+      "operands": "4d8 <initialise_benchmark>"
+    },
+    "S16": {
+      "pc": 192,
+      "mnemonic": "li",
+      "operands": "a0,0"
+    },
+    "S17": {
+      "pc": 196,
+      "mnemonic": "jal",
+      "operands": "4c0 <warm_caches>"
+    },
+    "S18": {
+      "pc": 200,
+      "mnemonic": "jal",
+      "operands": "2b0 <start_trigger>"
+    },
+    "S19": {
+      "pc": 204,
+      "mnemonic": "jal",
+      "operands": "4cc <benchmark>"
+    },
+    "S20": {
+      "pc": 208,
+      "mnemonic": "sw",
+      "operands": "a0,12(sp)"
+    },
+    "S21": {
+      "pc": 212,
+      "mnemonic": "jal",
+      "operands": "2b8 <stop_trigger>"
+    },
+    "S22": {
+      "pc": 216,
+      "mnemonic": "lw",
+      "operands": "a0,12(sp)"
+    },
+    "S23": {
+      "pc": 220,
+      "mnemonic": "jal",
+      "operands": "4dc <verify_benchmark>"
+    },
+    "S24": {
+      "pc": 224,
+      "mnemonic": "lw",
+      "operands": "ra,28(sp)"
+    },
+    "S25": {
+      "pc": 228,
+      "mnemonic": "seqz",
+      "operands": "a0,a0"
+    },
+    "S26": {
+      "pc": 232,
+      "mnemonic": "addi",
+      "operands": "sp,sp,32"
+    },
+    "S27": {
+      "pc": 236,
+      "mnemonic": "ret",
+      "operands": ""
+    },
+    "S28": {
+      "pc": 240,
+      "mnemonic": "lui",
+      "operands": "a4,0x12"
+    },
+    "S29": {
+      "pc": 244,
+      "mnemonic": "lw",
+      "operands": "a0,816(a4)"
+    },
+    "S30": {
+      "pc": 248,
+      "mnemonic": "lui",
+      "operands": "a5,0x41c65"
+    },
+    "S31": {
+      "pc": 252,
+      "mnemonic": "addi",
+      "operands": "a5,a5,-403"
+    },
+    "S32": {
+      "pc": 256,
+      "mnemonic": "mul",
+      "operands": "a0,a0,a5"
+    },
+    "S33": {
+      "pc": 260,
+      "mnemonic": "lui",
+      "operands": "a5,0x3"
+    },
+    "S34": {
+      "pc": 264,
+      "mnemonic": "addi",
+      "operands": "a5,a5,57"
+    },
+    "S35": {
+      "pc": 268,
+      "mnemonic": "add",
+      "operands": "a0,a0,a5"
+    },
+    "S36": {
+      "pc": 272,
+      "mnemonic": "slli",
+      "operands": "a0,a0,0x1"
+    },
+    "S37": {
+      "pc": 276,
+      "mnemonic": "srli",
+      "operands": "a0,a0,0x1"
+    },
+    "S38": {
+      "pc": 280,
+      "mnemonic": "sw",
+      "operands": "a0,816(a4)"
+    },
+    "S39": {
+      "pc": 284,
+      "mnemonic": "srli",
+      "operands": "a0,a0,0x10"
+    },
+    "S40": {
+      "pc": 288,
+      "mnemonic": "ret",
+      "operands": ""
+    },
+    "S41": {
+      "pc": 292,
+      "mnemonic": "lui",
+      "operands": "a5,0x12"
+    },
+    "S42": {
+      "pc": 296,
+      "mnemonic": "sw",
+      "operands": "a0,816(a5)"
+    },
+    "S43": {
+      "pc": 300,
+      "mnemonic": "ret",
+      "operands": ""
+    },
+    "S44": {
+      "pc": 304,
+      "mnemonic": "andi",
+      "operands": "a5,a1,3"
+    },
+    "S45": {
+      "pc": 308,
+      "mnemonic": "bnez",
+      "operands": "a5,158 <init_heap_beebs+0x28>"
+    },
+    "S46": {
+      "pc": 312,
+      "mnemonic": "add",
+      "operands": "a1,a0,a1"
+    },
+    "S47": {
+      "pc": 316,
+      "mnemonic": "lui",
+      "operands": "a3,0x12"
+    },
+    "S48": {
+      "pc": 320,
+      "mnemonic": "lui",
+      "operands": "a4,0x12"
+    },
+    "S49": {
+      "pc": 324,
+      "mnemonic": "lui",
+      "operands": "a5,0x12"
+    },
+    "S50": {
+      "pc": 328,
+      "mnemonic": "sw",
+      "operands": "a1,808(a3)"
+    },
+    "S51": {
+      "pc": 332,
+      "mnemonic": "sw",
+      "operands": "a0,812(a4)"
+    },
+    "S52": {
+      "pc": 336,
+      "mnemonic": "sw",
+      "operands": "zero,804(a5)"
+    },
+    "S53": {
+      "pc": 340,
+      "mnemonic": "ret",
+      "operands": ""
+    },
+    "S54": {
+      "pc": 344,
+      "mnemonic": "j",
+      "operands": "158 <init_heap_beebs+0x28>"
+    },
+    "S55": {
+      "pc": 348,
+      "mnemonic": "lui",
+      "operands": "a5,0x12"
+    },
+    "S56": {
+      "pc": 352,
+      "mnemonic": "lw",
+      "operands": "a4,804(a5)"
+    },
+    "S57": {
+      "pc": 356,
+      "mnemonic": "lui",
+      "operands": "a5,0x12"
+    },
+    "S58": {
+      "pc": 360,
+      "mnemonic": "lw",
+      "operands": "a5,808(a5)"
+    },
+    "S59": {
+      "pc": 364,
+      "mnemonic": "add",
+      "operands": "a0,a0,a4"
+    },
+    "S60": {
+      "pc": 368,
+      "mnemonic": "sltu",
+      "operands": "a0,a5,a0"
+    },
+    "S61": {
+      "pc": 372,
+      "mnemonic": "xori",
+      "operands": "a0,a0,1"
+    },
+    "S62": {
+      "pc": 376,
+      "mnemonic": "ret",
+      "operands": ""
+    },
+    "S63": {
+      "pc": 380,
+      "mnemonic": "mv",
+      "operands": "a5,a0"
+    },
+    "S64": {
+      "pc": 384,
+      "mnemonic": "beqz",
+      "operands": "a0,1dc <malloc_beebs+0x60>"
+    },
+    "S65": {
+      "pc": 388,
+      "mnemonic": "lui",
+      "operands": "a2,0x12"
+    },
+    "S66": {
+      "pc": 392,
+      "mnemonic": "lw",
+      "operands": "a0,812(a2)"
+    },
+    "S67": {
+      "pc": 396,
+      "mnemonic": "lui",
+      "operands": "a3,0x12"
+    },
+    "S68": {
+      "pc": 400,
+      "mnemonic": "lw",
+      "operands": "a1,804(a3)"
+    },
+    "S69": {
+      "pc": 404,
+      "mnemonic": "add",
+      "operands": "a4,a0,a5"
+    },
+    "S70": {
+      "pc": 408,
+      "mnemonic": "andi",
+      "operands": "a6,a4,3"
+    },
+    "S71": {
+      "pc": 412,
+      "mnemonic": "add",
+      "operands": "a5,a5,a1"
+    },
+    "S72": {
+      "pc": 416,
+      "mnemonic": "bnez",
+      "operands": "a6,1bc <malloc_beebs+0x40>"
+    },
+    "S73": {
+      "pc": 420,
+      "mnemonic": "lui",
+      "operands": "a1,0x12"
+    },
+    "S74": {
+      "pc": 424,
+      "mnemonic": "lw",
+      "operands": "a1,808(a1)"
+    },
+    "S75": {
+      "pc": 428,
+      "mnemonic": "sw",
+      "operands": "a5,804(a3)"
+    },
+    "S76": {
+      "pc": 432,
+      "mnemonic": "bltu",
+      "operands": "a1,a4,1dc <malloc_beebs+0x60>"
+    },
+    "S77": {
+      "pc": 436,
+      "mnemonic": "sw",
+      "operands": "a4,812(a2)"
+    },
+    "S78": {
+      "pc": 440,
+      "mnemonic": "ret",
+      "operands": ""
+    },
+    "S79": {
+      "pc": 444,
+      "mnemonic": "li",
+      "operands": "a1,4"
+    },
+    "S80": {
+      "pc": 448,
+      "mnemonic": "sub",
+      "operands": "a1,a1,a6"
+    },
+    "S81": {
+      "pc": 452,
+      "mnemonic": "add",
+      "operands": "a5,a5,a1"
+    },
+    "S82": {
+      "pc": 456,
+      "mnemonic": "add",
+      "operands": "a4,a4,a1"
+    },
+    "S83": {
+      "pc": 460,
+      "mnemonic": "lui",
+      "operands": "a1,0x12"
+    },
+    "S84": {
+      "pc": 464,
+      "mnemonic": "lw",
+      "operands": "a1,808(a1)"
+    },
+    "S85": {
+      "pc": 468,
+      "mnemonic": "sw",
+      "operands": "a5,804(a3)"
+    },
+    "S86": {
+      "pc": 472,
+      "mnemonic": "bgeu",
+      "operands": "a1,a4,1b4 <malloc_beebs+0x38>"
+    },
+    "S87": {
+      "pc": 476,
+      "mnemonic": "li",
+      "operands": "a0,0"
+    },
+    "S88": {
+      "pc": 480,
+      "mnemonic": "ret",
+      "operands": ""
+    },
+    "S89": {
+      "pc": 484,
+      "mnemonic": "addi",
+      "operands": "sp,sp,-16"
+    },
+    "S90": {
+      "pc": 488,
+      "mnemonic": "sw",
+      "operands": "s0,8(sp)"
+    },
+    "S91": {
+      "pc": 492,
+      "mnemonic": "mul",
+      "operands": "s0,a0,a1"
+    },
+    "S92": {
+      "pc": 496,
+      "mnemonic": "sw",
+      "operands": "ra,12(sp)"
+    },
+    "S93": {
+      "pc": 500,
+      "mnemonic": "mv",
+      "operands": "a0,s0"
+    },
+    "S94": {
+      "pc": 504,
+      "mnemonic": "jal",
+      "operands": "17c <malloc_beebs>"
+    },
+    "S95": {
+      "pc": 508,
+      "mnemonic": "beqz",
+      "operands": "a0,218 <calloc_beebs+0x34>"
+    },
+    "S96": {
+      "pc": 512,
+      "mnemonic": "beqz",
+      "operands": "s0,218 <calloc_beebs+0x34>"
+    },
+    "S97": {
+      "pc": 516,
+      "mnemonic": "add",
+      "operands": "a1,a0,s0"
+    },
+    "S98": {
+      "pc": 520,
+      "mnemonic": "mv",
+      "operands": "a5,a0"
+    },
+    "S99": {
+      "pc": 524,
+      "mnemonic": "addi",
+      "operands": "a5,a5,1"
+    },
+    "S100": {
+      "pc": 528,
+      "mnemonic": "sb",
+      "operands": "zero,-1(a5)"
+    },
+    "S101": {
+      "pc": 532,
+      "mnemonic": "bne",
+      "operands": "a5,a1,20c <calloc_beebs+0x28>"
+    },
+    "S102": {
+      "pc": 536,
+      "mnemonic": "lw",
+      "operands": "ra,12(sp)"
+    },
+    "S103": {
+      "pc": 540,
+      "mnemonic": "lw",
+      "operands": "s0,8(sp)"
+    },
+    "S104": {
+      "pc": 544,
+      "mnemonic": "addi",
+      "operands": "sp,sp,16"
+    },
+    "S105": {
+      "pc": 548,
+      "mnemonic": "ret",
+      "operands": ""
+    },
+    "S106": {
+      "pc": 552,
+      "mnemonic": "beqz",
+      "operands": "a0,2a0 <realloc_beebs+0x78>"
+    },
+    "S107": {
+      "pc": 556,
+      "mnemonic": "addi",
+      "operands": "sp,sp,-16"
+    },
+    "S108": {
+      "pc": 560,
+      "mnemonic": "sw",
+      "operands": "s0,8(sp)"
+    },
+    "S109": {
+      "pc": 564,
+      "mnemonic": "mv",
+      "operands": "s0,a0"
+    },
+    "S110": {
+      "pc": 568,
+      "mnemonic": "mv",
+      "operands": "a0,a1"
+    },
+    "S111": {
+      "pc": 572,
+      "mnemonic": "sw",
+      "operands": "s1,4(sp)"
+    },
+    "S112": {
+      "pc": 576,
+      "mnemonic": "sw",
+      "operands": "ra,12(sp)"
+    },
+    "S113": {
+      "pc": 580,
+      "mnemonic": "mv",
+      "operands": "s1,a1"
+    },
+    "S114": {
+      "pc": 584,
+      "mnemonic": "jal",
+      "operands": "17c <malloc_beebs>"
+    },
+    "S115": {
+      "pc": 588,
+      "mnemonic": "beqz",
+      "operands": "a0,288 <realloc_beebs+0x60>"
+    },
+    "S116": {
+      "pc": 592,
+      "mnemonic": "mv",
+      "operands": "a5,s0"
+    },
+    "S117": {
+      "pc": 596,
+      "mnemonic": "add",
+      "operands": "a2,s0,s1"
+    },
+    "S118": {
+      "pc": 600,
+      "mnemonic": "mv",
+      "operands": "a4,a0"
+    },
+    "S119": {
+      "pc": 604,
+      "mnemonic": "beqz",
+      "operands": "s1,274 <realloc_beebs+0x4c>"
+    },
+    "S120": {
+      "pc": 608,
+      "mnemonic": "lbu",
+      "operands": "a3,0(a5)"
+    },
+    "S121": {
+      "pc": 612,
+      "mnemonic": "addi",
+      "operands": "a5,a5,1"
+    },
+    "S122": {
+      "pc": 616,
+      "mnemonic": "addi",
+      "operands": "a4,a4,1"
+    },
+    "S123": {
+      "pc": 620,
+      "mnemonic": "sb",
+      "operands": "a3,-1(a4)"
+    },
+    "S124": {
+      "pc": 624,
+      "mnemonic": "bne",
+      "operands": "a5,a2,260 <realloc_beebs+0x38>"
+    },
+    "S125": {
+      "pc": 628,
+      "mnemonic": "lw",
+      "operands": "ra,12(sp)"
+    },
+    "S126": {
+      "pc": 632,
+      "mnemonic": "lw",
+      "operands": "s0,8(sp)"
+    },
+    "S127": {
+      "pc": 636,
+      "mnemonic": "lw",
+      "operands": "s1,4(sp)"
+    },
+    "S128": {
+      "pc": 640,
+      "mnemonic": "addi",
+      "operands": "sp,sp,16"
+    },
+    "S129": {
+      "pc": 644,
+      "mnemonic": "ret",
+      "operands": ""
+    },
+    "S130": {
+      "pc": 648,
+      "mnemonic": "lw",
+      "operands": "ra,12(sp)"
+    },
+    "S131": {
+      "pc": 652,
+      "mnemonic": "lw",
+      "operands": "s0,8(sp)"
+    },
+    "S132": {
+      "pc": 656,
+      "mnemonic": "lw",
+      "operands": "s1,4(sp)"
+    },
+    "S133": {
+      "pc": 660,
+      "mnemonic": "li",
+      "operands": "a0,0"
+    },
+    "S134": {
+      "pc": 664,
+      "mnemonic": "addi",
+      "operands": "sp,sp,16"
+    },
+    "S135": {
+      "pc": 668,
+      "mnemonic": "ret",
+      "operands": ""
+    },
+    "S136": {
+      "pc": 672,
+      "mnemonic": "li",
+      "operands": "a0,0"
+    },
+    "S137": {
+      "pc": 676,
+      "mnemonic": "ret",
+      "operands": ""
+    },
+    "S138": {
+      "pc": 680,
+      "mnemonic": "ret",
+      "operands": ""
+    },
+    "S139": {
+      "pc": 684,
+      "mnemonic": "ret",
+      "operands": ""
+    },
+    "S140": {
+      "pc": 688,
+      "mnemonic": "nop",
+      "operands": ""
+    },
+    "S141": {
+      "pc": 692,
+      "mnemonic": "ret",
+      "operands": ""
+    },
+    "S142": {
+      "pc": 696,
+      "mnemonic": "nop",
+      "operands": ""
+    },
+    "S143": {
+      "pc": 700,
+      "mnemonic": "ret",
+      "operands": ""
+    },
+    "S144": {
+      "pc": 704,
+      "mnemonic": "addi",
+      "operands": "sp,sp,-80"
+    },
+    "S145": {
+      "pc": 708,
+      "mnemonic": "sw",
+      "operands": "s8,40(sp)"
+    },
+    "S146": {
+      "pc": 712,
+      "mnemonic": "sw",
+      "operands": "ra,76(sp)"
+    },
+    "S147": {
+      "pc": 716,
+      "mnemonic": "sw",
+      "operands": "s0,72(sp)"
+    },
+    "S148": {
+      "pc": 720,
+      "mnemonic": "sw",
+      "operands": "a0,4(sp)"
+    },
+    "S149": {
+      "pc": 724,
+      "mnemonic": "mv",
+      "operands": "s8,a1"
+    },
+    "S150": {
+      "pc": 728,
+      "mnemonic": "beqz",
+      "operands": "a1,4a4 <benchmark_body+0x1e4>"
+    },
+    "S151": {
+      "pc": 732,
+      "mnemonic": "lui",
+      "operands": "a4,0x2"
+    },
+    "S152": {
+      "pc": 736,
+      "mnemonic": "mv",
+      "operands": "a5,a4"
+    },
+    "S153": {
+      "pc": 740,
+      "mnemonic": "sw",
+      "operands": "s2,64(sp)"
+    },
+    "S154": {
+      "pc": 744,
+      "mnemonic": "addi",
+      "operands": "a4,a4,803"
+    },
+    "S155": {
+      "pc": 748,
+      "mnemonic": "lui",
+      "operands": "s2,0x4ec4f"
+    },
+    "S156": {
+      "pc": 752,
+      "mnemonic": "addi",
+      "operands": "a5,a5,1060"
+    },
+    "S157": {
+      "pc": 756,
+      "mnemonic": "sw",
+      "operands": "s3,60(sp)"
+    },
+    "S158": {
+      "pc": 760,
+      "mnemonic": "sw",
+      "operands": "s5,52(sp)"
+    },
+    "S159": {
+      "pc": 764,
+      "mnemonic": "sw",
+      "operands": "s10,32(sp)"
+    },
+    "S160": {
+      "pc": 768,
+      "mnemonic": "sw",
+      "operands": "s1,68(sp)"
+    },
+    "S161": {
+      "pc": 772,
+      "mnemonic": "sw",
+      "operands": "s4,56(sp)"
+    },
+    "S162": {
+      "pc": 776,
+      "mnemonic": "sw",
+      "operands": "s6,48(sp)"
+    },
+    "S163": {
+      "pc": 780,
+      "mnemonic": "sw",
+      "operands": "s7,44(sp)"
+    },
+    "S164": {
+      "pc": 784,
+      "mnemonic": "sw",
+      "operands": "s9,36(sp)"
+    },
+    "S165": {
+      "pc": 788,
+      "mnemonic": "sw",
+      "operands": "s11,28(sp)"
+    },
+    "S166": {
+      "pc": 792,
+      "mnemonic": "sw",
+      "operands": "a4,12(sp)"
+    },
+    "S167": {
+      "pc": 796,
+      "mnemonic": "sw",
+      "operands": "a5,8(sp)"
+    },
+    "S168": {
+      "pc": 800,
+      "mnemonic": "addi",
+      "operands": "s2,s2,-945"
+    },
+    "S169": {
+      "pc": 804,
+      "mnemonic": "li",
+      "operands": "s10,0"
+    },
+    "S170": {
+      "pc": 808,
+      "mnemonic": "li",
+      "operands": "s5,48"
+    },
+    "S171": {
+      "pc": 812,
+      "mnemonic": "li",
+      "operands": "s3,26"
+    },
+    "S172": {
+      "pc": 816,
+      "mnemonic": "li",
+      "operands": "s11,0"
+    },
+    "S173": {
+      "pc": 820,
+      "mnemonic": "lui",
+      "operands": "a5,0x10"
+    },
+    "S174": {
+      "pc": 824,
+      "mnemonic": "lui",
+      "operands": "a1,0x2"
+    },
+    "S175": {
+      "pc": 828,
+      "mnemonic": "mv",
+      "operands": "a0,a5"
+    },
+    "S176": {
+      "pc": 832,
+      "mnemonic": "addi",
+      "operands": "a1,a1,804"
+    },
+    "S177": {
+      "pc": 836,
+      "mnemonic": "jal",
+      "operands": "130 <init_heap_beebs>"
+    },
+    "S178": {
+      "pc": 840,
+      "mnemonic": "lui",
+      "operands": "a0,0x2"
+    },
+    "S179": {
+      "pc": 844,
+      "mnemonic": "addi",
+      "operands": "a0,a0,803"
+    },
+    "S180": {
+      "pc": 848,
+      "mnemonic": "jal",
+      "operands": "17c <malloc_beebs>"
+    },
+    "S181": {
+      "pc": 852,
+      "mnemonic": "lw",
+      "operands": "a5,8(sp)"
+    },
+    "S182": {
+      "pc": 856,
+      "mnemonic": "mv",
+      "operands": "s7,a0"
+    },
+    "S183": {
+      "pc": 860,
+      "mnemonic": "addi",
+      "operands": "s1,a0,5"
+    },
+    "S184": {
+      "pc": 864,
+      "mnemonic": "add",
+      "operands": "s6,a0,a5"
+    },
+    "S185": {
+      "pc": 868,
+      "mnemonic": "addi",
+      "operands": "s0,a0,257"
+    },
+    "S186": {
+      "pc": 872,
+      "mnemonic": "mv",
+      "operands": "s4,a0"
+    },
+    "S187": {
+      "pc": 876,
+      "mnemonic": "mv",
+      "operands": "a5,s4"
+    },
+    "S188": {
+      "pc": 880,
+      "mnemonic": "addi",
+      "operands": "a5,a5,1"
+    },
+    "S189": {
+      "pc": 884,
+      "mnemonic": "sb",
+      "operands": "zero,-1(a5)"
+    },
+    "S190": {
+      "pc": 888,
+      "mnemonic": "bne",
+      "operands": "a5,s0,370 <benchmark_body+0xb0>"
+    },
+    "S191": {
+      "pc": 892,
+      "mnemonic": "sb",
+      "operands": "s5,-101(s0)"
+    },
+    "S192": {
+      "pc": 896,
+      "mnemonic": "mv",
+      "operands": "s9,s4"
+    },
+    "S193": {
+      "pc": 900,
+      "mnemonic": "jal",
+      "operands": "f0 <rand_beebs>"
+    },
+    "S194": {
+      "pc": 904,
+      "mnemonic": "mulh",
+      "operands": "a5,a0,s2"
+    },
+    "S195": {
+      "pc": 908,
+      "mnemonic": "srai",
+      "operands": "a3,a0,0x1f"
+    },
+    "S196": {
+      "pc": 912,
+      "mnemonic": "addi",
+      "operands": "s9,s9,1"
+    },
+    "S197": {
+      "pc": 916,
+      "mnemonic": "srai",
+      "operands": "a5,a5,0x3"
+    },
+    "S198": {
+      "pc": 920,
+      "mnemonic": "sub",
+      "operands": "a5,a5,a3"
+    },
+    "S199": {
+      "pc": 924,
+      "mnemonic": "mul",
+      "operands": "a5,a5,s3"
+    },
+    "S200": {
+      "pc": 928,
+      "mnemonic": "sub",
+      "operands": "a0,a0,a5"
+    },
+    "S201": {
+      "pc": 932,
+      "mnemonic": "addi",
+      "operands": "a0,a0,65"
+    },
+    "S202": {
+      "pc": 936,
+      "mnemonic": "sb",
+      "operands": "a0,-1(s9)"
+    },
+    "S203": {
+      "pc": 940,
+      "mnemonic": "bne",
+      "operands": "s9,s1,384 <benchmark_body+0xc4>"
+    },
+    "S204": {
+      "pc": 944,
+      "mnemonic": "sb",
+      "operands": "s5,-133(s0)"
+    },
+    "S205": {
+      "pc": 948,
+      "mnemonic": "addi",
+      "operands": "s0,s0,257"
+    },
+    "S206": {
+      "pc": 952,
+      "mnemonic": "addi",
+      "operands": "s4,s4,257"
+    },
+    "S207": {
+      "pc": 956,
+      "mnemonic": "addi",
+      "operands": "s1,s9,258"
+    },
+    "S208": {
+      "pc": 960,
+      "mnemonic": "bne",
+      "operands": "s0,s6,36c <benchmark_body+0xac>"
+    },
+    "S209": {
+      "pc": 964,
+      "mnemonic": "lui",
+      "operands": "a0,0x1"
+    },
+    "S210": {
+      "pc": 968,
+      "mnemonic": "lw",
+      "operands": "a5,12(sp)"
+    },
+    "S211": {
+      "pc": 972,
+      "mnemonic": "mv",
+      "operands": "a7,a0"
+    },
+    "S212": {
+      "pc": 976,
+      "mnemonic": "addi",
+      "operands": "a7,a7,1558"
+    },
+    "S213": {
+      "pc": 980,
+      "mnemonic": "addi",
+      "operands": "a0,a0,273"
+    },
+    "S214": {
+      "pc": 984,
+      "mnemonic": "add",
+      "operands": "a0,s7,a0"
+    },
+    "S215": {
+      "pc": 988,
+      "mnemonic": "add",
+      "operands": "a7,s7,a7"
+    },
+    "S216": {
+      "pc": 992,
+      "mnemonic": "li",
+      "operands": "s0,0"
+    },
+    "S217": {
+      "pc": 996,
+      "mnemonic": "add",
+      "operands": "a6,s7,a5"
+    },
+    "S218": {
+      "pc": 1000,
+      "mnemonic": "mv",
+      "operands": "a1,s7"
+    },
+    "S219": {
+      "pc": 1004,
+      "mnemonic": "lbu",
+      "operands": "a4,0(a1)"
+    },
+    "S220": {
+      "pc": 1008,
+      "mnemonic": "mv",
+      "operands": "a3,a1"
+    },
+    "S221": {
+      "pc": 1012,
+      "mnemonic": "mv",
+      "operands": "a5,a0"
+    },
+    "S222": {
+      "pc": 1016,
+      "mnemonic": "bnez",
+      "operands": "a4,40c <benchmark_body+0x14c>"
+    },
+    "S223": {
+      "pc": 1020,
+      "mnemonic": "j",
+      "operands": "48c <benchmark_body+0x1cc>"
+    },
+    "S224": {
+      "pc": 1024,
+      "mnemonic": "bne",
+      "operands": "a2,a4,41c <benchmark_body+0x15c>"
+    },
+    "S225": {
+      "pc": 1028,
+      "mnemonic": "lbu",
+      "operands": "a4,0(a3)"
+    },
+    "S226": {
+      "pc": 1032,
+      "mnemonic": "beqz",
+      "operands": "a4,48c <benchmark_body+0x1cc>"
+    },
+    "S227": {
+      "pc": 1036,
+      "mnemonic": "lbu",
+      "operands": "a2,0(a5)"
+    },
+    "S228": {
+      "pc": 1040,
+      "mnemonic": "addi",
+      "operands": "a3,a3,1"
+    },
+    "S229": {
+      "pc": 1044,
+      "mnemonic": "addi",
+      "operands": "a5,a5,1"
+    },
+    "S230": {
+      "pc": 1048,
+      "mnemonic": "bnez",
+      "operands": "a2,400 <benchmark_body+0x140>"
+    },
+    "S231": {
+      "pc": 1052,
+      "mnemonic": "addi",
+      "operands": "a1,a1,257"
+    },
+    "S232": {
+      "pc": 1056,
+      "mnemonic": "bne",
+      "operands": "a6,a1,3ec <benchmark_body+0x12c>"
+    },
+    "S233": {
+      "pc": 1060,
+      "mnemonic": "addi",
+      "operands": "a0,a0,257"
+    },
+    "S234": {
+      "pc": 1064,
+      "mnemonic": "bne",
+      "operands": "a0,a7,3e8 <benchmark_body+0x128>"
+    },
+    "S235": {
+      "pc": 1068,
+      "mnemonic": "mv",
+      "operands": "a0,s7"
+    },
+    "S236": {
+      "pc": 1072,
+      "mnemonic": "addi",
+      "operands": "s11,s11,1"
+    },
+    "S237": {
+      "pc": 1076,
+      "mnemonic": "jal",
+      "operands": "2a8 <free_beebs>"
+    },
+    "S238": {
+      "pc": 1080,
+      "mnemonic": "bne",
+      "operands": "s8,s11,334 <benchmark_body+0x74>"
+    },
+    "S239": {
+      "pc": 1084,
+      "mnemonic": "lw",
+      "operands": "a5,4(sp)"
+    },
+    "S240": {
+      "pc": 1088,
+      "mnemonic": "addi",
+      "operands": "s10,s10,1"
+    },
+    "S241": {
+      "pc": 1092,
+      "mnemonic": "bne",
+      "operands": "a5,s10,330 <benchmark_body+0x70>"
+    },
+    "S242": {
+      "pc": 1096,
+      "mnemonic": "lw",
+      "operands": "s1,68(sp)"
+    },
+    "S243": {
+      "pc": 1100,
+      "mnemonic": "lw",
+      "operands": "s2,64(sp)"
+    },
+    "S244": {
+      "pc": 1104,
+      "mnemonic": "lw",
+      "operands": "s3,60(sp)"
+    },
+    "S245": {
+      "pc": 1108,
+      "mnemonic": "lw",
+      "operands": "s4,56(sp)"
+    },
+    "S246": {
+      "pc": 1112,
+      "mnemonic": "lw",
+      "operands": "s5,52(sp)"
+    },
+    "S247": {
+      "pc": 1116,
+      "mnemonic": "lw",
+      "operands": "s6,48(sp)"
+    },
+    "S248": {
+      "pc": 1120,
+      "mnemonic": "lw",
+      "operands": "s7,44(sp)"
+    },
+    "S249": {
+      "pc": 1124,
+      "mnemonic": "lw",
+      "operands": "s9,36(sp)"
+    },
+    "S250": {
+      "pc": 1128,
+      "mnemonic": "lw",
+      "operands": "s10,32(sp)"
+    },
+    "S251": {
+      "pc": 1132,
+      "mnemonic": "lw",
+      "operands": "s11,28(sp)"
+    },
+    "S252": {
+      "pc": 1136,
+      "mnemonic": "lw",
+      "operands": "ra,76(sp)"
+    },
+    "S253": {
+      "pc": 1140,
+      "mnemonic": "addi",
+      "operands": "a0,s0,-5"
+    },
+    "S254": {
+      "pc": 1144,
+      "mnemonic": "lw",
+      "operands": "s0,72(sp)"
+    },
+    "S255": {
+      "pc": 1148,
+      "mnemonic": "lw",
+      "operands": "s8,40(sp)"
+    },
+    "S256": {
+      "pc": 1152,
+      "mnemonic": "seqz",
+      "operands": "a0,a0"
+    },
+    "S257": {
+      "pc": 1156,
+      "mnemonic": "addi",
+      "operands": "sp,sp,80"
+    },
+    "S258": {
+      "pc": 1160,
+      "mnemonic": "ret",
+      "operands": ""
+    },
+    "S259": {
+      "pc": 1164,
+      "mnemonic": "lbu",
+      "operands": "a5,0(a5)"
+    },
+    "S260": {
+      "pc": 1168,
+      "mnemonic": "bnez",
+      "operands": "a5,41c <benchmark_body+0x15c>"
+    },
+    "S261": {
+      "pc": 1172,
+      "mnemonic": "addi",
+      "operands": "a0,a0,257"
+    },
+    "S262": {
+      "pc": 1176,
+      "mnemonic": "addi",
+      "operands": "s0,s0,1"
+    },
+    "S263": {
+      "pc": 1180,
+      "mnemonic": "bne",
+      "operands": "a0,a7,3e8 <benchmark_body+0x128>"
+    },
+    "S264": {
+      "pc": 1184,
+      "mnemonic": "j",
+      "operands": "42c <benchmark_body+0x16c>"
+    },
+    "S265": {
+      "pc": 1188,
+      "mnemonic": "lw",
+      "operands": "a5,4(sp)"
+    },
+    "S266": {
+      "pc": 1192,
+      "mnemonic": "addi",
+      "operands": "s8,s8,1"
+    },
+    "S267": {
+      "pc": 1196,
+      "mnemonic": "beq",
+      "operands": "a5,s8,470 <benchmark_body+0x1b0>"
+    },
+    "S268": {
+      "pc": 1200,
+      "mnemonic": "lw",
+      "operands": "a5,4(sp)"
+    },
+    "S269": {
+      "pc": 1204,
+      "mnemonic": "addi",
+      "operands": "s8,s8,1"
+    },
+    "S270": {
+      "pc": 1208,
+      "mnemonic": "bne",
+      "operands": "a5,s8,4a4 <benchmark_body+0x1e4>"
+    },
+    "S271": {
+      "pc": 1212,
+      "mnemonic": "j",
+      "operands": "470 <benchmark_body+0x1b0>"
+    },
+    "S272": {
+      "pc": 1216,
+      "mnemonic": "mv",
+      "operands": "a1,a0"
+    },
+    "S273": {
+      "pc": 1220,
+      "mnemonic": "li",
+      "operands": "a0,1"
+    },
+    "S274": {
+      "pc": 1224,
+      "mnemonic": "j",
+      "operands": "2c0 <benchmark_body>"
+    },
+    "S275": {
+      "pc": 1228,
+      "mnemonic": "li",
+      "operands": "a1,1"
+    },
+    "S276": {
+      "pc": 1232,
+      "mnemonic": "li",
+      "operands": "a0,46"
+    },
+    "S277": {
+      "pc": 1236,
+      "mnemonic": "j",
+      "operands": "2c0 <benchmark_body>"
+    },
+    "S278": {
+      "pc": 1240,
+      "mnemonic": "ret",
+      "operands": ""
+    },
+    "S279": {
+      "pc": 1244,
+      "mnemonic": "addi",
+      "operands": "a0,a0,-1"
+    },
+    "S280": {
+      "pc": 1248,
+      "mnemonic": "seqz",
+      "operands": "a0,a0"
+    },
+    "S281": {
+      "pc": 1252,
+      "mnemonic": "ret",
+      "operands": ""
+    }
+  },
+  "transitions": {
+    "S0": {
+      "kind": "goto",
+      "target": "S1"
+    },
+    "S1": {
+      "kind": "goto",
+      "target": "S2"
+    },
+    "S2": {
+      "kind": "goto",
+      "target": "S3"
+    },
+    "S3": {
+      "kind": "goto",
+      "target": "S4"
+    },
+    "S4": {
+      "kind": "goto",
+      "target": "S5"
+    },
+    "S5": {
+      "kind": "goto",
+      "target": "S6"
+    },
+    "S6": {
+      "kind": "branch",
+      "taken": "S10",
+      "not_taken": "S7"
+    },
+    "S7": {
+      "kind": "goto",
+      "target": "S8"
+    },
+    "S8": {
+      "kind": "goto",
+      "target": "S9"
+    },
+    "S9": {
+      "kind": "goto",
+      "target": "S6"
+    },
+    "S10": {
+      "kind": "call",
+      "target": "S12",
+      "return_to": "S11"
+    },
+    "S11": {
+      "kind": "goto",
+      "target": "S11"
+    },
+    "S12": {
+      "kind": "goto",
+      "target": "S13"
+    },
+    "S13": {
+      "kind": "goto",
+      "target": "S14"
+    },
+    "S14": {
+      "kind": "call",
+      "target": "S139",
+      "return_to": "S15"
+    },
+    "S15": {
+      "kind": "call",
+      "target": "S278",
+      "return_to": "S16"
+    },
+    "S16": {
+      "kind": "goto",
+      "target": "S17"
+    },
+    "S17": {
+      "kind": "call",
+      "target": "S272",
+      "return_to": "S18"
+    },
+    "S18": {
+      "kind": "call",
+      "target": "S140",
+      "return_to": "S19"
+    },
+    "S19": {
+      "kind": "call",
+      "target": "S275",
+      "return_to": "S20"
+    },
+    "S20": {
+      "kind": "goto",
+      "target": "S21"
+    },
+    "S21": {
+      "kind": "call",
+      "target": "S142",
+      "return_to": "S22"
+    },
+    "S22": {
+      "kind": "goto",
+      "target": "S23"
+    },
+    "S23": {
+      "kind": "call",
+      "target": "S279",
+      "return_to": "S24"
+    },
+    "S24": {
+      "kind": "goto",
+      "target": "S25"
+    },
+    "S25": {
+      "kind": "goto",
+      "target": "S26"
+    },
+    "S26": {
+      "kind": "goto",
+      "target": "S27"
+    },
+    "S27": {
+      "kind": "return",
+      "target_source": "rf_rdata_a"
+    },
+    "S28": {
+      "kind": "goto",
+      "target": "S29"
+    },
+    "S29": {
+      "kind": "goto",
+      "target": "S30"
+    },
+    "S30": {
+      "kind": "goto",
+      "target": "S31"
+    },
+    "S31": {
+      "kind": "goto",
+      "target": "S32"
+    },
+    "S32": {
+      "kind": "goto",
+      "target": "S33"
+    },
+    "S33": {
+      "kind": "goto",
+      "target": "S34"
+    },
+    "S34": {
+      "kind": "goto",
+      "target": "S35"
+    },
+    "S35": {
+      "kind": "goto",
+      "target": "S36"
+    },
+    "S36": {
+      "kind": "goto",
+      "target": "S37"
+    },
+    "S37": {
+      "kind": "goto",
+      "target": "S38"
+    },
+    "S38": {
+      "kind": "goto",
+      "target": "S39"
+    },
+    "S39": {
+      "kind": "goto",
+      "target": "S40"
+    },
+    "S40": {
+      "kind": "return",
+      "target_source": "rf_rdata_a"
+    },
+    "S41": {
+      "kind": "goto",
+      "target": "S42"
+    },
+    "S42": {
+      "kind": "goto",
+      "target": "S43"
+    },
+    "S43": {
+      "kind": "return",
+      "target_source": "rf_rdata_a"
+    },
+    "S44": {
+      "kind": "goto",
+      "target": "S45"
+    },
+    "S45": {
+      "kind": "branch",
+      "taken": "S54",
+      "not_taken": "S46"
+    },
+    "S46": {
+      "kind": "goto",
+      "target": "S47"
+    },
+    "S47": {
+      "kind": "goto",
+      "target": "S48"
+    },
+    "S48": {
+      "kind": "goto",
+      "target": "S49"
+    },
+    "S49": {
+      "kind": "goto",
+      "target": "S50"
+    },
+    "S50": {
+      "kind": "goto",
+      "target": "S51"
+    },
+    "S51": {
+      "kind": "goto",
+      "target": "S52"
+    },
+    "S52": {
+      "kind": "goto",
+      "target": "S53"
+    },
+    "S53": {
+      "kind": "return",
+      "target_source": "rf_rdata_a"
+    },
+    "S54": {
+      "kind": "goto",
+      "target": "S54"
+    },
+    "S55": {
+      "kind": "goto",
+      "target": "S56"
+    },
+    "S56": {
+      "kind": "goto",
+      "target": "S57"
+    },
+    "S57": {
+      "kind": "goto",
+      "target": "S58"
+    },
+    "S58": {
+      "kind": "goto",
+      "target": "S59"
+    },
+    "S59": {
+      "kind": "goto",
+      "target": "S60"
+    },
+    "S60": {
+      "kind": "goto",
+      "target": "S61"
+    },
+    "S61": {
+      "kind": "goto",
+      "target": "S62"
+    },
+    "S62": {
+      "kind": "return",
+      "target_source": "rf_rdata_a"
+    },
+    "S63": {
+      "kind": "goto",
+      "target": "S64"
+    },
+    "S64": {
+      "kind": "branch",
+      "taken": "S87",
+      "not_taken": "S65"
+    },
+    "S65": {
+      "kind": "goto",
+      "target": "S66"
+    },
+    "S66": {
+      "kind": "goto",
+      "target": "S67"
+    },
+    "S67": {
+      "kind": "goto",
+      "target": "S68"
+    },
+    "S68": {
+      "kind": "goto",
+      "target": "S69"
+    },
+    "S69": {
+      "kind": "goto",
+      "target": "S70"
+    },
+    "S70": {
+      "kind": "goto",
+      "target": "S71"
+    },
+    "S71": {
+      "kind": "goto",
+      "target": "S72"
+    },
+    "S72": {
+      "kind": "branch",
+      "taken": "S79",
+      "not_taken": "S73"
+    },
+    "S73": {
+      "kind": "goto",
+      "target": "S74"
+    },
+    "S74": {
+      "kind": "goto",
+      "target": "S75"
+    },
+    "S75": {
+      "kind": "goto",
+      "target": "S76"
+    },
+    "S76": {
+      "kind": "branch",
+      "taken": "S87",
+      "not_taken": "S77"
+    },
+    "S77": {
+      "kind": "goto",
+      "target": "S78"
+    },
+    "S78": {
+      "kind": "return",
+      "target_source": "rf_rdata_a"
+    },
+    "S79": {
+      "kind": "goto",
+      "target": "S80"
+    },
+    "S80": {
+      "kind": "goto",
+      "target": "S81"
+    },
+    "S81": {
+      "kind": "goto",
+      "target": "S82"
+    },
+    "S82": {
+      "kind": "goto",
+      "target": "S83"
+    },
+    "S83": {
+      "kind": "goto",
+      "target": "S84"
+    },
+    "S84": {
+      "kind": "goto",
+      "target": "S85"
+    },
+    "S85": {
+      "kind": "goto",
+      "target": "S86"
+    },
+    "S86": {
+      "kind": "branch",
+      "taken": "S77",
+      "not_taken": "S87"
+    },
+    "S87": {
+      "kind": "goto",
+      "target": "S88"
+    },
+    "S88": {
+      "kind": "return",
+      "target_source": "rf_rdata_a"
+    },
+    "S89": {
+      "kind": "goto",
+      "target": "S90"
+    },
+    "S90": {
+      "kind": "goto",
+      "target": "S91"
+    },
+    "S91": {
+      "kind": "goto",
+      "target": "S92"
+    },
+    "S92": {
+      "kind": "goto",
+      "target": "S93"
+    },
+    "S93": {
+      "kind": "goto",
+      "target": "S94"
+    },
+    "S94": {
+      "kind": "call",
+      "target": "S63",
+      "return_to": "S95"
+    },
+    "S95": {
+      "kind": "branch",
+      "taken": "S102",
+      "not_taken": "S96"
+    },
+    "S96": {
+      "kind": "branch",
+      "taken": "S102",
+      "not_taken": "S97"
+    },
+    "S97": {
+      "kind": "goto",
+      "target": "S98"
+    },
+    "S98": {
+      "kind": "goto",
+      "target": "S99"
+    },
+    "S99": {
+      "kind": "goto",
+      "target": "S100"
+    },
+    "S100": {
+      "kind": "goto",
+      "target": "S101"
+    },
+    "S101": {
+      "kind": "branch",
+      "taken": "S99",
+      "not_taken": "S102"
+    },
+    "S102": {
+      "kind": "goto",
+      "target": "S103"
+    },
+    "S103": {
+      "kind": "goto",
+      "target": "S104"
+    },
+    "S104": {
+      "kind": "goto",
+      "target": "S105"
+    },
+    "S105": {
+      "kind": "return",
+      "target_source": "rf_rdata_a"
+    },
+    "S106": {
+      "kind": "branch",
+      "taken": "S136",
+      "not_taken": "S107"
+    },
+    "S107": {
+      "kind": "goto",
+      "target": "S108"
+    },
+    "S108": {
+      "kind": "goto",
+      "target": "S109"
+    },
+    "S109": {
+      "kind": "goto",
+      "target": "S110"
+    },
+    "S110": {
+      "kind": "goto",
+      "target": "S111"
+    },
+    "S111": {
+      "kind": "goto",
+      "target": "S112"
+    },
+    "S112": {
+      "kind": "goto",
+      "target": "S113"
+    },
+    "S113": {
+      "kind": "goto",
+      "target": "S114"
+    },
+    "S114": {
+      "kind": "call",
+      "target": "S63",
+      "return_to": "S115"
+    },
+    "S115": {
+      "kind": "branch",
+      "taken": "S130",
+      "not_taken": "S116"
+    },
+    "S116": {
+      "kind": "goto",
+      "target": "S117"
+    },
+    "S117": {
+      "kind": "goto",
+      "target": "S118"
+    },
+    "S118": {
+      "kind": "goto",
+      "target": "S119"
+    },
+    "S119": {
+      "kind": "branch",
+      "taken": "S125",
+      "not_taken": "S120"
+    },
+    "S120": {
+      "kind": "goto",
+      "target": "S121"
+    },
+    "S121": {
+      "kind": "goto",
+      "target": "S122"
+    },
+    "S122": {
+      "kind": "goto",
+      "target": "S123"
+    },
+    "S123": {
+      "kind": "goto",
+      "target": "S124"
+    },
+    "S124": {
+      "kind": "branch",
+      "taken": "S120",
+      "not_taken": "S125"
+    },
+    "S125": {
+      "kind": "goto",
+      "target": "S126"
+    },
+    "S126": {
+      "kind": "goto",
+      "target": "S127"
+    },
+    "S127": {
+      "kind": "goto",
+      "target": "S128"
+    },
+    "S128": {
+      "kind": "goto",
+      "target": "S129"
+    },
+    "S129": {
+      "kind": "return",
+      "target_source": "rf_rdata_a"
+    },
+    "S130": {
+      "kind": "goto",
+      "target": "S131"
+    },
+    "S131": {
+      "kind": "goto",
+      "target": "S132"
+    },
+    "S132": {
+      "kind": "goto",
+      "target": "S133"
+    },
+    "S133": {
+      "kind": "goto",
+      "target": "S134"
+    },
+    "S134": {
+      "kind": "goto",
+      "target": "S135"
+    },
+    "S135": {
+      "kind": "return",
+      "target_source": "rf_rdata_a"
+    },
+    "S136": {
+      "kind": "goto",
+      "target": "S137"
+    },
+    "S137": {
+      "kind": "return",
+      "target_source": "rf_rdata_a"
+    },
+    "S138": {
+      "kind": "return",
+      "target_source": "rf_rdata_a"
+    },
+    "S139": {
+      "kind": "return",
+      "target_source": "rf_rdata_a"
+    },
+    "S140": {
+      "kind": "goto",
+      "target": "S141"
+    },
+    "S141": {
+      "kind": "return",
+      "target_source": "rf_rdata_a"
+    },
+    "S142": {
+      "kind": "goto",
+      "target": "S143"
+    },
+    "S143": {
+      "kind": "return",
+      "target_source": "rf_rdata_a"
+    },
+    "S144": {
+      "kind": "goto",
+      "target": "S145"
+    },
+    "S145": {
+      "kind": "goto",
+      "target": "S146"
+    },
+    "S146": {
+      "kind": "goto",
+      "target": "S147"
+    },
+    "S147": {
+      "kind": "goto",
+      "target": "S148"
+    },
+    "S148": {
+      "kind": "goto",
+      "target": "S149"
+    },
+    "S149": {
+      "kind": "goto",
+      "target": "S150"
+    },
+    "S150": {
+      "kind": "branch",
+      "taken": "S265",
+      "not_taken": "S151"
+    },
+    "S151": {
+      "kind": "goto",
+      "target": "S152"
+    },
+    "S152": {
+      "kind": "goto",
+      "target": "S153"
+    },
+    "S153": {
+      "kind": "goto",
+      "target": "S154"
+    },
+    "S154": {
+      "kind": "goto",
+      "target": "S155"
+    },
+    "S155": {
+      "kind": "goto",
+      "target": "S156"
+    },
+    "S156": {
+      "kind": "goto",
+      "target": "S157"
+    },
+    "S157": {
+      "kind": "goto",
+      "target": "S158"
+    },
+    "S158": {
+      "kind": "goto",
+      "target": "S159"
+    },
+    "S159": {
+      "kind": "goto",
+      "target": "S160"
+    },
+    "S160": {
+      "kind": "goto",
+      "target": "S161"
+    },
+    "S161": {
+      "kind": "goto",
+      "target": "S162"
+    },
+    "S162": {
+      "kind": "goto",
+      "target": "S163"
+    },
+    "S163": {
+      "kind": "goto",
+      "target": "S164"
+    },
+    "S164": {
+      "kind": "goto",
+      "target": "S165"
+    },
+    "S165": {
+      "kind": "goto",
+      "target": "S166"
+    },
+    "S166": {
+      "kind": "goto",
+      "target": "S167"
+    },
+    "S167": {
+      "kind": "goto",
+      "target": "S168"
+    },
+    "S168": {
+      "kind": "goto",
+      "target": "S169"
+    },
+    "S169": {
+      "kind": "goto",
+      "target": "S170"
+    },
+    "S170": {
+      "kind": "goto",
+      "target": "S171"
+    },
+    "S171": {
+      "kind": "goto",
+      "target": "S172"
+    },
+    "S172": {
+      "kind": "goto",
+      "target": "S173"
+    },
+    "S173": {
+      "kind": "goto",
+      "target": "S174"
+    },
+    "S174": {
+      "kind": "goto",
+      "target": "S175"
+    },
+    "S175": {
+      "kind": "goto",
+      "target": "S176"
+    },
+    "S176": {
+      "kind": "goto",
+      "target": "S177"
+    },
+    "S177": {
+      "kind": "call",
+      "target": "S44",
+      "return_to": "S178"
+    },
+    "S178": {
+      "kind": "goto",
+      "target": "S179"
+    },
+    "S179": {
+      "kind": "goto",
+      "target": "S180"
+    },
+    "S180": {
+      "kind": "call",
+      "target": "S63",
+      "return_to": "S181"
+    },
+    "S181": {
+      "kind": "goto",
+      "target": "S182"
+    },
+    "S182": {
+      "kind": "goto",
+      "target": "S183"
+    },
+    "S183": {
+      "kind": "goto",
+      "target": "S184"
+    },
+    "S184": {
+      "kind": "goto",
+      "target": "S185"
+    },
+    "S185": {
+      "kind": "goto",
+      "target": "S186"
+    },
+    "S186": {
+      "kind": "goto",
+      "target": "S187"
+    },
+    "S187": {
+      "kind": "goto",
+      "target": "S188"
+    },
+    "S188": {
+      "kind": "goto",
+      "target": "S189"
+    },
+    "S189": {
+      "kind": "goto",
+      "target": "S190"
+    },
+    "S190": {
+      "kind": "branch",
+      "taken": "S188",
+      "not_taken": "S191"
+    },
+    "S191": {
+      "kind": "goto",
+      "target": "S192"
+    },
+    "S192": {
+      "kind": "goto",
+      "target": "S193"
+    },
+    "S193": {
+      "kind": "call",
+      "target": "S28",
+      "return_to": "S194"
+    },
+    "S194": {
+      "kind": "goto",
+      "target": "S195"
+    },
+    "S195": {
+      "kind": "goto",
+      "target": "S196"
+    },
+    "S196": {
+      "kind": "goto",
+      "target": "S197"
+    },
+    "S197": {
+      "kind": "goto",
+      "target": "S198"
+    },
+    "S198": {
+      "kind": "goto",
+      "target": "S199"
+    },
+    "S199": {
+      "kind": "goto",
+      "target": "S200"
+    },
+    "S200": {
+      "kind": "goto",
+      "target": "S201"
+    },
+    "S201": {
+      "kind": "goto",
+      "target": "S202"
+    },
+    "S202": {
+      "kind": "goto",
+      "target": "S203"
+    },
+    "S203": {
+      "kind": "branch",
+      "taken": "S193",
+      "not_taken": "S204"
+    },
+    "S204": {
+      "kind": "goto",
+      "target": "S205"
+    },
+    "S205": {
+      "kind": "goto",
+      "target": "S206"
+    },
+    "S206": {
+      "kind": "goto",
+      "target": "S207"
+    },
+    "S207": {
+      "kind": "goto",
+      "target": "S208"
+    },
+    "S208": {
+      "kind": "branch",
+      "taken": "S187",
+      "not_taken": "S209"
+    },
+    "S209": {
+      "kind": "goto",
+      "target": "S210"
+    },
+    "S210": {
+      "kind": "goto",
+      "target": "S211"
+    },
+    "S211": {
+      "kind": "goto",
+      "target": "S212"
+    },
+    "S212": {
+      "kind": "goto",
+      "target": "S213"
+    },
+    "S213": {
+      "kind": "goto",
+      "target": "S214"
+    },
+    "S214": {
+      "kind": "goto",
+      "target": "S215"
+    },
+    "S215": {
+      "kind": "goto",
+      "target": "S216"
+    },
+    "S216": {
+      "kind": "goto",
+      "target": "S217"
+    },
+    "S217": {
+      "kind": "goto",
+      "target": "S218"
+    },
+    "S218": {
+      "kind": "goto",
+      "target": "S219"
+    },
+    "S219": {
+      "kind": "goto",
+      "target": "S220"
+    },
+    "S220": {
+      "kind": "goto",
+      "target": "S221"
+    },
+    "S221": {
+      "kind": "goto",
+      "target": "S222"
+    },
+    "S222": {
+      "kind": "branch",
+      "taken": "S227",
+      "not_taken": "S223"
+    },
+    "S223": {
+      "kind": "goto",
+      "target": "S259"
+    },
+    "S224": {
+      "kind": "branch",
+      "taken": "S231",
+      "not_taken": "S225"
+    },
+    "S225": {
+      "kind": "goto",
+      "target": "S226"
+    },
+    "S226": {
+      "kind": "branch",
+      "taken": "S259",
+      "not_taken": "S227"
+    },
+    "S227": {
+      "kind": "goto",
+      "target": "S228"
+    },
+    "S228": {
+      "kind": "goto",
+      "target": "S229"
+    },
+    "S229": {
+      "kind": "goto",
+      "target": "S230"
+    },
+    "S230": {
+      "kind": "branch",
+      "taken": "S224",
+      "not_taken": "S231"
+    },
+    "S231": {
+      "kind": "goto",
+      "target": "S232"
+    },
+    "S232": {
+      "kind": "branch",
+      "taken": "S219",
+      "not_taken": "S233"
+    },
+    "S233": {
+      "kind": "goto",
+      "target": "S234"
+    },
+    "S234": {
+      "kind": "branch",
+      "taken": "S218",
+      "not_taken": "S235"
+    },
+    "S235": {
+      "kind": "goto",
+      "target": "S236"
+    },
+    "S236": {
+      "kind": "goto",
+      "target": "S237"
+    },
+    "S237": {
+      "kind": "call",
+      "target": "S138",
+      "return_to": "S238"
+    },
+    "S238": {
+      "kind": "branch",
+      "taken": "S173",
+      "not_taken": "S239"
+    },
+    "S239": {
+      "kind": "goto",
+      "target": "S240"
+    },
+    "S240": {
+      "kind": "goto",
+      "target": "S241"
+    },
+    "S241": {
+      "kind": "branch",
+      "taken": "S172",
+      "not_taken": "S242"
+    },
+    "S242": {
+      "kind": "goto",
+      "target": "S243"
+    },
+    "S243": {
+      "kind": "goto",
+      "target": "S244"
+    },
+    "S244": {
+      "kind": "goto",
+      "target": "S245"
+    },
+    "S245": {
+      "kind": "goto",
+      "target": "S246"
+    },
+    "S246": {
+      "kind": "goto",
+      "target": "S247"
+    },
+    "S247": {
+      "kind": "goto",
+      "target": "S248"
+    },
+    "S248": {
+      "kind": "goto",
+      "target": "S249"
+    },
+    "S249": {
+      "kind": "goto",
+      "target": "S250"
+    },
+    "S250": {
+      "kind": "goto",
+      "target": "S251"
+    },
+    "S251": {
+      "kind": "goto",
+      "target": "S252"
+    },
+    "S252": {
+      "kind": "goto",
+      "target": "S253"
+    },
+    "S253": {
+      "kind": "goto",
+      "target": "S254"
+    },
+    "S254": {
+      "kind": "goto",
+      "target": "S255"
+    },
+    "S255": {
+      "kind": "goto",
+      "target": "S256"
+    },
+    "S256": {
+      "kind": "goto",
+      "target": "S257"
+    },
+    "S257": {
+      "kind": "goto",
+      "target": "S258"
+    },
+    "S258": {
+      "kind": "return",
+      "target_source": "rf_rdata_a"
+    },
+    "S259": {
+      "kind": "goto",
+      "target": "S260"
+    },
+    "S260": {
+      "kind": "branch",
+      "taken": "S231",
+      "not_taken": "S261"
+    },
+    "S261": {
+      "kind": "goto",
+      "target": "S262"
+    },
+    "S262": {
+      "kind": "goto",
+      "target": "S263"
+    },
+    "S263": {
+      "kind": "branch",
+      "taken": "S218",
+      "not_taken": "S264"
+    },
+    "S264": {
+      "kind": "goto",
+      "target": "S235"
+    },
+    "S265": {
+      "kind": "goto",
+      "target": "S266"
+    },
+    "S266": {
+      "kind": "goto",
+      "target": "S267"
+    },
+    "S267": {
+      "kind": "branch",
+      "taken": "S252",
+      "not_taken": "S268"
+    },
+    "S268": {
+      "kind": "goto",
+      "target": "S269"
+    },
+    "S269": {
+      "kind": "goto",
+      "target": "S270"
+    },
+    "S270": {
+      "kind": "branch",
+      "taken": "S265",
+      "not_taken": "S271"
+    },
+    "S271": {
+      "kind": "goto",
+      "target": "S252"
+    },
+    "S272": {
+      "kind": "goto",
+      "target": "S273"
+    },
+    "S273": {
+      "kind": "goto",
+      "target": "S274"
+    },
+    "S274": {
+      "kind": "goto",
+      "target": "S144"
+    },
+    "S275": {
+      "kind": "goto",
+      "target": "S276"
+    },
+    "S276": {
+      "kind": "goto",
+      "target": "S277"
+    },
+    "S277": {
+      "kind": "goto",
+      "target": "S144"
+    },
+    "S278": {
+      "kind": "return",
+      "target_source": "rf_rdata_a"
+    },
+    "S279": {
+      "kind": "goto",
+      "target": "S280"
+    },
+    "S280": {
+      "kind": "goto",
+      "target": "S281"
+    },
+    "S281": {
+      "kind": "return",
+      "target_source": "rf_rdata_a"
+    }
+  },
+  "regions": {
+    "R0": {
+      "instructions": [
+        "S0",
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5"
+      ],
+      "source_order": 0,
+      "labels": [
+        "_start"
+      ],
+      "reasons": [
+        "entry",
+        "label"
+      ]
+    },
+    "R1": {
+      "instructions": [
+        "S6",
+        "S7",
+        "S8",
+        "S9"
+      ],
+      "source_order": 1,
+      "labels": [
+        "bss_loop"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ]
+    },
+    "R2": {
+      "instructions": [
+        "S10"
+      ],
+      "source_order": 2,
+      "labels": [
+        "bss_done"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ]
+    },
+    "R3": {
+      "instructions": [
+        "S11"
+      ],
+      "source_order": 3,
+      "labels": [
+        "loop"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ]
+    },
+    "R4": {
+      "instructions": [
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20",
+        "S21",
+        "S22",
+        "S23",
+        "S24",
+        "S25",
+        "S26",
+        "S27"
+      ],
+      "source_order": 4,
+      "labels": [
+        "main"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ]
+    },
+    "R5": {
+      "instructions": [
+        "S28",
+        "S29",
+        "S30",
+        "S31",
+        "S32",
+        "S33",
+        "S34",
+        "S35",
+        "S36",
+        "S37",
+        "S38",
+        "S39",
+        "S40"
+      ],
+      "source_order": 5,
+      "labels": [
+        "rand_beebs"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ]
+    },
+    "R6": {
+      "instructions": [
+        "S41",
+        "S42",
+        "S43"
+      ],
+      "source_order": 6,
+      "labels": [
+        "srand_beebs"
+      ],
+      "reasons": [
+        "label"
+      ]
+    },
+    "R7": {
+      "instructions": [
+        "S44",
+        "S45",
+        "S46",
+        "S47",
+        "S48",
+        "S49",
+        "S50",
+        "S51",
+        "S52",
+        "S53"
+      ],
+      "source_order": 7,
+      "labels": [
+        "init_heap_beebs"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ]
+    },
+    "R8": {
+      "instructions": [
+        "S54"
+      ],
+      "source_order": 8,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ]
+    },
+    "R9": {
+      "instructions": [
+        "S55",
+        "S56",
+        "S57",
+        "S58",
+        "S59",
+        "S60",
+        "S61",
+        "S62"
+      ],
+      "source_order": 9,
+      "labels": [
+        "check_heap_beebs"
+      ],
+      "reasons": [
+        "label"
+      ]
+    },
+    "R10": {
+      "instructions": [
+        "S63",
+        "S64",
+        "S65",
+        "S66",
+        "S67",
+        "S68",
+        "S69",
+        "S70",
+        "S71",
+        "S72",
+        "S73",
+        "S74",
+        "S75",
+        "S76"
+      ],
+      "source_order": 10,
+      "labels": [
+        "malloc_beebs"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ]
+    },
+    "R11": {
+      "instructions": [
+        "S77",
+        "S78"
+      ],
+      "source_order": 11,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ]
+    },
+    "R12": {
+      "instructions": [
+        "S79",
+        "S80",
+        "S81",
+        "S82",
+        "S83",
+        "S84",
+        "S85",
+        "S86"
+      ],
+      "source_order": 12,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ]
+    },
+    "R13": {
+      "instructions": [
+        "S87",
+        "S88"
+      ],
+      "source_order": 13,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ]
+    },
+    "R14": {
+      "instructions": [
+        "S89",
+        "S90",
+        "S91",
+        "S92",
+        "S93",
+        "S94",
+        "S95",
+        "S96",
+        "S97",
+        "S98"
+      ],
+      "source_order": 14,
+      "labels": [
+        "calloc_beebs"
+      ],
+      "reasons": [
+        "label"
+      ]
+    },
+    "R15": {
+      "instructions": [
+        "S99",
+        "S100",
+        "S101"
+      ],
+      "source_order": 15,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ]
+    },
+    "R16": {
+      "instructions": [
+        "S102",
+        "S103",
+        "S104",
+        "S105"
+      ],
+      "source_order": 16,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ]
+    },
+    "R17": {
+      "instructions": [
+        "S106",
+        "S107",
+        "S108",
+        "S109",
+        "S110",
+        "S111",
+        "S112",
+        "S113",
+        "S114",
+        "S115",
+        "S116",
+        "S117",
+        "S118",
+        "S119"
+      ],
+      "source_order": 17,
+      "labels": [
+        "realloc_beebs"
+      ],
+      "reasons": [
+        "label"
+      ]
+    },
+    "R18": {
+      "instructions": [
+        "S120",
+        "S121",
+        "S122",
+        "S123",
+        "S124"
+      ],
+      "source_order": 18,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ]
+    },
+    "R19": {
+      "instructions": [
+        "S125",
+        "S126",
+        "S127",
+        "S128",
+        "S129"
+      ],
+      "source_order": 19,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ]
+    },
+    "R20": {
+      "instructions": [
+        "S130",
+        "S131",
+        "S132",
+        "S133",
+        "S134",
+        "S135"
+      ],
+      "source_order": 20,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ]
+    },
+    "R21": {
+      "instructions": [
+        "S136",
+        "S137"
+      ],
+      "source_order": 21,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ]
+    },
+    "R22": {
+      "instructions": [
+        "S138"
+      ],
+      "source_order": 22,
+      "labels": [
+        "free_beebs"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ]
+    },
+    "R23": {
+      "instructions": [
+        "S139"
+      ],
+      "source_order": 23,
+      "labels": [
+        "initialise_board"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ]
+    },
+    "R24": {
+      "instructions": [
+        "S140",
+        "S141"
+      ],
+      "source_order": 24,
+      "labels": [
+        "start_trigger"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ]
+    },
+    "R25": {
+      "instructions": [
+        "S142",
+        "S143"
+      ],
+      "source_order": 25,
+      "labels": [
+        "stop_trigger"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ]
+    },
+    "R26": {
+      "instructions": [
+        "S144",
+        "S145",
+        "S146",
+        "S147",
+        "S148",
+        "S149",
+        "S150",
+        "S151",
+        "S152",
+        "S153",
+        "S154",
+        "S155",
+        "S156",
+        "S157",
+        "S158",
+        "S159",
+        "S160",
+        "S161",
+        "S162",
+        "S163",
+        "S164",
+        "S165",
+        "S166",
+        "S167",
+        "S168",
+        "S169",
+        "S170",
+        "S171"
+      ],
+      "source_order": 26,
+      "labels": [
+        "benchmark_body"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ]
+    },
+    "R27": {
+      "instructions": [
+        "S172"
+      ],
+      "source_order": 27,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ]
+    },
+    "R28": {
+      "instructions": [
+        "S173",
+        "S174",
+        "S175",
+        "S176",
+        "S177",
+        "S178",
+        "S179",
+        "S180",
+        "S181",
+        "S182",
+        "S183",
+        "S184",
+        "S185",
+        "S186"
+      ],
+      "source_order": 28,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ]
+    },
+    "R29": {
+      "instructions": [
+        "S187"
+      ],
+      "source_order": 29,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ]
+    },
+    "R30": {
+      "instructions": [
+        "S188",
+        "S189",
+        "S190",
+        "S191",
+        "S192"
+      ],
+      "source_order": 30,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ]
+    },
+    "R31": {
+      "instructions": [
+        "S193",
+        "S194",
+        "S195",
+        "S196",
+        "S197",
+        "S198",
+        "S199",
+        "S200",
+        "S201",
+        "S202",
+        "S203",
+        "S204",
+        "S205",
+        "S206",
+        "S207",
+        "S208",
+        "S209",
+        "S210",
+        "S211",
+        "S212",
+        "S213",
+        "S214",
+        "S215",
+        "S216",
+        "S217"
+      ],
+      "source_order": 31,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ]
+    },
+    "R32": {
+      "instructions": [
+        "S218"
+      ],
+      "source_order": 32,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ]
+    },
+    "R33": {
+      "instructions": [
+        "S219",
+        "S220",
+        "S221",
+        "S222",
+        "S223"
+      ],
+      "source_order": 33,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ]
+    },
+    "R34": {
+      "instructions": [
+        "S224",
+        "S225",
+        "S226"
+      ],
+      "source_order": 34,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ]
+    },
+    "R35": {
+      "instructions": [
+        "S227",
+        "S228",
+        "S229",
+        "S230"
+      ],
+      "source_order": 35,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ]
+    },
+    "R36": {
+      "instructions": [
+        "S231",
+        "S232",
+        "S233",
+        "S234"
+      ],
+      "source_order": 36,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ]
+    },
+    "R37": {
+      "instructions": [
+        "S235",
+        "S236",
+        "S237",
+        "S238",
+        "S239",
+        "S240",
+        "S241",
+        "S242",
+        "S243",
+        "S244",
+        "S245",
+        "S246",
+        "S247",
+        "S248",
+        "S249",
+        "S250",
+        "S251"
+      ],
+      "source_order": 37,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ]
+    },
+    "R38": {
+      "instructions": [
+        "S252",
+        "S253",
+        "S254",
+        "S255",
+        "S256",
+        "S257",
+        "S258"
+      ],
+      "source_order": 38,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ]
+    },
+    "R39": {
+      "instructions": [
+        "S259",
+        "S260",
+        "S261",
+        "S262",
+        "S263",
+        "S264"
+      ],
+      "source_order": 39,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ]
+    },
+    "R40": {
+      "instructions": [
+        "S265",
+        "S266",
+        "S267",
+        "S268",
+        "S269",
+        "S270",
+        "S271"
+      ],
+      "source_order": 40,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ]
+    },
+    "R41": {
+      "instructions": [
+        "S272",
+        "S273",
+        "S274"
+      ],
+      "source_order": 41,
+      "labels": [
+        "warm_caches"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ]
+    },
+    "R42": {
+      "instructions": [
+        "S275",
+        "S276",
+        "S277"
+      ],
+      "source_order": 42,
+      "labels": [
+        "benchmark"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ]
+    },
+    "R43": {
+      "instructions": [
+        "S278"
+      ],
+      "source_order": 43,
+      "labels": [
+        "initialise_benchmark"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ]
+    },
+    "R44": {
+      "instructions": [
+        "S279",
+        "S280",
+        "S281"
+      ],
+      "source_order": 44,
+      "labels": [
+        "verify_benchmark"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ]
+    }
+  },
+  "region_of": {
+    "S0": "R0",
+    "S1": "R0",
+    "S2": "R0",
+    "S3": "R0",
+    "S4": "R0",
+    "S5": "R0",
+    "S6": "R1",
+    "S7": "R1",
+    "S8": "R1",
+    "S9": "R1",
+    "S10": "R2",
+    "S11": "R3",
+    "S12": "R4",
+    "S13": "R4",
+    "S14": "R4",
+    "S15": "R4",
+    "S16": "R4",
+    "S17": "R4",
+    "S18": "R4",
+    "S19": "R4",
+    "S20": "R4",
+    "S21": "R4",
+    "S22": "R4",
+    "S23": "R4",
+    "S24": "R4",
+    "S25": "R4",
+    "S26": "R4",
+    "S27": "R4",
+    "S28": "R5",
+    "S29": "R5",
+    "S30": "R5",
+    "S31": "R5",
+    "S32": "R5",
+    "S33": "R5",
+    "S34": "R5",
+    "S35": "R5",
+    "S36": "R5",
+    "S37": "R5",
+    "S38": "R5",
+    "S39": "R5",
+    "S40": "R5",
+    "S41": "R6",
+    "S42": "R6",
+    "S43": "R6",
+    "S44": "R7",
+    "S45": "R7",
+    "S46": "R7",
+    "S47": "R7",
+    "S48": "R7",
+    "S49": "R7",
+    "S50": "R7",
+    "S51": "R7",
+    "S52": "R7",
+    "S53": "R7",
+    "S54": "R8",
+    "S55": "R9",
+    "S56": "R9",
+    "S57": "R9",
+    "S58": "R9",
+    "S59": "R9",
+    "S60": "R9",
+    "S61": "R9",
+    "S62": "R9",
+    "S63": "R10",
+    "S64": "R10",
+    "S65": "R10",
+    "S66": "R10",
+    "S67": "R10",
+    "S68": "R10",
+    "S69": "R10",
+    "S70": "R10",
+    "S71": "R10",
+    "S72": "R10",
+    "S73": "R10",
+    "S74": "R10",
+    "S75": "R10",
+    "S76": "R10",
+    "S77": "R11",
+    "S78": "R11",
+    "S79": "R12",
+    "S80": "R12",
+    "S81": "R12",
+    "S82": "R12",
+    "S83": "R12",
+    "S84": "R12",
+    "S85": "R12",
+    "S86": "R12",
+    "S87": "R13",
+    "S88": "R13",
+    "S89": "R14",
+    "S90": "R14",
+    "S91": "R14",
+    "S92": "R14",
+    "S93": "R14",
+    "S94": "R14",
+    "S95": "R14",
+    "S96": "R14",
+    "S97": "R14",
+    "S98": "R14",
+    "S99": "R15",
+    "S100": "R15",
+    "S101": "R15",
+    "S102": "R16",
+    "S103": "R16",
+    "S104": "R16",
+    "S105": "R16",
+    "S106": "R17",
+    "S107": "R17",
+    "S108": "R17",
+    "S109": "R17",
+    "S110": "R17",
+    "S111": "R17",
+    "S112": "R17",
+    "S113": "R17",
+    "S114": "R17",
+    "S115": "R17",
+    "S116": "R17",
+    "S117": "R17",
+    "S118": "R17",
+    "S119": "R17",
+    "S120": "R18",
+    "S121": "R18",
+    "S122": "R18",
+    "S123": "R18",
+    "S124": "R18",
+    "S125": "R19",
+    "S126": "R19",
+    "S127": "R19",
+    "S128": "R19",
+    "S129": "R19",
+    "S130": "R20",
+    "S131": "R20",
+    "S132": "R20",
+    "S133": "R20",
+    "S134": "R20",
+    "S135": "R20",
+    "S136": "R21",
+    "S137": "R21",
+    "S138": "R22",
+    "S139": "R23",
+    "S140": "R24",
+    "S141": "R24",
+    "S142": "R25",
+    "S143": "R25",
+    "S144": "R26",
+    "S145": "R26",
+    "S146": "R26",
+    "S147": "R26",
+    "S148": "R26",
+    "S149": "R26",
+    "S150": "R26",
+    "S151": "R26",
+    "S152": "R26",
+    "S153": "R26",
+    "S154": "R26",
+    "S155": "R26",
+    "S156": "R26",
+    "S157": "R26",
+    "S158": "R26",
+    "S159": "R26",
+    "S160": "R26",
+    "S161": "R26",
+    "S162": "R26",
+    "S163": "R26",
+    "S164": "R26",
+    "S165": "R26",
+    "S166": "R26",
+    "S167": "R26",
+    "S168": "R26",
+    "S169": "R26",
+    "S170": "R26",
+    "S171": "R26",
+    "S172": "R27",
+    "S173": "R28",
+    "S174": "R28",
+    "S175": "R28",
+    "S176": "R28",
+    "S177": "R28",
+    "S178": "R28",
+    "S179": "R28",
+    "S180": "R28",
+    "S181": "R28",
+    "S182": "R28",
+    "S183": "R28",
+    "S184": "R28",
+    "S185": "R28",
+    "S186": "R28",
+    "S187": "R29",
+    "S188": "R30",
+    "S189": "R30",
+    "S190": "R30",
+    "S191": "R30",
+    "S192": "R30",
+    "S193": "R31",
+    "S194": "R31",
+    "S195": "R31",
+    "S196": "R31",
+    "S197": "R31",
+    "S198": "R31",
+    "S199": "R31",
+    "S200": "R31",
+    "S201": "R31",
+    "S202": "R31",
+    "S203": "R31",
+    "S204": "R31",
+    "S205": "R31",
+    "S206": "R31",
+    "S207": "R31",
+    "S208": "R31",
+    "S209": "R31",
+    "S210": "R31",
+    "S211": "R31",
+    "S212": "R31",
+    "S213": "R31",
+    "S214": "R31",
+    "S215": "R31",
+    "S216": "R31",
+    "S217": "R31",
+    "S218": "R32",
+    "S219": "R33",
+    "S220": "R33",
+    "S221": "R33",
+    "S222": "R33",
+    "S223": "R33",
+    "S224": "R34",
+    "S225": "R34",
+    "S226": "R34",
+    "S227": "R35",
+    "S228": "R35",
+    "S229": "R35",
+    "S230": "R35",
+    "S231": "R36",
+    "S232": "R36",
+    "S233": "R36",
+    "S234": "R36",
+    "S235": "R37",
+    "S236": "R37",
+    "S237": "R37",
+    "S238": "R37",
+    "S239": "R37",
+    "S240": "R37",
+    "S241": "R37",
+    "S242": "R37",
+    "S243": "R37",
+    "S244": "R37",
+    "S245": "R37",
+    "S246": "R37",
+    "S247": "R37",
+    "S248": "R37",
+    "S249": "R37",
+    "S250": "R37",
+    "S251": "R37",
+    "S252": "R38",
+    "S253": "R38",
+    "S254": "R38",
+    "S255": "R38",
+    "S256": "R38",
+    "S257": "R38",
+    "S258": "R38",
+    "S259": "R39",
+    "S260": "R39",
+    "S261": "R39",
+    "S262": "R39",
+    "S263": "R39",
+    "S264": "R39",
+    "S265": "R40",
+    "S266": "R40",
+    "S267": "R40",
+    "S268": "R40",
+    "S269": "R40",
+    "S270": "R40",
+    "S271": "R40",
+    "S272": "R41",
+    "S273": "R41",
+    "S274": "R41",
+    "S275": "R42",
+    "S276": "R42",
+    "S277": "R42",
+    "S278": "R43",
+    "S279": "R44",
+    "S280": "R44",
+    "S281": "R44"
+  },
+  "instruction_offsets": {
+    "S0": 0,
+    "S1": 1,
+    "S2": 2,
+    "S3": 3,
+    "S4": 4,
+    "S5": 5,
+    "S6": 0,
+    "S7": 1,
+    "S8": 2,
+    "S9": 3,
+    "S10": 0,
+    "S11": 0,
+    "S12": 0,
+    "S13": 1,
+    "S14": 2,
+    "S15": 3,
+    "S16": 4,
+    "S17": 5,
+    "S18": 6,
+    "S19": 7,
+    "S20": 8,
+    "S21": 9,
+    "S22": 10,
+    "S23": 11,
+    "S24": 12,
+    "S25": 13,
+    "S26": 14,
+    "S27": 15,
+    "S28": 0,
+    "S29": 1,
+    "S30": 2,
+    "S31": 3,
+    "S32": 4,
+    "S33": 5,
+    "S34": 6,
+    "S35": 7,
+    "S36": 8,
+    "S37": 9,
+    "S38": 10,
+    "S39": 11,
+    "S40": 12,
+    "S41": 0,
+    "S42": 1,
+    "S43": 2,
+    "S44": 0,
+    "S45": 1,
+    "S46": 2,
+    "S47": 3,
+    "S48": 4,
+    "S49": 5,
+    "S50": 6,
+    "S51": 7,
+    "S52": 8,
+    "S53": 9,
+    "S54": 0,
+    "S55": 0,
+    "S56": 1,
+    "S57": 2,
+    "S58": 3,
+    "S59": 4,
+    "S60": 5,
+    "S61": 6,
+    "S62": 7,
+    "S63": 0,
+    "S64": 1,
+    "S65": 2,
+    "S66": 3,
+    "S67": 4,
+    "S68": 5,
+    "S69": 6,
+    "S70": 7,
+    "S71": 8,
+    "S72": 9,
+    "S73": 10,
+    "S74": 11,
+    "S75": 12,
+    "S76": 13,
+    "S77": 0,
+    "S78": 1,
+    "S79": 0,
+    "S80": 1,
+    "S81": 2,
+    "S82": 3,
+    "S83": 4,
+    "S84": 5,
+    "S85": 6,
+    "S86": 7,
+    "S87": 0,
+    "S88": 1,
+    "S89": 0,
+    "S90": 1,
+    "S91": 2,
+    "S92": 3,
+    "S93": 4,
+    "S94": 5,
+    "S95": 6,
+    "S96": 7,
+    "S97": 8,
+    "S98": 9,
+    "S99": 0,
+    "S100": 1,
+    "S101": 2,
+    "S102": 0,
+    "S103": 1,
+    "S104": 2,
+    "S105": 3,
+    "S106": 0,
+    "S107": 1,
+    "S108": 2,
+    "S109": 3,
+    "S110": 4,
+    "S111": 5,
+    "S112": 6,
+    "S113": 7,
+    "S114": 8,
+    "S115": 9,
+    "S116": 10,
+    "S117": 11,
+    "S118": 12,
+    "S119": 13,
+    "S120": 0,
+    "S121": 1,
+    "S122": 2,
+    "S123": 3,
+    "S124": 4,
+    "S125": 0,
+    "S126": 1,
+    "S127": 2,
+    "S128": 3,
+    "S129": 4,
+    "S130": 0,
+    "S131": 1,
+    "S132": 2,
+    "S133": 3,
+    "S134": 4,
+    "S135": 5,
+    "S136": 0,
+    "S137": 1,
+    "S138": 0,
+    "S139": 0,
+    "S140": 0,
+    "S141": 1,
+    "S142": 0,
+    "S143": 1,
+    "S144": 0,
+    "S145": 1,
+    "S146": 2,
+    "S147": 3,
+    "S148": 4,
+    "S149": 5,
+    "S150": 6,
+    "S151": 7,
+    "S152": 8,
+    "S153": 9,
+    "S154": 10,
+    "S155": 11,
+    "S156": 12,
+    "S157": 13,
+    "S158": 14,
+    "S159": 15,
+    "S160": 16,
+    "S161": 17,
+    "S162": 18,
+    "S163": 19,
+    "S164": 20,
+    "S165": 21,
+    "S166": 22,
+    "S167": 23,
+    "S168": 24,
+    "S169": 25,
+    "S170": 26,
+    "S171": 27,
+    "S172": 0,
+    "S173": 0,
+    "S174": 1,
+    "S175": 2,
+    "S176": 3,
+    "S177": 4,
+    "S178": 5,
+    "S179": 6,
+    "S180": 7,
+    "S181": 8,
+    "S182": 9,
+    "S183": 10,
+    "S184": 11,
+    "S185": 12,
+    "S186": 13,
+    "S187": 0,
+    "S188": 0,
+    "S189": 1,
+    "S190": 2,
+    "S191": 3,
+    "S192": 4,
+    "S193": 0,
+    "S194": 1,
+    "S195": 2,
+    "S196": 3,
+    "S197": 4,
+    "S198": 5,
+    "S199": 6,
+    "S200": 7,
+    "S201": 8,
+    "S202": 9,
+    "S203": 10,
+    "S204": 11,
+    "S205": 12,
+    "S206": 13,
+    "S207": 14,
+    "S208": 15,
+    "S209": 16,
+    "S210": 17,
+    "S211": 18,
+    "S212": 19,
+    "S213": 20,
+    "S214": 21,
+    "S215": 22,
+    "S216": 23,
+    "S217": 24,
+    "S218": 0,
+    "S219": 0,
+    "S220": 1,
+    "S221": 2,
+    "S222": 3,
+    "S223": 4,
+    "S224": 0,
+    "S225": 1,
+    "S226": 2,
+    "S227": 0,
+    "S228": 1,
+    "S229": 2,
+    "S230": 3,
+    "S231": 0,
+    "S232": 1,
+    "S233": 2,
+    "S234": 3,
+    "S235": 0,
+    "S236": 1,
+    "S237": 2,
+    "S238": 3,
+    "S239": 4,
+    "S240": 5,
+    "S241": 6,
+    "S242": 7,
+    "S243": 8,
+    "S244": 9,
+    "S245": 10,
+    "S246": 11,
+    "S247": 12,
+    "S248": 13,
+    "S249": 14,
+    "S250": 15,
+    "S251": 16,
+    "S252": 0,
+    "S253": 1,
+    "S254": 2,
+    "S255": 3,
+    "S256": 4,
+    "S257": 5,
+    "S258": 6,
+    "S259": 0,
+    "S260": 1,
+    "S261": 2,
+    "S262": 3,
+    "S263": 4,
+    "S264": 5,
+    "S265": 0,
+    "S266": 1,
+    "S267": 2,
+    "S268": 3,
+    "S269": 4,
+    "S270": 5,
+    "S271": 6,
+    "S272": 0,
+    "S273": 1,
+    "S274": 2,
+    "S275": 0,
+    "S276": 1,
+    "S277": 2,
+    "S278": 0,
+    "S279": 0,
+    "S280": 1,
+    "S281": 2
+  },
+  "label_codes": {
+    "R0": 14,
+    "R1": 21,
+    "R2": 36,
+    "R3": 37,
+    "R4": 3,
+    "R5": 7,
+    "R6": 25,
+    "R7": 8,
+    "R8": 38,
+    "R9": 10,
+    "R10": 4,
+    "R11": 31,
+    "R12": 11,
+    "R13": 32,
+    "R14": 9,
+    "R15": 26,
+    "R16": 22,
+    "R17": 5,
+    "R18": 17,
+    "R19": 18,
+    "R20": 15,
+    "R21": 33,
+    "R22": 39,
+    "R23": 40,
+    "R24": 34,
+    "R25": 35,
+    "R26": 0,
+    "R27": 41,
+    "R28": 6,
+    "R29": 42,
+    "R30": 19,
+    "R31": 1,
+    "R32": 43,
+    "R33": 20,
+    "R34": 27,
+    "R35": 23,
+    "R36": 24,
+    "R37": 2,
+    "R38": 12,
+    "R39": 16,
+    "R40": 13,
+    "R41": 28,
+    "R42": 29,
+    "R43": 44,
+    "R44": 30
+  },
+  "state_codes": {
+    "S0": 448,
+    "S1": 449,
+    "S2": 450,
+    "S3": 451,
+    "S4": 452,
+    "S5": 453,
+    "S6": 672,
+    "S7": 673,
+    "S8": 674,
+    "S9": 675,
+    "S10": 1152,
+    "S11": 1184,
+    "S12": 96,
+    "S13": 97,
+    "S14": 98,
+    "S15": 99,
+    "S16": 100,
+    "S17": 101,
+    "S18": 102,
+    "S19": 103,
+    "S20": 104,
+    "S21": 105,
+    "S22": 106,
+    "S23": 107,
+    "S24": 108,
+    "S25": 109,
+    "S26": 110,
+    "S27": 111,
+    "S28": 224,
+    "S29": 225,
+    "S30": 226,
+    "S31": 227,
+    "S32": 228,
+    "S33": 229,
+    "S34": 230,
+    "S35": 231,
+    "S36": 232,
+    "S37": 233,
+    "S38": 234,
+    "S39": 235,
+    "S40": 236,
+    "S41": 800,
+    "S42": 801,
+    "S43": 802,
+    "S44": 256,
+    "S45": 257,
+    "S46": 258,
+    "S47": 259,
+    "S48": 260,
+    "S49": 261,
+    "S50": 262,
+    "S51": 263,
+    "S52": 264,
+    "S53": 265,
+    "S54": 1216,
+    "S55": 320,
+    "S56": 321,
+    "S57": 322,
+    "S58": 323,
+    "S59": 324,
+    "S60": 325,
+    "S61": 326,
+    "S62": 327,
+    "S63": 128,
+    "S64": 129,
+    "S65": 130,
+    "S66": 131,
+    "S67": 132,
+    "S68": 133,
+    "S69": 134,
+    "S70": 135,
+    "S71": 136,
+    "S72": 137,
+    "S73": 138,
+    "S74": 139,
+    "S75": 140,
+    "S76": 141,
+    "S77": 992,
+    "S78": 993,
+    "S79": 352,
+    "S80": 353,
+    "S81": 354,
+    "S82": 355,
+    "S83": 356,
+    "S84": 357,
+    "S85": 358,
+    "S86": 359,
+    "S87": 1024,
+    "S88": 1025,
+    "S89": 288,
+    "S90": 289,
+    "S91": 290,
+    "S92": 291,
+    "S93": 292,
+    "S94": 293,
+    "S95": 294,
+    "S96": 295,
+    "S97": 296,
+    "S98": 297,
+    "S99": 832,
+    "S100": 833,
+    "S101": 834,
+    "S102": 704,
+    "S103": 705,
+    "S104": 706,
+    "S105": 707,
+    "S106": 160,
+    "S107": 161,
+    "S108": 162,
+    "S109": 163,
+    "S110": 164,
+    "S111": 165,
+    "S112": 166,
+    "S113": 167,
+    "S114": 168,
+    "S115": 169,
+    "S116": 170,
+    "S117": 171,
+    "S118": 172,
+    "S119": 173,
+    "S120": 544,
+    "S121": 545,
+    "S122": 546,
+    "S123": 547,
+    "S124": 548,
+    "S125": 576,
+    "S126": 577,
+    "S127": 578,
+    "S128": 579,
+    "S129": 580,
+    "S130": 480,
+    "S131": 481,
+    "S132": 482,
+    "S133": 483,
+    "S134": 484,
+    "S135": 485,
+    "S136": 1056,
+    "S137": 1057,
+    "S138": 1248,
+    "S139": 1280,
+    "S140": 1088,
+    "S141": 1089,
+    "S142": 1120,
+    "S143": 1121,
+    "S144": 0,
+    "S145": 1,
+    "S146": 2,
+    "S147": 3,
+    "S148": 4,
+    "S149": 5,
+    "S150": 6,
+    "S151": 7,
+    "S152": 8,
+    "S153": 9,
+    "S154": 10,
+    "S155": 11,
+    "S156": 12,
+    "S157": 13,
+    "S158": 14,
+    "S159": 15,
+    "S160": 16,
+    "S161": 17,
+    "S162": 18,
+    "S163": 19,
+    "S164": 20,
+    "S165": 21,
+    "S166": 22,
+    "S167": 23,
+    "S168": 24,
+    "S169": 25,
+    "S170": 26,
+    "S171": 27,
+    "S172": 1312,
+    "S173": 192,
+    "S174": 193,
+    "S175": 194,
+    "S176": 195,
+    "S177": 196,
+    "S178": 197,
+    "S179": 198,
+    "S180": 199,
+    "S181": 200,
+    "S182": 201,
+    "S183": 202,
+    "S184": 203,
+    "S185": 204,
+    "S186": 205,
+    "S187": 1344,
+    "S188": 608,
+    "S189": 609,
+    "S190": 610,
+    "S191": 611,
+    "S192": 612,
+    "S193": 32,
+    "S194": 33,
+    "S195": 34,
+    "S196": 35,
+    "S197": 36,
+    "S198": 37,
+    "S199": 38,
+    "S200": 39,
+    "S201": 40,
+    "S202": 41,
+    "S203": 42,
+    "S204": 43,
+    "S205": 44,
+    "S206": 45,
+    "S207": 46,
+    "S208": 47,
+    "S209": 48,
+    "S210": 49,
+    "S211": 50,
+    "S212": 51,
+    "S213": 52,
+    "S214": 53,
+    "S215": 54,
+    "S216": 55,
+    "S217": 56,
+    "S218": 1376,
+    "S219": 640,
+    "S220": 641,
+    "S221": 642,
+    "S222": 643,
+    "S223": 644,
+    "S224": 864,
+    "S225": 865,
+    "S226": 866,
+    "S227": 736,
+    "S228": 737,
+    "S229": 738,
+    "S230": 739,
+    "S231": 768,
+    "S232": 769,
+    "S233": 770,
+    "S234": 771,
+    "S235": 64,
+    "S236": 65,
+    "S237": 66,
+    "S238": 67,
+    "S239": 68,
+    "S240": 69,
+    "S241": 70,
+    "S242": 71,
+    "S243": 72,
+    "S244": 73,
+    "S245": 74,
+    "S246": 75,
+    "S247": 76,
+    "S248": 77,
+    "S249": 78,
+    "S250": 79,
+    "S251": 80,
+    "S252": 384,
+    "S253": 385,
+    "S254": 386,
+    "S255": 387,
+    "S256": 388,
+    "S257": 389,
+    "S258": 390,
+    "S259": 512,
+    "S260": 513,
+    "S261": 514,
+    "S262": 515,
+    "S263": 516,
+    "S264": 517,
+    "S265": 416,
+    "S266": 417,
+    "S267": 418,
+    "S268": 419,
+    "S269": 420,
+    "S270": 421,
+    "S271": 422,
+    "S272": 896,
+    "S273": 897,
+    "S274": 898,
+    "S275": 928,
+    "S276": 929,
+    "S277": 930,
+    "S278": 1408,
+    "S279": 960,
+    "S280": 961,
+    "S281": 962
+  },
+  "A": 45,
+  "B": 28,
+  "a": 6,
+  "b": 5,
+  "width": 11,
+  "ignored_labels": {}
+}

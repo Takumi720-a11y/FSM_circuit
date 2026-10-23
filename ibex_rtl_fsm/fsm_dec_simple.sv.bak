@@ -1,0 +1,356 @@
+// Simple test FSM: lw, lw, mul, sw
+// mem[0]=3, mem[1]=4 -> mem[2]=12
+module fsm_dec import ibex_pkg::*; #(
+  parameter bit WritebackStage = 1'b1
+) (
+  input  logic        clk_i,
+  input  logic        rst_ni,
+  input  logic        ex_valid_i,
+  input  logic        lsu_resp_valid_i,
+  input  logic        lsu_rdata_valid_i,
+  input  logic        ready_wb_i,
+  input  logic        outstanding_load_wb_i,
+  input  logic        outstanding_store_wb_i,
+  input  logic [31:0] rf_rdata_a_i,
+  input  logic [31:0] rf_rdata_b_i,
+  input  logic [31:0] rf_wdata_fwd_wb_i,
+  input  logic        rf_write_wb_i,
+  input  logic [4:0]  rf_waddr_wb_i,
+  input  logic [31:0] result_ex_i,
+  input  logic [31:0] csr_rdata_i,
+  input  logic        instr_exec_i,
+  input  logic        branch_decision_i,
+  input  logic        lsu_req_done_i,
+  input  logic        lsu_addr_incr_req_i,
+  input  logic [31:0] lsu_addr_last_i,
+  input  logic        lsu_load_err_i,
+  input  logic        lsu_load_resp_intg_err_i,
+  input  logic        lsu_store_err_i,
+  input  logic        lsu_store_resp_intg_err_i,
+  input  logic        illegal_csr_insn_i,
+  input  logic        csr_mstatus_mie_i,
+  input  logic        irq_pending_i,
+  input  logic [14:0] irqs_i,
+  input  logic        irq_nm_i,
+  input  logic        debug_req_i,
+  input  logic        debug_single_step_i,
+  input  logic        debug_ebreakm_i,
+  input  logic        debug_ebreaku_i,
+  input  logic        trigger_match_i,
+  input  logic        priv_mode_i,
+  input  logic        csr_mstatus_tw_i,
+  input  logic        data_ind_timing_i,
+  input  logic        instr_fetch_err_i,
+  input  logic        instr_fetch_err_plus2_i,
+  input  logic        illegal_c_insn_i,
+  input  logic [31:0] pc_id_i,
+  input  logic [33:0] imd_val_d_ex_i[2],
+  input  logic [1:0]  imd_val_we_ex_i,
+  output logic        ctrl_busy_o,
+  output logic        illegal_insn_o,
+  output logic        instr_first_cycle_id_o,
+  output logic        instr_valid_clear_o,
+  output logic        id_in_ready_o,
+  output logic        instr_req_o,
+  output logic        pc_set_o,
+  output pc_sel_e     pc_mux_o,
+  output logic        nt_branch_mispredict_o,
+  output logic [31:0] nt_branch_addr_o,
+  output exc_pc_sel_e exc_pc_mux_o,
+  output exc_cause_t  exc_cause_o,
+  output logic        icache_inval_o,
+  output alu_op_e     alu_operator_ex_o,
+  output logic [31:0] alu_operand_a_ex_o,
+  output logic [31:0] alu_operand_b_ex_o,
+  output logic [33:0] imd_val_q_ex_o[2],
+  output logic [31:0] bt_a_operand_o,
+  output logic [31:0] bt_b_operand_o,
+  output logic        mult_en_ex_o,
+  output logic        div_en_ex_o,
+  output logic        mult_sel_ex_o,
+  output logic        div_sel_ex_o,
+  output md_op_e      multdiv_operator_ex_o,
+  output logic [1:0]  multdiv_signed_mode_ex_o,
+  output logic [31:0] multdiv_operand_a_ex_o,
+  output logic [31:0] multdiv_operand_b_ex_o,
+  output logic        multdiv_ready_id_o,
+  output logic        csr_access_o,
+  output csr_op_e     csr_op_o,
+  output csr_num_e    csr_addr_o,
+  output logic        csr_op_en_o,
+  output logic        csr_save_if_o,
+  output logic        csr_save_id_o,
+  output logic        csr_save_wb_o,
+  output logic        csr_restore_mret_id_o,
+  output logic        csr_restore_dret_id_o,
+  output logic        csr_save_cause_o,
+  output logic [31:0] csr_mtval_o,
+  output logic        lsu_req_o,
+  output logic        lsu_we_o,
+  output logic [1:0]  lsu_type_o,
+  output logic        lsu_sign_ext_o,
+  output logic [31:0] lsu_wdata_o,
+  output logic        expecting_load_resp_o,
+  output logic        expecting_store_resp_o,
+  output logic        nmi_mode_o,
+  output logic        debug_mode_o,
+  output logic        debug_mode_entering_o,
+  output dbg_cause_e  debug_cause_o,
+  output logic        debug_csr_save_o,
+  output logic [4:0]  rf_raddr_a_o,
+  output logic [4:0]  rf_raddr_b_o,
+  output logic        rf_ren_a_o,
+  output logic        rf_ren_b_o,
+  output logic [4:0]  rf_waddr_id_o,
+  output logic [31:0] rf_wdata_id_o,
+  output logic        rf_we_id_o,
+  output logic        rf_rd_a_wb_match_o,
+  output logic        rf_rd_b_wb_match_o,
+  output logic        en_wb_o,
+  output wb_instr_type_e instr_type_wb_o,
+  output logic        instr_perf_count_id_o,
+  output logic        perf_jump_o,
+  output logic        perf_branch_o,
+  output logic        perf_tbranch_o,
+  output logic        perf_dside_wait_o,
+  output logic        perf_mul_wait_o,
+  output logic        perf_div_wait_o,
+  output logic        instr_id_done_o
+);
+
+  // ステート定義
+  typedef enum logic [2:0] {
+    S0,
+    S1,  // lw a0, 0(x0)
+    S2,  // lw a1, 4(x0)
+    S3,  // mul a2, a0, a1
+    S4,  // sw a2, 8(x0)
+    S5,   // 無限ループ
+    S6,
+    S7
+  } state_e;
+
+  state_e state_q, state_d;
+  logic [31:0] rf_rdata_a;
+  logic [31:0] rf_rdata_b;
+  assign rf_rdata_a = rf_rdata_a_i;
+  assign rf_rdata_b = rf_rdata_b_i;
+
+  // first_cycle検出
+  (* dont_touch = "yes" *) state_e state_q_prev;
+  always_ff @(posedge clk_i or negedge rst_ni) begin
+    if (!rst_ni) state_q_prev <= S0;
+    else         state_q_prev <= state_q;
+  end
+  (* dont_touch = "yes" *) logic first_cycle;
+  assign first_cycle = (state_q != state_q_prev);
+
+  // lsu_req制御
+  logic lsu_resp_valid_q;
+  always_ff @(posedge clk_i or negedge rst_ni) begin
+    if (!rst_ni) lsu_resp_valid_q <= 1'b0;
+    else         lsu_resp_valid_q <= lsu_resp_valid_i;
+  end
+  (* dont_touch = "yes" *) logic lsu_req_sent;
+  always_ff @(posedge clk_i or negedge rst_ni) begin
+    if (!rst_ni)               lsu_req_sent <= 1'b0;
+    else if (lsu_resp_valid_i) lsu_req_sent <= 1'b0;
+    else if (first_cycle)      lsu_req_sent <= 1'b1;
+  end
+  (* dont_touch = "yes" *) logic lsu_req_actual;
+  assign lsu_req_actual = first_cycle | lsu_req_sent;
+
+  // lwのWBアドレスラッチ
+  (* dont_touch = "yes" *) logic [4:0] rf_waddr_latch;
+  always_ff @(posedge clk_i or negedge rst_ni) begin
+    if (!rst_ni) rf_waddr_latch <= 5'b0;
+    else if (lsu_resp_valid_i & ~lsu_we_o)
+      rf_waddr_latch <= rf_waddr_id_o;
+  end
+
+  // lw/swステート判定
+  logic is_lw_sw;
+  assign is_lw_sw = (state_q == S1 || state_q == S2 || state_q == S4);
+  logic is_mul;
+  assign is_mul = (state_q == S3);
+
+  // ステート遷移
+  always_ff @(posedge clk_i or negedge rst_ni) begin
+      if (!rst_ni) state_q <= S0;
+      else if ((!is_lw_sw && !is_mul && ex_valid_i) ||
+              (is_lw_sw  && lsu_resp_valid_q)       ||
+              (is_mul    && ex_valid_i && !first_cycle))
+          state_q <= state_d;
+  end
+  // 出力ロジック
+  always_comb begin
+    state_d                  = state_q;
+    alu_operator_ex_o        = ALU_ADD;
+    alu_operand_a_ex_o       = '0;
+    alu_operand_b_ex_o       = '0;
+    rf_raddr_a_o             = '0;
+    rf_raddr_b_o             = '0;
+    rf_ren_a_o               = 1'b0;
+    rf_ren_b_o               = 1'b0;
+    rf_waddr_id_o            = rf_waddr_latch;
+    rf_we_id_o               = 1'b0;
+    rf_wdata_id_o            = '0;
+    en_wb_o                  = 1'b0;
+    instr_type_wb_o          = WB_INSTR_OTHER;
+    lsu_req_o                = 1'b0;
+    lsu_we_o                 = 1'b0;
+    lsu_type_o               = 2'b00;
+    lsu_sign_ext_o           = 1'b0;
+    lsu_wdata_o              = '0;
+    rf_rd_a_wb_match_o       = 1'b0;
+    rf_rd_b_wb_match_o       = 1'b0;
+    expecting_load_resp_o    = 1'b0;
+    mult_en_ex_o             = 1'b0;
+    div_en_ex_o              = 1'b0;
+    mult_sel_ex_o            = 1'b0;
+    div_sel_ex_o             = 1'b0;
+    multdiv_operator_ex_o    = MD_OP_MULL;
+    multdiv_signed_mode_ex_o = 2'b00;
+    multdiv_operand_a_ex_o   = '0;
+    multdiv_operand_b_ex_o   = '0;
+
+    case (state_q)
+      S0: begin  // NOP（リセット直後の待機）
+        rf_we_id_o = 1'b0;
+        en_wb_o    = 1'b0;
+        state_d    = S1;
+      end
+      S1: begin  // lw a0, 0(x0)
+        alu_operand_a_ex_o    = 32'h00000000;  // x0=0
+        alu_operand_b_ex_o    = 32'h00000000;  // offset=0
+        lsu_req_o             = lsu_req_actual;
+        lsu_we_o              = 1'b0;
+        lsu_type_o            = 2'b00;
+        rf_waddr_id_o         = 5'd10;  // a0
+        rf_we_id_o            = 1'b1;
+        en_wb_o               = 1'b1;
+        instr_type_wb_o       = WB_INSTR_LOAD;
+        expecting_load_resp_o = 1'b1;
+        state_d               = S6;
+      end
+      S6: begin
+        rf_we_id_o = 1'b0;
+        en_wb_o    = 1'b0;
+        state_d    = S2;
+      end
+      S2: begin  // lw a1, 4(x0)
+        alu_operand_a_ex_o    = 32'h00000000;  // x0=0
+        alu_operand_b_ex_o    = 32'h00000004;  // offset=4
+        lsu_req_o             = lsu_req_actual;
+        lsu_we_o              = 1'b0;
+        lsu_type_o            = 2'b00;
+        rf_waddr_id_o         = 5'd11;  // a1
+        rf_we_id_o            = 1'b1;
+        en_wb_o               = 1'b1;
+        instr_type_wb_o       = WB_INSTR_LOAD;
+        expecting_load_resp_o = 1'b1;
+        state_d               = S3;
+      end
+      S3: begin  // mul a2, a0, a1
+        mult_en_ex_o = is_mul & ~ex_valid_i;
+        mult_sel_ex_o            = 1'b1;
+        multdiv_operator_ex_o    = MD_OP_MULL;
+        multdiv_signed_mode_ex_o = 2'b00;
+        multdiv_operand_a_ex_o   = rf_rdata_a;
+        multdiv_operand_b_ex_o   = rf_rdata_b;
+        rf_raddr_a_o             = 5'd10;  // a0
+        rf_raddr_b_o             = 5'd11;  // a1
+        rf_ren_a_o               = 1'b1;
+        rf_ren_b_o               = 1'b1;
+        rf_waddr_id_o            = 5'd12;  // a2
+        rf_wdata_id_o = result_ex_i;
+        rf_we_id_o               = 1'b1;
+        en_wb_o                  = 1'b1;
+        instr_type_wb_o          = WB_INSTR_OTHER;
+        state_d                  = S7;
+      end
+      S7: begin
+        rf_we_id_o = 1'b0;
+        en_wb_o    = 1'b0;
+        state_d    = S4;
+      end
+      S4: begin  // sw a2, 8(x0)
+        alu_operand_a_ex_o = 32'h00000000;  // x0=0
+        alu_operand_b_ex_o = 32'h00000008;  // offset=8
+        rf_raddr_b_o       = 5'd12;  // a2
+        rf_ren_b_o         = 1'b1;
+        lsu_req_o          = lsu_req_actual;
+        lsu_we_o           = 1'b1;
+        lsu_type_o         = 2'b00;
+        lsu_wdata_o        = rf_rdata_b;
+        rf_we_id_o         = 1'b0;
+        en_wb_o            = 1'b1;
+        instr_type_wb_o    = WB_INSTR_STORE;
+        state_d            = S5;
+      end
+
+      S5: begin  // 無限ループ
+        rf_we_id_o = 1'b0;
+        en_wb_o    = 1'b0;
+        state_d    = S5;
+      end
+
+      default: state_d = S0;
+    endcase
+  end
+
+  // 固定出力
+  assign ctrl_busy_o             = (state_q != S4);
+  assign illegal_insn_o          = 1'b0;
+  assign instr_first_cycle_id_o  = 1'b1;
+  assign instr_valid_clear_o     = 1'b0;
+  assign id_in_ready_o           = 1'b1;
+  assign instr_req_o             = 1'b0;
+  assign pc_set_o                = 1'b0;
+  assign pc_mux_o                = PC_BOOT;
+  assign nt_branch_mispredict_o  = 1'b0;
+  assign nt_branch_addr_o        = '0;
+  assign exc_pc_mux_o            = EXC_PC_EXC;
+  assign exc_cause_o             = '0;
+  assign icache_inval_o          = 1'b0;
+  logic [33:0] imd_val_q[2];
+  always_ff @(posedge clk_i or negedge rst_ni) begin
+      if (!rst_ni) begin
+          imd_val_q[0] <= '0;
+          imd_val_q[1] <= '0;
+      end else if (|imd_val_we_ex_i) begin
+          imd_val_q[0] <= imd_val_d_ex_i[0];
+          imd_val_q[1] <= imd_val_d_ex_i[1];
+      end
+  end
+  assign imd_val_q_ex_o = imd_val_q;
+  assign bt_a_operand_o          = '0;
+  assign bt_b_operand_o          = '0;
+  assign multdiv_ready_id_o      = 1'b0;
+  assign csr_access_o            = 1'b0;
+  assign csr_op_o                = CSR_OP_READ;
+  assign csr_addr_o              = csr_num_e'(0);
+  assign csr_op_en_o             = 1'b0;
+  assign csr_save_if_o           = 1'b0;
+  assign csr_save_id_o           = 1'b0;
+  assign csr_save_wb_o           = 1'b0;
+  assign csr_restore_mret_id_o   = 1'b0;
+  assign csr_restore_dret_id_o   = 1'b0;
+  assign csr_save_cause_o        = 1'b0;
+  assign csr_mtval_o             = '0;
+  assign expecting_store_resp_o  = 1'b0;
+  assign nmi_mode_o              = 1'b0;
+  assign debug_mode_o            = 1'b0;
+  assign debug_mode_entering_o   = 1'b0;
+  assign debug_cause_o           = DBG_CAUSE_NONE;
+  assign debug_csr_save_o        = 1'b0;
+  assign instr_perf_count_id_o   = 1'b0;
+  assign perf_jump_o             = 1'b0;
+  assign perf_branch_o           = 1'b0;
+  assign perf_tbranch_o          = 1'b0;
+  assign perf_dside_wait_o       = 1'b0;
+  assign perf_mul_wait_o         = 1'b0;
+  assign perf_div_wait_o         = 1'b0;
+  assign instr_id_done_o         = 1'b1;
+
+endmodule

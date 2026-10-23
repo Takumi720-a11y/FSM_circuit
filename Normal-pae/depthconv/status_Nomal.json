@@ -1,0 +1,14 @@
+{
+  "benchmark": "depthconv",
+  "status": "OK",
+  "stage": "pae",
+  "instructions": 270,
+  "states": 270,
+  "elapsed_seconds": 118.156,
+  "reason": "",
+  "directory": "/mnt/c/Users/c3165/ibex_src/benchmarks/build_fsm_pae/Nomal-f2c2a76fe961/20261017T003057.818723Z-pae/depthconv",
+  "map_circuit": "depthconv_Nomal_59523fb94cc1",
+  "fsm_verilog": "/mnt/c/Users/c3165/ibex_src/benchmarks/results_fsm_pae/Nomal/20261017T003057.818723Z-pae/FSM/depthconv_Nomal.v",
+  "pae41_verilog": "/mnt/c/Users/c3165/ibex_src/benchmarks/results_fsm_pae/Nomal/20261017T003057.818723Z-pae/4-1-PAE/depthconv_Nomal.v",
+  "pae43_verilog": "/mnt/c/Users/c3165/ibex_src/benchmarks/results_fsm_pae/Nomal/20261017T003057.818723Z-pae/4-3-PAE_OBFF/depthconv_Nomal.v"
+}

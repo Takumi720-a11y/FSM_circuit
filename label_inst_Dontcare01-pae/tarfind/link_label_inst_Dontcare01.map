@@ -1,0 +1,106 @@
+
+There are no discarded input sections
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ROM              0x00000080         0x0000ff80         xr
+RAM              0x00010000         0x00010000         rw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD /tmp/ccrARW4m.o
+LOAD /tmp/ccBKOV8g.o
+LOAD /tmp/ccztx0yw.o
+LOAD /tmp/ccgAkv4L.o
+LOAD /tmp/ccA5fsdC.o
+
+.text           0x00000080      0x468
+ *(.text*)
+ .text          0x00000080       0x30 /tmp/ccrARW4m.o
+                0x00000080                _start
+ .text          0x000000b0        0x0 /tmp/ccBKOV8g.o
+ .text.startup  0x000000b0       0x40 /tmp/ccBKOV8g.o
+                0x000000b0                main
+ .text          0x000000f0      0x1bc /tmp/ccztx0yw.o
+                0x000000f0                rand_beebs
+                0x00000124                srand_beebs
+                0x00000130                init_heap_beebs
+                0x0000015c                check_heap_beebs
+                0x0000017c                malloc_beebs
+                0x000001e4                calloc_beebs
+                0x00000228                realloc_beebs
+                0x000002a8                free_beebs
+ .text          0x000002ac       0x14 /tmp/ccgAkv4L.o
+                0x000002ac                initialise_board
+                0x000002b0                start_trigger
+                0x000002b8                stop_trigger
+ .text          0x000002c0      0x228 /tmp/ccA5fsdC.o
+                0x000004c0                warm_caches
+                0x000004cc                benchmark
+                0x000004d8                initialise_benchmark
+                0x000004dc                verify_benchmark
+
+.rela.dyn       0x000004e8        0x0
+ .rela.text     0x000004e8        0x0 /tmp/ccrARW4m.o
+
+.data           0x00010000        0x0
+ *(.rodata*)
+ *(.srodata*)
+ *(.data*)
+ .data          0x00010000        0x0 /tmp/ccrARW4m.o
+ .data          0x00010000        0x0 /tmp/ccBKOV8g.o
+ .data          0x00010000        0x0 /tmp/ccztx0yw.o
+ .data          0x00010000        0x0 /tmp/ccgAkv4L.o
+ .data          0x00010000        0x0 /tmp/ccA5fsdC.o
+ *(.sdata*)
+
+.bss            0x00010000     0x2334
+                0x00010000                        _bss_start = .
+ *(.bss*)
+ .bss           0x00010000        0x0 /tmp/ccrARW4m.o
+ .bss           0x00010000        0x0 /tmp/ccBKOV8g.o
+ .bss           0x00010000        0x0 /tmp/ccztx0yw.o
+ .bss           0x00010000        0x0 /tmp/ccgAkv4L.o
+ .bss           0x00010000     0x2324 /tmp/ccA5fsdC.o
+ *(.sbss*)
+ .sbss          0x00012324       0x10 /tmp/ccztx0yw.o
+ *(COMMON)
+                0x00012334                        _bss_end = .
+                0x00020000                        _stack_top = 0x20000
+OUTPUT(/home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Dontcare01-e493c2f4a745/20261023T014045.069251Z-pae/tarfind/tarfind_label_inst_Dontcare01.elf elf32-littleriscv)
+
+.riscv.attributes
+                0x00000000       0x33
+ .riscv.attributes
+                0x00000000       0x31 /tmp/ccrARW4m.o
+ .riscv.attributes
+                0x00000031       0x33 /tmp/ccBKOV8g.o
+ .riscv.attributes
+                0x00000064       0x33 /tmp/ccztx0yw.o
+ .riscv.attributes
+                0x00000097       0x33 /tmp/ccgAkv4L.o
+ .riscv.attributes
+                0x000000ca       0x33 /tmp/ccA5fsdC.o
+
+.comment        0x00000000       0x18
+ .comment       0x00000000       0x18 /tmp/ccBKOV8g.o
+                                 0x19 (size before relaxing)
+ .comment       0x00000018        0x0 /tmp/ccztx0yw.o
+                                 0x19 (size before relaxing)
+ .comment       0x00000018        0x0 /tmp/ccgAkv4L.o
+                                 0x19 (size before relaxing)
+ .comment       0x00000018        0x0 /tmp/ccA5fsdC.o
+                                 0x19 (size before relaxing)
+
+.note.GNU-stack
+                0x00000000        0x0
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccBKOV8g.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccztx0yw.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccgAkv4L.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccA5fsdC.o

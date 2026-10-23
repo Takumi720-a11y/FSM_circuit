@@ -1,0 +1,14 @@
+{
+  "benchmark": "statemate",
+  "status": "OK",
+  "stage": "pae",
+  "instructions": 1751,
+  "states": 1751,
+  "elapsed_seconds": 1116.909,
+  "reason": "",
+  "directory": "/mnt/c/Users/c3165/ibex_src/benchmarks/build_fsm_pae/Nomal-f2c2a76fe961/20261017T003057.818723Z-pae/statemate",
+  "map_circuit": "statemate_Nomal_3a58cc9ce82f",
+  "fsm_verilog": "/mnt/c/Users/c3165/ibex_src/benchmarks/results_fsm_pae/Nomal/20261017T003057.818723Z-pae/FSM/statemate_Nomal.v",
+  "pae41_verilog": "/mnt/c/Users/c3165/ibex_src/benchmarks/results_fsm_pae/Nomal/20261017T003057.818723Z-pae/4-1-PAE/statemate_Nomal.v",
+  "pae43_verilog": "/mnt/c/Users/c3165/ibex_src/benchmarks/results_fsm_pae/Nomal/20261017T003057.818723Z-pae/4-3-PAE_OBFF/statemate_Nomal.v"
+}

@@ -1,0 +1,2 @@
+#!/bin/sh
+exec /home/c3165/PAE-Mapper/PAE-Mapper-main/TECHMAP/bin/python "$@"

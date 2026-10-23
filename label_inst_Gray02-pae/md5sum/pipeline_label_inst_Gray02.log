@@ -1,0 +1,783 @@
+$ riscv64-unknown-elf-gcc -march=rv32im_zicsr -mabi=ilp32 -ffreestanding -DCPU_MHZ=1 -DWARMUP_HEAT=0 -DGLOBAL_SCALE_FACTOR=1 -O2 -I /home/c3165/ibex_src/benchmarks/embench_ibex -I /home/c3165/ibex_src/benchmarks/embench-iot/support -I /home/c3165/ibex_src/benchmarks/embench-iot/src/md5sum -S /home/c3165/ibex_src/benchmarks/embench-iot/support/main.c -o /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/00-main_label_inst_Gray02.s
+$ riscv64-unknown-elf-gcc -march=rv32im_zicsr -mabi=ilp32 -ffreestanding -DCPU_MHZ=1 -DWARMUP_HEAT=0 -DGLOBAL_SCALE_FACTOR=1 -O2 -I /home/c3165/ibex_src/benchmarks/embench_ibex -I /home/c3165/ibex_src/benchmarks/embench-iot/support -I /home/c3165/ibex_src/benchmarks/embench-iot/src/md5sum -S /home/c3165/ibex_src/benchmarks/embench-iot/support/beebsc.c -o /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/01-beebsc_label_inst_Gray02.s
+$ riscv64-unknown-elf-gcc -march=rv32im_zicsr -mabi=ilp32 -ffreestanding -DCPU_MHZ=1 -DWARMUP_HEAT=0 -DGLOBAL_SCALE_FACTOR=1 -O2 -I /home/c3165/ibex_src/benchmarks/embench_ibex -I /home/c3165/ibex_src/benchmarks/embench-iot/support -I /home/c3165/ibex_src/benchmarks/embench-iot/src/md5sum -S /home/c3165/ibex_src/benchmarks/embench_ibex/boardsupport.c -o /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/02-boardsupport_label_inst_Gray02.s
+$ riscv64-unknown-elf-gcc -march=rv32im_zicsr -mabi=ilp32 -ffreestanding -DCPU_MHZ=1 -DWARMUP_HEAT=0 -DGLOBAL_SCALE_FACTOR=1 -O2 -I /home/c3165/ibex_src/benchmarks/embench_ibex -I /home/c3165/ibex_src/benchmarks/embench-iot/support -I /home/c3165/ibex_src/benchmarks/embench-iot/src/md5sum -S /home/c3165/ibex_src/benchmarks/embench-iot/src/md5sum/md5.c -o /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/03-md5_label_inst_Gray02.s
+$ riscv64-unknown-elf-gcc -march=rv32im_zicsr -mabi=ilp32 -ffreestanding -DCPU_MHZ=1 -DWARMUP_HEAT=0 -DGLOBAL_SCALE_FACTOR=1 -O2 -I /home/c3165/ibex_src/benchmarks/embench_ibex -I /home/c3165/ibex_src/benchmarks/embench-iot/support -I /home/c3165/ibex_src/benchmarks/embench-iot/src/md5sum /home/c3165/ibex_src/benchmarks/coremark/port/startup.s /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/00-main_label_inst_Gray02.s /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/01-beebsc_label_inst_Gray02.s /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/02-boardsupport_label_inst_Gray02.s /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/03-md5_label_inst_Gray02.s -nostartfiles -nostdlib -T /home/c3165/ibex_src/benchmarks/coremark/port/link.ld -Wl,-Map=link_label_inst_Gray02.map -o /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/md5sum_label_inst_Gray02.elf
+$ riscv64-unknown-elf-objdump -d /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/md5sum_label_inst_Gray02.elf
+$ python3 /home/c3165/ibex_src/benchmarks/fsm_state_table.py /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/md5sum_label_inst_Gray02.dump -o /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/program_label_inst_Gray02.json --label-boundaries all
+State table: /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/program_label_inst_Gray02.json (398 states, 49 regions)
+$ python3 /home/c3165/ibex_src/benchmarks/gen_fsm.py --state-table /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/program_label_inst_Gray02.json --instruction-encoding gray -o /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/md5sum_label_inst_Gray02_baseline.sv
+Generated: /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/md5sum_label_inst_Gray02_baseline.sv
+PC map: /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/md5sum_label_inst_Gray02_baseline_pcmap.txt (398 entries)
+Encoding report: /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/md5sum_label_inst_Gray02_baseline_encoding.json
+$ sv2v --top=fsm_dec /home/c3165/ibex_src/ibex_rtl/ibex_pkg.sv /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/md5sum_label_inst_Gray02_baseline.sv
+$ python3 /home/c3165/ibex_src/benchmarks/fsm_pae/profile_ibex.py
+%Warning-PINMISSING: /home/c3165/ibex_src/ibex_rtl_fsm/ibex_core.sv:439:5: Cell has missing pin: 'imd_val_q_ex_o'
+  439 |   ) fsm_dec_i (
+      |     ^~~~~~~~~
+                     /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_baseline_label_inst_Gray02.sv:64:23: ... Location of port declaration
+   64 |   output logic [33:0] imd_val_q_ex_o[2],
+      |                       ^~~~~~~~~~~~~~
+                     ... For warning description see https://verilator.org/warn/PINMISSING?v=5.032
+                     ... Use "/* verilator lint_off PINMISSING */" and lint_on around source to disable this message.
+%Warning-PINMISSING: /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:15:66: Cell has missing pin: 'instr_req_o'
+   15 |   ibex_core #(.RV32M(ibex_pkg::RV32MFast),.WritebackStage(1'b0)) dut(
+      |                                                                  ^~~
+                     /home/c3165/ibex_src/ibex_rtl_fsm/ibex_core.sv:64:40: ... Location of port declaration
+   64 |   output logic                         instr_req_o,
+      |                                        ^~~~~~~~~~~
+%Warning-PINMISSING: /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:15:66: Cell has missing pin: 'instr_addr_o'
+   15 |   ibex_core #(.RV32M(ibex_pkg::RV32MFast),.WritebackStage(1'b0)) dut(
+      |                                                                  ^~~
+                     /home/c3165/ibex_src/ibex_rtl_fsm/ibex_core.sv:67:40: ... Location of port declaration
+   67 |   output logic [31:0]                  instr_addr_o,
+      |                                        ^~~~~~~~~~~~
+%Warning-PINMISSING: /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:15:66: Cell has missing pin: 'ic_tag_req_o'
+   15 |   ibex_core #(.RV32M(ibex_pkg::RV32MFast),.WritebackStage(1'b0)) dut(
+      |                                                                  ^~~
+                     /home/c3165/ibex_src/ibex_rtl_fsm/ibex_core.sv:94:40: ... Location of port declaration
+   94 |   output logic [IC_NUM_WAYS-1:0]       ic_tag_req_o,
+      |                                        ^~~~~~~~~~~~
+%Warning-PINMISSING: /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:15:66: Cell has missing pin: 'ic_tag_write_o'
+   15 |   ibex_core #(.RV32M(ibex_pkg::RV32MFast),.WritebackStage(1'b0)) dut(
+      |                                                                  ^~~
+                     /home/c3165/ibex_src/ibex_rtl_fsm/ibex_core.sv:95:40: ... Location of port declaration
+   95 |   output logic                         ic_tag_write_o,
+      |                                        ^~~~~~~~~~~~~~
+%Warning-PINMISSING: /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:15:66: Cell has missing pin: 'ic_tag_addr_o'
+   15 |   ibex_core #(.RV32M(ibex_pkg::RV32MFast),.WritebackStage(1'b0)) dut(
+      |                                                                  ^~~
+                     /home/c3165/ibex_src/ibex_rtl_fsm/ibex_core.sv:96:40: ... Location of port declaration
+   96 |   output logic [IC_INDEX_W-1:0]        ic_tag_addr_o,
+      |                                        ^~~~~~~~~~~~~
+%Warning-PINMISSING: /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:15:66: Cell has missing pin: 'ic_tag_wdata_o'
+   15 |   ibex_core #(.RV32M(ibex_pkg::RV32MFast),.WritebackStage(1'b0)) dut(
+      |                                                                  ^~~
+                     /home/c3165/ibex_src/ibex_rtl_fsm/ibex_core.sv:97:40: ... Location of port declaration
+   97 |   output logic [TagSizeECC-1:0]        ic_tag_wdata_o,
+      |                                        ^~~~~~~~~~~~~~
+%Warning-PINMISSING: /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:15:66: Cell has missing pin: 'ic_data_req_o'
+   15 |   ibex_core #(.RV32M(ibex_pkg::RV32MFast),.WritebackStage(1'b0)) dut(
+      |                                                                  ^~~
+                     /home/c3165/ibex_src/ibex_rtl_fsm/ibex_core.sv:99:40: ... Location of port declaration
+   99 |   output logic [IC_NUM_WAYS-1:0]       ic_data_req_o,
+      |                                        ^~~~~~~~~~~~~
+%Warning-PINMISSING: /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:15:66: Cell has missing pin: 'ic_data_write_o'
+   15 |   ibex_core #(.RV32M(ibex_pkg::RV32MFast),.WritebackStage(1'b0)) dut(
+      |                                                                  ^~~
+                     /home/c3165/ibex_src/ibex_rtl_fsm/ibex_core.sv:100:40: ... Location of port declaration
+  100 |   output logic                         ic_data_write_o,
+      |                                        ^~~~~~~~~~~~~~~
+%Warning-PINMISSING: /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:15:66: Cell has missing pin: 'ic_data_addr_o'
+   15 |   ibex_core #(.RV32M(ibex_pkg::RV32MFast),.WritebackStage(1'b0)) dut(
+      |                                                                  ^~~
+                     /home/c3165/ibex_src/ibex_rtl_fsm/ibex_core.sv:101:40: ... Location of port declaration
+  101 |   output logic [IC_INDEX_W-1:0]        ic_data_addr_o,
+      |                                        ^~~~~~~~~~~~~~
+%Warning-PINMISSING: /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:15:66: Cell has missing pin: 'ic_data_wdata_o'
+   15 |   ibex_core #(.RV32M(ibex_pkg::RV32MFast),.WritebackStage(1'b0)) dut(
+      |                                                                  ^~~
+                     /home/c3165/ibex_src/ibex_rtl_fsm/ibex_core.sv:102:40: ... Location of port declaration
+  102 |   output logic [LineSizeECC-1:0]       ic_data_wdata_o,
+      |                                        ^~~~~~~~~~~~~~~
+%Warning-PINMISSING: /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:15:66: Cell has missing pin: 'ic_scr_key_req_o'
+   15 |   ibex_core #(.RV32M(ibex_pkg::RV32MFast),.WritebackStage(1'b0)) dut(
+      |                                                                  ^~~
+                     /home/c3165/ibex_src/ibex_rtl_fsm/ibex_core.sv:105:40: ... Location of port declaration
+  105 |   output logic                         ic_scr_key_req_o,
+      |                                        ^~~~~~~~~~~~~~~~
+%Warning-PINMISSING: /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:15:66: Cell has missing pin: 'irq_pending_o'
+   15 |   ibex_core #(.RV32M(ibex_pkg::RV32MFast),.WritebackStage(1'b0)) dut(
+      |                                                                  ^~~
+                     /home/c3165/ibex_src/ibex_rtl_fsm/ibex_core.sv:113:40: ... Location of port declaration
+  113 |   output logic                         irq_pending_o,
+      |                                        ^~~~~~~~~~~~~
+%Warning-PINMISSING: /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:15:66: Cell has missing pin: 'crash_dump_o'
+   15 |   ibex_core #(.RV32M(ibex_pkg::RV32MFast),.WritebackStage(1'b0)) dut(
+      |                                                                  ^~~
+                     /home/c3165/ibex_src/ibex_rtl_fsm/ibex_core.sv:117:40: ... Location of port declaration
+  117 |   output crash_dump_t                  crash_dump_o,
+      |                                        ^~~~~~~~~~~~
+%Warning-PINMISSING: /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:15:66: Cell has missing pin: 'double_fault_seen_o'
+   15 |   ibex_core #(.RV32M(ibex_pkg::RV32MFast),.WritebackStage(1'b0)) dut(
+      |                                                                  ^~~
+                     /home/c3165/ibex_src/ibex_rtl_fsm/ibex_core.sv:120:40: ... Location of port declaration
+  120 |   output logic                         double_fault_seen_o,
+      |                                        ^~~~~~~~~~~~~~~~~~~
+%Warning-PINMISSING: /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:15:66: Cell has missing pin: 'alert_minor_o'
+   15 |   ibex_core #(.RV32M(ibex_pkg::RV32MFast),.WritebackStage(1'b0)) dut(
+      |                                                                  ^~~
+                     /home/c3165/ibex_src/ibex_rtl_fsm/ibex_core.sv:166:40: ... Location of port declaration
+  166 |   output logic                         alert_minor_o,
+      |                                        ^~~~~~~~~~~~~
+%Warning-PINMISSING: /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:15:66: Cell has missing pin: 'alert_major_internal_o'
+   15 |   ibex_core #(.RV32M(ibex_pkg::RV32MFast),.WritebackStage(1'b0)) dut(
+      |                                                                  ^~~
+                     /home/c3165/ibex_src/ibex_rtl_fsm/ibex_core.sv:167:40: ... Location of port declaration
+  167 |   output logic                         alert_major_internal_o,
+      |                                        ^~~~~~~~~~~~~~~~~~~~~~
+%Warning-PINMISSING: /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:15:66: Cell has missing pin: 'alert_major_bus_o'
+   15 |   ibex_core #(.RV32M(ibex_pkg::RV32MFast),.WritebackStage(1'b0)) dut(
+      |                                                                  ^~~
+                     /home/c3165/ibex_src/ibex_rtl_fsm/ibex_core.sv:168:40: ... Location of port declaration
+  168 |   output logic                         alert_major_bus_o,
+      |                                        ^~~~~~~~~~~~~~~~~
+%Warning-PINMISSING: /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:15:66: Cell has missing pin: 'core_busy_o'
+   15 |   ibex_core #(.RV32M(ibex_pkg::RV32MFast),.WritebackStage(1'b0)) dut(
+      |                                                                  ^~~
+                     /home/c3165/ibex_src/ibex_rtl_fsm/ibex_core.sv:169:40: ... Location of port declaration
+  169 |   output ibex_mubi_t                   core_busy_o
+      |                                        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/prim_rtl/prim_secded_pkg.sv:8:9: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    8 | package prim_secded_pkg;
+      |         ^~~~~~~~~~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/prim_rtl/prim_util_pkg.sv:9:9: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    9 | package prim_util_pkg;
+      |         ^~~~~~~~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/prim_rtl/prim_cipher_pkg.sv:17:9: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   17 | package prim_cipher_pkg;
+      |         ^~~~~~~~~~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/ibex_rtl_fsm/ibex_pkg.sv:9:9: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    9 | package ibex_pkg;
+      |         ^~~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/ibex_rtl_fsm/ibex_alu.sv:9:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    9 | module ibex_alu #(
+      |        ^~~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/ibex_rtl_fsm/ibex_branch_predict.sv:20:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   20 | module ibex_branch_predict (
+      |        ^~~~~~~~~~~~~~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/ibex_rtl_fsm/ibex_compressed_decoder.sv:16:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   16 | module ibex_compressed_decoder (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/ibex_rtl_fsm/ibex_controller.sv:13:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   13 | module ibex_controller #(
+      |        ^~~~~~~~~~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/ibex_rtl_fsm/ibex_core.sv:16:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   16 | module ibex_core import ibex_pkg::*; #(
+      |        ^~~~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/ibex_rtl_fsm/ibex_counter.sv:5:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    5 | module ibex_counter #(
+      |        ^~~~~~~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/ibex_rtl_fsm/ibex_cs_registers.sv:12:33: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   12 | (* dont_touch = "yes" *) module ibex_cs_registers #(
+      |                                 ^~~~~~~~~~~~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/ibex_rtl_fsm/ibex_csr.sv:11:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   11 | module ibex_csr #(
+      |        ^~~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/ibex_rtl_fsm/ibex_decoder.sv:16:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   16 | module ibex_decoder #(
+      |        ^~~~~~~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/ibex_rtl_fsm/ibex_dummy_instr.sv:12:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   12 | module ibex_dummy_instr import ibex_pkg::*; #(
+      |        ^~~~~~~~~~~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/ibex_rtl_fsm/ibex_ex_block.sv:11:33: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   11 | (* dont_touch = "yes" *) module ibex_ex_block #(
+      |                                 ^~~~~~~~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/ibex_rtl_fsm/ibex_fetch_fifo.sv:15:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   15 | module ibex_fetch_fifo #(
+      |        ^~~~~~~~~~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/ibex_rtl_fsm/ibex_icache.sv:13:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   13 | module ibex_icache import ibex_pkg::*; #(
+      |        ^~~~~~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/ibex_rtl_fsm/ibex_id_stage.sv:20:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   20 | module ibex_id_stage #(
+      |        ^~~~~~~~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/ibex_rtl_fsm/ibex_if_stage.sv:16:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   16 | module ibex_if_stage import ibex_pkg::*; #(
+      |        ^~~~~~~~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/ibex_rtl_fsm/ibex_load_store_unit.sv:17:33: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   17 | (* dont_touch = "yes" *) module ibex_load_store_unit #(
+      |                                 ^~~~~~~~~~~~~~~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/ibex_rtl_fsm/ibex_multdiv_fast.sv:17:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   17 | module ibex_multdiv_fast #(
+      |        ^~~~~~~~~~~~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/ibex_rtl_fsm/ibex_multdiv_slow.sv:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   14 | module ibex_multdiv_slow
+      |        ^~~~~~~~~~~~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/ibex_rtl_fsm/ibex_pmp.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    7 | module ibex_pmp #(
+      |        ^~~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/ibex_rtl_fsm/ibex_prefetch_buffer.sv:12:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   12 | module ibex_prefetch_buffer #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/ibex_rtl_fsm/ibex_register_file_ff.sv:13:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   13 | module ibex_register_file_ff #(
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/ibex_rtl_fsm/ibex_register_file_fpga.sv:14:33: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   14 | (* dont_touch = "yes" *) module ibex_register_file_fpga #(
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/ibex_rtl_fsm/ibex_register_file_latch.sv:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   14 | module ibex_register_file_latch #(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/ibex_rtl_fsm/ibex_wb_stage.sv:17:33: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   17 | (* dont_touch = "yes" *) module ibex_wb_stage #(
+      |                                 ^~~~~~~~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/prim_rtl/prim_buf.sv:11:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   11 | module prim_buf #(
+      |        ^~~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_baseline_label_inst_Gray02.sv:2:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    2 | module fsm_dec import ibex_pkg::*; #(
+      |        ^~~~~~~
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/prim_rtl/prim_secded_inv_39_32_enc.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    7 | module prim_secded_inv_39_32_enc (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~
+                       /home/c3165/ibex_src/ibex_rtl_fsm/ibex_core.sv:793:1: ... note: In file included from 'ibex_core.sv'
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/prim_rtl/prim_secded_inv_39_32_dec.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    7 | module prim_secded_inv_39_32_dec (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~
+                       /home/c3165/ibex_src/ibex_rtl_fsm/ibex_core.sv:799:1: ... note: In file included from 'ibex_core.sv'
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/prim_rtl/prim_lfsr.sv:29:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   29 | module prim_lfsr #(
+      |        ^~~~~~~~~
+                       /home/c3165/ibex_src/ibex_rtl_fsm/ibex_dummy_instr.sv:84:1: ... note: In file included from 'ibex_dummy_instr.sv'
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/prim_rtl/prim_secded_inv_28_22_enc.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    7 | module prim_secded_inv_28_22_enc (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~
+                       /home/c3165/ibex_src/ibex_rtl_fsm/ibex_icache.sv:292:1: ... note: In file included from 'ibex_icache.sv'
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/prim_rtl/prim_secded_inv_28_22_dec.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    7 | module prim_secded_inv_28_22_dec (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~
+                       /home/c3165/ibex_src/ibex_rtl_fsm/ibex_icache.sv:424:1: ... note: In file included from 'ibex_icache.sv'
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/prim_rtl/prim_onehot_check.sv:21:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   21 | module prim_onehot_check #(
+      |        ^~~~~~~~~~~~~~~~~
+                       /home/c3165/ibex_src/ibex_rtl_fsm/ibex_register_file_ff.sv:80:1: ... note: In file included from 'ibex_register_file_ff.sv'
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/prim_rtl/prim_onehot_enc.sv:8:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    8 | module prim_onehot_enc #(
+      |        ^~~~~~~~~~~~~~~
+                       /home/c3165/ibex_src/ibex_rtl_fsm/ibex_register_file_ff.sv:144:1: ... note: In file included from 'ibex_register_file_ff.sv'
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/prim_rtl/prim_onehot_mux.sv:10:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   10 | module prim_onehot_mux #(
+      |        ^~~~~~~~~~~~~~~
+                       /home/c3165/ibex_src/ibex_rtl_fsm/ibex_register_file_ff.sv:212:1: ... note: In file included from 'ibex_register_file_ff.sv'
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/prim_rtl/prim_clock_gating.sv:2:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    2 | module prim_clock_gating #(
+      |        ^~~~~~~~~~~~~~~~~
+                       /home/c3165/ibex_src/ibex_rtl_fsm/ibex_register_file_latch.sv:178:1: ... note: In file included from 'ibex_register_file_latch.sv'
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/prim_rtl/prim_generic_buf.sv:1:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    1 | module prim_generic_buf #(
+      |        ^~~~~~~~~~~~~~~~
+                       /home/c3165/ibex_src/prim_rtl/prim_buf.sv:21:1: ... note: In file included from 'prim_buf.sv'
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/c3165/ibex_src/prim_rtl/prim_and2.sv:11:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   11 | module prim_and2 #(
+      |        ^~~~~~~~~
+                       /home/c3165/ibex_src/prim_rtl/prim_onehot_mux.sv:33:1: ... note: In file included from 'prim_onehot_mux.sv'
+                       /home/c3165/ibex_src/ibex_rtl_fsm/ibex_register_file_ff.sv:212:1: ... note: In file included from 'ibex_register_file_ff.sv'
+                       /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:2:8: ... Location of module with timescale
+    2 | module profile_tb;
+      |        ^~~~~~~~~~
+%Warning-WIDTHTRUNC: /home/c3165/ibex_src/ibex_rtl_fsm/ibex_core.sv:473:6: Input port connection 'irqs_i' expects 15 bits on the pin connection, but pin connection's VARREF 'irqs' generates 18 bits.
+                                                                         : ... note: In instance 'profile_tb.dut'
+  473 |     .irqs_i                  (irqs),
+      |      ^~~~~~
+%Warning-WIDTHTRUNC: /home/c3165/ibex_src/ibex_rtl_fsm/ibex_core.sv:480:6: Input port connection 'priv_mode_i' expects 1 bits on the pin connection, but pin connection's VARREF 'priv_mode_id' generates 2 bits.
+                                                                         : ... note: In instance 'profile_tb.dut'
+  480 |     .priv_mode_i             (priv_mode_id),
+      |      ^~~~~~~~~~~
+%Warning-WIDTHTRUNC: /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:41:8: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's VARREF 'f' generates 32 bits.
+                                                                                                                                                                         : ... note: In instance 'profile_tb'
+   41 |     if(!f) $fatal(1,"cannot open cycle samples");
+      |        ^
+%Warning-MULTIDRIVEN: /home/c3165/ibex_src/ibex_rtl_fsm/ibex_core.sv:394:33: Bits [0:0] of signal 'unused_illegal_insn_id' have multiple combinational drivers
+                                                                           : ... note: In instance 'profile_tb.dut'
+                      /home/c3165/ibex_src/ibex_rtl_fsm/ibex_core.sv:579:33: ... Location of first driver
+  579 |   assign unused_illegal_insn_id = illegal_insn_id;
+      |                                 ^
+                      /home/c3165/ibex_src/ibex_rtl_fsm/ibex_core.sv:600:33: ... Location of other driver
+  600 |   assign unused_illegal_insn_id = illegal_insn_id;
+      |                                 ^
+                      /home/c3165/ibex_src/ibex_rtl_fsm/ibex_core.sv:394:33: ... Only the first driver will be respected
+make[1]: Entering directory '/tmp/ibex_profile_label_inst_Gray02_k1d1ew9q/obj'
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated.o /usr/share/verilator/include/verilated.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated_timing.o /usr/share/verilator/include/verilated_timing.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated_threads.o /usr/share/verilator/include/verilated_threads.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -x c++-header Vprofile_label_inst_Gray02__pch.h -o Vprofile_label_inst_Gray02__pch.h.fast.gch
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -x c++-header Vprofile_label_inst_Gray02__pch.h -o Vprofile_label_inst_Gray02__pch.h.slow.gch
+echo "" > Vprofile_label_inst_Gray02__ALL.verilator_deplist.tmp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -include Vprofile_label_inst_Gray02__pch.h.fast -c -o Vprofile_label_inst_Gray02.o Vprofile_label_inst_Gray02.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -include Vprofile_label_inst_Gray02__pch.h.fast -c -o Vprofile_label_inst_Gray02___024root__DepSet_h36b54f19__0.o Vprofile_label_inst_Gray02___024root__DepSet_h36b54f19__0.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -include Vprofile_label_inst_Gray02__pch.h.fast -c -o Vprofile_label_inst_Gray02___024root__DepSet_h9b237143__0.o Vprofile_label_inst_Gray02___024root__DepSet_h9b237143__0.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -include Vprofile_label_inst_Gray02__pch.h.fast -c -o Vprofile_label_inst_Gray02___024root__DepSet_h9b237143__1.o Vprofile_label_inst_Gray02___024root__DepSet_h9b237143__1.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -include Vprofile_label_inst_Gray02__pch.h.fast -c -o Vprofile_label_inst_Gray02__main.o Vprofile_label_inst_Gray02__main.cpp
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -include Vprofile_label_inst_Gray02__pch.h.slow -c -o Vprofile_label_inst_Gray02__ConstPool_0.o Vprofile_label_inst_Gray02__ConstPool_0.cpp
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -include Vprofile_label_inst_Gray02__pch.h.slow -c -o Vprofile_label_inst_Gray02___024root__Slow.o Vprofile_label_inst_Gray02___024root__Slow.cpp
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -include Vprofile_label_inst_Gray02__pch.h.slow -c -o Vprofile_label_inst_Gray02___024root__DepSet_h36b54f19__0__Slow.o Vprofile_label_inst_Gray02___024root__DepSet_h36b54f19__0__Slow.cpp
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -include Vprofile_label_inst_Gray02__pch.h.slow -c -o Vprofile_label_inst_Gray02___024root__DepSet_h9b237143__0__Slow.o Vprofile_label_inst_Gray02___024root__DepSet_h9b237143__0__Slow.cpp
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -include Vprofile_label_inst_Gray02__pch.h.slow -c -o Vprofile_label_inst_Gray02___024root__DepSet_h9b237143__1__Slow.o Vprofile_label_inst_Gray02___024root__DepSet_h9b237143__1__Slow.cpp
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -include Vprofile_label_inst_Gray02__pch.h.slow -c -o Vprofile_label_inst_Gray02__Syms.o Vprofile_label_inst_Gray02__Syms.cpp
+g++    verilated.o verilated_timing.o verilated_threads.o Vprofile_label_inst_Gray02__ALL.a    -pthread -lpthread -latomic   -o Vprofile_label_inst_Gray02
+rm Vprofile_label_inst_Gray02__ALL.verilator_deplist.tmp
+make[1]: Leaving directory '/tmp/ibex_profile_label_inst_Gray02_k1d1ew9q/obj'
+- V e r i l a t i o n   R e p o r t: Verilator 5.032 2025-01-01 rev (Debian 5.032-1)
+- Verilator: Built from 13.951 MB sources in 45 modules, into 1.883 MB in 11 C++ files needing 0.000 MB
+- Verilator: Walltime 6.191 s (elab=0.061, cvt=0.307, bld=5.724); cpu 0.497 s on 2 threads; alloced 58.410 MB
+BENCHMARK_PASS cycles=3620551 a0=0
+- /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_tb_label_inst_Gray02.sv:53: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 36ms; walltime 1.811 s; speed 19.986 ms/s
+- Verilator: cpu 1.812 s on 1 threads; alloced 169 MB
+$ python3 /home/c3165/ibex_src/benchmarks/optimize_label_codes.py /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/program_label_inst_Gray02.json --profile /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_label_inst_Gray02.json -o /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/label_codes_label_inst_Gray02.json --seeds 3 --max-swaps 50 --max-evaluations 200000
+Label flips: 483189 -> 206878; selected greedy-R35; output /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/label_codes_label_inst_Gray02.json
+$ python3 /home/c3165/ibex_src/benchmarks/optimize_instruction_codes.py /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/program_label_inst_Gray02.json --profile /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/profile_label_inst_Gray02.json -o /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/instruction_codes_label_inst_Gray02.json --max-swaps 100 --max-evaluations 200000
+Instruction objective: 3513504 -> 3510988 (measured-transitions); /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/instruction_codes_label_inst_Gray02.json
+$ python3 /home/c3165/ibex_src/benchmarks/gen_fsm.py --state-table /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/program_label_inst_Gray02.json --label-codes /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/label_codes_label_inst_Gray02.json --instruction-encoding gray --instruction-codes /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/instruction_codes_label_inst_Gray02.json -o /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/md5sum_label_inst_Gray02_fsm.sv
+Generated: /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/md5sum_label_inst_Gray02_fsm.sv
+PC map: /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/md5sum_label_inst_Gray02_fsm_pcmap.txt (398 entries)
+Encoding report: /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/md5sum_label_inst_Gray02_fsm_encoding.json
+$ sv2v --top=fsm_dec /home/c3165/ibex_src/ibex_rtl/ibex_pkg.sv /home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray02-3af0e9b46b96/20261022T053546.835967Z-pae/md5sum/md5sum_label_inst_Gray02_fsm.sv
+$ yosys -s prepare_label_inst_Gray02.ys
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2025  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.52 (git sha1 fee39a3284c90249e1d9684cf6944ffbbcbb8f90)
+
+-- Executing script file `prepare_label_inst_Gray02.ys' --
+
+1. Executing Verilog-2005 frontend: fsm_dec_label_inst_Gray02.v
+Parsing Verilog input from `fsm_dec_label_inst_Gray02.v' to AST representation.
+Generating RTLIL representation for module `\fsm_dec'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \fsm_dec
+
+2.2. Analyzing design hierarchy..
+Top module:  \fsm_dec
+Removed 0 unused modules.
+Renaming module \fsm_dec to \top.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+Cleaned up 1 empty switch.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$fsm_dec_label_inst_Gray02.v:5391$518 in module top.
+Marked 30 switch rules as full_case in process $proc$fsm_dec_label_inst_Gray02.v:266$508 in module top.
+Marked 1 switch rules as full_case in process $proc$fsm_dec_label_inst_Gray02.v:261$10 in module top.
+Marked 1 switch rules as full_case in process $proc$fsm_dec_label_inst_Gray02.v:256$6 in module top.
+Marked 2 switch rules as full_case in process $proc$fsm_dec_label_inst_Gray02.v:246$4 in module top.
+Marked 1 switch rules as full_case in process $proc$fsm_dec_label_inst_Gray02.v:238$1 in module top.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 30 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_ni in `\top.$proc$fsm_dec_label_inst_Gray02.v:5391$518'.
+Found async reset \rst_ni in `\top.$proc$fsm_dec_label_inst_Gray02.v:261$10'.
+Found async reset \rst_ni in `\top.$proc$fsm_dec_label_inst_Gray02.v:256$6'.
+Found async reset \rst_ni in `\top.$proc$fsm_dec_label_inst_Gray02.v:246$4'.
+Found async reset \rst_ni in `\top.$proc$fsm_dec_label_inst_Gray02.v:238$1'.
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~35 debug messages>
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\top.$proc$fsm_dec_label_inst_Gray02.v:0$521'.
+Creating decoders for process `\top.$proc$fsm_dec_label_inst_Gray02.v:5391$518'.
+     1/2: $0\imd_val_q[67:0] [67:34]
+     2/2: $0\imd_val_q[67:0] [33:0]
+Creating decoders for process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+     1/54: $30\state_d[11:0]
+     2/54: $29\state_d[11:0]
+     3/54: $28\state_d[11:0]
+     4/54: $27\state_d[11:0]
+     5/54: $26\state_d[11:0]
+     6/54: $25\state_d[11:0]
+     7/54: $24\state_d[11:0]
+     8/54: $23\state_d[11:0]
+     9/54: $22\state_d[11:0]
+    10/54: $21\state_d[11:0]
+    11/54: $20\state_d[11:0]
+    12/54: $19\state_d[11:0]
+    13/54: $18\state_d[11:0]
+    14/54: $17\state_d[11:0]
+    15/54: $16\state_d[11:0]
+    16/54: $15\state_d[11:0]
+    17/54: $14\state_d[11:0]
+    18/54: $13\state_d[11:0]
+    19/54: $12\state_d[11:0]
+    20/54: $11\state_d[11:0]
+    21/54: $10\state_d[11:0]
+    22/54: $9\state_d[11:0]
+    23/54: $8\state_d[11:0]
+    24/54: $7\state_d[11:0]
+    25/54: $6\state_d[11:0]
+    26/54: $5\state_d[11:0]
+    27/54: $4\state_d[11:0]
+    28/54: $3\state_d[11:0]
+    29/54: $2\state_d[11:0]
+    30/54: $1\state_d[11:0]
+    31/54: $1\instr_type_wb_o[1:0]
+    32/54: $1\en_wb_o[0:0]
+    33/54: $1\rf_wdata_id_o[31:0]
+    34/54: $1\rf_we_id_o[0:0]
+    35/54: $1\rf_waddr_id_o[4:0]
+    36/54: $1\alu_operand_b_ex_o[31:0]
+    37/54: $1\rf_ren_b_o[0:0]
+    38/54: $1\rf_ren_a_o[0:0]
+    39/54: $1\rf_raddr_b_o[4:0]
+    40/54: $1\rf_raddr_a_o[4:0]
+    41/54: $1\expecting_load_resp_o[0:0]
+    42/54: $1\lsu_wdata_o[31:0]
+    43/54: $1\lsu_sign_ext_o[0:0]
+    44/54: $1\lsu_type_o[1:0]
+    45/54: $1\lsu_we_o[0:0]
+    46/54: $1\lsu_req_o[0:0]
+    47/54: $1\multdiv_operand_b_ex_o[31:0]
+    48/54: $1\multdiv_operand_a_ex_o[31:0]
+    49/54: $1\multdiv_signed_mode_ex_o[1:0]
+    50/54: $1\multdiv_operator_ex_o[1:0]
+    51/54: $1\mult_sel_ex_o[0:0]
+    52/54: $1\mult_en_ex_o[0:0]
+    53/54: $1\alu_operand_a_ex_o[31:0]
+    54/54: $1\alu_operator_ex_o[6:0]
+Creating decoders for process `\top.$proc$fsm_dec_label_inst_Gray02.v:261$10'.
+     1/1: $0\state_q[11:0]
+Creating decoders for process `\top.$proc$fsm_dec_label_inst_Gray02.v:256$6'.
+     1/1: $0\rf_waddr_latch[4:0]
+Creating decoders for process `\top.$proc$fsm_dec_label_inst_Gray02.v:246$4'.
+     1/1: $0\lsu_req_sent[0:0]
+Creating decoders for process `\top.$proc$fsm_dec_label_inst_Gray02.v:238$1'.
+     1/1: $0\state_q_prev[11:0]
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\top.\_sv2v_0' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:0$521'.
+No latch inferred for signal `\top.\alu_operator_ex_o' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+No latch inferred for signal `\top.\alu_operand_a_ex_o' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+No latch inferred for signal `\top.\alu_operand_b_ex_o' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+No latch inferred for signal `\top.\mult_en_ex_o' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+No latch inferred for signal `\top.\div_en_ex_o' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+No latch inferred for signal `\top.\mult_sel_ex_o' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+No latch inferred for signal `\top.\div_sel_ex_o' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+No latch inferred for signal `\top.\multdiv_operator_ex_o' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+No latch inferred for signal `\top.\multdiv_signed_mode_ex_o' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+No latch inferred for signal `\top.\multdiv_operand_a_ex_o' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+No latch inferred for signal `\top.\multdiv_operand_b_ex_o' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+No latch inferred for signal `\top.\lsu_req_o' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+No latch inferred for signal `\top.\lsu_we_o' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+No latch inferred for signal `\top.\lsu_type_o' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+No latch inferred for signal `\top.\lsu_sign_ext_o' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+No latch inferred for signal `\top.\lsu_wdata_o' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+No latch inferred for signal `\top.\expecting_load_resp_o' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+No latch inferred for signal `\top.\rf_raddr_a_o' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+No latch inferred for signal `\top.\rf_raddr_b_o' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+No latch inferred for signal `\top.\rf_ren_a_o' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+No latch inferred for signal `\top.\rf_ren_b_o' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+No latch inferred for signal `\top.\rf_waddr_id_o' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+No latch inferred for signal `\top.\rf_wdata_id_o' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+No latch inferred for signal `\top.\rf_we_id_o' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+No latch inferred for signal `\top.\rf_rd_a_wb_match_o' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+No latch inferred for signal `\top.\rf_rd_b_wb_match_o' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+No latch inferred for signal `\top.\en_wb_o' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+No latch inferred for signal `\top.\instr_type_wb_o' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+No latch inferred for signal `\top.\state_d' from process `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\top.\imd_val_q' using process `\top.$proc$fsm_dec_label_inst_Gray02.v:5391$518'.
+  created $adff cell `$procdff$13130' with positive edge clock and positive level reset.
+Creating register for signal `\top.\state_q' using process `\top.$proc$fsm_dec_label_inst_Gray02.v:261$10'.
+  created $adff cell `$procdff$13135' with positive edge clock and positive level reset.
+Creating register for signal `\top.\rf_waddr_latch' using process `\top.$proc$fsm_dec_label_inst_Gray02.v:256$6'.
+  created $adff cell `$procdff$13140' with positive edge clock and positive level reset.
+Creating register for signal `\top.\lsu_req_sent' using process `\top.$proc$fsm_dec_label_inst_Gray02.v:246$4'.
+  created $adff cell `$procdff$13145' with positive edge clock and positive level reset.
+Creating register for signal `\top.\state_q_prev' using process `\top.$proc$fsm_dec_label_inst_Gray02.v:238$1'.
+  created $adff cell `$procdff$13150' with positive edge clock and positive level reset.
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `top.$proc$fsm_dec_label_inst_Gray02.v:0$521'.
+Found and cleaned up 1 empty switch in `\top.$proc$fsm_dec_label_inst_Gray02.v:5391$518'.
+Removing empty process `top.$proc$fsm_dec_label_inst_Gray02.v:5391$518'.
+Found and cleaned up 30 empty switches in `\top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+Removing empty process `top.$proc$fsm_dec_label_inst_Gray02.v:266$508'.
+Found and cleaned up 1 empty switch in `\top.$proc$fsm_dec_label_inst_Gray02.v:261$10'.
+Removing empty process `top.$proc$fsm_dec_label_inst_Gray02.v:261$10'.
+Found and cleaned up 1 empty switch in `\top.$proc$fsm_dec_label_inst_Gray02.v:256$6'.
+Removing empty process `top.$proc$fsm_dec_label_inst_Gray02.v:256$6'.
+Found and cleaned up 2 empty switches in `\top.$proc$fsm_dec_label_inst_Gray02.v:246$4'.
+Removing empty process `top.$proc$fsm_dec_label_inst_Gray02.v:246$4'.
+Removing empty process `top.$proc$fsm_dec_label_inst_Gray02.v:238$1'.
+Cleaned up 35 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~22 debug messages>
+
+4. Executing OPT pass (performing simple optimizations).
+
+4.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+4.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~10131 debug messages>
+Removed a total of 3377 cells.
+
+4.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$6789.
+    dead port 2/2 on $mux $procmux$6392.
+    dead port 2/2 on $mux $procmux$6034.
+    dead port 2/2 on $mux $procmux$5695.
+    dead port 2/2 on $mux $procmux$5364.
+    dead port 2/2 on $mux $procmux$5037.
+    dead port 2/2 on $mux $procmux$4720.
+    dead port 2/2 on $mux $procmux$4412.
+    dead port 2/2 on $mux $procmux$4105.
+    dead port 2/2 on $mux $procmux$3803.
+    dead port 2/2 on $mux $procmux$3506.
+    dead port 2/2 on $mux $procmux$3218.
+    dead port 2/2 on $mux $procmux$2934.
+    dead port 2/2 on $mux $procmux$2655.
+    dead port 2/2 on $mux $procmux$2427.
+    dead port 2/2 on $mux $procmux$2212.
+    dead port 2/2 on $mux $procmux$2022.
+    dead port 2/2 on $mux $procmux$1837.
+    dead port 2/2 on $mux $procmux$1665.
+    dead port 2/2 on $mux $procmux$1494.
+    dead port 2/2 on $mux $procmux$1345.
+    dead port 2/2 on $mux $procmux$1199.
+    dead port 2/2 on $mux $procmux$1057.
+    dead port 2/2 on $mux $procmux$937.
+    dead port 2/2 on $mux $procmux$821.
+    dead port 2/2 on $mux $procmux$725.
+    dead port 2/2 on $mux $procmux$652.
+    dead port 2/2 on $mux $procmux$604.
+    dead port 2/2 on $mux $procmux$563.
+Removed 29 multiplexer ports.
+<suppressed ~24 debug messages>
+
+4.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+    New ctrl vector for $pmux cell $procmux$7334: { $auto$opt_reduce.cc:137:opt_pmux$13154 $auto$opt_reduce.cc:137:opt_pmux$13152 }
+    New ctrl vector for $pmux cell $procmux$13053: { $auto$opt_reduce.cc:137:opt_pmux$13178 $auto$opt_reduce.cc:137:opt_pmux$13176 $auto$opt_reduce.cc:137:opt_pmux$13174 $auto$opt_reduce.cc:137:opt_pmux$13172 $auto$opt_reduce.cc:137:opt_pmux$13170 $auto$opt_reduce.cc:137:opt_pmux$13168 $auto$opt_reduce.cc:137:opt_pmux$13166 $auto$opt_reduce.cc:137:opt_pmux$13164 $procmux$13062_CMP $auto$opt_reduce.cc:137:opt_pmux$13162 $auto$opt_reduce.cc:137:opt_pmux$13160 $auto$opt_reduce.cc:137:opt_pmux$13158 $auto$opt_reduce.cc:137:opt_pmux$13156 }
+    New ctrl vector for $pmux cell $procmux$7677: $auto$opt_reduce.cc:137:opt_pmux$13180
+    New ctrl vector for $pmux cell $procmux$8895: $auto$opt_reduce.cc:137:opt_pmux$13182
+    New ctrl vector for $pmux cell $procmux$6792: { $procmux$8765_CMP $procmux$13050_CMP $procmux$13049_CMP $procmux$13048_CMP $procmux$13047_CMP $procmux$13116_CMP $procmux$13044_CMP $procmux$13043_CMP $auto$opt_reduce.cc:137:opt_pmux$13194 $procmux$8757_CMP $procmux$7179_CMP $procmux$13042_CMP $procmux$13041_CMP $procmux$8754_CMP $procmux$8753_CMP $procmux$8448_CMP $procmux$8752_CMP $procmux$8751_CMP $procmux$8750_CMP $procmux$13040_CMP $procmux$8748_CMP $procmux$13039_CMP $procmux$8746_CMP $procmux$13038_CMP $procmux$13115_CMP $procmux$13036_CMP $procmux$8742_CMP $procmux$13035_CMP $procmux$8740_CMP $procmux$13034_CMP $procmux$12753_CMP $procmux$8738_CMP $procmux$13033_CMP $procmux$13032_CMP $procmux$13114_CMP $procmux$13113_CMP $procmux$13029_CMP $procmux$13112_CMP $procmux$8731_CMP $procmux$13027_CMP $procmux$13111_CMP $procmux$13110_CMP $procmux$13024_CMP $procmux$8727_CMP $procmux$8726_CMP $procmux$8725_CMP $procmux$13023_CMP $procmux$13022_CMP $procmux$13021_CMP $procmux$7136_CMP $procmux$8721_CMP $procmux$13020_CMP $procmux$8719_CMP $procmux$13019_CMP $procmux$13018_CMP $procmux$13109_CMP $procmux$13108_CMP $procmux$13015_CMP $procmux$13107_CMP $procmux$8714_CMP $procmux$13013_CMP $procmux$8712_CMP $procmux$13012_CMP $procmux$13011_CMP $procmux$13106_CMP $procmux$13009_CMP $procmux$13105_CMP $procmux$8707_CMP $procmux$13007_CMP $procmux$13006_CMP $procmux$13104_CMP $procmux$13004_CMP $procmux$8702_CMP $procmux$13103_CMP $procmux$13002_CMP $procmux$13001_CMP $procmux$8698_CMP $procmux$13000_CMP $procmux$12999_CMP $procmux$13102_CMP $procmux$8398_CMP $procmux$12997_CMP $procmux$12996_CMP $procmux$12752_CMP $procmux$12995_CMP $procmux$12994_CMP $procmux$13101_CMP $procmux$13100_CMP $procmux$12991_CMP $procmux$12990_CMP $procmux$12989_CMP $procmux$12988_CMP $procmux$13099_CMP $procmux$12986_CMP $procmux$12985_CMP $procmux$12984_CMP $procmux$13098_CMP $procmux$12982_CMP $procmux$12981_CMP $procmux$12980_CMP $procmux$12979_CMP $procmux$12978_CMP $procmux$12977_CMP $procmux$12976_CMP $procmux$13097_CMP $procmux$12974_CMP $procmux$12973_CMP $procmux$12972_CMP $procmux$13096_CMP $procmux$12970_CMP $procmux$12969_CMP $procmux$12968_CMP $procmux$12967_CMP $procmux$13095_CMP $procmux$12965_CMP $procmux$12964_CMP $procmux$12963_CMP $procmux$12962_CMP $procmux$12961_CMP $procmux$12960_CMP $procmux$12959_CMP $procmux$8369_CMP $procmux$12958_CMP $procmux$8367_CMP $procmux$7050_CMP $procmux$7048_CMP $procmux$8665_CMP $procmux$12957_CMP $procmux$12956_CMP $procmux$12955_CMP $procmux$12954_CMP $procmux$12953_CMP $procmux$12952_CMP $procmux$12951_CMP $procmux$12950_CMP $procmux$12949_CMP $procmux$12948_CMP $procmux$12947_CMP $procmux$12946_CMP $procmux$12945_CMP $procmux$12944_CMP $procmux$12943_CMP $procmux$12942_CMP $procmux$12941_CMP $procmux$12940_CMP $procmux$12939_CMP $procmux$12938_CMP $procmux$12937_CMP $procmux$12936_CMP $procmux$12935_CMP $procmux$12934_CMP $procmux$12933_CMP $procmux$12932_CMP $procmux$12931_CMP $procmux$12930_CMP $procmux$12929_CMP $procmux$12928_CMP $procmux$13094_CMP $procmux$12926_CMP $procmux$12925_CMP $procmux$12924_CMP $procmux$12923_CMP $procmux$12922_CMP $procmux$12921_CMP $procmux$12920_CMP $procmux$12919_CMP $procmux$12918_CMP $procmux$12917_CMP $procmux$12916_CMP $procmux$12915_CMP $procmux$13093_CMP $procmux$12913_CMP $procmux$8627_CMP $procmux$13092_CMP $procmux$12911_CMP $procmux$8624_CMP $procmux$8623_CMP $procmux$8622_CMP $procmux$8621_CMP $procmux$12910_CMP $procmux$12909_CMP $procmux$12908_CMP $procmux$12907_CMP $procmux$12906_CMP $procmux$8615_CMP $procmux$8614_CMP $procmux$8613_CMP $procmux$8612_CMP $procmux$12905_CMP $procmux$12904_CMP $procmux$12903_CMP $procmux$8608_CMP $procmux$12902_CMP $procmux$12901_CMP $procmux$12900_CMP $procmux$13091_CMP $procmux$12898_CMP $procmux$12897_CMP $procmux$12896_CMP $procmux$12895_CMP $procmux$13090_CMP $procmux$12893_CMP $procmux$8600_CMP $procmux$13089_CMP $procmux$12891_CMP $procmux$12890_CMP $procmux$12889_CMP $procmux$12888_CMP $procmux$12887_CMP $procmux$12886_CMP $procmux$12885_CMP $procmux$12884_CMP $procmux$12883_CMP $procmux$13088_CMP $procmux$13087_CMP $procmux$8589_CMP $procmux$12881_CMP $procmux$12880_CMP $procmux$12879_CMP $procmux$12878_CMP $procmux$8307_CMP $procmux$8584_CMP $procmux$8583_CMP $procmux$8582_CMP $procmux$8581_CMP $procmux$12877_CMP $procmux$8302_CMP $procmux$12876_CMP $procmux$12875_CMP $procmux$12874_CMP $procmux$12873_CMP $procmux$12872_CMP $procmux$12871_CMP $procmux$8295_CMP $procmux$8577_CMP $procmux$8576_CMP $procmux$13086_CMP $procmux$13085_CMP $procmux$13084_CMP $procmux$13083_CMP $procmux$13082_CMP $procmux$13081_CMP $procmux$13080_CMP $procmux$13079_CMP $procmux$13078_CMP $procmux$12861_CMP $procmux$12860_CMP $procmux$12859_CMP $procmux$12858_CMP $procmux$12857_CMP $procmux$12856_CMP $procmux$12855_CMP $procmux$12854_CMP $procmux$13077_CMP $procmux$13076_CMP $procmux$13075_CMP $procmux$13074_CMP $procmux$12850_CMP $procmux$12849_CMP $procmux$12848_CMP $procmux$12847_CMP $procmux$12846_CMP $procmux$12845_CMP $procmux$12844_CMP $procmux$12843_CMP $procmux$13073_CMP $procmux$12841_CMP $procmux$12840_CMP $procmux$12839_CMP $procmux$13072_CMP $procmux$13071_CMP $procmux$13070_CMP $procmux$13069_CMP $procmux$12834_CMP $procmux$13068_CMP $procmux$13067_CMP $procmux$13066_CMP $procmux$13065_CMP $procmux$13064_CMP $procmux$13063_CMP $auto$opt_reduce.cc:137:opt_pmux$13192 $procmux$12827_CMP $procmux$12826_CMP $procmux$12825_CMP $procmux$12824_CMP $procmux$12823_CMP $procmux$12822_CMP $procmux$13062_CMP $procmux$8532_CMP $procmux$12820_CMP $procmux$12819_CMP $procmux$12818_CMP $procmux$12817_CMP $procmux$12816_CMP $procmux$12815_CMP $procmux$12814_CMP $procmux$12813_CMP $procmux$12812_CMP $procmux$12811_CMP $procmux$12810_CMP $procmux$12809_CMP $procmux$12808_CMP $procmux$12807_CMP $procmux$12806_CMP $procmux$12805_CMP $procmux$12804_CMP $procmux$12803_CMP $procmux$12802_CMP $procmux$12801_CMP $procmux$13061_CMP $procmux$12799_CMP $procmux$12798_CMP $procmux$12797_CMP $procmux$12796_CMP $procmux$12795_CMP $procmux$12794_CMP $procmux$12793_CMP $procmux$12792_CMP $procmux$12791_CMP $procmux$8229_CMP $procmux$8505_CMP $procmux$8504_CMP $procmux$8226_CMP $procmux$8503_CMP $procmux$12790_CMP $procmux$12789_CMP $procmux$8500_CMP $procmux$8499_CMP $auto$opt_reduce.cc:137:opt_pmux$13190 $procmux$12788_CMP $procmux$8218_CMP $procmux$12787_CMP $procmux$12786_CMP $procmux$12785_CMP $procmux$13060_CMP $procmux$12783_CMP $procmux$12782_CMP $procmux$8494_CMP $procmux$12781_CMP $procmux$12780_CMP $auto$opt_reduce.cc:137:opt_pmux$13188 $procmux$13059_CMP $procmux$12778_CMP $procmux$13058_CMP $procmux$12776_CMP $procmux$12775_CMP $procmux$12774_CMP $procmux$12773_CMP $procmux$12772_CMP $procmux$12771_CMP $procmux$12770_CMP $procmux$8482_CMP $procmux$8481_CMP $procmux$12769_CMP $procmux$12768_CMP $procmux$8478_CMP $procmux$12767_CMP $procmux$8476_CMP $procmux$12766_CMP $procmux$12765_CMP $procmux$13057_CMP $procmux$13056_CMP $procmux$13055_CMP $procmux$12761_CMP $procmux$12760_CMP $procmux$8469_CMP $procmux$8468_CMP $procmux$8467_CMP $auto$opt_reduce.cc:137:opt_pmux$13186 $procmux$8466_CMP $procmux$12759_CMP $procmux$12758_CMP $procmux$13054_CMP $auto$opt_reduce.cc:137:opt_pmux$13184 }
+    New ctrl vector for $pmux cell $procmux$9212: { $procmux$13116_CMP $procmux$12947_CMP $procmux$12946_CMP $procmux$12943_CMP $procmux$12859_CMP $auto$opt_reduce.cc:137:opt_pmux$13230 $auto$opt_reduce.cc:137:opt_pmux$13228 $auto$opt_reduce.cc:137:opt_pmux$13226 $auto$opt_reduce.cc:137:opt_pmux$13224 $auto$opt_reduce.cc:137:opt_pmux$13222 $auto$opt_reduce.cc:137:opt_pmux$13220 $procmux$12817_CMP $auto$opt_reduce.cc:137:opt_pmux$13218 $auto$opt_reduce.cc:137:opt_pmux$13216 $auto$opt_reduce.cc:137:opt_pmux$13214 $auto$opt_reduce.cc:137:opt_pmux$13212 $auto$opt_reduce.cc:137:opt_pmux$13210 $auto$opt_reduce.cc:137:opt_pmux$13208 $auto$opt_reduce.cc:137:opt_pmux$13206 $auto$opt_reduce.cc:137:opt_pmux$13204 $auto$opt_reduce.cc:137:opt_pmux$13202 $auto$opt_reduce.cc:137:opt_pmux$13200 $auto$opt_reduce.cc:137:opt_pmux$13198 $auto$opt_reduce.cc:137:opt_pmux$13196 }
+    New ctrl vector for $pmux cell $procmux$12756: { $procmux$13049_CMP $procmux$13047_CMP $auto$opt_reduce.cc:137:opt_pmux$13232 }
+    New ctrl vector for $pmux cell $procmux$12751: $auto$opt_reduce.cc:137:opt_pmux$13234
+    New ctrl vector for $pmux cell $procmux$12441: $auto$opt_reduce.cc:137:opt_pmux$13236
+    New ctrl vector for $pmux cell $procmux$8462: { $procmux$8765_CMP $procmux$13048_CMP $procmux$13046_CMP $procmux$8757_CMP $procmux$8754_CMP $procmux$8753_CMP $procmux$8752_CMP $procmux$8751_CMP $procmux$8750_CMP $procmux$8748_CMP $procmux$8746_CMP $procmux$8740_CMP $procmux$13034_CMP $procmux$8738_CMP $procmux$13033_CMP $auto$opt_reduce.cc:137:opt_pmux$13322 $auto$opt_reduce.cc:137:opt_pmux$13320 $auto$opt_reduce.cc:137:opt_pmux$13318 $auto$opt_reduce.cc:137:opt_pmux$13316 $procmux$8691_CMP $auto$opt_reduce.cc:137:opt_pmux$13314 $procmux$8679_CMP $procmux$12957_CMP $procmux$12939_CMP $procmux$8627_CMP $procmux$13092_CMP $procmux$12911_CMP $procmux$8624_CMP $procmux$8623_CMP $procmux$8622_CMP $procmux$12910_CMP $procmux$12909_CMP $procmux$12908_CMP $procmux$12907_CMP $procmux$8608_CMP $procmux$12902_CMP $procmux$8600_CMP $procmux$13087_CMP $procmux$8583_CMP $procmux$8582_CMP $auto$opt_reduce.cc:137:opt_pmux$13312 $procmux$13078_CMP $auto$opt_reduce.cc:137:opt_pmux$13310 $auto$opt_reduce.cc:137:opt_pmux$13308 $procmux$12847_CMP $auto$opt_reduce.cc:137:opt_pmux$13306 $auto$opt_reduce.cc:137:opt_pmux$13304 $auto$opt_reduce.cc:137:opt_pmux$13302 $auto$opt_reduce.cc:137:opt_pmux$13300 $auto$opt_reduce.cc:137:opt_pmux$13298 $auto$opt_reduce.cc:137:opt_pmux$13296 $auto$opt_reduce.cc:137:opt_pmux$13294 $auto$opt_reduce.cc:137:opt_pmux$13292 $auto$opt_reduce.cc:137:opt_pmux$13290 $auto$opt_reduce.cc:137:opt_pmux$13288 $auto$opt_reduce.cc:137:opt_pmux$13286 $auto$opt_reduce.cc:137:opt_pmux$13284 $auto$opt_reduce.cc:137:opt_pmux$13282 $auto$opt_reduce.cc:137:opt_pmux$13280 $auto$opt_reduce.cc:137:opt_pmux$13278 $auto$opt_reduce.cc:137:opt_pmux$13276 $procmux$12803_CMP $auto$opt_reduce.cc:137:opt_pmux$13274 $auto$opt_reduce.cc:137:opt_pmux$13272 $procmux$8503_CMP $procmux$12790_CMP $auto$opt_reduce.cc:137:opt_pmux$13270 $procmux$8500_CMP $auto$opt_reduce.cc:137:opt_pmux$13268 $procmux$8498_CMP $procmux$8494_CMP $procmux$8492_CMP $auto$opt_reduce.cc:137:opt_pmux$13266 $auto$opt_reduce.cc:137:opt_pmux$13264 $auto$opt_reduce.cc:137:opt_pmux$13262 $auto$opt_reduce.cc:137:opt_pmux$13260 $auto$opt_reduce.cc:137:opt_pmux$13258 $auto$opt_reduce.cc:137:opt_pmux$13256 $auto$opt_reduce.cc:137:opt_pmux$13254 $auto$opt_reduce.cc:137:opt_pmux$13252 $auto$opt_reduce.cc:137:opt_pmux$13250 $auto$opt_reduce.cc:137:opt_pmux$13248 $auto$opt_reduce.cc:137:opt_pmux$13246 $auto$opt_reduce.cc:137:opt_pmux$13244 $auto$opt_reduce.cc:137:opt_pmux$13242 $procmux$8467_CMP $procmux$8466_CMP $procmux$12759_CMP $auto$opt_reduce.cc:137:opt_pmux$13240 $auto$opt_reduce.cc:137:opt_pmux$13238 }
+    New ctrl vector for $pmux cell $procmux$8180: { $auto$opt_reduce.cc:137:opt_pmux$13380 $auto$opt_reduce.cc:137:opt_pmux$13378 $auto$opt_reduce.cc:137:opt_pmux$13376 $auto$opt_reduce.cc:137:opt_pmux$13374 $auto$opt_reduce.cc:137:opt_pmux$13372 $auto$opt_reduce.cc:137:opt_pmux$13370 $auto$opt_reduce.cc:137:opt_pmux$13368 $auto$opt_reduce.cc:137:opt_pmux$13366 $auto$opt_reduce.cc:137:opt_pmux$13364 $auto$opt_reduce.cc:137:opt_pmux$13362 $auto$opt_reduce.cc:137:opt_pmux$13360 $auto$opt_reduce.cc:137:opt_pmux$13358 $auto$opt_reduce.cc:137:opt_pmux$13356 $auto$opt_reduce.cc:137:opt_pmux$13354 $auto$opt_reduce.cc:137:opt_pmux$13352 $auto$opt_reduce.cc:137:opt_pmux$13350 $auto$opt_reduce.cc:137:opt_pmux$13348 $auto$opt_reduce.cc:137:opt_pmux$13346 $auto$opt_reduce.cc:137:opt_pmux$13344 $auto$opt_reduce.cc:137:opt_pmux$13342 $auto$opt_reduce.cc:137:opt_pmux$13340 $auto$opt_reduce.cc:137:opt_pmux$13338 $auto$opt_reduce.cc:137:opt_pmux$13336 $auto$opt_reduce.cc:137:opt_pmux$13334 $auto$opt_reduce.cc:137:opt_pmux$13332 $auto$opt_reduce.cc:137:opt_pmux$13330 $auto$opt_reduce.cc:137:opt_pmux$13328 $auto$opt_reduce.cc:137:opt_pmux$13326 $auto$opt_reduce.cc:137:opt_pmux$13324 }
+    New ctrl vector for $pmux cell $procmux$7209: { $auto$opt_reduce.cc:137:opt_pmux$13384 $auto$opt_reduce.cc:137:opt_pmux$13382 }
+    New ctrl vector for $pmux cell $procmux$9667: $auto$opt_reduce.cc:137:opt_pmux$13386
+    New ctrl vector for $pmux cell $procmux$9335: { $procmux$13079_CMP $auto$opt_reduce.cc:137:opt_pmux$13440 $auto$opt_reduce.cc:137:opt_pmux$13438 $auto$opt_reduce.cc:137:opt_pmux$13436 $auto$opt_reduce.cc:137:opt_pmux$13434 $auto$opt_reduce.cc:137:opt_pmux$13432 $auto$opt_reduce.cc:137:opt_pmux$13430 $auto$opt_reduce.cc:137:opt_pmux$13428 $auto$opt_reduce.cc:137:opt_pmux$13426 $auto$opt_reduce.cc:137:opt_pmux$13424 $auto$opt_reduce.cc:137:opt_pmux$13422 $auto$opt_reduce.cc:137:opt_pmux$13420 $auto$opt_reduce.cc:137:opt_pmux$13418 $auto$opt_reduce.cc:137:opt_pmux$13416 $auto$opt_reduce.cc:137:opt_pmux$13414 $auto$opt_reduce.cc:137:opt_pmux$13412 $auto$opt_reduce.cc:137:opt_pmux$13410 $auto$opt_reduce.cc:137:opt_pmux$13408 $auto$opt_reduce.cc:137:opt_pmux$13406 $auto$opt_reduce.cc:137:opt_pmux$13404 $auto$opt_reduce.cc:137:opt_pmux$13402 $auto$opt_reduce.cc:137:opt_pmux$13400 $procmux$13058_CMP $auto$opt_reduce.cc:137:opt_pmux$13398 $auto$opt_reduce.cc:137:opt_pmux$13396 $auto$opt_reduce.cc:137:opt_pmux$13394 $auto$opt_reduce.cc:137:opt_pmux$13392 $auto$opt_reduce.cc:137:opt_pmux$13390 $auto$opt_reduce.cc:137:opt_pmux$13388 }
+    New ctrl vector for $pmux cell $procmux$10415: $auto$opt_reduce.cc:137:opt_pmux$13442
+    New ctrl vector for $pmux cell $procmux$10335: $auto$opt_reduce.cc:137:opt_pmux$13444
+    New ctrl vector for $pmux cell $procmux$8769: $auto$opt_reduce.cc:137:opt_pmux$13446
+    New ctrl vector for $pmux cell $procmux$10280: $auto$opt_reduce.cc:137:opt_pmux$13448
+    New ctrl vector for $pmux cell $procmux$7898: { $auto$opt_reduce.cc:137:opt_pmux$13452 $auto$opt_reduce.cc:137:opt_pmux$13450 }
+    New ctrl vector for $pmux cell $procmux$9774: $auto$opt_reduce.cc:137:opt_pmux$13454
+  Optimizing cells in module \top.
+Performed a total of 20 changes.
+
+4.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~24 debug messages>
+Removed a total of 8 cells.
+
+4.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$13140 ($adff) from module top (D = \rf_waddr_id_o, Q = \rf_waddr_latch).
+Adding EN signal on $procdff$13130 ($adff) from module top (D = \imd_val_d_ex_i [67:34], Q = \imd_val_q [67:34]).
+Adding EN signal on $procdff$13130 ($adff) from module top (D = \imd_val_d_ex_i [33:0], Q = \imd_val_q [33:0]).
+Adding EN signal on $procdff$13145 ($adff) from module top (D = $procmux$13124_Y, Q = \lsu_req_sent).
+Adding EN signal on $procdff$13135 ($adff) from module top (D = \state_d, Q = \state_q).
+
+4.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 10 unused cells and 3574 unused wires.
+<suppressed ~12 debug messages>
+
+4.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+4.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~19 debug messages>
+
+4.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+4.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+4.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+4.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+4.16. Finished OPT passes. (There is nothing left to do.)
+
+5. Executing CHECK pass (checking for obvious problems).
+Checking module top...
+Found and reported 0 problems.
+
+6. Executing Verilog backend.
+
+6.1. Executing BMUXMAP pass.
+
+6.2. Executing DEMUXMAP pass.
+Dumping module `\top'.
+
+End of script. Logfile hash: f647f1e02f, CPU: user 0.50s system 0.02s, MEM: 45.11 MB peak
+Yosys 0.52 (git sha1 fee39a3284c90249e1d9684cf6944ffbbcbb8f90)
+Time spent: 26% 1x proc_mux (0 sec), 19% 2x read_verilog (0 sec), ...
+$ bash map_new_circuit_label_inst_Gray02.sh EmbenchFSM --seq md5sum_label_inst_Gray02_051a4a667b9b
+======== md5sum_label_inst_Gray02_051a4a667b9b ========
+Warning: Encountered `parallel_case' comment! Such legacy hot comments are supported by Yosys, but are not part of any formal language specification. Using the Verilog `parallel_case' attribute or the SystemVerilog `unique' or `priority' keywords is recommended!
+  [AIG]     ok
+Warning: Encountered `parallel_case' comment! Such legacy hot comments are supported by Yosys, but are not part of any formal language specification. Using the Verilog `parallel_case' attribute or the SystemVerilog `unique' or `priority' keywords is recommended!
+  [4-1-PAE] ok
+Warning: Encountered `parallel_case' comment! Such legacy hot comments are supported by Yosys, but are not part of any formal language specification. Using the Verilog `parallel_case' attribute or the SystemVerilog `unique' or `priority' keywords is recommended!
+  [4-LUT]   ok
+  [4-3-PAE_OBFF] ok  (順序(強制), PA2PAE=pa2pae_ob_only.py)
+完了: TechMapResult/EmbenchFSM/{AIG,4-1-PAE,LUT,4-3-PAE|4-3-PAE_OBFF,PA}/{eblif,verilog}

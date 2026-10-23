@@ -1,0 +1,13 @@
+{
+  "benchmark": "nsichneu",
+  "status": "FAILED",
+  "stage": "pae",
+  "instructions": 5190,
+  "states": 5190,
+  "elapsed_seconds": 1868.89,
+  "reason": "timeout after 1800.0s",
+  "directory": "/mnt/c/Users/c3165/ibex_src/benchmarks/build_fsm_pae/Nomal-f2c2a76fe961/20261017T003057.818723Z-pae/nsichneu",
+  "map_circuit": "nsichneu_Nomal_72ad574a5b42",
+  "fsm_verilog": "/mnt/c/Users/c3165/ibex_src/benchmarks/results_fsm_pae/Nomal/20261017T003057.818723Z-pae/FSM/nsichneu_Nomal.v",
+  "pae41_verilog": "/mnt/c/Users/c3165/ibex_src/benchmarks/results_fsm_pae/Nomal/20261017T003057.818723Z-pae/4-1-PAE/nsichneu_Nomal.v"
+}

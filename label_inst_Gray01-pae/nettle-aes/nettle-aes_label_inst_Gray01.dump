@@ -1,0 +1,1300 @@
+
+/home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Gray01-bbe342696727/20261022T004046.678086Z-pae/nettle-aes/nettle-aes_label_inst_Gray01.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000080 <_start>:
+      80:	00020137          	lui	sp,0x20
+      84:	ff010113          	addi	sp,sp,-16 # 1fff0 <_bss_end+0xd3cc>
+      88:	00012297          	auipc	t0,0x12
+      8c:	7a428293          	addi	t0,t0,1956 # 1282c <encctx>
+      90:	00013317          	auipc	t1,0x13
+      94:	b9430313          	addi	t1,t1,-1132 # 12c24 <_bss_end>
+
+00000098 <bss_loop>:
+      98:	0062d863          	bge	t0,t1,a8 <bss_done>
+      9c:	0002a023          	sw	zero,0(t0)
+      a0:	00428293          	addi	t0,t0,4
+      a4:	ff5ff06f          	j	98 <bss_loop>
+
+000000a8 <bss_done>:
+      a8:	008000ef          	jal	b0 <main>
+
+000000ac <loop>:
+      ac:	0000006f          	j	ac <loop>
+
+000000b0 <main>:
+      b0:	fe010113          	addi	sp,sp,-32
+      b4:	00112e23          	sw	ra,28(sp)
+      b8:	1f4000ef          	jal	2ac <initialise_board>
+      bc:	2c4010ef          	jal	1380 <initialise_benchmark>
+      c0:	00000513          	li	a0,0
+      c4:	2c0010ef          	jal	1384 <warm_caches>
+      c8:	1e8000ef          	jal	2b0 <start_trigger>
+      cc:	2c4010ef          	jal	1390 <benchmark>
+      d0:	00a12623          	sw	a0,12(sp)
+      d4:	1e4000ef          	jal	2b8 <stop_trigger>
+      d8:	00c12503          	lw	a0,12(sp)
+      dc:	23c010ef          	jal	1318 <verify_benchmark>
+      e0:	01c12083          	lw	ra,28(sp)
+      e4:	00153513          	seqz	a0,a0
+      e8:	02010113          	addi	sp,sp,32
+      ec:	00008067          	ret
+
+000000f0 <rand_beebs>:
+      f0:	00013737          	lui	a4,0x13
+      f4:	c2072503          	lw	a0,-992(a4) # 12c20 <seed>
+      f8:	41c657b7          	lui	a5,0x41c65
+      fc:	e6d78793          	addi	a5,a5,-403 # 41c64e6d <_stack_top+0x41c44e6d>
+     100:	02f50533          	mul	a0,a0,a5
+     104:	000037b7          	lui	a5,0x3
+     108:	03978793          	addi	a5,a5,57 # 3039 <benchmark+0x1ca9>
+     10c:	00f50533          	add	a0,a0,a5
+     110:	00151513          	slli	a0,a0,0x1
+     114:	00155513          	srli	a0,a0,0x1
+     118:	c2a72023          	sw	a0,-992(a4)
+     11c:	01055513          	srli	a0,a0,0x10
+     120:	00008067          	ret
+
+00000124 <srand_beebs>:
+     124:	000137b7          	lui	a5,0x13
+     128:	c2a7a023          	sw	a0,-992(a5) # 12c20 <seed>
+     12c:	00008067          	ret
+
+00000130 <init_heap_beebs>:
+     130:	0035f793          	andi	a5,a1,3
+     134:	02079263          	bnez	a5,158 <init_heap_beebs+0x28>
+     138:	00b505b3          	add	a1,a0,a1
+     13c:	000136b7          	lui	a3,0x13
+     140:	00013737          	lui	a4,0x13
+     144:	000137b7          	lui	a5,0x13
+     148:	c0b6ac23          	sw	a1,-1000(a3) # 12c18 <heap_end>
+     14c:	c0a72e23          	sw	a0,-996(a4) # 12c1c <heap_ptr>
+     150:	c007aa23          	sw	zero,-1004(a5) # 12c14 <heap_requested>
+     154:	00008067          	ret
+     158:	0000006f          	j	158 <init_heap_beebs+0x28>
+
+0000015c <check_heap_beebs>:
+     15c:	000137b7          	lui	a5,0x13
+     160:	c147a703          	lw	a4,-1004(a5) # 12c14 <heap_requested>
+     164:	000137b7          	lui	a5,0x13
+     168:	c187a783          	lw	a5,-1000(a5) # 12c18 <heap_end>
+     16c:	00e50533          	add	a0,a0,a4
+     170:	00a7b533          	sltu	a0,a5,a0
+     174:	00154513          	xori	a0,a0,1
+     178:	00008067          	ret
+
+0000017c <malloc_beebs>:
+     17c:	00050793          	mv	a5,a0
+     180:	04050e63          	beqz	a0,1dc <malloc_beebs+0x60>
+     184:	00013637          	lui	a2,0x13
+     188:	c1c62503          	lw	a0,-996(a2) # 12c1c <heap_ptr>
+     18c:	000136b7          	lui	a3,0x13
+     190:	c146a583          	lw	a1,-1004(a3) # 12c14 <heap_requested>
+     194:	00f50733          	add	a4,a0,a5
+     198:	00377813          	andi	a6,a4,3
+     19c:	00b787b3          	add	a5,a5,a1
+     1a0:	00081e63          	bnez	a6,1bc <malloc_beebs+0x40>
+     1a4:	000135b7          	lui	a1,0x13
+     1a8:	c185a583          	lw	a1,-1000(a1) # 12c18 <heap_end>
+     1ac:	c0f6aa23          	sw	a5,-1004(a3)
+     1b0:	02e5e663          	bltu	a1,a4,1dc <malloc_beebs+0x60>
+     1b4:	c0e62e23          	sw	a4,-996(a2)
+     1b8:	00008067          	ret
+     1bc:	00400593          	li	a1,4
+     1c0:	410585b3          	sub	a1,a1,a6
+     1c4:	00b787b3          	add	a5,a5,a1
+     1c8:	00b70733          	add	a4,a4,a1
+     1cc:	000135b7          	lui	a1,0x13
+     1d0:	c185a583          	lw	a1,-1000(a1) # 12c18 <heap_end>
+     1d4:	c0f6aa23          	sw	a5,-1004(a3)
+     1d8:	fce5fee3          	bgeu	a1,a4,1b4 <malloc_beebs+0x38>
+     1dc:	00000513          	li	a0,0
+     1e0:	00008067          	ret
+
+000001e4 <calloc_beebs>:
+     1e4:	ff010113          	addi	sp,sp,-16
+     1e8:	00812423          	sw	s0,8(sp)
+     1ec:	02b50433          	mul	s0,a0,a1
+     1f0:	00112623          	sw	ra,12(sp)
+     1f4:	00040513          	mv	a0,s0
+     1f8:	f85ff0ef          	jal	17c <malloc_beebs>
+     1fc:	00050e63          	beqz	a0,218 <calloc_beebs+0x34>
+     200:	00040c63          	beqz	s0,218 <calloc_beebs+0x34>
+     204:	008505b3          	add	a1,a0,s0
+     208:	00050793          	mv	a5,a0
+     20c:	00178793          	addi	a5,a5,1
+     210:	fe078fa3          	sb	zero,-1(a5)
+     214:	feb79ce3          	bne	a5,a1,20c <calloc_beebs+0x28>
+     218:	00c12083          	lw	ra,12(sp)
+     21c:	00812403          	lw	s0,8(sp)
+     220:	01010113          	addi	sp,sp,16
+     224:	00008067          	ret
+
+00000228 <realloc_beebs>:
+     228:	06050c63          	beqz	a0,2a0 <realloc_beebs+0x78>
+     22c:	ff010113          	addi	sp,sp,-16
+     230:	00812423          	sw	s0,8(sp)
+     234:	00050413          	mv	s0,a0
+     238:	00058513          	mv	a0,a1
+     23c:	00912223          	sw	s1,4(sp)
+     240:	00112623          	sw	ra,12(sp)
+     244:	00058493          	mv	s1,a1
+     248:	f35ff0ef          	jal	17c <malloc_beebs>
+     24c:	02050e63          	beqz	a0,288 <realloc_beebs+0x60>
+     250:	00040793          	mv	a5,s0
+     254:	00940633          	add	a2,s0,s1
+     258:	00050713          	mv	a4,a0
+     25c:	00048c63          	beqz	s1,274 <realloc_beebs+0x4c>
+     260:	0007c683          	lbu	a3,0(a5)
+     264:	00178793          	addi	a5,a5,1
+     268:	00170713          	addi	a4,a4,1
+     26c:	fed70fa3          	sb	a3,-1(a4)
+     270:	fec798e3          	bne	a5,a2,260 <realloc_beebs+0x38>
+     274:	00c12083          	lw	ra,12(sp)
+     278:	00812403          	lw	s0,8(sp)
+     27c:	00412483          	lw	s1,4(sp)
+     280:	01010113          	addi	sp,sp,16
+     284:	00008067          	ret
+     288:	00c12083          	lw	ra,12(sp)
+     28c:	00812403          	lw	s0,8(sp)
+     290:	00412483          	lw	s1,4(sp)
+     294:	00000513          	li	a0,0
+     298:	01010113          	addi	sp,sp,16
+     29c:	00008067          	ret
+     2a0:	00000513          	li	a0,0
+     2a4:	00008067          	ret
+
+000002a8 <free_beebs>:
+     2a8:	00008067          	ret
+
+000002ac <initialise_board>:
+     2ac:	00008067          	ret
+
+000002b0 <start_trigger>:
+     2b0:	00000013          	nop
+     2b4:	00008067          	ret
+
+000002b8 <stop_trigger>:
+     2b8:	00000013          	nop
+     2bc:	00008067          	ret
+
+000002c0 <_aes_set_key.part.0>:
+     2c0:	00150513          	addi	a0,a0,1
+     2c4:	00251893          	slli	a7,a0,0x2
+     2c8:	04058463          	beqz	a1,310 <_aes_set_key.part.0+0x50>
+     2cc:	00259e13          	slli	t3,a1,0x2
+     2d0:	01c68e33          	add	t3,a3,t3
+     2d4:	00060813          	mv	a6,a2
+     2d8:	0036c783          	lbu	a5,3(a3)
+     2dc:	0026c503          	lbu	a0,2(a3)
+     2e0:	0006c303          	lbu	t1,0(a3)
+     2e4:	0016c703          	lbu	a4,1(a3)
+     2e8:	01879793          	slli	a5,a5,0x18
+     2ec:	01051513          	slli	a0,a0,0x10
+     2f0:	00a7e7b3          	or	a5,a5,a0
+     2f4:	0067e7b3          	or	a5,a5,t1
+     2f8:	00871713          	slli	a4,a4,0x8
+     2fc:	00e7e7b3          	or	a5,a5,a4
+     300:	00f82023          	sw	a5,0(a6)
+     304:	00468693          	addi	a3,a3,4
+     308:	00480813          	addi	a6,a6,4
+     30c:	fcde16e3          	bne	t3,a3,2d8 <_aes_set_key.part.0+0x18>
+     310:	1515f663          	bgeu	a1,a7,45c <_aes_set_key.part.0+0x19c>
+     314:	00259e93          	slli	t4,a1,0x2
+     318:	ff010113          	addi	sp,sp,-16
+     31c:	01d607b3          	add	a5,a2,t4
+     320:	00010e37          	lui	t3,0x10
+     324:	ffc7a783          	lw	a5,-4(a5)
+     328:	00812623          	sw	s0,12(sp)
+     32c:	000e0e13          	mv	t3,t3
+     330:	00058813          	mv	a6,a1
+     334:	00600f93          	li	t6,6
+     338:	00400293          	li	t0,4
+     33c:	00011f37          	lui	t5,0x11
+     340:	0540006f          	j	394 <_aes_set_key.part.0+0xd4>
+     344:	0003c783          	lbu	a5,0(t2)
+     348:	00054503          	lbu	a0,0(a0)
+     34c:	00034303          	lbu	t1,0(t1)
+     350:	0006c703          	lbu	a4,0(a3)
+     354:	01879793          	slli	a5,a5,0x18
+     358:	00851693          	slli	a3,a0,0x8
+     35c:	0067e7b3          	or	a5,a5,t1
+     360:	000e4503          	lbu	a0,0(t3) # 10000 <rcon.0>
+     364:	00d7e7b3          	or	a5,a5,a3
+     368:	01071713          	slli	a4,a4,0x10
+     36c:	00e7e7b3          	or	a5,a5,a4
+     370:	00a7c7b3          	xor	a5,a5,a0
+     374:	001e0e13          	addi	t3,t3,1
+     378:	00062683          	lw	a3,0(a2)
+     37c:	01d60733          	add	a4,a2,t4
+     380:	00180813          	addi	a6,a6,1
+     384:	00d7c7b3          	xor	a5,a5,a3
+     388:	00f72023          	sw	a5,0(a4)
+     38c:	00460613          	addi	a2,a2,4
+     390:	0d088063          	beq	a7,a6,450 <_aes_set_key.part.0+0x190>
+     394:	02b87433          	remu	s0,a6,a1
+     398:	0087d693          	srli	a3,a5,0x8
+     39c:	01879713          	slli	a4,a5,0x18
+     3a0:	00d76733          	or	a4,a4,a3
+     3a4:	01875313          	srli	t1,a4,0x18
+     3a8:	50cf0693          	addi	a3,t5,1292 # 1150c <_aes_encrypt_table>
+     3ac:	00875513          	srli	a0,a4,0x8
+     3b0:	006683b3          	add	t2,a3,t1
+     3b4:	0ff77313          	zext.b	t1,a4
+     3b8:	01075713          	srli	a4,a4,0x10
+     3bc:	0ff57513          	zext.b	a0,a0
+     3c0:	0ff77713          	zext.b	a4,a4
+     3c4:	00668333          	add	t1,a3,t1
+     3c8:	00a68533          	add	a0,a3,a0
+     3cc:	00e686b3          	add	a3,a3,a4
+     3d0:	f6040ae3          	beqz	s0,344 <_aes_set_key.part.0+0x84>
+     3d4:	fabff2e3          	bgeu	t6,a1,378 <_aes_set_key.part.0+0xb8>
+     3d8:	fa5410e3          	bne	s0,t0,378 <_aes_set_key.part.0+0xb8>
+     3dc:	00011737          	lui	a4,0x11
+     3e0:	50c70713          	addi	a4,a4,1292 # 1150c <_aes_encrypt_table>
+     3e4:	0187d693          	srli	a3,a5,0x18
+     3e8:	0087d513          	srli	a0,a5,0x8
+     3ec:	00d706b3          	add	a3,a4,a3
+     3f0:	0ff7f313          	zext.b	t1,a5
+     3f4:	0ff57513          	zext.b	a0,a0
+     3f8:	0006c683          	lbu	a3,0(a3)
+     3fc:	00670333          	add	t1,a4,t1
+     400:	00a70533          	add	a0,a4,a0
+     404:	0107d793          	srli	a5,a5,0x10
+     408:	0ff7f793          	zext.b	a5,a5
+     40c:	00034303          	lbu	t1,0(t1)
+     410:	00054503          	lbu	a0,0(a0)
+     414:	00f70733          	add	a4,a4,a5
+     418:	00074783          	lbu	a5,0(a4)
+     41c:	01869713          	slli	a4,a3,0x18
+     420:	00676733          	or	a4,a4,t1
+     424:	00851693          	slli	a3,a0,0x8
+     428:	00d76733          	or	a4,a4,a3
+     42c:	00062683          	lw	a3,0(a2)
+     430:	01079793          	slli	a5,a5,0x10
+     434:	00f767b3          	or	a5,a4,a5
+     438:	00d7c7b3          	xor	a5,a5,a3
+     43c:	01d60733          	add	a4,a2,t4
+     440:	00180813          	addi	a6,a6,1
+     444:	00f72023          	sw	a5,0(a4)
+     448:	00460613          	addi	a2,a2,4
+     44c:	f50894e3          	bne	a7,a6,394 <_aes_set_key.part.0+0xd4>
+     450:	00c12403          	lw	s0,12(sp)
+     454:	01010113          	addi	sp,sp,16
+     458:	00008067          	ret
+     45c:	00008067          	ret
+
+00000460 <_nettle_aes_encrypt.part.0>:
+     460:	50068e63          	beqz	a3,97c <_nettle_aes_encrypt.part.0+0x51c>
+     464:	fc010113          	addi	sp,sp,-64
+     468:	01a12a23          	sw	s10,20(sp)
+     46c:	00451d13          	slli	s10,a0,0x4
+     470:	01812e23          	sw	s8,28(sp)
+     474:	00070813          	mv	a6,a4
+     478:	00d70c33          	add	s8,a4,a3
+     47c:	004d0713          	addi	a4,s10,4
+     480:	00e12223          	sw	a4,4(sp)
+     484:	008d0713          	addi	a4,s10,8
+     488:	00e12423          	sw	a4,8(sp)
+     48c:	00cd0713          	addi	a4,s10,12
+     490:	01912c23          	sw	s9,24(sp)
+     494:	01b12823          	sw	s11,16(sp)
+     498:	02812e23          	sw	s0,60(sp)
+     49c:	02912c23          	sw	s1,56(sp)
+     4a0:	03212a23          	sw	s2,52(sp)
+     4a4:	03312823          	sw	s3,48(sp)
+     4a8:	03412623          	sw	s4,44(sp)
+     4ac:	03512423          	sw	s5,40(sp)
+     4b0:	03612223          	sw	s6,36(sp)
+     4b4:	03712023          	sw	s7,32(sp)
+     4b8:	00050c93          	mv	s9,a0
+     4bc:	01a58eb3          	add	t4,a1,s10
+     4c0:	00e12623          	sw	a4,12(sp)
+     4c4:	00100d93          	li	s11,1
+     4c8:	0017c283          	lbu	t0,1(a5)
+     4cc:	0057cf83          	lbu	t6,5(a5)
+     4d0:	0007c683          	lbu	a3,0(a5)
+     4d4:	0047c483          	lbu	s1,4(a5)
+     4d8:	0097c983          	lbu	s3,9(a5)
+     4dc:	00d7cf03          	lbu	t5,13(a5)
+     4e0:	0027ce03          	lbu	t3,2(a5)
+     4e4:	0067c303          	lbu	t1,6(a5)
+     4e8:	0087c903          	lbu	s2,8(a5)
+     4ec:	00c7c403          	lbu	s0,12(a5)
+     4f0:	00a7c883          	lbu	a7,10(a5)
+     4f4:	00e7c503          	lbu	a0,14(a5)
+     4f8:	00829293          	slli	t0,t0,0x8
+     4fc:	008f9f93          	slli	t6,t6,0x8
+     500:	00d2e2b3          	or	t0,t0,a3
+     504:	009fefb3          	or	t6,t6,s1
+     508:	0037c703          	lbu	a4,3(a5)
+     50c:	0077c383          	lbu	t2,7(a5)
+     510:	00b7c683          	lbu	a3,11(a5)
+     514:	00f7c483          	lbu	s1,15(a5)
+     518:	00899993          	slli	s3,s3,0x8
+     51c:	008f1f13          	slli	t5,t5,0x8
+     520:	010e1e13          	slli	t3,t3,0x10
+     524:	01031313          	slli	t1,t1,0x10
+     528:	0129e9b3          	or	s3,s3,s2
+     52c:	008f6f33          	or	t5,t5,s0
+     530:	005e6e33          	or	t3,t3,t0
+     534:	01f36333          	or	t1,t1,t6
+     538:	0005a903          	lw	s2,0(a1)
+     53c:	0045a403          	lw	s0,4(a1)
+     540:	0085a283          	lw	t0,8(a1)
+     544:	00c5af83          	lw	t6,12(a1)
+     548:	01089893          	slli	a7,a7,0x10
+     54c:	01051513          	slli	a0,a0,0x10
+     550:	01871713          	slli	a4,a4,0x18
+     554:	01839393          	slli	t2,t2,0x18
+     558:	0138e8b3          	or	a7,a7,s3
+     55c:	01869693          	slli	a3,a3,0x18
+     560:	01e56533          	or	a0,a0,t5
+     564:	01849493          	slli	s1,s1,0x18
+     568:	01c76733          	or	a4,a4,t3
+     56c:	0063e3b3          	or	t2,t2,t1
+     570:	0116e6b3          	or	a3,a3,a7
+     574:	00a4e4b3          	or	s1,s1,a0
+     578:	01274733          	xor	a4,a4,s2
+     57c:	0083c3b3          	xor	t2,t2,s0
+     580:	0056c6b3          	xor	a3,a3,t0
+     584:	01f4c4b3          	xor	s1,s1,t6
+     588:	3f9df063          	bgeu	s11,s9,968 <_nettle_aes_encrypt.part.0+0x508>
+     58c:	01058413          	addi	s0,a1,16
+     590:	00068f93          	mv	t6,a3
+     594:	0184d293          	srli	t0,s1,0x18
+     598:	0ff77a93          	zext.b	s5,a4
+     59c:	34028293          	addi	t0,t0,832
+     5a0:	01875513          	srli	a0,a4,0x18
+     5a4:	002a9a93          	slli	s5,s5,0x2
+     5a8:	00229293          	slli	t0,t0,0x2
+     5ac:	018fd913          	srli	s2,t6,0x18
+     5b0:	34050513          	addi	a0,a0,832
+     5b4:	01560ab3          	add	s5,a2,s5
+     5b8:	005602b3          	add	t0,a2,t0
+     5bc:	100aaa83          	lw	s5,256(s5)
+     5c0:	0ff3fb93          	zext.b	s7,t2
+     5c4:	0ff4f993          	zext.b	s3,s1
+     5c8:	00251513          	slli	a0,a0,0x2
+     5cc:	0002a283          	lw	t0,0(t0)
+     5d0:	34090913          	addi	s2,s2,832
+     5d4:	00038313          	mv	t1,t2
+     5d8:	0183da13          	srli	s4,t2,0x18
+     5dc:	0084db13          	srli	s6,s1,0x8
+     5e0:	0104d693          	srli	a3,s1,0x10
+     5e4:	0083d393          	srli	t2,t2,0x8
+     5e8:	00a604b3          	add	s1,a2,a0
+     5ec:	002b9b93          	slli	s7,s7,0x2
+     5f0:	01075513          	srli	a0,a4,0x10
+     5f4:	00291913          	slli	s2,s2,0x2
+     5f8:	00299993          	slli	s3,s3,0x2
+     5fc:	0ffff893          	zext.b	a7,t6
+     600:	0ff3f393          	zext.b	t2,t2
+     604:	01760bb3          	add	s7,a2,s7
+     608:	340a0a13          	addi	s4,s4,832
+     60c:	0ff6f693          	zext.b	a3,a3
+     610:	01260933          	add	s2,a2,s2
+     614:	013609b3          	add	s3,a2,s3
+     618:	0ff57513          	zext.b	a0,a0
+     61c:	005ac2b3          	xor	t0,s5,t0
+     620:	00092903          	lw	s2,0(s2)
+     624:	1009a983          	lw	s3,256(s3)
+     628:	00042a83          	lw	s5,0(s0)
+     62c:	008fdf13          	srli	t5,t6,0x8
+     630:	00875e13          	srli	t3,a4,0x8
+     634:	010fdf93          	srli	t6,t6,0x10
+     638:	00239713          	slli	a4,t2,0x2
+     63c:	002a1a13          	slli	s4,s4,0x2
+     640:	0004a383          	lw	t2,0(s1)
+     644:	01035313          	srli	t1,t1,0x10
+     648:	100ba483          	lw	s1,256(s7)
+     64c:	00289893          	slli	a7,a7,0x2
+     650:	24068693          	addi	a3,a3,576
+     654:	24050513          	addi	a0,a0,576
+     658:	00e60733          	add	a4,a2,a4
+     65c:	00251513          	slli	a0,a0,0x2
+     660:	0fff7f13          	zext.b	t5,t5
+     664:	0ffb7b13          	zext.b	s6,s6
+     668:	0fffff93          	zext.b	t6,t6
+     66c:	01460a33          	add	s4,a2,s4
+     670:	0ff37313          	zext.b	t1,t1
+     674:	011608b3          	add	a7,a2,a7
+     678:	0ffe7e13          	zext.b	t3,t3
+     67c:	00269693          	slli	a3,a3,0x2
+     680:	50072b83          	lw	s7,1280(a4)
+     684:	00d606b3          	add	a3,a2,a3
+     688:	00a60733          	add	a4,a2,a0
+     68c:	000a2a03          	lw	s4,0(s4)
+     690:	1008a883          	lw	a7,256(a7)
+     694:	240f8f93          	addi	t6,t6,576
+     698:	002f1f13          	slli	t5,t5,0x2
+     69c:	24030313          	addi	t1,t1,576
+     6a0:	002b1b13          	slli	s6,s6,0x2
+     6a4:	002e1e13          	slli	t3,t3,0x2
+     6a8:	0074c533          	xor	a0,s1,t2
+     6ac:	002f9f93          	slli	t6,t6,0x2
+     6b0:	0129c4b3          	xor	s1,s3,s2
+     6b4:	0006a383          	lw	t2,0(a3)
+     6b8:	00442983          	lw	s3,4(s0)
+     6bc:	00842683          	lw	a3,8(s0)
+     6c0:	00072903          	lw	s2,0(a4)
+     6c4:	01e60f33          	add	t5,a2,t5
+     6c8:	0152c733          	xor	a4,t0,s5
+     6cc:	00231313          	slli	t1,t1,0x2
+     6d0:	00c42283          	lw	t0,12(s0)
+     6d4:	01660b33          	add	s6,a2,s6
+     6d8:	01c60e33          	add	t3,a2,t3
+     6dc:	500f2f03          	lw	t5,1280(t5)
+     6e0:	500b2b03          	lw	s6,1280(s6)
+     6e4:	500e2e03          	lw	t3,1280(t3)
+     6e8:	01f60fb3          	add	t6,a2,t6
+     6ec:	00660333          	add	t1,a2,t1
+     6f0:	000faf83          	lw	t6,0(t6)
+     6f4:	00032303          	lw	t1,0(t1)
+     6f8:	0148c8b3          	xor	a7,a7,s4
+     6fc:	01354533          	xor	a0,a0,s3
+     700:	00d8c8b3          	xor	a7,a7,a3
+     704:	0054c4b3          	xor	s1,s1,t0
+     708:	01774733          	xor	a4,a4,s7
+     70c:	01e54533          	xor	a0,a0,t5
+     710:	0168c8b3          	xor	a7,a7,s6
+     714:	01c4c4b3          	xor	s1,s1,t3
+     718:	01040413          	addi	s0,s0,16
+     71c:	01f74733          	xor	a4,a4,t6
+     720:	007543b3          	xor	t2,a0,t2
+     724:	0128cfb3          	xor	t6,a7,s2
+     728:	0064c4b3          	xor	s1,s1,t1
+     72c:	e7d414e3          	bne	s0,t4,594 <_nettle_aes_encrypt.part.0+0x134>
+     730:	00c12983          	lw	s3,12(sp)
+     734:	00812a03          	lw	s4,8(sp)
+     738:	00412a83          	lw	s5,4(sp)
+     73c:	000f8693          	mv	a3,t6
+     740:	000d0b13          	mv	s6,s10
+     744:	0183d293          	srli	t0,t2,0x18
+     748:	0184df93          	srli	t6,s1,0x18
+     74c:	01875f13          	srli	t5,a4,0x18
+     750:	005602b3          	add	t0,a2,t0
+     754:	0002c903          	lbu	s2,0(t0)
+     758:	0ff77e13          	zext.b	t3,a4
+     75c:	0ff3f293          	zext.b	t0,t2
+     760:	01f60fb3          	add	t6,a2,t6
+     764:	01e60f33          	add	t5,a2,t5
+     768:	000fcf83          	lbu	t6,0(t6)
+     76c:	000f4f03          	lbu	t5,0(t5)
+     770:	01c60e33          	add	t3,a2,t3
+     774:	005602b3          	add	t0,a2,t0
+     778:	000e4403          	lbu	s0,0(t3)
+     77c:	0002c283          	lbu	t0,0(t0)
+     780:	0083d313          	srli	t1,t2,0x8
+     784:	018f9f93          	slli	t6,t6,0x18
+     788:	018f1f13          	slli	t5,t5,0x18
+     78c:	008fefb3          	or	t6,t6,s0
+     790:	005f6f33          	or	t5,t5,t0
+     794:	0084d513          	srli	a0,s1,0x8
+     798:	0104d413          	srli	s0,s1,0x10
+     79c:	0ff6f293          	zext.b	t0,a3
+     7a0:	0ff37313          	zext.b	t1,t1
+     7a4:	0ff4f493          	zext.b	s1,s1
+     7a8:	0086d893          	srli	a7,a3,0x8
+     7ac:	00660333          	add	t1,a2,t1
+     7b0:	009604b3          	add	s1,a2,s1
+     7b4:	005602b3          	add	t0,a2,t0
+     7b8:	00034e03          	lbu	t3,0(t1)
+     7bc:	0004cb83          	lbu	s7,0(s1)
+     7c0:	0106d313          	srli	t1,a3,0x10
+     7c4:	0002c483          	lbu	s1,0(t0)
+     7c8:	0ff8f893          	zext.b	a7,a7
+     7cc:	01075293          	srli	t0,a4,0x10
+     7d0:	0ff57513          	zext.b	a0,a0
+     7d4:	0186d693          	srli	a3,a3,0x18
+     7d8:	00875713          	srli	a4,a4,0x8
+     7dc:	011608b3          	add	a7,a2,a7
+     7e0:	00a60533          	add	a0,a2,a0
+     7e4:	0ff37313          	zext.b	t1,t1
+     7e8:	0103d393          	srli	t2,t2,0x10
+     7ec:	0ff47413          	zext.b	s0,s0
+     7f0:	00d606b3          	add	a3,a2,a3
+     7f4:	0ff2f293          	zext.b	t0,t0
+     7f8:	0ff77713          	zext.b	a4,a4
+     7fc:	0008c883          	lbu	a7,0(a7)
+     800:	00054503          	lbu	a0,0(a0)
+     804:	0006c683          	lbu	a3,0(a3)
+     808:	00660333          	add	t1,a2,t1
+     80c:	0ff3f393          	zext.b	t2,t2
+     810:	00860433          	add	s0,a2,s0
+     814:	005602b3          	add	t0,a2,t0
+     818:	00e60733          	add	a4,a2,a4
+     81c:	00034303          	lbu	t1,0(t1)
+     820:	00044403          	lbu	s0,0(s0)
+     824:	0002c283          	lbu	t0,0(t0)
+     828:	00074703          	lbu	a4,0(a4)
+     82c:	007603b3          	add	t2,a2,t2
+     830:	0003c383          	lbu	t2,0(t2)
+     834:	01891913          	slli	s2,s2,0x18
+     838:	01658b33          	add	s6,a1,s6
+     83c:	01558ab3          	add	s5,a1,s5
+     840:	01458a33          	add	s4,a1,s4
+     844:	000b2b03          	lw	s6,0(s6)
+     848:	000aaa83          	lw	s5,0(s5)
+     84c:	000a2a03          	lw	s4,0(s4)
+     850:	009964b3          	or	s1,s2,s1
+     854:	013589b3          	add	s3,a1,s3
+     858:	008e1e13          	slli	t3,t3,0x8
+     85c:	00889893          	slli	a7,a7,0x8
+     860:	01869693          	slli	a3,a3,0x18
+     864:	00851513          	slli	a0,a0,0x8
+     868:	0009a903          	lw	s2,0(s3)
+     86c:	01cfee33          	or	t3,t6,t3
+     870:	011f68b3          	or	a7,t5,a7
+     874:	01041413          	slli	s0,s0,0x10
+     878:	00a4e533          	or	a0,s1,a0
+     87c:	0176e6b3          	or	a3,a3,s7
+     880:	01029293          	slli	t0,t0,0x10
+     884:	01031313          	slli	t1,t1,0x10
+     888:	00871713          	slli	a4,a4,0x8
+     88c:	006e6333          	or	t1,t3,t1
+     890:	0088e8b3          	or	a7,a7,s0
+     894:	01039393          	slli	t2,t2,0x10
+     898:	00556533          	or	a0,a0,t0
+     89c:	00e6e733          	or	a4,a3,a4
+     8a0:	0158c8b3          	xor	a7,a7,s5
+     8a4:	01454533          	xor	a0,a0,s4
+     8a8:	01634333          	xor	t1,t1,s6
+     8ac:	00776733          	or	a4,a4,t2
+     8b0:	01274733          	xor	a4,a4,s2
+     8b4:	00855693          	srli	a3,a0,0x8
+     8b8:	0188d393          	srli	t2,a7,0x18
+     8bc:	0108d293          	srli	t0,a7,0x10
+     8c0:	0088df93          	srli	t6,a7,0x8
+     8c4:	01855f13          	srli	t5,a0,0x18
+     8c8:	01055e13          	srli	t3,a0,0x10
+     8cc:	01835913          	srli	s2,t1,0x18
+     8d0:	01035493          	srli	s1,t1,0x10
+     8d4:	00835413          	srli	s0,t1,0x8
+     8d8:	01180223          	sb	a7,4(a6)
+     8dc:	00a80423          	sb	a0,8(a6)
+     8e0:	00d804a3          	sb	a3,9(a6)
+     8e4:	00680023          	sb	t1,0(a6)
+     8e8:	012801a3          	sb	s2,3(a6)
+     8ec:	00980123          	sb	s1,2(a6)
+     8f0:	008800a3          	sb	s0,1(a6)
+     8f4:	007803a3          	sb	t2,7(a6)
+     8f8:	00580323          	sb	t0,6(a6)
+     8fc:	01f802a3          	sb	t6,5(a6)
+     900:	01e805a3          	sb	t5,11(a6)
+     904:	01c80523          	sb	t3,10(a6)
+     908:	01875893          	srli	a7,a4,0x18
+     90c:	01075513          	srli	a0,a4,0x10
+     910:	00875693          	srli	a3,a4,0x8
+     914:	011807a3          	sb	a7,15(a6)
+     918:	00e80623          	sb	a4,12(a6)
+     91c:	00a80723          	sb	a0,14(a6)
+     920:	00d806a3          	sb	a3,13(a6)
+     924:	01080813          	addi	a6,a6,16
+     928:	01078793          	addi	a5,a5,16
+     92c:	b9881ee3          	bne	a6,s8,4c8 <_nettle_aes_encrypt.part.0+0x68>
+     930:	03c12403          	lw	s0,60(sp)
+     934:	03812483          	lw	s1,56(sp)
+     938:	03412903          	lw	s2,52(sp)
+     93c:	03012983          	lw	s3,48(sp)
+     940:	02c12a03          	lw	s4,44(sp)
+     944:	02812a83          	lw	s5,40(sp)
+     948:	02412b03          	lw	s6,36(sp)
+     94c:	02012b83          	lw	s7,32(sp)
+     950:	01c12c03          	lw	s8,28(sp)
+     954:	01812c83          	lw	s9,24(sp)
+     958:	01412d03          	lw	s10,20(sp)
+     95c:	01012d83          	lw	s11,16(sp)
+     960:	04010113          	addi	sp,sp,64
+     964:	00008067          	ret
+     968:	01c00993          	li	s3,28
+     96c:	01800a13          	li	s4,24
+     970:	01400a93          	li	s5,20
+     974:	01000b13          	li	s6,16
+     978:	dcdff06f          	j	744 <_nettle_aes_encrypt.part.0+0x2e4>
+     97c:	00008067          	ret
+
+00000980 <_nettle_aes_decrypt.part.0>:
+     980:	52068263          	beqz	a3,ea4 <_nettle_aes_decrypt.part.0+0x524>
+     984:	fc010113          	addi	sp,sp,-64
+     988:	01812e23          	sw	s8,28(sp)
+     98c:	00451c13          	slli	s8,a0,0x4
+     990:	03312823          	sw	s3,48(sp)
+     994:	00078993          	mv	s3,a5
+     998:	008c0793          	addi	a5,s8,8
+     99c:	00f12423          	sw	a5,8(sp)
+     9a0:	00cc0793          	addi	a5,s8,12
+     9a4:	03212a23          	sw	s2,52(sp)
+     9a8:	03412623          	sw	s4,44(sp)
+     9ac:	03512423          	sw	s5,40(sp)
+     9b0:	03612223          	sw	s6,36(sp)
+     9b4:	03712023          	sw	s7,32(sp)
+     9b8:	01912c23          	sw	s9,24(sp)
+     9bc:	01a12a23          	sw	s10,20(sp)
+     9c0:	02812e23          	sw	s0,60(sp)
+     9c4:	02912c23          	sw	s1,56(sp)
+     9c8:	01b12823          	sw	s11,16(sp)
+     9cc:	00050b93          	mv	s7,a0
+     9d0:	00058a13          	mv	s4,a1
+     9d4:	00070913          	mv	s2,a4
+     9d8:	00d70b33          	add	s6,a4,a3
+     9dc:	01858ab3          	add	s5,a1,s8
+     9e0:	004c0d13          	addi	s10,s8,4
+     9e4:	00f12623          	sw	a5,12(sp)
+     9e8:	00100c93          	li	s9,1
+     9ec:	0019cf03          	lbu	t5,1(s3)
+     9f0:	0059ce83          	lbu	t4,5(s3)
+     9f4:	0009c703          	lbu	a4,0(s3)
+     9f8:	0049c303          	lbu	t1,4(s3)
+     9fc:	0099c383          	lbu	t2,9(s3)
+     a00:	00d9ce03          	lbu	t3,13(s3)
+     a04:	0029c883          	lbu	a7,2(s3)
+     a08:	0069c803          	lbu	a6,6(s3)
+     a0c:	0089c283          	lbu	t0,8(s3)
+     a10:	00c9cf83          	lbu	t6,12(s3)
+     a14:	00a9c503          	lbu	a0,10(s3)
+     a18:	00e9c583          	lbu	a1,14(s3)
+     a1c:	008f1f13          	slli	t5,t5,0x8
+     a20:	008e9e93          	slli	t4,t4,0x8
+     a24:	00ef6f33          	or	t5,t5,a4
+     a28:	006eeeb3          	or	t4,t4,t1
+     a2c:	0039c683          	lbu	a3,3(s3)
+     a30:	0079c783          	lbu	a5,7(s3)
+     a34:	00b9c703          	lbu	a4,11(s3)
+     a38:	00f9c303          	lbu	t1,15(s3)
+     a3c:	00839393          	slli	t2,t2,0x8
+     a40:	008e1e13          	slli	t3,t3,0x8
+     a44:	01089893          	slli	a7,a7,0x10
+     a48:	01081813          	slli	a6,a6,0x10
+     a4c:	0053e3b3          	or	t2,t2,t0
+     a50:	01fe6e33          	or	t3,t3,t6
+     a54:	01e8e8b3          	or	a7,a7,t5
+     a58:	01d86833          	or	a6,a6,t4
+     a5c:	000a2283          	lw	t0,0(s4)
+     a60:	004a2f83          	lw	t6,4(s4)
+     a64:	008a2f03          	lw	t5,8(s4)
+     a68:	00ca2e83          	lw	t4,12(s4)
+     a6c:	01051513          	slli	a0,a0,0x10
+     a70:	01059593          	slli	a1,a1,0x10
+     a74:	01869693          	slli	a3,a3,0x18
+     a78:	01879793          	slli	a5,a5,0x18
+     a7c:	00756533          	or	a0,a0,t2
+     a80:	01871713          	slli	a4,a4,0x18
+     a84:	01c5e5b3          	or	a1,a1,t3
+     a88:	01831313          	slli	t1,t1,0x18
+     a8c:	0116e6b3          	or	a3,a3,a7
+     a90:	0107e7b3          	or	a5,a5,a6
+     a94:	00a76733          	or	a4,a4,a0
+     a98:	00b36333          	or	t1,t1,a1
+     a9c:	0056c6b3          	xor	a3,a3,t0
+     aa0:	01f7c7b3          	xor	a5,a5,t6
+     aa4:	01e74733          	xor	a4,a4,t5
+     aa8:	01d34333          	xor	t1,t1,t4
+     aac:	3f7cf263          	bgeu	s9,s7,e90 <_nettle_aes_decrypt.part.0+0x510>
+     ab0:	00070593          	mv	a1,a4
+     ab4:	010a0493          	addi	s1,s4,16
+     ab8:	00030713          	mv	a4,t1
+     abc:	0187d413          	srli	s0,a5,0x18
+     ac0:	0ff6fd93          	zext.b	s11,a3
+     ac4:	34040413          	addi	s0,s0,832
+     ac8:	002d9d93          	slli	s11,s11,0x2
+     acc:	00241413          	slli	s0,s0,0x2
+     ad0:	0186d393          	srli	t2,a3,0x18
+     ad4:	01875f13          	srli	t5,a4,0x18
+     ad8:	0185d313          	srli	t1,a1,0x18
+     adc:	01b60db3          	add	s11,a2,s11
+     ae0:	00860433          	add	s0,a2,s0
+     ae4:	100dad83          	lw	s11,256(s11)
+     ae8:	0ff77293          	zext.b	t0,a4
+     aec:	0ff7ff93          	zext.b	t6,a5
+     af0:	0ff5fe93          	zext.b	t4,a1
+     af4:	00042403          	lw	s0,0(s0)
+     af8:	34038393          	addi	t2,t2,832
+     afc:	340f0f13          	addi	t5,t5,832
+     b00:	34030313          	addi	t1,t1,832
+     b04:	00875e13          	srli	t3,a4,0x8
+     b08:	0087d893          	srli	a7,a5,0x8
+     b0c:	0086d813          	srli	a6,a3,0x8
+     b10:	00239393          	slli	t2,t2,0x2
+     b14:	00229293          	slli	t0,t0,0x2
+     b18:	002f9f93          	slli	t6,t6,0x2
+     b1c:	01075713          	srli	a4,a4,0x10
+     b20:	002f1f13          	slli	t5,t5,0x2
+     b24:	002e9e93          	slli	t4,t4,0x2
+     b28:	00231313          	slli	t1,t1,0x2
+     b2c:	0107d793          	srli	a5,a5,0x10
+     b30:	0106d693          	srli	a3,a3,0x10
+     b34:	007603b3          	add	t2,a2,t2
+     b38:	005602b3          	add	t0,a2,t0
+     b3c:	01f60fb3          	add	t6,a2,t6
+     b40:	01e60f33          	add	t5,a2,t5
+     b44:	0ff77713          	zext.b	a4,a4
+     b48:	0ff7f793          	zext.b	a5,a5
+     b4c:	01d60eb3          	add	t4,a2,t4
+     b50:	00660333          	add	t1,a2,t1
+     b54:	0ff6f693          	zext.b	a3,a3
+     b58:	008dc433          	xor	s0,s11,s0
+     b5c:	0003a383          	lw	t2,0(t2)
+     b60:	100faf83          	lw	t6,256(t6)
+     b64:	000f2f03          	lw	t5,0(t5)
+     b68:	00032303          	lw	t1,0(t1)
+     b6c:	0004ad83          	lw	s11,0(s1)
+     b70:	0085d513          	srli	a0,a1,0x8
+     b74:	1002a283          	lw	t0,256(t0)
+     b78:	100eae83          	lw	t4,256(t4)
+     b7c:	0105d593          	srli	a1,a1,0x10
+     b80:	24070713          	addi	a4,a4,576
+     b84:	24078793          	addi	a5,a5,576
+     b88:	24068693          	addi	a3,a3,576
+     b8c:	0ffe7e13          	zext.b	t3,t3
+     b90:	0ff57513          	zext.b	a0,a0
+     b94:	0ff8f893          	zext.b	a7,a7
+     b98:	0ff5f593          	zext.b	a1,a1
+     b9c:	0ff87813          	zext.b	a6,a6
+     ba0:	00271713          	slli	a4,a4,0x2
+     ba4:	00279793          	slli	a5,a5,0x2
+     ba8:	00269693          	slli	a3,a3,0x2
+     bac:	00e60733          	add	a4,a2,a4
+     bb0:	00f607b3          	add	a5,a2,a5
+     bb4:	00d606b3          	add	a3,a2,a3
+     bb8:	002e1e13          	slli	t3,t3,0x2
+     bbc:	24058593          	addi	a1,a1,576
+     bc0:	00251513          	slli	a0,a0,0x2
+     bc4:	00289893          	slli	a7,a7,0x2
+     bc8:	00281813          	slli	a6,a6,0x2
+     bcc:	0072c2b3          	xor	t0,t0,t2
+     bd0:	01eeceb3          	xor	t4,t4,t5
+     bd4:	00072383          	lw	t2,0(a4)
+     bd8:	0006af03          	lw	t5,0(a3)
+     bdc:	0007a703          	lw	a4,0(a5)
+     be0:	01b446b3          	xor	a3,s0,s11
+     be4:	006fc7b3          	xor	a5,t6,t1
+     be8:	0044a403          	lw	s0,4(s1)
+     bec:	00c4a303          	lw	t1,12(s1)
+     bf0:	0084af83          	lw	t6,8(s1)
+     bf4:	01c60e33          	add	t3,a2,t3
+     bf8:	00259593          	slli	a1,a1,0x2
+     bfc:	00a60533          	add	a0,a2,a0
+     c00:	011608b3          	add	a7,a2,a7
+     c04:	01060833          	add	a6,a2,a6
+     c08:	500e2e03          	lw	t3,1280(t3)
+     c0c:	50052503          	lw	a0,1280(a0)
+     c10:	5008a883          	lw	a7,1280(a7)
+     c14:	50082803          	lw	a6,1280(a6)
+     c18:	00b605b3          	add	a1,a2,a1
+     c1c:	0005a583          	lw	a1,0(a1)
+     c20:	0062c333          	xor	t1,t0,t1
+     c24:	01feceb3          	xor	t4,t4,t6
+     c28:	0087c7b3          	xor	a5,a5,s0
+     c2c:	01c6c6b3          	xor	a3,a3,t3
+     c30:	00a34333          	xor	t1,t1,a0
+     c34:	011eceb3          	xor	t4,t4,a7
+     c38:	0107c7b3          	xor	a5,a5,a6
+     c3c:	01048493          	addi	s1,s1,16
+     c40:	00b6c6b3          	xor	a3,a3,a1
+     c44:	00e34733          	xor	a4,t1,a4
+     c48:	01eec5b3          	xor	a1,t4,t5
+     c4c:	0077c7b3          	xor	a5,a5,t2
+     c50:	e75496e3          	bne	s1,s5,abc <_nettle_aes_decrypt.part.0+0x13c>
+     c54:	00c12283          	lw	t0,12(sp)
+     c58:	00812383          	lw	t2,8(sp)
+     c5c:	00070313          	mv	t1,a4
+     c60:	000d0413          	mv	s0,s10
+     c64:	00058713          	mv	a4,a1
+     c68:	000c0493          	mv	s1,s8
+     c6c:	01875e13          	srli	t3,a4,0x18
+     c70:	0ff7ff93          	zext.b	t6,a5
+     c74:	01c60e33          	add	t3,a2,t3
+     c78:	000e4e03          	lbu	t3,0(t3)
+     c7c:	01f60fb3          	add	t6,a2,t6
+     c80:	000fcf83          	lbu	t6,0(t6)
+     c84:	0187de93          	srli	t4,a5,0x18
+     c88:	01835f13          	srli	t5,t1,0x18
+     c8c:	018e1e13          	slli	t3,t3,0x18
+     c90:	01fe6e33          	or	t3,t3,t6
+     c94:	0ff6f893          	zext.b	a7,a3
+     c98:	0ff77f93          	zext.b	t6,a4
+     c9c:	01d60eb3          	add	t4,a2,t4
+     ca0:	01e60f33          	add	t5,a2,t5
+     ca4:	000ece83          	lbu	t4,0(t4)
+     ca8:	000f4f03          	lbu	t5,0(t5)
+     cac:	011608b3          	add	a7,a2,a7
+     cb0:	01f60fb3          	add	t6,a2,t6
+     cb4:	0008cd83          	lbu	s11,0(a7)
+     cb8:	000fcf83          	lbu	t6,0(t6)
+     cbc:	00835813          	srli	a6,t1,0x8
+     cc0:	0ff87813          	zext.b	a6,a6
+     cc4:	0086d513          	srli	a0,a3,0x8
+     cc8:	0087d593          	srli	a1,a5,0x8
+     ccc:	01060833          	add	a6,a2,a6
+     cd0:	018f1f13          	slli	t5,t5,0x18
+     cd4:	018e9e93          	slli	t4,t4,0x18
+     cd8:	00084883          	lbu	a7,0(a6)
+     cdc:	01beeeb3          	or	t4,t4,s11
+     ce0:	01ff6fb3          	or	t6,t5,t6
+     ce4:	01075813          	srli	a6,a4,0x10
+     ce8:	01035d93          	srli	s11,t1,0x10
+     cec:	0106df13          	srli	t5,a3,0x10
+     cf0:	0ff57513          	zext.b	a0,a0
+     cf4:	0ff5f593          	zext.b	a1,a1
+     cf8:	00875713          	srli	a4,a4,0x8
+     cfc:	0186d693          	srli	a3,a3,0x18
+     d00:	00a60533          	add	a0,a2,a0
+     d04:	00b605b3          	add	a1,a2,a1
+     d08:	0ff87813          	zext.b	a6,a6
+     d0c:	0107d793          	srli	a5,a5,0x10
+     d10:	0ffdfd93          	zext.b	s11,s11
+     d14:	0ff37313          	zext.b	t1,t1
+     d18:	0ff77713          	zext.b	a4,a4
+     d1c:	0fff7f13          	zext.b	t5,t5
+     d20:	00d606b3          	add	a3,a2,a3
+     d24:	00054503          	lbu	a0,0(a0)
+     d28:	0005c583          	lbu	a1,0(a1)
+     d2c:	0006c683          	lbu	a3,0(a3)
+     d30:	01060833          	add	a6,a2,a6
+     d34:	0ff7f793          	zext.b	a5,a5
+     d38:	01b60db3          	add	s11,a2,s11
+     d3c:	00660333          	add	t1,a2,t1
+     d40:	00e60733          	add	a4,a2,a4
+     d44:	01e60f33          	add	t5,a2,t5
+     d48:	00034303          	lbu	t1,0(t1)
+     d4c:	00084803          	lbu	a6,0(a6)
+     d50:	000dcd83          	lbu	s11,0(s11)
+     d54:	00074703          	lbu	a4,0(a4)
+     d58:	000f4f03          	lbu	t5,0(t5)
+     d5c:	00f607b3          	add	a5,a2,a5
+     d60:	0007c783          	lbu	a5,0(a5)
+     d64:	009a04b3          	add	s1,s4,s1
+     d68:	008a0433          	add	s0,s4,s0
+     d6c:	007a03b3          	add	t2,s4,t2
+     d70:	0004a483          	lw	s1,0(s1)
+     d74:	00042403          	lw	s0,0(s0)
+     d78:	0003a383          	lw	t2,0(t2)
+     d7c:	005a02b3          	add	t0,s4,t0
+     d80:	00889893          	slli	a7,a7,0x8
+     d84:	00851513          	slli	a0,a0,0x8
+     d88:	00859593          	slli	a1,a1,0x8
+     d8c:	01869693          	slli	a3,a3,0x18
+     d90:	0002a283          	lw	t0,0(t0)
+     d94:	011ee8b3          	or	a7,t4,a7
+     d98:	0066e6b3          	or	a3,a3,t1
+     d9c:	00ae6533          	or	a0,t3,a0
+     da0:	00871713          	slli	a4,a4,0x8
+     da4:	00bfe5b3          	or	a1,t6,a1
+     da8:	010f1f13          	slli	t5,t5,0x10
+     dac:	01081813          	slli	a6,a6,0x10
+     db0:	010d9d93          	slli	s11,s11,0x10
+     db4:	0108e833          	or	a6,a7,a6
+     db8:	01e5e5b3          	or	a1,a1,t5
+     dbc:	01079893          	slli	a7,a5,0x10
+     dc0:	01b56533          	or	a0,a0,s11
+     dc4:	00e6e7b3          	or	a5,a3,a4
+     dc8:	0075c5b3          	xor	a1,a1,t2
+     dcc:	00984833          	xor	a6,a6,s1
+     dd0:	00854533          	xor	a0,a0,s0
+     dd4:	0117e7b3          	or	a5,a5,a7
+     dd8:	0057c7b3          	xor	a5,a5,t0
+     ddc:	0105d693          	srli	a3,a1,0x10
+     de0:	0085d713          	srli	a4,a1,0x8
+     de4:	0185d893          	srli	a7,a1,0x18
+     de8:	01885293          	srli	t0,a6,0x18
+     dec:	01085f93          	srli	t6,a6,0x10
+     df0:	00885f13          	srli	t5,a6,0x8
+     df4:	01855e93          	srli	t4,a0,0x18
+     df8:	01055e13          	srli	t3,a0,0x10
+     dfc:	00855313          	srli	t1,a0,0x8
+     e00:	00b90423          	sb	a1,8(s2)
+     e04:	00d90523          	sb	a3,10(s2)
+     e08:	00e904a3          	sb	a4,9(s2)
+     e0c:	01090023          	sb	a6,0(s2)
+     e10:	00a90223          	sb	a0,4(s2)
+     e14:	005901a3          	sb	t0,3(s2)
+     e18:	01f90123          	sb	t6,2(s2)
+     e1c:	01e900a3          	sb	t5,1(s2)
+     e20:	01d903a3          	sb	t4,7(s2)
+     e24:	01c90323          	sb	t3,6(s2)
+     e28:	006902a3          	sb	t1,5(s2)
+     e2c:	011905a3          	sb	a7,11(s2)
+     e30:	0187d593          	srli	a1,a5,0x18
+     e34:	0107d693          	srli	a3,a5,0x10
+     e38:	0087d713          	srli	a4,a5,0x8
+     e3c:	00b907a3          	sb	a1,15(s2)
+     e40:	00f90623          	sb	a5,12(s2)
+     e44:	00d90723          	sb	a3,14(s2)
+     e48:	00e906a3          	sb	a4,13(s2)
+     e4c:	01090913          	addi	s2,s2,16
+     e50:	01098993          	addi	s3,s3,16
+     e54:	b9691ce3          	bne	s2,s6,9ec <_nettle_aes_decrypt.part.0+0x6c>
+     e58:	03c12403          	lw	s0,60(sp)
+     e5c:	03812483          	lw	s1,56(sp)
+     e60:	03412903          	lw	s2,52(sp)
+     e64:	03012983          	lw	s3,48(sp)
+     e68:	02c12a03          	lw	s4,44(sp)
+     e6c:	02812a83          	lw	s5,40(sp)
+     e70:	02412b03          	lw	s6,36(sp)
+     e74:	02012b83          	lw	s7,32(sp)
+     e78:	01c12c03          	lw	s8,28(sp)
+     e7c:	01812c83          	lw	s9,24(sp)
+     e80:	01412d03          	lw	s10,20(sp)
+     e84:	01012d83          	lw	s11,16(sp)
+     e88:	04010113          	addi	sp,sp,64
+     e8c:	00008067          	ret
+     e90:	01c00293          	li	t0,28
+     e94:	01800393          	li	t2,24
+     e98:	01400413          	li	s0,20
+     e9c:	01000493          	li	s1,16
+     ea0:	dcdff06f          	j	c6c <_nettle_aes_decrypt.part.0+0x2ec>
+     ea4:	00008067          	ret
+
+00000ea8 <_aes_set_key>:
+     ea8:	00058463          	beqz	a1,eb0 <_aes_set_key+0x8>
+     eac:	c14ff06f          	j	2c0 <_aes_set_key.part.0>
+     eb0:	0000006f          	j	eb0 <_aes_set_key+0x8>
+
+00000eb4 <aes_set_encrypt_key>:
+     eb4:	00f00793          	li	a5,15
+     eb8:	00060693          	mv	a3,a2
+     ebc:	00b7f863          	bgeu	a5,a1,ecc <aes_set_encrypt_key+0x18>
+     ec0:	02000793          	li	a5,32
+     ec4:	00b7f663          	bgeu	a5,a1,ed0 <aes_set_encrypt_key+0x1c>
+     ec8:	0000006f          	j	ec8 <aes_set_encrypt_key+0x14>
+     ecc:	0000006f          	j	ecc <aes_set_encrypt_key+0x18>
+     ed0:	02f58263          	beq	a1,a5,ef4 <aes_set_encrypt_key+0x40>
+     ed4:	01700793          	li	a5,23
+     ed8:	00450613          	addi	a2,a0,4
+     edc:	02b7e463          	bltu	a5,a1,f04 <aes_set_encrypt_key+0x50>
+     ee0:	00a00793          	li	a5,10
+     ee4:	00400593          	li	a1,4
+     ee8:	00f52023          	sw	a5,0(a0)
+     eec:	00078513          	mv	a0,a5
+     ef0:	bd0ff06f          	j	2c0 <_aes_set_key.part.0>
+     ef4:	00450613          	addi	a2,a0,4
+     ef8:	00e00793          	li	a5,14
+     efc:	00800593          	li	a1,8
+     f00:	fe9ff06f          	j	ee8 <aes_set_encrypt_key+0x34>
+     f04:	00c00793          	li	a5,12
+     f08:	00600593          	li	a1,6
+     f0c:	fddff06f          	j	ee8 <aes_set_encrypt_key+0x34>
+
+00000f10 <_nettle_aes_invert>:
+     f10:	00251e93          	slli	t4,a0,0x2
+     f14:	0eb60263          	beq	a2,a1,ff8 <_nettle_aes_invert+0xe8>
+     f18:	00451793          	slli	a5,a0,0x4
+     f1c:	00f60633          	add	a2,a2,a5
+     f20:	00058893          	mv	a7,a1
+     f24:	00000e13          	li	t3,0
+     f28:	01000313          	li	t1,16
+     f2c:	00000793          	li	a5,0
+     f30:	00f60733          	add	a4,a2,a5
+     f34:	00072683          	lw	a3,0(a4)
+     f38:	00f88733          	add	a4,a7,a5
+     f3c:	00478793          	addi	a5,a5,4
+     f40:	00d72023          	sw	a3,0(a4)
+     f44:	fe6796e3          	bne	a5,t1,f30 <_nettle_aes_invert+0x20>
+     f48:	004e0e13          	addi	t3,t3,4
+     f4c:	ff060613          	addi	a2,a2,-16
+     f50:	01088893          	addi	a7,a7,16
+     f54:	fdcefce3          	bgeu	t4,t3,f2c <_nettle_aes_invert+0x1c>
+     f58:	00400793          	li	a5,4
+     f5c:	0fd7fa63          	bgeu	a5,t4,1050 <_nettle_aes_invert+0x140>
+     f60:	00451813          	slli	a6,a0,0x4
+     f64:	00010537          	lui	a0,0x10
+     f68:	01058833          	add	a6,a1,a6
+     f6c:	00050513          	mv	a0,a0
+     f70:	01058593          	addi	a1,a1,16
+     f74:	0005a783          	lw	a5,0(a1)
+     f78:	00458593          	addi	a1,a1,4
+     f7c:	0187d613          	srli	a2,a5,0x18
+     f80:	0067d693          	srli	a3,a5,0x6
+     f84:	00261613          	slli	a2,a2,0x2
+     f88:	00c50633          	add	a2,a0,a2
+     f8c:	0ff7f713          	zext.b	a4,a5
+     f90:	3fc6f693          	andi	a3,a3,1020
+     f94:	00e7d793          	srli	a5,a5,0xe
+     f98:	00c62883          	lw	a7,12(a2)
+     f9c:	00d506b3          	add	a3,a0,a3
+     fa0:	00271713          	slli	a4,a4,0x2
+     fa4:	3fc7f793          	andi	a5,a5,1020
+     fa8:	00c6a603          	lw	a2,12(a3)
+     fac:	00e50733          	add	a4,a0,a4
+     fb0:	00f507b3          	add	a5,a0,a5
+     fb4:	00c7a683          	lw	a3,12(a5)
+     fb8:	00c72303          	lw	t1,12(a4)
+     fbc:	0088d793          	srli	a5,a7,0x8
+     fc0:	01889893          	slli	a7,a7,0x18
+     fc4:	01865713          	srli	a4,a2,0x18
+     fc8:	0117e7b3          	or	a5,a5,a7
+     fcc:	00861613          	slli	a2,a2,0x8
+     fd0:	00c76633          	or	a2,a4,a2
+     fd4:	0067c7b3          	xor	a5,a5,t1
+     fd8:	0106d713          	srli	a4,a3,0x10
+     fdc:	01069693          	slli	a3,a3,0x10
+     fe0:	00c7c7b3          	xor	a5,a5,a2
+     fe4:	00d76733          	or	a4,a4,a3
+     fe8:	00f747b3          	xor	a5,a4,a5
+     fec:	fef5ae23          	sw	a5,-4(a1)
+     ff0:	f8b812e3          	bne	a6,a1,f74 <_nettle_aes_invert+0x64>
+     ff4:	00008067          	ret
+     ff8:	040e8e63          	beqz	t4,1054 <_nettle_aes_invert+0x144>
+     ffc:	00351e13          	slli	t3,a0,0x3
+    1000:	00be0e33          	add	t3,t3,a1
+    1004:	001e1e13          	slli	t3,t3,0x1
+    1008:	010e0e13          	addi	t3,t3,16
+    100c:	01058693          	addi	a3,a1,16
+    1010:	000e8313          	mv	t1,t4
+    1014:	00000813          	li	a6,0
+    1018:	ff068793          	addi	a5,a3,-16
+    101c:	40de0733          	sub	a4,t3,a3
+    1020:	00072883          	lw	a7,0(a4)
+    1024:	0007a603          	lw	a2,0(a5)
+    1028:	00478793          	addi	a5,a5,4
+    102c:	ff17ae23          	sw	a7,-4(a5)
+    1030:	00c72023          	sw	a2,0(a4)
+    1034:	00470713          	addi	a4,a4,4
+    1038:	fef694e3          	bne	a3,a5,1020 <_nettle_aes_invert+0x110>
+    103c:	00480813          	addi	a6,a6,4
+    1040:	ffc30313          	addi	t1,t1,-4
+    1044:	01068693          	addi	a3,a3,16
+    1048:	fc6868e3          	bltu	a6,t1,1018 <_nettle_aes_invert+0x108>
+    104c:	f0dff06f          	j	f58 <_nettle_aes_invert+0x48>
+    1050:	00008067          	ret
+    1054:	00008067          	ret
+
+00001058 <benchmark_body.isra.0>:
+    1058:	fb010113          	addi	sp,sp,-80
+    105c:	04112623          	sw	ra,76(sp)
+    1060:	00a12623          	sw	a0,12(sp)
+    1064:	14058263          	beqz	a1,11a8 <benchmark_body.isra.0+0x150>
+    1068:	04912223          	sw	s1,68(sp)
+    106c:	000134b7          	lui	s1,0x13
+    1070:	03312e23          	sw	s3,60(sp)
+    1074:	03412c23          	sw	s4,56(sp)
+    1078:	03712623          	sw	s7,44(sp)
+    107c:	03812423          	sw	s8,40(sp)
+    1080:	82c48493          	addi	s1,s1,-2004 # 1282c <encctx>
+    1084:	00013a37          	lui	s4,0x13
+    1088:	00012c37          	lui	s8,0x12
+    108c:	000139b7          	lui	s3,0x13
+    1090:	00013bb7          	lui	s7,0x13
+    1094:	04812423          	sw	s0,72(sp)
+    1098:	05212023          	sw	s2,64(sp)
+    109c:	03512a23          	sw	s5,52(sp)
+    10a0:	03612823          	sw	s6,48(sp)
+    10a4:	03912223          	sw	s9,36(sp)
+    10a8:	03a12023          	sw	s10,32(sp)
+    10ac:	01b12e23          	sw	s11,28(sp)
+    10b0:	00058b13          	mv	s6,a1
+    10b4:	1f848413          	addi	s0,s1,504
+    10b8:	830a0a13          	addi	s4,s4,-2000 # 12830 <encctx+0x4>
+    10bc:	62cc0c13          	addi	s8,s8,1580 # 1262c <plaintext>
+    10c0:	92098993          	addi	s3,s3,-1760 # 12920 <encrypted>
+    10c4:	b14b8b93          	addi	s7,s7,-1260 # 12b14 <decrypted>
+    10c8:	00012423          	sw	zero,8(sp)
+    10cc:	00012ab7          	lui	s5,0x12
+    10d0:	00011d37          	lui	s10,0x11
+    10d4:	00010cb7          	lui	s9,0x10
+    10d8:	00e00913          	li	s2,14
+    10dc:	00000d93          	li	s11,0
+    10e0:	60ca8693          	addi	a3,s5,1548 # 1260c <key>
+    10e4:	000a0613          	mv	a2,s4
+    10e8:	00800593          	li	a1,8
+    10ec:	00e00513          	li	a0,14
+    10f0:	0124a023          	sw	s2,0(s1)
+    10f4:	9ccff0ef          	jal	2c0 <_aes_set_key.part.0>
+    10f8:	000c0793          	mv	a5,s8
+    10fc:	00098713          	mv	a4,s3
+    1100:	50cd0613          	addi	a2,s10,1292 # 1150c <_aes_encrypt_table>
+    1104:	000a0593          	mv	a1,s4
+    1108:	10000693          	li	a3,256
+    110c:	00e00513          	li	a0,14
+    1110:	b50ff0ef          	jal	460 <_nettle_aes_encrypt.part.0>
+    1114:	60ca8693          	addi	a3,s5,1548
+    1118:	00040613          	mv	a2,s0
+    111c:	00800593          	li	a1,8
+    1120:	00e00513          	li	a0,14
+    1124:	1f24aa23          	sw	s2,500(s1)
+    1128:	998ff0ef          	jal	2c0 <_aes_set_key.part.0>
+    112c:	00040613          	mv	a2,s0
+    1130:	00040593          	mv	a1,s0
+    1134:	00e00513          	li	a0,14
+    1138:	dd9ff0ef          	jal	f10 <_nettle_aes_invert>
+    113c:	00098793          	mv	a5,s3
+    1140:	000b8713          	mv	a4,s7
+    1144:	40cc8613          	addi	a2,s9,1036 # 1040c <_aes_decrypt_table>
+    1148:	00040593          	mv	a1,s0
+    114c:	10000693          	li	a3,256
+    1150:	00e00513          	li	a0,14
+    1154:	001d8d93          	addi	s11,s11,1
+    1158:	1f24aa23          	sw	s2,500(s1)
+    115c:	825ff0ef          	jal	980 <_nettle_aes_decrypt.part.0>
+    1160:	f96d90e3          	bne	s11,s6,10e0 <benchmark_body.isra.0+0x88>
+    1164:	00812783          	lw	a5,8(sp)
+    1168:	00c12703          	lw	a4,12(sp)
+    116c:	00178793          	addi	a5,a5,1
+    1170:	00f12423          	sw	a5,8(sp)
+    1174:	f6f714e3          	bne	a4,a5,10dc <benchmark_body.isra.0+0x84>
+    1178:	04812403          	lw	s0,72(sp)
+    117c:	04412483          	lw	s1,68(sp)
+    1180:	04012903          	lw	s2,64(sp)
+    1184:	03c12983          	lw	s3,60(sp)
+    1188:	03812a03          	lw	s4,56(sp)
+    118c:	03412a83          	lw	s5,52(sp)
+    1190:	03012b03          	lw	s6,48(sp)
+    1194:	02c12b83          	lw	s7,44(sp)
+    1198:	02812c03          	lw	s8,40(sp)
+    119c:	02412c83          	lw	s9,36(sp)
+    11a0:	02012d03          	lw	s10,32(sp)
+    11a4:	01c12d83          	lw	s11,28(sp)
+    11a8:	04c12083          	lw	ra,76(sp)
+    11ac:	05010113          	addi	sp,sp,80
+    11b0:	00008067          	ret
+
+000011b4 <aes_invert_key>:
+    11b4:	ff010113          	addi	sp,sp,-16
+    11b8:	00912223          	sw	s1,4(sp)
+    11bc:	0005a483          	lw	s1,0(a1)
+    11c0:	00812423          	sw	s0,8(sp)
+    11c4:	00050413          	mv	s0,a0
+    11c8:	00458613          	addi	a2,a1,4
+    11cc:	00048513          	mv	a0,s1
+    11d0:	00440593          	addi	a1,s0,4
+    11d4:	00112623          	sw	ra,12(sp)
+    11d8:	d39ff0ef          	jal	f10 <_nettle_aes_invert>
+    11dc:	00c12083          	lw	ra,12(sp)
+    11e0:	00942023          	sw	s1,0(s0)
+    11e4:	00812403          	lw	s0,8(sp)
+    11e8:	00412483          	lw	s1,4(sp)
+    11ec:	01010113          	addi	sp,sp,16
+    11f0:	00008067          	ret
+
+000011f4 <aes_set_decrypt_key>:
+    11f4:	00f00793          	li	a5,15
+    11f8:	00b7f863          	bgeu	a5,a1,1208 <aes_set_decrypt_key+0x14>
+    11fc:	02000793          	li	a5,32
+    1200:	00b7f663          	bgeu	a5,a1,120c <aes_set_decrypt_key+0x18>
+    1204:	0000006f          	j	1204 <aes_set_decrypt_key+0x10>
+    1208:	0000006f          	j	1208 <aes_set_decrypt_key+0x14>
+    120c:	ff010113          	addi	sp,sp,-16
+    1210:	00812423          	sw	s0,8(sp)
+    1214:	00112623          	sw	ra,12(sp)
+    1218:	00912223          	sw	s1,4(sp)
+    121c:	01212023          	sw	s2,0(sp)
+    1220:	00050413          	mv	s0,a0
+    1224:	04f58c63          	beq	a1,a5,127c <aes_set_decrypt_key+0x88>
+    1228:	01700793          	li	a5,23
+    122c:	00450913          	addi	s2,a0,4 # 10004 <rcon.0+0x4>
+    1230:	04b7ee63          	bltu	a5,a1,128c <aes_set_decrypt_key+0x98>
+    1234:	00a00493          	li	s1,10
+    1238:	00400593          	li	a1,4
+    123c:	00942023          	sw	s1,0(s0)
+    1240:	00060693          	mv	a3,a2
+    1244:	00048513          	mv	a0,s1
+    1248:	00090613          	mv	a2,s2
+    124c:	874ff0ef          	jal	2c0 <_aes_set_key.part.0>
+    1250:	00090613          	mv	a2,s2
+    1254:	00090593          	mv	a1,s2
+    1258:	00048513          	mv	a0,s1
+    125c:	cb5ff0ef          	jal	f10 <_nettle_aes_invert>
+    1260:	00c12083          	lw	ra,12(sp)
+    1264:	00942023          	sw	s1,0(s0)
+    1268:	00812403          	lw	s0,8(sp)
+    126c:	00412483          	lw	s1,4(sp)
+    1270:	00012903          	lw	s2,0(sp)
+    1274:	01010113          	addi	sp,sp,16
+    1278:	00008067          	ret
+    127c:	00450913          	addi	s2,a0,4
+    1280:	00e00493          	li	s1,14
+    1284:	00800593          	li	a1,8
+    1288:	fb5ff06f          	j	123c <aes_set_decrypt_key+0x48>
+    128c:	00c00493          	li	s1,12
+    1290:	00600593          	li	a1,6
+    1294:	fa9ff06f          	j	123c <aes_set_decrypt_key+0x48>
+
+00001298 <_nettle_aes_encrypt>:
+    1298:	00f6f813          	andi	a6,a3,15
+    129c:	00081463          	bnez	a6,12a4 <_nettle_aes_encrypt+0xc>
+    12a0:	9c0ff06f          	j	460 <_nettle_aes_encrypt.part.0>
+    12a4:	0000006f          	j	12a4 <_nettle_aes_encrypt+0xc>
+
+000012a8 <_nettle_aes_decrypt>:
+    12a8:	00f6f813          	andi	a6,a3,15
+    12ac:	00081463          	bnez	a6,12b4 <_nettle_aes_decrypt+0xc>
+    12b0:	ed0ff06f          	j	980 <_nettle_aes_decrypt.part.0>
+    12b4:	0000006f          	j	12b4 <_nettle_aes_decrypt+0xc>
+
+000012b8 <aes_encrypt>:
+    12b8:	00f5f793          	andi	a5,a1,15
+    12bc:	00050813          	mv	a6,a0
+    12c0:	00078463          	beqz	a5,12c8 <aes_encrypt+0x10>
+    12c4:	0000006f          	j	12c4 <aes_encrypt+0xc>
+    12c8:	00052503          	lw	a0,0(a0)
+    12cc:	000118b7          	lui	a7,0x11
+    12d0:	00068793          	mv	a5,a3
+    12d4:	00060713          	mv	a4,a2
+    12d8:	00058693          	mv	a3,a1
+    12dc:	50c88613          	addi	a2,a7,1292 # 1150c <_aes_encrypt_table>
+    12e0:	00480593          	addi	a1,a6,4
+    12e4:	97cff06f          	j	460 <_nettle_aes_encrypt.part.0>
+
+000012e8 <aes_decrypt>:
+    12e8:	00f5f793          	andi	a5,a1,15
+    12ec:	00050813          	mv	a6,a0
+    12f0:	00078463          	beqz	a5,12f8 <aes_decrypt+0x10>
+    12f4:	0000006f          	j	12f4 <aes_decrypt+0xc>
+    12f8:	00052503          	lw	a0,0(a0)
+    12fc:	000108b7          	lui	a7,0x10
+    1300:	00068793          	mv	a5,a3
+    1304:	00060713          	mv	a4,a2
+    1308:	00058693          	mv	a3,a1
+    130c:	40c88613          	addi	a2,a7,1036 # 1040c <_aes_decrypt_table>
+    1310:	00480593          	addi	a1,a6,4
+    1314:	e6cff06f          	j	980 <_nettle_aes_decrypt.part.0>
+
+00001318 <verify_benchmark>:
+    1318:	00013e37          	lui	t3,0x13
+    131c:	00012637          	lui	a2,0x12
+    1320:	82ce0e13          	addi	t3,t3,-2004 # 1282c <encctx>
+    1324:	60c60613          	addi	a2,a2,1548 # 1260c <key>
+    1328:	0f4e0693          	addi	a3,t3,244
+    132c:	2e8e0813          	addi	a6,t3,744
+    1330:	12060593          	addi	a1,a2,288
+    1334:	1f4e0e13          	addi	t3,t3,500
+    1338:	02060613          	addi	a2,a2,32
+    133c:	00100513          	li	a0,1
+    1340:	00064783          	lbu	a5,0(a2)
+    1344:	00084303          	lbu	t1,0(a6)
+    1348:	0006c703          	lbu	a4,0(a3)
+    134c:	0005c883          	lbu	a7,0(a1)
+    1350:	406787b3          	sub	a5,a5,t1
+    1354:	0017b793          	seqz	a5,a5
+    1358:	41170733          	sub	a4,a4,a7
+    135c:	00173713          	seqz	a4,a4
+    1360:	00e7f7b3          	and	a5,a5,a4
+    1364:	00168693          	addi	a3,a3,1
+    1368:	00160613          	addi	a2,a2,1
+    136c:	00180813          	addi	a6,a6,1
+    1370:	00f57533          	and	a0,a0,a5
+    1374:	00158593          	addi	a1,a1,1
+    1378:	fdc694e3          	bne	a3,t3,1340 <verify_benchmark+0x28>
+    137c:	00008067          	ret
+
+00001380 <initialise_benchmark>:
+    1380:	00008067          	ret
+
+00001384 <warm_caches>:
+    1384:	00050593          	mv	a1,a0
+    1388:	00100513          	li	a0,1
+    138c:	ccdff06f          	j	1058 <benchmark_body.isra.0>
+
+00001390 <benchmark>:
+    1390:	ff010113          	addi	sp,sp,-16
+    1394:	04c00513          	li	a0,76
+    1398:	00100593          	li	a1,1
+    139c:	00112623          	sw	ra,12(sp)
+    13a0:	cb9ff0ef          	jal	1058 <benchmark_body.isra.0>
+    13a4:	00c12083          	lw	ra,12(sp)
+    13a8:	00000513          	li	a0,0
+    13ac:	01010113          	addi	sp,sp,16
+    13b0:	00008067          	ret

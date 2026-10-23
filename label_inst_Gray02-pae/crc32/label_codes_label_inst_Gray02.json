@@ -1,0 +1,100 @@
+{
+  "schema": "fsm-label-codes-v1",
+  "program_id": "9fad5e7f8a86845e39e3d0bfae82b2620f7d24325c68a8ca8bf8f3a43a28642f",
+  "table_id": "a0aae817d9c7720d2412c4e86c5f539da9035d5c5cedeeb958fb39f591e08110",
+  "profile_id": "a75e0dc23a727a144868f6921c9792874ba581b50705b160288ce21e76c15c46",
+  "algorithm": "weighted-greedy-pair-swap-v1",
+  "label_codes": {
+    "R0": 18,
+    "R1": 16,
+    "R2": 24,
+    "R3": 27,
+    "R4": 9,
+    "R5": 1,
+    "R6": 3,
+    "R7": 20,
+    "R8": 36,
+    "R9": 23,
+    "R10": 14,
+    "R11": 33,
+    "R12": 26,
+    "R13": 34,
+    "R14": 21,
+    "R15": 32,
+    "R16": 31,
+    "R17": 19,
+    "R18": 29,
+    "R19": 30,
+    "R20": 28,
+    "R21": 35,
+    "R22": 37,
+    "R23": 15,
+    "R24": 25,
+    "R25": 10,
+    "R26": 4,
+    "R27": 6,
+    "R28": 2,
+    "R29": 0,
+    "R30": 8,
+    "R31": 12,
+    "R32": 22,
+    "R33": 7,
+    "R34": 17,
+    "R35": 5,
+    "R36": 13,
+    "R37": 11
+  },
+  "settings": {
+    "seeds": 3,
+    "max_swaps": 50,
+    "max_evaluations": 200000,
+    "code_pool": "0..A-1"
+  },
+  "metrics": {
+    "label_flips_before": 698432,
+    "label_flips_after": 349212,
+    "instruction_flips": 7314250,
+    "total_flips_before": 8012682,
+    "total_flips_after": 7663462,
+    "sequential_flips": 8709341,
+    "measured_transitions": 4876585,
+    "observed_states": 110,
+    "observed_region_pairs": 23
+  },
+  "selected": "greedy-R29",
+  "search": [
+    {
+      "candidate": "size",
+      "initial_cost": 698432,
+      "final_cost": 349213,
+      "swaps": 10,
+      "evaluations": 7733,
+      "stop": "local-optimum"
+    },
+    {
+      "candidate": "greedy-R29",
+      "initial_cost": 349212,
+      "final_cost": 349212,
+      "swaps": 0,
+      "evaluations": 703,
+      "stop": "local-optimum"
+    },
+    {
+      "candidate": "greedy-R5",
+      "initial_cost": 349212,
+      "final_cost": 349212,
+      "swaps": 0,
+      "evaluations": 703,
+      "stop": "local-optimum"
+    },
+    {
+      "candidate": "greedy-R28",
+      "initial_cost": 349214,
+      "final_cost": 349214,
+      "swaps": 0,
+      "evaluations": 703,
+      "stop": "local-optimum"
+    }
+  ],
+  "caveat": "Measured-profile switching counts only; not whole-circuit power or unseen-input guarantee"
+}
