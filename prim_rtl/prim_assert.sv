@@ -100,14 +100,14 @@
 //  ASSUME_I:     Assume an immediate property
 
 `ifdef VERILATOR
- `include "prim_assert_dummy_macros.svh"
+ `include "C:/Users/shing/OneDrive/デスクトップ/FSM-circuit-main/FSM_circuit-main/prim_rtl/prim_assert_dummy_macros.svh"
 `elsif SYNTHESIS
- `include "prim_assert_dummy_macros.svh"
+ `include "C:/Users/shing/OneDrive/デスクトップ/FSM-circuit-main/FSM_circuit-main/prim_rtl/prim_assert_dummy_macros.svh"
 `elsif YOSYS
- `include "prim_assert_yosys_macros.svh"
+ `include "C:/Users/shing/OneDrive/デスクトップ/FSM-circuit-main/FSM_circuit-main/prim_rtl/prim_assert_yosys_macros.svh"
  `define INC_ASSERT
 `else
- `include "prim_assert_standard_macros.svh"
+ `include "C:/Users/shing/OneDrive/デスクトップ/FSM-circuit-main/FSM_circuit-main/prim_rtl/prim_assert_standard_macros.svh"
  `define INC_ASSERT
 `endif
 
@@ -182,7 +182,7 @@
    `ASSERT(__name, __name``_p, __clk, __rst)                                                                     \
   `endif
 
-`include "prim_assert_sec_cm.svh"
-`include "prim_flop_macros.sv"
+`include "C:/Users/shing/OneDrive/デスクトップ/FSM-circuit-main/FSM_circuit-main/prim_rtl/prim_assert_sec_cm.svh"
+`include "C:/Users/shing/OneDrive/デスクトップ/FSM-circuit-main/FSM_circuit-main/prim_rtl/prim_flop_macros.sv"
 
 `endif // PRIM_ASSERT_SV

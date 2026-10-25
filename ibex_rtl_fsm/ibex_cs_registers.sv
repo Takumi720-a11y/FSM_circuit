@@ -7,7 +7,7 @@
  * Control and Status Registers
  */
 
-`include "prim_assert.sv"
+`include "C:/Users/shing/OneDrive/デスクトップ/FSM-circuit-main/FSM_circuit-main/prim_rtl/prim_assert.sv"
 
 (* dont_touch = "yes" *) module ibex_cs_registers #(
   parameter bit                     DbgTriggerEn      = 0,

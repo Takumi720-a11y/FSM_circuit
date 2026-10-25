@@ -1,7 +1,0 @@
-read_verilog -noautowire fsm_dec_label_inst_Dontcare01.v
-hierarchy -check -top fsm_dec
-rename fsm_dec top
-proc
-opt
-check -assert
-write_verilog -noattr top_label_inst_Dontcare01.v

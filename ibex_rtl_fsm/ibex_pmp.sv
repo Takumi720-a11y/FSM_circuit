@@ -2,7 +2,7 @@
 // Licensed under the Apache License, Version 2.0, see LICENSE for details.
 // SPDX-License-Identifier: Apache-2.0
 
-`include "dv_fcov_macros.svh"
+`include "C:/Users/shing/OneDrive/デスクトップ/FSM-circuit-main/FSM_circuit-main/prim_rtl/dv_fcov_macros.svh"
 
 module ibex_pmp #(
   parameter int unsigned DmBaseAddr     = 32'h1A110000,

@@ -14,8 +14,8 @@
  * file.
  */
 
-`include "prim_assert.sv"
-`include "dv_fcov_macros.svh"
+`include "C:/Users/shing/OneDrive/デスクトップ/FSM-circuit-main/FSM_circuit-main/prim_rtl/prim_assert.sv"
+`include "C:/Users/shing/OneDrive/デスクトップ/FSM-circuit-main/FSM_circuit-main/prim_rtl/dv_fcov_macros.svh"
 
 module ibex_id_stage #(
   parameter bit               RV32E           = 0,

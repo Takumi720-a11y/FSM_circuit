@@ -36,8 +36,8 @@ module profile_tb;
     end
   end
   initial begin
-    $readmemh("/home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Dontcare01-e493c2f4a745/20261023T014045.069251Z-pae/huffbench/memory_label_inst_Dontcare01.hex",memory);
-    f=$fopen("/home/c3165/ibex_src/benchmarks/build_fsm_pae/label_inst_Dontcare01-e493c2f4a745/20261023T014045.069251Z-pae/huffbench/cycles_label_inst_Dontcare01.txt","w");
+    $readmemh("C:/Users/shing/OneDrive/デスクトップ/FSM-circuit-main/FSM_circuit-main/label_inst_Dontcare01-pae/huffbench/memory_label_inst_Dontcare01.hex",memory);
+    f=$fopen("C:/Users/shing/OneDrive/デスクトップ/FSM-circuit-main/FSM_circuit-main/label_inst_Dontcare01-pae/huffbench/cycles_label_inst_Dontcare01.txt","w");
     if(!f) $fatal(1,"cannot open cycle samples");
     #1; rst=0; #6; rst=1;
   end

@@ -11,8 +11,8 @@
  * a simple passthrough to write data direct to the register file.
  */
 
-`include "prim_assert.sv"
-`include "dv_fcov_macros.svh"
+`include "C:/Users/shing/OneDrive/デスクトップ/FSM-circuit-main/FSM_circuit-main/prim_rtl/prim_assert.sv"
+`include "C:/Users/shing/OneDrive/デスクトップ/FSM-circuit-main/FSM_circuit-main/prim_rtl/dv_fcov_macros.svh"
 
 (* dont_touch = "yes" *) module ibex_wb_stage #(
   parameter bit ResetAll          = 1'b0,
