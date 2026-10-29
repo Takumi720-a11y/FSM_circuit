@@ -36,8 +36,8 @@ module profile_tb;
     end
   end
   initial begin
-    $readmemh("C:/Users/shing/OneDrive/デスクトップ/FSM-circuit-main/FSM_circuit-main/label_inst_01-pae/md5sum/memory_label_inst_01.hex",memory);
-    f=$fopen("C:/Users/shing/OneDrive/デスクトップ/FSM-circuit-main/FSM_circuit-main/label_inst_01-pae/md5sum/cycles_label_inst_01.txt","w");
+    $readmemh("C:/Users/shing/OneDrive/デスクトップ/FSM_circuit-main/label_inst_01-pae/md5sum/memory_label_inst_01.hex",memory);
+    f=$fopen("C:/Users/shing/OneDrive/デスクトップ/FSM_circuit-main/label_inst_01-pae/md5sum/cycles_label_inst_01.txt","w");
     if(!f) $fatal(1,"cannot open cycle samples");
     #1; rst=0; #6; rst=1;
   end

@@ -36,8 +36,8 @@ module profile_tb;
     end
   end
   initial begin
-    $readmemh("C:/Users/shing/OneDrive/デスクトップ/FSM-circuit-main/FSM_circuit-main/label_inst_Gray02-pae/nettle-sha256/memory_label_inst_Gray02.hex",memory);
-    f=$fopen("C:/Users/shing/OneDrive/デスクトップ/FSM-circuit-main/FSM_circuit-main/label_inst_Gray02-pae/nettle-sha256/cycles_label_inst_Gray02.txt","w");
+    $readmemh("C:/Users/shing/OneDrive/デスクトップ/FSM_circuit-main/label_inst_Gray02-pae/nettle-sha256/memory_label_inst_Gray02.hex",memory);
+    f=$fopen("C:/Users/shing/OneDrive/デスクトップ/FSM_circuit-main/label_inst_Gray02-pae/nettle-sha256/cycles_label_inst_Gray02.txt","w");
     if(!f) $fatal(1,"cannot open cycle samples");
     #1; rst=0; #6; rst=1;
   end

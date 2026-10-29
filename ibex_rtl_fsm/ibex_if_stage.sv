@@ -10,8 +10,8 @@
  * the read instruction.
  */
 
-`include "C:/Users/shing/OneDrive/デスクトップ/FSM-circuit-main/FSM_circuit-main/prim_rtl/prim_assert.sv"
-`include "C:/Users/shing/OneDrive/デスクトップ/FSM-circuit-main/FSM_circuit-main/prim_rtl/dv_fcov_macros.svh"
+`include "C:/Users/shing/OneDrive/デスクトップ/FSM_circuit-main/prim_rtl/prim_assert.sv"
+`include "C:/Users/shing/OneDrive/デスクトップ/FSM_circuit-main/prim_rtl/dv_fcov_macros.svh"
 
 module ibex_if_stage import ibex_pkg::*; #(
   parameter int unsigned DmHaltAddr        = 32'h1A110800,

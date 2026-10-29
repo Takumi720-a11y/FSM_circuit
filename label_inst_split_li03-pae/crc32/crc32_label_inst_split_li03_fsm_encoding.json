@@ -1,0 +1,4787 @@
+{
+  "mode": "label-index",
+  "boundaries": "all",
+  "A": 38,
+  "B": 19,
+  "a": 6,
+  "b": 5,
+  "width": 11,
+  "codes": [
+    1024,
+    1025,
+    1027,
+    1031,
+    1030,
+    1026,
+    1088,
+    1089,
+    1091,
+    1090,
+    1120,
+    32,
+    224,
+    225,
+    227,
+    226,
+    230,
+    231,
+    228,
+    229,
+    236,
+    237,
+    239,
+    238,
+    234,
+    235,
+    233,
+    232,
+    896,
+    897,
+    899,
+    898,
+    902,
+    903,
+    901,
+    900,
+    908,
+    909,
+    911,
+    910,
+    906,
+    768,
+    769,
+    771,
+    128,
+    129,
+    131,
+    130,
+    134,
+    135,
+    133,
+    132,
+    140,
+    141,
+    256,
+    288,
+    289,
+    291,
+    290,
+    294,
+    295,
+    293,
+    292,
+    1152,
+    1153,
+    1155,
+    1154,
+    1158,
+    1159,
+    1157,
+    1156,
+    1164,
+    1165,
+    1167,
+    1166,
+    1162,
+    1163,
+    352,
+    353,
+    384,
+    385,
+    387,
+    386,
+    390,
+    391,
+    389,
+    388,
+    416,
+    417,
+    448,
+    449,
+    451,
+    450,
+    454,
+    455,
+    453,
+    452,
+    460,
+    461,
+    960,
+    961,
+    963,
+    512,
+    513,
+    515,
+    514,
+    544,
+    545,
+    547,
+    546,
+    550,
+    551,
+    549,
+    548,
+    556,
+    557,
+    559,
+    558,
+    554,
+    555,
+    576,
+    577,
+    579,
+    578,
+    582,
+    608,
+    609,
+    611,
+    610,
+    614,
+    640,
+    641,
+    643,
+    642,
+    646,
+    647,
+    672,
+    673,
+    704,
+    736,
+    192,
+    193,
+    160,
+    161,
+    832,
+    833,
+    835,
+    834,
+    838,
+    839,
+    837,
+    836,
+    844,
+    845,
+    847,
+    846,
+    842,
+    843,
+    841,
+    864,
+    800,
+    801,
+    803,
+    802,
+    928,
+    939,
+    931,
+    930,
+    934,
+    935,
+    933,
+    941,
+    940,
+    932,
+    943,
+    942,
+    938,
+    936,
+    937,
+    955,
+    952,
+    953,
+    929,
+    480,
+    481,
+    483,
+    482,
+    486,
+    487,
+    485,
+    484,
+    992,
+    993,
+    995,
+    994,
+    998,
+    0,
+    1,
+    3,
+    2,
+    6,
+    7,
+    5,
+    4,
+    12,
+    1056,
+    1057,
+    1059,
+    1058,
+    1062,
+    1063,
+    1061,
+    1060,
+    1068,
+    1069,
+    1071,
+    1070,
+    1066,
+    1067,
+    1065,
+    1064,
+    1080,
+    96,
+    64,
+    65,
+    67,
+    320,
+    321,
+    323,
+    1184,
+    1185,
+    1187,
+    1186,
+    1190
+  ],
+  "positions": [
+    [
+      32,
+      0
+    ],
+    [
+      32,
+      1
+    ],
+    [
+      32,
+      2
+    ],
+    [
+      32,
+      3
+    ],
+    [
+      32,
+      4
+    ],
+    [
+      32,
+      5
+    ],
+    [
+      34,
+      0
+    ],
+    [
+      34,
+      1
+    ],
+    [
+      34,
+      2
+    ],
+    [
+      34,
+      3
+    ],
+    [
+      35,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      7,
+      0
+    ],
+    [
+      7,
+      1
+    ],
+    [
+      7,
+      2
+    ],
+    [
+      7,
+      3
+    ],
+    [
+      7,
+      4
+    ],
+    [
+      7,
+      5
+    ],
+    [
+      7,
+      6
+    ],
+    [
+      7,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      7,
+      9
+    ],
+    [
+      7,
+      10
+    ],
+    [
+      7,
+      11
+    ],
+    [
+      7,
+      12
+    ],
+    [
+      7,
+      13
+    ],
+    [
+      7,
+      14
+    ],
+    [
+      7,
+      15
+    ],
+    [
+      28,
+      0
+    ],
+    [
+      28,
+      1
+    ],
+    [
+      28,
+      2
+    ],
+    [
+      28,
+      3
+    ],
+    [
+      28,
+      4
+    ],
+    [
+      28,
+      5
+    ],
+    [
+      28,
+      6
+    ],
+    [
+      28,
+      7
+    ],
+    [
+      28,
+      8
+    ],
+    [
+      28,
+      9
+    ],
+    [
+      28,
+      10
+    ],
+    [
+      28,
+      11
+    ],
+    [
+      28,
+      12
+    ],
+    [
+      24,
+      0
+    ],
+    [
+      24,
+      1
+    ],
+    [
+      24,
+      2
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      4,
+      6
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      4,
+      8
+    ],
+    [
+      4,
+      9
+    ],
+    [
+      8,
+      0
+    ],
+    [
+      9,
+      0
+    ],
+    [
+      9,
+      1
+    ],
+    [
+      9,
+      2
+    ],
+    [
+      9,
+      3
+    ],
+    [
+      9,
+      4
+    ],
+    [
+      9,
+      5
+    ],
+    [
+      9,
+      6
+    ],
+    [
+      9,
+      7
+    ],
+    [
+      36,
+      0
+    ],
+    [
+      36,
+      1
+    ],
+    [
+      36,
+      2
+    ],
+    [
+      36,
+      3
+    ],
+    [
+      36,
+      4
+    ],
+    [
+      36,
+      5
+    ],
+    [
+      36,
+      6
+    ],
+    [
+      36,
+      7
+    ],
+    [
+      36,
+      8
+    ],
+    [
+      36,
+      9
+    ],
+    [
+      36,
+      10
+    ],
+    [
+      36,
+      11
+    ],
+    [
+      36,
+      12
+    ],
+    [
+      36,
+      13
+    ],
+    [
+      11,
+      0
+    ],
+    [
+      11,
+      1
+    ],
+    [
+      12,
+      0
+    ],
+    [
+      12,
+      1
+    ],
+    [
+      12,
+      2
+    ],
+    [
+      12,
+      3
+    ],
+    [
+      12,
+      4
+    ],
+    [
+      12,
+      5
+    ],
+    [
+      12,
+      6
+    ],
+    [
+      12,
+      7
+    ],
+    [
+      13,
+      0
+    ],
+    [
+      13,
+      1
+    ],
+    [
+      14,
+      0
+    ],
+    [
+      14,
+      1
+    ],
+    [
+      14,
+      2
+    ],
+    [
+      14,
+      3
+    ],
+    [
+      14,
+      4
+    ],
+    [
+      14,
+      5
+    ],
+    [
+      14,
+      6
+    ],
+    [
+      14,
+      7
+    ],
+    [
+      14,
+      8
+    ],
+    [
+      14,
+      9
+    ],
+    [
+      30,
+      0
+    ],
+    [
+      30,
+      1
+    ],
+    [
+      30,
+      2
+    ],
+    [
+      16,
+      0
+    ],
+    [
+      16,
+      1
+    ],
+    [
+      16,
+      2
+    ],
+    [
+      16,
+      3
+    ],
+    [
+      17,
+      0
+    ],
+    [
+      17,
+      1
+    ],
+    [
+      17,
+      2
+    ],
+    [
+      17,
+      3
+    ],
+    [
+      17,
+      4
+    ],
+    [
+      17,
+      5
+    ],
+    [
+      17,
+      6
+    ],
+    [
+      17,
+      7
+    ],
+    [
+      17,
+      8
+    ],
+    [
+      17,
+      9
+    ],
+    [
+      17,
+      10
+    ],
+    [
+      17,
+      11
+    ],
+    [
+      17,
+      12
+    ],
+    [
+      17,
+      13
+    ],
+    [
+      18,
+      0
+    ],
+    [
+      18,
+      1
+    ],
+    [
+      18,
+      2
+    ],
+    [
+      18,
+      3
+    ],
+    [
+      18,
+      4
+    ],
+    [
+      19,
+      0
+    ],
+    [
+      19,
+      1
+    ],
+    [
+      19,
+      2
+    ],
+    [
+      19,
+      3
+    ],
+    [
+      19,
+      4
+    ],
+    [
+      20,
+      0
+    ],
+    [
+      20,
+      1
+    ],
+    [
+      20,
+      2
+    ],
+    [
+      20,
+      3
+    ],
+    [
+      20,
+      4
+    ],
+    [
+      20,
+      5
+    ],
+    [
+      21,
+      0
+    ],
+    [
+      21,
+      1
+    ],
+    [
+      22,
+      0
+    ],
+    [
+      23,
+      0
+    ],
+    [
+      6,
+      0
+    ],
+    [
+      6,
+      1
+    ],
+    [
+      5,
+      0
+    ],
+    [
+      5,
+      1
+    ],
+    [
+      26,
+      0
+    ],
+    [
+      26,
+      1
+    ],
+    [
+      26,
+      2
+    ],
+    [
+      26,
+      3
+    ],
+    [
+      26,
+      4
+    ],
+    [
+      26,
+      5
+    ],
+    [
+      26,
+      6
+    ],
+    [
+      26,
+      7
+    ],
+    [
+      26,
+      8
+    ],
+    [
+      26,
+      9
+    ],
+    [
+      26,
+      10
+    ],
+    [
+      26,
+      11
+    ],
+    [
+      26,
+      12
+    ],
+    [
+      26,
+      13
+    ],
+    [
+      26,
+      14
+    ],
+    [
+      27,
+      0
+    ],
+    [
+      25,
+      0
+    ],
+    [
+      25,
+      1
+    ],
+    [
+      25,
+      2
+    ],
+    [
+      25,
+      3
+    ],
+    [
+      29,
+      0
+    ],
+    [
+      29,
+      1
+    ],
+    [
+      29,
+      2
+    ],
+    [
+      29,
+      3
+    ],
+    [
+      29,
+      4
+    ],
+    [
+      29,
+      5
+    ],
+    [
+      29,
+      6
+    ],
+    [
+      29,
+      7
+    ],
+    [
+      29,
+      8
+    ],
+    [
+      29,
+      9
+    ],
+    [
+      29,
+      10
+    ],
+    [
+      29,
+      11
+    ],
+    [
+      29,
+      12
+    ],
+    [
+      29,
+      13
+    ],
+    [
+      29,
+      14
+    ],
+    [
+      29,
+      15
+    ],
+    [
+      29,
+      16
+    ],
+    [
+      29,
+      17
+    ],
+    [
+      29,
+      18
+    ],
+    [
+      15,
+      0
+    ],
+    [
+      15,
+      1
+    ],
+    [
+      15,
+      2
+    ],
+    [
+      15,
+      3
+    ],
+    [
+      15,
+      4
+    ],
+    [
+      15,
+      5
+    ],
+    [
+      15,
+      6
+    ],
+    [
+      15,
+      7
+    ],
+    [
+      31,
+      0
+    ],
+    [
+      31,
+      1
+    ],
+    [
+      31,
+      2
+    ],
+    [
+      31,
+      3
+    ],
+    [
+      31,
+      4
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      0,
+      7
+    ],
+    [
+      0,
+      8
+    ],
+    [
+      33,
+      0
+    ],
+    [
+      33,
+      1
+    ],
+    [
+      33,
+      2
+    ],
+    [
+      33,
+      3
+    ],
+    [
+      33,
+      4
+    ],
+    [
+      33,
+      5
+    ],
+    [
+      33,
+      6
+    ],
+    [
+      33,
+      7
+    ],
+    [
+      33,
+      8
+    ],
+    [
+      33,
+      9
+    ],
+    [
+      33,
+      10
+    ],
+    [
+      33,
+      11
+    ],
+    [
+      33,
+      12
+    ],
+    [
+      33,
+      13
+    ],
+    [
+      33,
+      14
+    ],
+    [
+      33,
+      15
+    ],
+    [
+      33,
+      16
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      10,
+      0
+    ],
+    [
+      10,
+      1
+    ],
+    [
+      10,
+      2
+    ],
+    [
+      37,
+      0
+    ],
+    [
+      37,
+      1
+    ],
+    [
+      37,
+      2
+    ],
+    [
+      37,
+      3
+    ],
+    [
+      37,
+      4
+    ]
+  ],
+  "regions": [
+    {
+      "start": 0,
+      "count": 6,
+      "source_order": 0,
+      "labels": [
+        "_start"
+      ],
+      "reasons": [
+        "entry",
+        "label"
+      ],
+      "label_id": 32
+    },
+    {
+      "start": 6,
+      "count": 4,
+      "source_order": 1,
+      "labels": [
+        "bss_loop"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ],
+      "label_id": 34
+    },
+    {
+      "start": 10,
+      "count": 1,
+      "source_order": 2,
+      "labels": [
+        "bss_done"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ],
+      "label_id": 35
+    },
+    {
+      "start": 11,
+      "count": 1,
+      "source_order": 3,
+      "labels": [
+        "loop"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ],
+      "label_id": 1
+    },
+    {
+      "start": 12,
+      "count": 16,
+      "source_order": 4,
+      "labels": [
+        "main"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ],
+      "label_id": 7
+    },
+    {
+      "start": 28,
+      "count": 13,
+      "source_order": 5,
+      "labels": [
+        "rand_beebs"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ],
+      "label_id": 28
+    },
+    {
+      "start": 41,
+      "count": 3,
+      "source_order": 6,
+      "labels": [
+        "srand_beebs"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ],
+      "label_id": 24
+    },
+    {
+      "start": 44,
+      "count": 10,
+      "source_order": 7,
+      "labels": [
+        "init_heap_beebs"
+      ],
+      "reasons": [
+        "label"
+      ],
+      "label_id": 4
+    },
+    {
+      "start": 54,
+      "count": 1,
+      "source_order": 8,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ],
+      "label_id": 8
+    },
+    {
+      "start": 55,
+      "count": 8,
+      "source_order": 9,
+      "labels": [
+        "check_heap_beebs"
+      ],
+      "reasons": [
+        "label"
+      ],
+      "label_id": 9
+    },
+    {
+      "start": 63,
+      "count": 14,
+      "source_order": 10,
+      "labels": [
+        "malloc_beebs"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ],
+      "label_id": 36
+    },
+    {
+      "start": 77,
+      "count": 2,
+      "source_order": 11,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ],
+      "label_id": 11
+    },
+    {
+      "start": 79,
+      "count": 8,
+      "source_order": 12,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ],
+      "label_id": 12
+    },
+    {
+      "start": 87,
+      "count": 2,
+      "source_order": 13,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ],
+      "label_id": 13
+    },
+    {
+      "start": 89,
+      "count": 10,
+      "source_order": 14,
+      "labels": [
+        "calloc_beebs"
+      ],
+      "reasons": [
+        "label"
+      ],
+      "label_id": 14
+    },
+    {
+      "start": 99,
+      "count": 3,
+      "source_order": 15,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ],
+      "label_id": 30
+    },
+    {
+      "start": 102,
+      "count": 4,
+      "source_order": 16,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ],
+      "label_id": 16
+    },
+    {
+      "start": 106,
+      "count": 14,
+      "source_order": 17,
+      "labels": [
+        "realloc_beebs"
+      ],
+      "reasons": [
+        "label"
+      ],
+      "label_id": 17
+    },
+    {
+      "start": 120,
+      "count": 5,
+      "source_order": 18,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ],
+      "label_id": 18
+    },
+    {
+      "start": 125,
+      "count": 5,
+      "source_order": 19,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ],
+      "label_id": 19
+    },
+    {
+      "start": 130,
+      "count": 6,
+      "source_order": 20,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ],
+      "label_id": 20
+    },
+    {
+      "start": 136,
+      "count": 2,
+      "source_order": 21,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ],
+      "label_id": 21
+    },
+    {
+      "start": 138,
+      "count": 1,
+      "source_order": 22,
+      "labels": [
+        "free_beebs"
+      ],
+      "reasons": [
+        "label"
+      ],
+      "label_id": 22
+    },
+    {
+      "start": 139,
+      "count": 1,
+      "source_order": 23,
+      "labels": [
+        "initialise_board"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ],
+      "label_id": 23
+    },
+    {
+      "start": 140,
+      "count": 2,
+      "source_order": 24,
+      "labels": [
+        "start_trigger"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ],
+      "label_id": 6
+    },
+    {
+      "start": 142,
+      "count": 2,
+      "source_order": 25,
+      "labels": [
+        "stop_trigger"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ],
+      "label_id": 5
+    },
+    {
+      "start": 144,
+      "count": 15,
+      "source_order": 26,
+      "labels": [
+        "benchmark_body"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ],
+      "label_id": 26
+    },
+    {
+      "start": 159,
+      "count": 1,
+      "source_order": 27,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ],
+      "label_id": 27
+    },
+    {
+      "start": 160,
+      "count": 4,
+      "source_order": 28,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ],
+      "label_id": 25
+    },
+    {
+      "start": 164,
+      "count": 19,
+      "source_order": 29,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ],
+      "label_id": 29
+    },
+    {
+      "start": 183,
+      "count": 8,
+      "source_order": 30,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ],
+      "label_id": 15
+    },
+    {
+      "start": 191,
+      "count": 5,
+      "source_order": 31,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ],
+      "label_id": 31
+    },
+    {
+      "start": 196,
+      "count": 9,
+      "source_order": 32,
+      "labels": [
+        "crc32pseudo"
+      ],
+      "reasons": [
+        "label"
+      ],
+      "label_id": 0
+    },
+    {
+      "start": 205,
+      "count": 17,
+      "source_order": 33,
+      "labels": [],
+      "reasons": [
+        "direct-target"
+      ],
+      "label_id": 33
+    },
+    {
+      "start": 222,
+      "count": 1,
+      "source_order": 34,
+      "labels": [
+        "initialise_benchmark"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ],
+      "label_id": 3
+    },
+    {
+      "start": 223,
+      "count": 3,
+      "source_order": 35,
+      "labels": [
+        "warm_caches"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ],
+      "label_id": 2
+    },
+    {
+      "start": 226,
+      "count": 3,
+      "source_order": 36,
+      "labels": [
+        "benchmark"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ],
+      "label_id": 10
+    },
+    {
+      "start": 229,
+      "count": 5,
+      "source_order": 37,
+      "labels": [
+        "verify_benchmark"
+      ],
+      "reasons": [
+        "direct-target",
+        "label"
+      ],
+      "label_id": 37
+    }
+  ],
+  "targets": {
+    "6": 10,
+    "9": 6,
+    "10": 12,
+    "11": 11,
+    "14": 139,
+    "15": 222,
+    "17": 223,
+    "18": 140,
+    "19": 226,
+    "21": 142,
+    "23": 229,
+    "45": 54,
+    "54": 54,
+    "64": 87,
+    "72": 79,
+    "76": 87,
+    "86": 77,
+    "94": 63,
+    "95": 102,
+    "96": 102,
+    "101": 99,
+    "106": 136,
+    "114": 63,
+    "115": 130,
+    "119": 125,
+    "124": 120,
+    "151": 191,
+    "161": 41,
+    "164": 28,
+    "173": 164,
+    "175": 160,
+    "177": 159,
+    "192": 183,
+    "194": 191,
+    "195": 183,
+    "205": 28,
+    "214": 205,
+    "225": 144,
+    "228": 144
+  },
+  "unused_codes": 1814,
+  "ignored_labels": {},
+  "program_id": "9fad5e7f8a86845e39e3d0bfae82b2620f7d24325c68a8ca8bf8f3a43a28642f",
+  "table_id": "a0aae817d9c7720d2412c4e86c5f539da9035d5c5cedeeb958fb39f591e08110",
+  "label_codes": {
+    "R0": 32,
+    "R1": 34,
+    "R2": 35,
+    "R3": 1,
+    "R4": 7,
+    "R5": 28,
+    "R6": 24,
+    "R7": 4,
+    "R8": 8,
+    "R9": 9,
+    "R10": 36,
+    "R11": 11,
+    "R12": 12,
+    "R13": 13,
+    "R14": 14,
+    "R15": 30,
+    "R16": 16,
+    "R17": 17,
+    "R18": 18,
+    "R19": 19,
+    "R20": 20,
+    "R21": 21,
+    "R22": 22,
+    "R23": 23,
+    "R24": 6,
+    "R25": 5,
+    "R26": 26,
+    "R27": 27,
+    "R28": 25,
+    "R29": 29,
+    "R30": 15,
+    "R31": 31,
+    "R32": 0,
+    "R33": 33,
+    "R34": 3,
+    "R35": 2,
+    "R36": 10,
+    "R37": 37
+  },
+  "instruction_encoding": "optimized",
+  "instruction_codes": {
+    "S0": 0,
+    "S1": 1,
+    "S2": 3,
+    "S3": 7,
+    "S4": 6,
+    "S5": 2,
+    "S6": 0,
+    "S7": 1,
+    "S8": 3,
+    "S9": 2,
+    "S10": 0,
+    "S11": 0,
+    "S12": 0,
+    "S13": 1,
+    "S14": 3,
+    "S15": 2,
+    "S16": 6,
+    "S17": 7,
+    "S18": 4,
+    "S19": 5,
+    "S20": 12,
+    "S21": 13,
+    "S22": 15,
+    "S23": 14,
+    "S24": 10,
+    "S25": 11,
+    "S26": 9,
+    "S27": 8,
+    "S28": 0,
+    "S29": 1,
+    "S30": 3,
+    "S31": 2,
+    "S32": 6,
+    "S33": 7,
+    "S34": 5,
+    "S35": 4,
+    "S36": 12,
+    "S37": 13,
+    "S38": 15,
+    "S39": 14,
+    "S40": 10,
+    "S41": 0,
+    "S42": 1,
+    "S43": 3,
+    "S44": 0,
+    "S45": 1,
+    "S46": 3,
+    "S47": 2,
+    "S48": 6,
+    "S49": 7,
+    "S50": 5,
+    "S51": 4,
+    "S52": 12,
+    "S53": 13,
+    "S54": 0,
+    "S55": 0,
+    "S56": 1,
+    "S57": 3,
+    "S58": 2,
+    "S59": 6,
+    "S60": 7,
+    "S61": 5,
+    "S62": 4,
+    "S63": 0,
+    "S64": 1,
+    "S65": 3,
+    "S66": 2,
+    "S67": 6,
+    "S68": 7,
+    "S69": 5,
+    "S70": 4,
+    "S71": 12,
+    "S72": 13,
+    "S73": 15,
+    "S74": 14,
+    "S75": 10,
+    "S76": 11,
+    "S77": 0,
+    "S78": 1,
+    "S79": 0,
+    "S80": 1,
+    "S81": 3,
+    "S82": 2,
+    "S83": 6,
+    "S84": 7,
+    "S85": 5,
+    "S86": 4,
+    "S87": 0,
+    "S88": 1,
+    "S89": 0,
+    "S90": 1,
+    "S91": 3,
+    "S92": 2,
+    "S93": 6,
+    "S94": 7,
+    "S95": 5,
+    "S96": 4,
+    "S97": 12,
+    "S98": 13,
+    "S99": 0,
+    "S100": 1,
+    "S101": 3,
+    "S102": 0,
+    "S103": 1,
+    "S104": 3,
+    "S105": 2,
+    "S106": 0,
+    "S107": 1,
+    "S108": 3,
+    "S109": 2,
+    "S110": 6,
+    "S111": 7,
+    "S112": 5,
+    "S113": 4,
+    "S114": 12,
+    "S115": 13,
+    "S116": 15,
+    "S117": 14,
+    "S118": 10,
+    "S119": 11,
+    "S120": 0,
+    "S121": 1,
+    "S122": 3,
+    "S123": 2,
+    "S124": 6,
+    "S125": 0,
+    "S126": 1,
+    "S127": 3,
+    "S128": 2,
+    "S129": 6,
+    "S130": 0,
+    "S131": 1,
+    "S132": 3,
+    "S133": 2,
+    "S134": 6,
+    "S135": 7,
+    "S136": 0,
+    "S137": 1,
+    "S138": 0,
+    "S139": 0,
+    "S140": 0,
+    "S141": 1,
+    "S142": 0,
+    "S143": 1,
+    "S144": 0,
+    "S145": 1,
+    "S146": 3,
+    "S147": 2,
+    "S148": 6,
+    "S149": 7,
+    "S150": 5,
+    "S151": 4,
+    "S152": 12,
+    "S153": 13,
+    "S154": 15,
+    "S155": 14,
+    "S156": 10,
+    "S157": 11,
+    "S158": 9,
+    "S159": 0,
+    "S160": 0,
+    "S161": 1,
+    "S162": 3,
+    "S163": 2,
+    "S164": 0,
+    "S165": 11,
+    "S166": 3,
+    "S167": 2,
+    "S168": 6,
+    "S169": 7,
+    "S170": 5,
+    "S171": 13,
+    "S172": 12,
+    "S173": 4,
+    "S174": 15,
+    "S175": 14,
+    "S176": 10,
+    "S177": 8,
+    "S178": 9,
+    "S179": 27,
+    "S180": 24,
+    "S181": 25,
+    "S182": 1,
+    "S183": 0,
+    "S184": 1,
+    "S185": 3,
+    "S186": 2,
+    "S187": 6,
+    "S188": 7,
+    "S189": 5,
+    "S190": 4,
+    "S191": 0,
+    "S192": 1,
+    "S193": 3,
+    "S194": 2,
+    "S195": 6,
+    "S196": 0,
+    "S197": 1,
+    "S198": 3,
+    "S199": 2,
+    "S200": 6,
+    "S201": 7,
+    "S202": 5,
+    "S203": 4,
+    "S204": 12,
+    "S205": 0,
+    "S206": 1,
+    "S207": 3,
+    "S208": 2,
+    "S209": 6,
+    "S210": 7,
+    "S211": 5,
+    "S212": 4,
+    "S213": 12,
+    "S214": 13,
+    "S215": 15,
+    "S216": 14,
+    "S217": 10,
+    "S218": 11,
+    "S219": 9,
+    "S220": 8,
+    "S221": 24,
+    "S222": 0,
+    "S223": 0,
+    "S224": 1,
+    "S225": 3,
+    "S226": 0,
+    "S227": 1,
+    "S228": 3,
+    "S229": 0,
+    "S230": 1,
+    "S231": 3,
+    "S232": 2,
+    "S233": 6
+  },
+  "label_assignment": {
+    "artifact_id": "f7cfe4724fd72936ad927d8c758baaaa3d81daabd850bc206cc81c31b9583680",
+    "profile_id": "a75e0dc23a727a144868f6921c9792874ba581b50705b160288ce21e76c15c46",
+    "algorithm": "weighted-greedy-pair-swap-v1"
+  },
+  "instruction_assignment": {
+    "artifact_id": "4ed250e3c80a22b5e9313f5aa2c78505f1c25a82b0eb35346a4f0021e61a1059",
+    "profile_id": "a75e0dc23a727a144868f6921c9792874ba581b50705b160288ce21e76c15c46",
+    "algorithm": "gray-within-region-pair-swap-v1",
+    "objective": "measured-transitions"
+  },
+  "states": [
+    {
+      "instruction": 0,
+      "pc": 128,
+      "mnemonic": "lui",
+      "operands": "sp,0x20",
+      "code": 1024,
+      "binary": "10000000000"
+    },
+    {
+      "instruction": 1,
+      "pc": 132,
+      "mnemonic": "addi",
+      "operands": "sp,sp,-16",
+      "code": 1025,
+      "binary": "10000000001"
+    },
+    {
+      "instruction": 2,
+      "pc": 136,
+      "mnemonic": "auipc",
+      "operands": "t0,0x10",
+      "code": 1027,
+      "binary": "10000000011"
+    },
+    {
+      "instruction": 3,
+      "pc": 140,
+      "mnemonic": "addi",
+      "operands": "t0,t0,888",
+      "code": 1031,
+      "binary": "10000000111"
+    },
+    {
+      "instruction": 4,
+      "pc": 144,
+      "mnemonic": "auipc",
+      "operands": "t1,0x10",
+      "code": 1030,
+      "binary": "10000000110"
+    },
+    {
+      "instruction": 5,
+      "pc": 148,
+      "mnemonic": "addi",
+      "operands": "t1,t1,896",
+      "code": 1026,
+      "binary": "10000000010"
+    },
+    {
+      "instruction": 6,
+      "pc": 152,
+      "mnemonic": "bge",
+      "operands": "t0,t1,a8 <bss_done>",
+      "code": 1088,
+      "binary": "10001000000"
+    },
+    {
+      "instruction": 7,
+      "pc": 156,
+      "mnemonic": "sw",
+      "operands": "zero,0(t0)",
+      "code": 1089,
+      "binary": "10001000001"
+    },
+    {
+      "instruction": 8,
+      "pc": 160,
+      "mnemonic": "addi",
+      "operands": "t0,t0,4",
+      "code": 1091,
+      "binary": "10001000011"
+    },
+    {
+      "instruction": 9,
+      "pc": 164,
+      "mnemonic": "j",
+      "operands": "98 <bss_loop>",
+      "code": 1090,
+      "binary": "10001000010"
+    },
+    {
+      "instruction": 10,
+      "pc": 168,
+      "mnemonic": "jal",
+      "operands": "b0 <main>",
+      "code": 1120,
+      "binary": "10001100000"
+    },
+    {
+      "instruction": 11,
+      "pc": 172,
+      "mnemonic": "j",
+      "operands": "ac <loop>",
+      "code": 32,
+      "binary": "00000100000"
+    },
+    {
+      "instruction": 12,
+      "pc": 176,
+      "mnemonic": "addi",
+      "operands": "sp,sp,-32",
+      "code": 224,
+      "binary": "00011100000"
+    },
+    {
+      "instruction": 13,
+      "pc": 180,
+      "mnemonic": "sw",
+      "operands": "ra,28(sp)",
+      "code": 225,
+      "binary": "00011100001"
+    },
+    {
+      "instruction": 14,
+      "pc": 184,
+      "mnemonic": "jal",
+      "operands": "2ac <initialise_board>",
+      "code": 227,
+      "binary": "00011100011"
+    },
+    {
+      "instruction": 15,
+      "pc": 188,
+      "mnemonic": "jal",
+      "operands": "3f8 <initialise_benchmark>",
+      "code": 226,
+      "binary": "00011100010"
+    },
+    {
+      "instruction": 16,
+      "pc": 192,
+      "mnemonic": "li",
+      "operands": "a0,0",
+      "code": 230,
+      "binary": "00011100110"
+    },
+    {
+      "instruction": 17,
+      "pc": 196,
+      "mnemonic": "jal",
+      "operands": "3fc <warm_caches>",
+      "code": 231,
+      "binary": "00011100111"
+    },
+    {
+      "instruction": 18,
+      "pc": 200,
+      "mnemonic": "jal",
+      "operands": "2b0 <start_trigger>",
+      "code": 228,
+      "binary": "00011100100"
+    },
+    {
+      "instruction": 19,
+      "pc": 204,
+      "mnemonic": "jal",
+      "operands": "408 <benchmark>",
+      "code": 229,
+      "binary": "00011100101"
+    },
+    {
+      "instruction": 20,
+      "pc": 208,
+      "mnemonic": "sw",
+      "operands": "a0,12(sp)",
+      "code": 236,
+      "binary": "00011101100"
+    },
+    {
+      "instruction": 21,
+      "pc": 212,
+      "mnemonic": "jal",
+      "operands": "2b8 <stop_trigger>",
+      "code": 237,
+      "binary": "00011101101"
+    },
+    {
+      "instruction": 22,
+      "pc": 216,
+      "mnemonic": "lw",
+      "operands": "a0,12(sp)",
+      "code": 239,
+      "binary": "00011101111"
+    },
+    {
+      "instruction": 23,
+      "pc": 220,
+      "mnemonic": "jal",
+      "operands": "414 <verify_benchmark>",
+      "code": 238,
+      "binary": "00011101110"
+    },
+    {
+      "instruction": 24,
+      "pc": 224,
+      "mnemonic": "lw",
+      "operands": "ra,28(sp)",
+      "code": 234,
+      "binary": "00011101010"
+    },
+    {
+      "instruction": 25,
+      "pc": 228,
+      "mnemonic": "seqz",
+      "operands": "a0,a0",
+      "code": 235,
+      "binary": "00011101011"
+    },
+    {
+      "instruction": 26,
+      "pc": 232,
+      "mnemonic": "addi",
+      "operands": "sp,sp,32",
+      "code": 233,
+      "binary": "00011101001"
+    },
+    {
+      "instruction": 27,
+      "pc": 236,
+      "mnemonic": "ret",
+      "operands": "",
+      "code": 232,
+      "binary": "00011101000"
+    },
+    {
+      "instruction": 28,
+      "pc": 240,
+      "mnemonic": "lui",
+      "operands": "a4,0x10",
+      "code": 896,
+      "binary": "01110000000"
+    },
+    {
+      "instruction": 29,
+      "pc": 244,
+      "mnemonic": "lw",
+      "operands": "a0,1036(a4)",
+      "code": 897,
+      "binary": "01110000001"
+    },
+    {
+      "instruction": 30,
+      "pc": 248,
+      "mnemonic": "lui",
+      "operands": "a5,0x41c65",
+      "code": 899,
+      "binary": "01110000011"
+    },
+    {
+      "instruction": 31,
+      "pc": 252,
+      "mnemonic": "addi",
+      "operands": "a5,a5,-403",
+      "code": 898,
+      "binary": "01110000010"
+    },
+    {
+      "instruction": 32,
+      "pc": 256,
+      "mnemonic": "mul",
+      "operands": "a0,a0,a5",
+      "code": 902,
+      "binary": "01110000110"
+    },
+    {
+      "instruction": 33,
+      "pc": 260,
+      "mnemonic": "lui",
+      "operands": "a5,0x3",
+      "code": 903,
+      "binary": "01110000111"
+    },
+    {
+      "instruction": 34,
+      "pc": 264,
+      "mnemonic": "addi",
+      "operands": "a5,a5,57",
+      "code": 901,
+      "binary": "01110000101"
+    },
+    {
+      "instruction": 35,
+      "pc": 268,
+      "mnemonic": "add",
+      "operands": "a0,a0,a5",
+      "code": 900,
+      "binary": "01110000100"
+    },
+    {
+      "instruction": 36,
+      "pc": 272,
+      "mnemonic": "slli",
+      "operands": "a0,a0,0x1",
+      "code": 908,
+      "binary": "01110001100"
+    },
+    {
+      "instruction": 37,
+      "pc": 276,
+      "mnemonic": "srli",
+      "operands": "a0,a0,0x1",
+      "code": 909,
+      "binary": "01110001101"
+    },
+    {
+      "instruction": 38,
+      "pc": 280,
+      "mnemonic": "sw",
+      "operands": "a0,1036(a4)",
+      "code": 911,
+      "binary": "01110001111"
+    },
+    {
+      "instruction": 39,
+      "pc": 284,
+      "mnemonic": "srli",
+      "operands": "a0,a0,0x10",
+      "code": 910,
+      "binary": "01110001110"
+    },
+    {
+      "instruction": 40,
+      "pc": 288,
+      "mnemonic": "ret",
+      "operands": "",
+      "code": 906,
+      "binary": "01110001010"
+    },
+    {
+      "instruction": 41,
+      "pc": 292,
+      "mnemonic": "lui",
+      "operands": "a5,0x10",
+      "code": 768,
+      "binary": "01100000000"
+    },
+    {
+      "instruction": 42,
+      "pc": 296,
+      "mnemonic": "sw",
+      "operands": "a0,1036(a5)",
+      "code": 769,
+      "binary": "01100000001"
+    },
+    {
+      "instruction": 43,
+      "pc": 300,
+      "mnemonic": "ret",
+      "operands": "",
+      "code": 771,
+      "binary": "01100000011"
+    },
+    {
+      "instruction": 44,
+      "pc": 304,
+      "mnemonic": "andi",
+      "operands": "a5,a1,3",
+      "code": 128,
+      "binary": "00010000000"
+    },
+    {
+      "instruction": 45,
+      "pc": 308,
+      "mnemonic": "bnez",
+      "operands": "a5,158 <init_heap_beebs+0x28>",
+      "code": 129,
+      "binary": "00010000001"
+    },
+    {
+      "instruction": 46,
+      "pc": 312,
+      "mnemonic": "add",
+      "operands": "a1,a0,a1",
+      "code": 131,
+      "binary": "00010000011"
+    },
+    {
+      "instruction": 47,
+      "pc": 316,
+      "mnemonic": "lui",
+      "operands": "a3,0x10",
+      "code": 130,
+      "binary": "00010000010"
+    },
+    {
+      "instruction": 48,
+      "pc": 320,
+      "mnemonic": "lui",
+      "operands": "a4,0x10",
+      "code": 134,
+      "binary": "00010000110"
+    },
+    {
+      "instruction": 49,
+      "pc": 324,
+      "mnemonic": "lui",
+      "operands": "a5,0x10",
+      "code": 135,
+      "binary": "00010000111"
+    },
+    {
+      "instruction": 50,
+      "pc": 328,
+      "mnemonic": "sw",
+      "operands": "a1,1028(a3)",
+      "code": 133,
+      "binary": "00010000101"
+    },
+    {
+      "instruction": 51,
+      "pc": 332,
+      "mnemonic": "sw",
+      "operands": "a0,1032(a4)",
+      "code": 132,
+      "binary": "00010000100"
+    },
+    {
+      "instruction": 52,
+      "pc": 336,
+      "mnemonic": "sw",
+      "operands": "zero,1024(a5)",
+      "code": 140,
+      "binary": "00010001100"
+    },
+    {
+      "instruction": 53,
+      "pc": 340,
+      "mnemonic": "ret",
+      "operands": "",
+      "code": 141,
+      "binary": "00010001101"
+    },
+    {
+      "instruction": 54,
+      "pc": 344,
+      "mnemonic": "j",
+      "operands": "158 <init_heap_beebs+0x28>",
+      "code": 256,
+      "binary": "00100000000"
+    },
+    {
+      "instruction": 55,
+      "pc": 348,
+      "mnemonic": "lui",
+      "operands": "a5,0x10",
+      "code": 288,
+      "binary": "00100100000"
+    },
+    {
+      "instruction": 56,
+      "pc": 352,
+      "mnemonic": "lw",
+      "operands": "a4,1024(a5)",
+      "code": 289,
+      "binary": "00100100001"
+    },
+    {
+      "instruction": 57,
+      "pc": 356,
+      "mnemonic": "lui",
+      "operands": "a5,0x10",
+      "code": 291,
+      "binary": "00100100011"
+    },
+    {
+      "instruction": 58,
+      "pc": 360,
+      "mnemonic": "lw",
+      "operands": "a5,1028(a5)",
+      "code": 290,
+      "binary": "00100100010"
+    },
+    {
+      "instruction": 59,
+      "pc": 364,
+      "mnemonic": "add",
+      "operands": "a0,a0,a4",
+      "code": 294,
+      "binary": "00100100110"
+    },
+    {
+      "instruction": 60,
+      "pc": 368,
+      "mnemonic": "sltu",
+      "operands": "a0,a5,a0",
+      "code": 295,
+      "binary": "00100100111"
+    },
+    {
+      "instruction": 61,
+      "pc": 372,
+      "mnemonic": "xori",
+      "operands": "a0,a0,1",
+      "code": 293,
+      "binary": "00100100101"
+    },
+    {
+      "instruction": 62,
+      "pc": 376,
+      "mnemonic": "ret",
+      "operands": "",
+      "code": 292,
+      "binary": "00100100100"
+    },
+    {
+      "instruction": 63,
+      "pc": 380,
+      "mnemonic": "mv",
+      "operands": "a5,a0",
+      "code": 1152,
+      "binary": "10010000000"
+    },
+    {
+      "instruction": 64,
+      "pc": 384,
+      "mnemonic": "beqz",
+      "operands": "a0,1dc <malloc_beebs+0x60>",
+      "code": 1153,
+      "binary": "10010000001"
+    },
+    {
+      "instruction": 65,
+      "pc": 388,
+      "mnemonic": "lui",
+      "operands": "a2,0x10",
+      "code": 1155,
+      "binary": "10010000011"
+    },
+    {
+      "instruction": 66,
+      "pc": 392,
+      "mnemonic": "lw",
+      "operands": "a0,1032(a2)",
+      "code": 1154,
+      "binary": "10010000010"
+    },
+    {
+      "instruction": 67,
+      "pc": 396,
+      "mnemonic": "lui",
+      "operands": "a3,0x10",
+      "code": 1158,
+      "binary": "10010000110"
+    },
+    {
+      "instruction": 68,
+      "pc": 400,
+      "mnemonic": "lw",
+      "operands": "a1,1024(a3)",
+      "code": 1159,
+      "binary": "10010000111"
+    },
+    {
+      "instruction": 69,
+      "pc": 404,
+      "mnemonic": "add",
+      "operands": "a4,a0,a5",
+      "code": 1157,
+      "binary": "10010000101"
+    },
+    {
+      "instruction": 70,
+      "pc": 408,
+      "mnemonic": "andi",
+      "operands": "a6,a4,3",
+      "code": 1156,
+      "binary": "10010000100"
+    },
+    {
+      "instruction": 71,
+      "pc": 412,
+      "mnemonic": "add",
+      "operands": "a5,a5,a1",
+      "code": 1164,
+      "binary": "10010001100"
+    },
+    {
+      "instruction": 72,
+      "pc": 416,
+      "mnemonic": "bnez",
+      "operands": "a6,1bc <malloc_beebs+0x40>",
+      "code": 1165,
+      "binary": "10010001101"
+    },
+    {
+      "instruction": 73,
+      "pc": 420,
+      "mnemonic": "lui",
+      "operands": "a1,0x10",
+      "code": 1167,
+      "binary": "10010001111"
+    },
+    {
+      "instruction": 74,
+      "pc": 424,
+      "mnemonic": "lw",
+      "operands": "a1,1028(a1)",
+      "code": 1166,
+      "binary": "10010001110"
+    },
+    {
+      "instruction": 75,
+      "pc": 428,
+      "mnemonic": "sw",
+      "operands": "a5,1024(a3)",
+      "code": 1162,
+      "binary": "10010001010"
+    },
+    {
+      "instruction": 76,
+      "pc": 432,
+      "mnemonic": "bltu",
+      "operands": "a1,a4,1dc <malloc_beebs+0x60>",
+      "code": 1163,
+      "binary": "10010001011"
+    },
+    {
+      "instruction": 77,
+      "pc": 436,
+      "mnemonic": "sw",
+      "operands": "a4,1032(a2)",
+      "code": 352,
+      "binary": "00101100000"
+    },
+    {
+      "instruction": 78,
+      "pc": 440,
+      "mnemonic": "ret",
+      "operands": "",
+      "code": 353,
+      "binary": "00101100001"
+    },
+    {
+      "instruction": 79,
+      "pc": 444,
+      "mnemonic": "li",
+      "operands": "a1,4",
+      "code": 384,
+      "binary": "00110000000"
+    },
+    {
+      "instruction": 80,
+      "pc": 448,
+      "mnemonic": "sub",
+      "operands": "a1,a1,a6",
+      "code": 385,
+      "binary": "00110000001"
+    },
+    {
+      "instruction": 81,
+      "pc": 452,
+      "mnemonic": "add",
+      "operands": "a5,a5,a1",
+      "code": 387,
+      "binary": "00110000011"
+    },
+    {
+      "instruction": 82,
+      "pc": 456,
+      "mnemonic": "add",
+      "operands": "a4,a4,a1",
+      "code": 386,
+      "binary": "00110000010"
+    },
+    {
+      "instruction": 83,
+      "pc": 460,
+      "mnemonic": "lui",
+      "operands": "a1,0x10",
+      "code": 390,
+      "binary": "00110000110"
+    },
+    {
+      "instruction": 84,
+      "pc": 464,
+      "mnemonic": "lw",
+      "operands": "a1,1028(a1)",
+      "code": 391,
+      "binary": "00110000111"
+    },
+    {
+      "instruction": 85,
+      "pc": 468,
+      "mnemonic": "sw",
+      "operands": "a5,1024(a3)",
+      "code": 389,
+      "binary": "00110000101"
+    },
+    {
+      "instruction": 86,
+      "pc": 472,
+      "mnemonic": "bgeu",
+      "operands": "a1,a4,1b4 <malloc_beebs+0x38>",
+      "code": 388,
+      "binary": "00110000100"
+    },
+    {
+      "instruction": 87,
+      "pc": 476,
+      "mnemonic": "li",
+      "operands": "a0,0",
+      "code": 416,
+      "binary": "00110100000"
+    },
+    {
+      "instruction": 88,
+      "pc": 480,
+      "mnemonic": "ret",
+      "operands": "",
+      "code": 417,
+      "binary": "00110100001"
+    },
+    {
+      "instruction": 89,
+      "pc": 484,
+      "mnemonic": "addi",
+      "operands": "sp,sp,-16",
+      "code": 448,
+      "binary": "00111000000"
+    },
+    {
+      "instruction": 90,
+      "pc": 488,
+      "mnemonic": "sw",
+      "operands": "s0,8(sp)",
+      "code": 449,
+      "binary": "00111000001"
+    },
+    {
+      "instruction": 91,
+      "pc": 492,
+      "mnemonic": "mul",
+      "operands": "s0,a0,a1",
+      "code": 451,
+      "binary": "00111000011"
+    },
+    {
+      "instruction": 92,
+      "pc": 496,
+      "mnemonic": "sw",
+      "operands": "ra,12(sp)",
+      "code": 450,
+      "binary": "00111000010"
+    },
+    {
+      "instruction": 93,
+      "pc": 500,
+      "mnemonic": "mv",
+      "operands": "a0,s0",
+      "code": 454,
+      "binary": "00111000110"
+    },
+    {
+      "instruction": 94,
+      "pc": 504,
+      "mnemonic": "jal",
+      "operands": "17c <malloc_beebs>",
+      "code": 455,
+      "binary": "00111000111"
+    },
+    {
+      "instruction": 95,
+      "pc": 508,
+      "mnemonic": "beqz",
+      "operands": "a0,218 <calloc_beebs+0x34>",
+      "code": 453,
+      "binary": "00111000101"
+    },
+    {
+      "instruction": 96,
+      "pc": 512,
+      "mnemonic": "beqz",
+      "operands": "s0,218 <calloc_beebs+0x34>",
+      "code": 452,
+      "binary": "00111000100"
+    },
+    {
+      "instruction": 97,
+      "pc": 516,
+      "mnemonic": "add",
+      "operands": "a1,a0,s0",
+      "code": 460,
+      "binary": "00111001100"
+    },
+    {
+      "instruction": 98,
+      "pc": 520,
+      "mnemonic": "mv",
+      "operands": "a5,a0",
+      "code": 461,
+      "binary": "00111001101"
+    },
+    {
+      "instruction": 99,
+      "pc": 524,
+      "mnemonic": "addi",
+      "operands": "a5,a5,1",
+      "code": 960,
+      "binary": "01111000000"
+    },
+    {
+      "instruction": 100,
+      "pc": 528,
+      "mnemonic": "sb",
+      "operands": "zero,-1(a5)",
+      "code": 961,
+      "binary": "01111000001"
+    },
+    {
+      "instruction": 101,
+      "pc": 532,
+      "mnemonic": "bne",
+      "operands": "a5,a1,20c <calloc_beebs+0x28>",
+      "code": 963,
+      "binary": "01111000011"
+    },
+    {
+      "instruction": 102,
+      "pc": 536,
+      "mnemonic": "lw",
+      "operands": "ra,12(sp)",
+      "code": 512,
+      "binary": "01000000000"
+    },
+    {
+      "instruction": 103,
+      "pc": 540,
+      "mnemonic": "lw",
+      "operands": "s0,8(sp)",
+      "code": 513,
+      "binary": "01000000001"
+    },
+    {
+      "instruction": 104,
+      "pc": 544,
+      "mnemonic": "addi",
+      "operands": "sp,sp,16",
+      "code": 515,
+      "binary": "01000000011"
+    },
+    {
+      "instruction": 105,
+      "pc": 548,
+      "mnemonic": "ret",
+      "operands": "",
+      "code": 514,
+      "binary": "01000000010"
+    },
+    {
+      "instruction": 106,
+      "pc": 552,
+      "mnemonic": "beqz",
+      "operands": "a0,2a0 <realloc_beebs+0x78>",
+      "code": 544,
+      "binary": "01000100000"
+    },
+    {
+      "instruction": 107,
+      "pc": 556,
+      "mnemonic": "addi",
+      "operands": "sp,sp,-16",
+      "code": 545,
+      "binary": "01000100001"
+    },
+    {
+      "instruction": 108,
+      "pc": 560,
+      "mnemonic": "sw",
+      "operands": "s0,8(sp)",
+      "code": 547,
+      "binary": "01000100011"
+    },
+    {
+      "instruction": 109,
+      "pc": 564,
+      "mnemonic": "mv",
+      "operands": "s0,a0",
+      "code": 546,
+      "binary": "01000100010"
+    },
+    {
+      "instruction": 110,
+      "pc": 568,
+      "mnemonic": "mv",
+      "operands": "a0,a1",
+      "code": 550,
+      "binary": "01000100110"
+    },
+    {
+      "instruction": 111,
+      "pc": 572,
+      "mnemonic": "sw",
+      "operands": "s1,4(sp)",
+      "code": 551,
+      "binary": "01000100111"
+    },
+    {
+      "instruction": 112,
+      "pc": 576,
+      "mnemonic": "sw",
+      "operands": "ra,12(sp)",
+      "code": 549,
+      "binary": "01000100101"
+    },
+    {
+      "instruction": 113,
+      "pc": 580,
+      "mnemonic": "mv",
+      "operands": "s1,a1",
+      "code": 548,
+      "binary": "01000100100"
+    },
+    {
+      "instruction": 114,
+      "pc": 584,
+      "mnemonic": "jal",
+      "operands": "17c <malloc_beebs>",
+      "code": 556,
+      "binary": "01000101100"
+    },
+    {
+      "instruction": 115,
+      "pc": 588,
+      "mnemonic": "beqz",
+      "operands": "a0,288 <realloc_beebs+0x60>",
+      "code": 557,
+      "binary": "01000101101"
+    },
+    {
+      "instruction": 116,
+      "pc": 592,
+      "mnemonic": "mv",
+      "operands": "a5,s0",
+      "code": 559,
+      "binary": "01000101111"
+    },
+    {
+      "instruction": 117,
+      "pc": 596,
+      "mnemonic": "add",
+      "operands": "a2,s0,s1",
+      "code": 558,
+      "binary": "01000101110"
+    },
+    {
+      "instruction": 118,
+      "pc": 600,
+      "mnemonic": "mv",
+      "operands": "a4,a0",
+      "code": 554,
+      "binary": "01000101010"
+    },
+    {
+      "instruction": 119,
+      "pc": 604,
+      "mnemonic": "beqz",
+      "operands": "s1,274 <realloc_beebs+0x4c>",
+      "code": 555,
+      "binary": "01000101011"
+    },
+    {
+      "instruction": 120,
+      "pc": 608,
+      "mnemonic": "lbu",
+      "operands": "a3,0(a5)",
+      "code": 576,
+      "binary": "01001000000"
+    },
+    {
+      "instruction": 121,
+      "pc": 612,
+      "mnemonic": "addi",
+      "operands": "a5,a5,1",
+      "code": 577,
+      "binary": "01001000001"
+    },
+    {
+      "instruction": 122,
+      "pc": 616,
+      "mnemonic": "addi",
+      "operands": "a4,a4,1",
+      "code": 579,
+      "binary": "01001000011"
+    },
+    {
+      "instruction": 123,
+      "pc": 620,
+      "mnemonic": "sb",
+      "operands": "a3,-1(a4)",
+      "code": 578,
+      "binary": "01001000010"
+    },
+    {
+      "instruction": 124,
+      "pc": 624,
+      "mnemonic": "bne",
+      "operands": "a5,a2,260 <realloc_beebs+0x38>",
+      "code": 582,
+      "binary": "01001000110"
+    },
+    {
+      "instruction": 125,
+      "pc": 628,
+      "mnemonic": "lw",
+      "operands": "ra,12(sp)",
+      "code": 608,
+      "binary": "01001100000"
+    },
+    {
+      "instruction": 126,
+      "pc": 632,
+      "mnemonic": "lw",
+      "operands": "s0,8(sp)",
+      "code": 609,
+      "binary": "01001100001"
+    },
+    {
+      "instruction": 127,
+      "pc": 636,
+      "mnemonic": "lw",
+      "operands": "s1,4(sp)",
+      "code": 611,
+      "binary": "01001100011"
+    },
+    {
+      "instruction": 128,
+      "pc": 640,
+      "mnemonic": "addi",
+      "operands": "sp,sp,16",
+      "code": 610,
+      "binary": "01001100010"
+    },
+    {
+      "instruction": 129,
+      "pc": 644,
+      "mnemonic": "ret",
+      "operands": "",
+      "code": 614,
+      "binary": "01001100110"
+    },
+    {
+      "instruction": 130,
+      "pc": 648,
+      "mnemonic": "lw",
+      "operands": "ra,12(sp)",
+      "code": 640,
+      "binary": "01010000000"
+    },
+    {
+      "instruction": 131,
+      "pc": 652,
+      "mnemonic": "lw",
+      "operands": "s0,8(sp)",
+      "code": 641,
+      "binary": "01010000001"
+    },
+    {
+      "instruction": 132,
+      "pc": 656,
+      "mnemonic": "lw",
+      "operands": "s1,4(sp)",
+      "code": 643,
+      "binary": "01010000011"
+    },
+    {
+      "instruction": 133,
+      "pc": 660,
+      "mnemonic": "li",
+      "operands": "a0,0",
+      "code": 642,
+      "binary": "01010000010"
+    },
+    {
+      "instruction": 134,
+      "pc": 664,
+      "mnemonic": "addi",
+      "operands": "sp,sp,16",
+      "code": 646,
+      "binary": "01010000110"
+    },
+    {
+      "instruction": 135,
+      "pc": 668,
+      "mnemonic": "ret",
+      "operands": "",
+      "code": 647,
+      "binary": "01010000111"
+    },
+    {
+      "instruction": 136,
+      "pc": 672,
+      "mnemonic": "li",
+      "operands": "a0,0",
+      "code": 672,
+      "binary": "01010100000"
+    },
+    {
+      "instruction": 137,
+      "pc": 676,
+      "mnemonic": "ret",
+      "operands": "",
+      "code": 673,
+      "binary": "01010100001"
+    },
+    {
+      "instruction": 138,
+      "pc": 680,
+      "mnemonic": "ret",
+      "operands": "",
+      "code": 704,
+      "binary": "01011000000"
+    },
+    {
+      "instruction": 139,
+      "pc": 684,
+      "mnemonic": "ret",
+      "operands": "",
+      "code": 736,
+      "binary": "01011100000"
+    },
+    {
+      "instruction": 140,
+      "pc": 688,
+      "mnemonic": "nop",
+      "operands": "",
+      "code": 192,
+      "binary": "00011000000"
+    },
+    {
+      "instruction": 141,
+      "pc": 692,
+      "mnemonic": "ret",
+      "operands": "",
+      "code": 193,
+      "binary": "00011000001"
+    },
+    {
+      "instruction": 142,
+      "pc": 696,
+      "mnemonic": "nop",
+      "operands": "",
+      "code": 160,
+      "binary": "00010100000"
+    },
+    {
+      "instruction": 143,
+      "pc": 700,
+      "mnemonic": "ret",
+      "operands": "",
+      "code": 161,
+      "binary": "00010100001"
+    },
+    {
+      "instruction": 144,
+      "pc": 704,
+      "mnemonic": "addi",
+      "operands": "sp,sp,-32",
+      "code": 832,
+      "binary": "01101000000"
+    },
+    {
+      "instruction": 145,
+      "pc": 708,
+      "mnemonic": "sw",
+      "operands": "s3,12(sp)",
+      "code": 833,
+      "binary": "01101000001"
+    },
+    {
+      "instruction": 146,
+      "pc": 712,
+      "mnemonic": "sw",
+      "operands": "s4,8(sp)",
+      "code": 835,
+      "binary": "01101000011"
+    },
+    {
+      "instruction": 147,
+      "pc": 716,
+      "mnemonic": "sw",
+      "operands": "ra,28(sp)",
+      "code": 834,
+      "binary": "01101000010"
+    },
+    {
+      "instruction": 148,
+      "pc": 720,
+      "mnemonic": "sw",
+      "operands": "s0,24(sp)",
+      "code": 838,
+      "binary": "01101000110"
+    },
+    {
+      "instruction": 149,
+      "pc": 724,
+      "mnemonic": "mv",
+      "operands": "s3,a1",
+      "code": 839,
+      "binary": "01101000111"
+    },
+    {
+      "instruction": 150,
+      "pc": 728,
+      "mnemonic": "mv",
+      "operands": "s4,a0",
+      "code": 837,
+      "binary": "01101000101"
+    },
+    {
+      "instruction": 151,
+      "pc": 732,
+      "mnemonic": "beqz",
+      "operands": "a1,37c <benchmark_body+0xbc>",
+      "code": 836,
+      "binary": "01101000100"
+    },
+    {
+      "instruction": 152,
+      "pc": 736,
+      "mnemonic": "sw",
+      "operands": "s1,20(sp)",
+      "code": 844,
+      "binary": "01101001100"
+    },
+    {
+      "instruction": 153,
+      "pc": 740,
+      "mnemonic": "lui",
+      "operands": "s1,0x10",
+      "code": 845,
+      "binary": "01101001101"
+    },
+    {
+      "instruction": 154,
+      "pc": 744,
+      "mnemonic": "sw",
+      "operands": "s5,4(sp)",
+      "code": 847,
+      "binary": "01101001111"
+    },
+    {
+      "instruction": 155,
+      "pc": 748,
+      "mnemonic": "sw",
+      "operands": "s2,16(sp)",
+      "code": 846,
+      "binary": "01101001110"
+    },
+    {
+      "instruction": 156,
+      "pc": 752,
+      "mnemonic": "sw",
+      "operands": "s6,0(sp)",
+      "code": 842,
+      "binary": "01101001010"
+    },
+    {
+      "instruction": 157,
+      "pc": 756,
+      "mnemonic": "mv",
+      "operands": "s1,s1",
+      "code": 843,
+      "binary": "01101001011"
+    },
+    {
+      "instruction": 158,
+      "pc": 760,
+      "mnemonic": "li",
+      "operands": "s5,0",
+      "code": 841,
+      "binary": "01101001001"
+    },
+    {
+      "instruction": 159,
+      "pc": 764,
+      "mnemonic": "li",
+      "operands": "s2,0",
+      "code": 864,
+      "binary": "01101100000"
+    },
+    {
+      "instruction": 160,
+      "pc": 768,
+      "mnemonic": "li",
+      "operands": "a0,0",
+      "code": 800,
+      "binary": "01100100000"
+    },
+    {
+      "instruction": 161,
+      "pc": 772,
+      "mnemonic": "jal",
+      "operands": "124 <srand_beebs>",
+      "code": 801,
+      "binary": "01100100001"
+    },
+    {
+      "instruction": 162,
+      "pc": 776,
+      "mnemonic": "li",
+      "operands": "s6,1024",
+      "code": 803,
+      "binary": "01100100011"
+    },
+    {
+      "instruction": 163,
+      "pc": 780,
+      "mnemonic": "li",
+      "operands": "s0,-1",
+      "code": 802,
+      "binary": "01100100010"
+    },
+    {
+      "instruction": 164,
+      "pc": 784,
+      "mnemonic": "jal",
+      "operands": "f0 <rand_beebs>",
+      "code": 928,
+      "binary": "01110100000"
+    },
+    {
+      "instruction": 165,
+      "pc": 788,
+      "mnemonic": "xor",
+      "operands": "a5,s0,a0",
+      "code": 939,
+      "binary": "01110101011"
+    },
+    {
+      "instruction": 166,
+      "pc": 792,
+      "mnemonic": "zext.b",
+      "operands": "a5,a5",
+      "code": 931,
+      "binary": "01110100011"
+    },
+    {
+      "instruction": 167,
+      "pc": 796,
+      "mnemonic": "slli",
+      "operands": "a5,a5,0x2",
+      "code": 930,
+      "binary": "01110100010"
+    },
+    {
+      "instruction": 168,
+      "pc": 800,
+      "mnemonic": "add",
+      "operands": "a5,s1,a5",
+      "code": 934,
+      "binary": "01110100110"
+    },
+    {
+      "instruction": 169,
+      "pc": 804,
+      "mnemonic": "lw",
+      "operands": "a5,0(a5)",
+      "code": 935,
+      "binary": "01110100111"
+    },
+    {
+      "instruction": 170,
+      "pc": 808,
+      "mnemonic": "srli",
+      "operands": "s0,s0,0x8",
+      "code": 933,
+      "binary": "01110100101"
+    },
+    {
+      "instruction": 171,
+      "pc": 812,
+      "mnemonic": "addi",
+      "operands": "s6,s6,-1",
+      "code": 941,
+      "binary": "01110101101"
+    },
+    {
+      "instruction": 172,
+      "pc": 816,
+      "mnemonic": "xor",
+      "operands": "s0,a5,s0",
+      "code": 940,
+      "binary": "01110101100"
+    },
+    {
+      "instruction": 173,
+      "pc": 820,
+      "mnemonic": "bnez",
+      "operands": "s6,310 <benchmark_body+0x50>",
+      "code": 932,
+      "binary": "01110100100"
+    },
+    {
+      "instruction": 174,
+      "pc": 824,
+      "mnemonic": "addi",
+      "operands": "s2,s2,1",
+      "code": 943,
+      "binary": "01110101111"
+    },
+    {
+      "instruction": 175,
+      "pc": 828,
+      "mnemonic": "bne",
+      "operands": "s3,s2,300 <benchmark_body+0x40>",
+      "code": 942,
+      "binary": "01110101110"
+    },
+    {
+      "instruction": 176,
+      "pc": 832,
+      "mnemonic": "addi",
+      "operands": "s5,s5,1",
+      "code": 938,
+      "binary": "01110101010"
+    },
+    {
+      "instruction": 177,
+      "pc": 836,
+      "mnemonic": "bne",
+      "operands": "s4,s5,2fc <benchmark_body+0x3c>",
+      "code": 936,
+      "binary": "01110101000"
+    },
+    {
+      "instruction": 178,
+      "pc": 840,
+      "mnemonic": "lw",
+      "operands": "s1,20(sp)",
+      "code": 937,
+      "binary": "01110101001"
+    },
+    {
+      "instruction": 179,
+      "pc": 844,
+      "mnemonic": "lw",
+      "operands": "s2,16(sp)",
+      "code": 955,
+      "binary": "01110111011"
+    },
+    {
+      "instruction": 180,
+      "pc": 848,
+      "mnemonic": "lw",
+      "operands": "s5,4(sp)",
+      "code": 952,
+      "binary": "01110111000"
+    },
+    {
+      "instruction": 181,
+      "pc": 852,
+      "mnemonic": "lw",
+      "operands": "s6,0(sp)",
+      "code": 953,
+      "binary": "01110111001"
+    },
+    {
+      "instruction": 182,
+      "pc": 856,
+      "mnemonic": "not",
+      "operands": "s0,s0",
+      "code": 929,
+      "binary": "01110100001"
+    },
+    {
+      "instruction": 183,
+      "pc": 860,
+      "mnemonic": "slli",
+      "operands": "s0,s0,0x11",
+      "code": 480,
+      "binary": "00111100000"
+    },
+    {
+      "instruction": 184,
+      "pc": 864,
+      "mnemonic": "lw",
+      "operands": "ra,28(sp)",
+      "code": 481,
+      "binary": "00111100001"
+    },
+    {
+      "instruction": 185,
+      "pc": 868,
+      "mnemonic": "srli",
+      "operands": "a0,s0,0x11",
+      "code": 483,
+      "binary": "00111100011"
+    },
+    {
+      "instruction": 186,
+      "pc": 872,
+      "mnemonic": "lw",
+      "operands": "s0,24(sp)",
+      "code": 482,
+      "binary": "00111100010"
+    },
+    {
+      "instruction": 187,
+      "pc": 876,
+      "mnemonic": "lw",
+      "operands": "s3,12(sp)",
+      "code": 486,
+      "binary": "00111100110"
+    },
+    {
+      "instruction": 188,
+      "pc": 880,
+      "mnemonic": "lw",
+      "operands": "s4,8(sp)",
+      "code": 487,
+      "binary": "00111100111"
+    },
+    {
+      "instruction": 189,
+      "pc": 884,
+      "mnemonic": "addi",
+      "operands": "sp,sp,32",
+      "code": 485,
+      "binary": "00111100101"
+    },
+    {
+      "instruction": 190,
+      "pc": 888,
+      "mnemonic": "ret",
+      "operands": "",
+      "code": 484,
+      "binary": "00111100100"
+    },
+    {
+      "instruction": 191,
+      "pc": 892,
+      "mnemonic": "addi",
+      "operands": "s3,s3,1",
+      "code": 992,
+      "binary": "01111100000"
+    },
+    {
+      "instruction": 192,
+      "pc": 896,
+      "mnemonic": "beq",
+      "operands": "s4,s3,35c <benchmark_body+0x9c>",
+      "code": 993,
+      "binary": "01111100001"
+    },
+    {
+      "instruction": 193,
+      "pc": 900,
+      "mnemonic": "addi",
+      "operands": "s3,s3,1",
+      "code": 995,
+      "binary": "01111100011"
+    },
+    {
+      "instruction": 194,
+      "pc": 904,
+      "mnemonic": "bne",
+      "operands": "s4,s3,37c <benchmark_body+0xbc>",
+      "code": 994,
+      "binary": "01111100010"
+    },
+    {
+      "instruction": 195,
+      "pc": 908,
+      "mnemonic": "j",
+      "operands": "35c <benchmark_body+0x9c>",
+      "code": 998,
+      "binary": "01111100110"
+    },
+    {
+      "instruction": 196,
+      "pc": 912,
+      "mnemonic": "addi",
+      "operands": "sp,sp,-16",
+      "code": 0,
+      "binary": "00000000000"
+    },
+    {
+      "instruction": 197,
+      "pc": 916,
+      "mnemonic": "sw",
+      "operands": "s2,0(sp)",
+      "code": 1,
+      "binary": "00000000001"
+    },
+    {
+      "instruction": 198,
+      "pc": 920,
+      "mnemonic": "lui",
+      "operands": "s2,0x10",
+      "code": 3,
+      "binary": "00000000011"
+    },
+    {
+      "instruction": 199,
+      "pc": 924,
+      "mnemonic": "sw",
+      "operands": "s0,8(sp)",
+      "code": 2,
+      "binary": "00000000010"
+    },
+    {
+      "instruction": 200,
+      "pc": 928,
+      "mnemonic": "sw",
+      "operands": "s1,4(sp)",
+      "code": 6,
+      "binary": "00000000110"
+    },
+    {
+      "instruction": 201,
+      "pc": 932,
+      "mnemonic": "sw",
+      "operands": "ra,12(sp)",
+      "code": 7,
+      "binary": "00000000111"
+    },
+    {
+      "instruction": 202,
+      "pc": 936,
+      "mnemonic": "mv",
+      "operands": "s2,s2",
+      "code": 5,
+      "binary": "00000000101"
+    },
+    {
+      "instruction": 203,
+      "pc": 940,
+      "mnemonic": "li",
+      "operands": "s1,1024",
+      "code": 4,
+      "binary": "00000000100"
+    },
+    {
+      "instruction": 204,
+      "pc": 944,
+      "mnemonic": "li",
+      "operands": "s0,-1",
+      "code": 12,
+      "binary": "00000001100"
+    },
+    {
+      "instruction": 205,
+      "pc": 948,
+      "mnemonic": "jal",
+      "operands": "f0 <rand_beebs>",
+      "code": 1056,
+      "binary": "10000100000"
+    },
+    {
+      "instruction": 206,
+      "pc": 952,
+      "mnemonic": "xor",
+      "operands": "a5,s0,a0",
+      "code": 1057,
+      "binary": "10000100001"
+    },
+    {
+      "instruction": 207,
+      "pc": 956,
+      "mnemonic": "zext.b",
+      "operands": "a5,a5",
+      "code": 1059,
+      "binary": "10000100011"
+    },
+    {
+      "instruction": 208,
+      "pc": 960,
+      "mnemonic": "slli",
+      "operands": "a5,a5,0x2",
+      "code": 1058,
+      "binary": "10000100010"
+    },
+    {
+      "instruction": 209,
+      "pc": 964,
+      "mnemonic": "add",
+      "operands": "a5,s2,a5",
+      "code": 1062,
+      "binary": "10000100110"
+    },
+    {
+      "instruction": 210,
+      "pc": 968,
+      "mnemonic": "lw",
+      "operands": "a5,0(a5)",
+      "code": 1063,
+      "binary": "10000100111"
+    },
+    {
+      "instruction": 211,
+      "pc": 972,
+      "mnemonic": "srli",
+      "operands": "s0,s0,0x8",
+      "code": 1061,
+      "binary": "10000100101"
+    },
+    {
+      "instruction": 212,
+      "pc": 976,
+      "mnemonic": "addi",
+      "operands": "s1,s1,-1",
+      "code": 1060,
+      "binary": "10000100100"
+    },
+    {
+      "instruction": 213,
+      "pc": 980,
+      "mnemonic": "xor",
+      "operands": "s0,a5,s0",
+      "code": 1068,
+      "binary": "10000101100"
+    },
+    {
+      "instruction": 214,
+      "pc": 984,
+      "mnemonic": "bnez",
+      "operands": "s1,3b4 <crc32pseudo+0x24>",
+      "code": 1069,
+      "binary": "10000101101"
+    },
+    {
+      "instruction": 215,
+      "pc": 988,
+      "mnemonic": "lw",
+      "operands": "ra,12(sp)",
+      "code": 1071,
+      "binary": "10000101111"
+    },
+    {
+      "instruction": 216,
+      "pc": 992,
+      "mnemonic": "not",
+      "operands": "a0,s0",
+      "code": 1070,
+      "binary": "10000101110"
+    },
+    {
+      "instruction": 217,
+      "pc": 996,
+      "mnemonic": "lw",
+      "operands": "s0,8(sp)",
+      "code": 1066,
+      "binary": "10000101010"
+    },
+    {
+      "instruction": 218,
+      "pc": 1000,
+      "mnemonic": "lw",
+      "operands": "s1,4(sp)",
+      "code": 1067,
+      "binary": "10000101011"
+    },
+    {
+      "instruction": 219,
+      "pc": 1004,
+      "mnemonic": "lw",
+      "operands": "s2,0(sp)",
+      "code": 1065,
+      "binary": "10000101001"
+    },
+    {
+      "instruction": 220,
+      "pc": 1008,
+      "mnemonic": "addi",
+      "operands": "sp,sp,16",
+      "code": 1064,
+      "binary": "10000101000"
+    },
+    {
+      "instruction": 221,
+      "pc": 1012,
+      "mnemonic": "ret",
+      "operands": "",
+      "code": 1080,
+      "binary": "10000111000"
+    },
+    {
+      "instruction": 222,
+      "pc": 1016,
+      "mnemonic": "ret",
+      "operands": "",
+      "code": 96,
+      "binary": "00001100000"
+    },
+    {
+      "instruction": 223,
+      "pc": 1020,
+      "mnemonic": "mv",
+      "operands": "a1,a0",
+      "code": 64,
+      "binary": "00001000000"
+    },
+    {
+      "instruction": 224,
+      "pc": 1024,
+      "mnemonic": "li",
+      "operands": "a0,1",
+      "code": 65,
+      "binary": "00001000001"
+    },
+    {
+      "instruction": 225,
+      "pc": 1028,
+      "mnemonic": "j",
+      "operands": "2c0 <benchmark_body>",
+      "code": 67,
+      "binary": "00001000011"
+    },
+    {
+      "instruction": 226,
+      "pc": 1032,
+      "mnemonic": "li",
+      "operands": "a1,1",
+      "code": 320,
+      "binary": "00101000000"
+    },
+    {
+      "instruction": 227,
+      "pc": 1036,
+      "mnemonic": "li",
+      "operands": "a0,170",
+      "code": 321,
+      "binary": "00101000001"
+    },
+    {
+      "instruction": 228,
+      "pc": 1040,
+      "mnemonic": "j",
+      "operands": "2c0 <benchmark_body>",
+      "code": 323,
+      "binary": "00101000011"
+    },
+    {
+      "instruction": 229,
+      "pc": 1044,
+      "mnemonic": "lui",
+      "operands": "a5,0xffffd",
+      "code": 1184,
+      "binary": "10010100000"
+    },
+    {
+      "instruction": 230,
+      "pc": 1048,
+      "mnemonic": "addi",
+      "operands": "a5,a5,855",
+      "code": 1185,
+      "binary": "10010100001"
+    },
+    {
+      "instruction": 231,
+      "pc": 1052,
+      "mnemonic": "add",
+      "operands": "a0,a0,a5",
+      "code": 1187,
+      "binary": "10010100011"
+    },
+    {
+      "instruction": 232,
+      "pc": 1056,
+      "mnemonic": "seqz",
+      "operands": "a0,a0",
+      "code": 1186,
+      "binary": "10010100010"
+    },
+    {
+      "instruction": 233,
+      "pc": 1060,
+      "mnemonic": "ret",
+      "operands": "",
+      "code": 1190,
+      "binary": "10010100110"
+    }
+  ],
+  "state_layout": "split-li",
+  "transition_counts": {
+    "local_step": 184,
+    "inter_region": 43,
+    "local_jump": 6,
+    "hold": 2,
+    "indirect": 19
+  },
+  "field_register_bits": {
+    "L": 6,
+    "I": 5
+  },
+  "state_pairs": {
+    "S0": {
+      "L": 32,
+      "I": 0
+    },
+    "S1": {
+      "L": 32,
+      "I": 1
+    },
+    "S2": {
+      "L": 32,
+      "I": 3
+    },
+    "S3": {
+      "L": 32,
+      "I": 7
+    },
+    "S4": {
+      "L": 32,
+      "I": 6
+    },
+    "S5": {
+      "L": 32,
+      "I": 2
+    },
+    "S6": {
+      "L": 34,
+      "I": 0
+    },
+    "S7": {
+      "L": 34,
+      "I": 1
+    },
+    "S8": {
+      "L": 34,
+      "I": 3
+    },
+    "S9": {
+      "L": 34,
+      "I": 2
+    },
+    "S10": {
+      "L": 35,
+      "I": 0
+    },
+    "S11": {
+      "L": 1,
+      "I": 0
+    },
+    "S12": {
+      "L": 7,
+      "I": 0
+    },
+    "S13": {
+      "L": 7,
+      "I": 1
+    },
+    "S14": {
+      "L": 7,
+      "I": 3
+    },
+    "S15": {
+      "L": 7,
+      "I": 2
+    },
+    "S16": {
+      "L": 7,
+      "I": 6
+    },
+    "S17": {
+      "L": 7,
+      "I": 7
+    },
+    "S18": {
+      "L": 7,
+      "I": 4
+    },
+    "S19": {
+      "L": 7,
+      "I": 5
+    },
+    "S20": {
+      "L": 7,
+      "I": 12
+    },
+    "S21": {
+      "L": 7,
+      "I": 13
+    },
+    "S22": {
+      "L": 7,
+      "I": 15
+    },
+    "S23": {
+      "L": 7,
+      "I": 14
+    },
+    "S24": {
+      "L": 7,
+      "I": 10
+    },
+    "S25": {
+      "L": 7,
+      "I": 11
+    },
+    "S26": {
+      "L": 7,
+      "I": 9
+    },
+    "S27": {
+      "L": 7,
+      "I": 8
+    },
+    "S28": {
+      "L": 28,
+      "I": 0
+    },
+    "S29": {
+      "L": 28,
+      "I": 1
+    },
+    "S30": {
+      "L": 28,
+      "I": 3
+    },
+    "S31": {
+      "L": 28,
+      "I": 2
+    },
+    "S32": {
+      "L": 28,
+      "I": 6
+    },
+    "S33": {
+      "L": 28,
+      "I": 7
+    },
+    "S34": {
+      "L": 28,
+      "I": 5
+    },
+    "S35": {
+      "L": 28,
+      "I": 4
+    },
+    "S36": {
+      "L": 28,
+      "I": 12
+    },
+    "S37": {
+      "L": 28,
+      "I": 13
+    },
+    "S38": {
+      "L": 28,
+      "I": 15
+    },
+    "S39": {
+      "L": 28,
+      "I": 14
+    },
+    "S40": {
+      "L": 28,
+      "I": 10
+    },
+    "S41": {
+      "L": 24,
+      "I": 0
+    },
+    "S42": {
+      "L": 24,
+      "I": 1
+    },
+    "S43": {
+      "L": 24,
+      "I": 3
+    },
+    "S44": {
+      "L": 4,
+      "I": 0
+    },
+    "S45": {
+      "L": 4,
+      "I": 1
+    },
+    "S46": {
+      "L": 4,
+      "I": 3
+    },
+    "S47": {
+      "L": 4,
+      "I": 2
+    },
+    "S48": {
+      "L": 4,
+      "I": 6
+    },
+    "S49": {
+      "L": 4,
+      "I": 7
+    },
+    "S50": {
+      "L": 4,
+      "I": 5
+    },
+    "S51": {
+      "L": 4,
+      "I": 4
+    },
+    "S52": {
+      "L": 4,
+      "I": 12
+    },
+    "S53": {
+      "L": 4,
+      "I": 13
+    },
+    "S54": {
+      "L": 8,
+      "I": 0
+    },
+    "S55": {
+      "L": 9,
+      "I": 0
+    },
+    "S56": {
+      "L": 9,
+      "I": 1
+    },
+    "S57": {
+      "L": 9,
+      "I": 3
+    },
+    "S58": {
+      "L": 9,
+      "I": 2
+    },
+    "S59": {
+      "L": 9,
+      "I": 6
+    },
+    "S60": {
+      "L": 9,
+      "I": 7
+    },
+    "S61": {
+      "L": 9,
+      "I": 5
+    },
+    "S62": {
+      "L": 9,
+      "I": 4
+    },
+    "S63": {
+      "L": 36,
+      "I": 0
+    },
+    "S64": {
+      "L": 36,
+      "I": 1
+    },
+    "S65": {
+      "L": 36,
+      "I": 3
+    },
+    "S66": {
+      "L": 36,
+      "I": 2
+    },
+    "S67": {
+      "L": 36,
+      "I": 6
+    },
+    "S68": {
+      "L": 36,
+      "I": 7
+    },
+    "S69": {
+      "L": 36,
+      "I": 5
+    },
+    "S70": {
+      "L": 36,
+      "I": 4
+    },
+    "S71": {
+      "L": 36,
+      "I": 12
+    },
+    "S72": {
+      "L": 36,
+      "I": 13
+    },
+    "S73": {
+      "L": 36,
+      "I": 15
+    },
+    "S74": {
+      "L": 36,
+      "I": 14
+    },
+    "S75": {
+      "L": 36,
+      "I": 10
+    },
+    "S76": {
+      "L": 36,
+      "I": 11
+    },
+    "S77": {
+      "L": 11,
+      "I": 0
+    },
+    "S78": {
+      "L": 11,
+      "I": 1
+    },
+    "S79": {
+      "L": 12,
+      "I": 0
+    },
+    "S80": {
+      "L": 12,
+      "I": 1
+    },
+    "S81": {
+      "L": 12,
+      "I": 3
+    },
+    "S82": {
+      "L": 12,
+      "I": 2
+    },
+    "S83": {
+      "L": 12,
+      "I": 6
+    },
+    "S84": {
+      "L": 12,
+      "I": 7
+    },
+    "S85": {
+      "L": 12,
+      "I": 5
+    },
+    "S86": {
+      "L": 12,
+      "I": 4
+    },
+    "S87": {
+      "L": 13,
+      "I": 0
+    },
+    "S88": {
+      "L": 13,
+      "I": 1
+    },
+    "S89": {
+      "L": 14,
+      "I": 0
+    },
+    "S90": {
+      "L": 14,
+      "I": 1
+    },
+    "S91": {
+      "L": 14,
+      "I": 3
+    },
+    "S92": {
+      "L": 14,
+      "I": 2
+    },
+    "S93": {
+      "L": 14,
+      "I": 6
+    },
+    "S94": {
+      "L": 14,
+      "I": 7
+    },
+    "S95": {
+      "L": 14,
+      "I": 5
+    },
+    "S96": {
+      "L": 14,
+      "I": 4
+    },
+    "S97": {
+      "L": 14,
+      "I": 12
+    },
+    "S98": {
+      "L": 14,
+      "I": 13
+    },
+    "S99": {
+      "L": 30,
+      "I": 0
+    },
+    "S100": {
+      "L": 30,
+      "I": 1
+    },
+    "S101": {
+      "L": 30,
+      "I": 3
+    },
+    "S102": {
+      "L": 16,
+      "I": 0
+    },
+    "S103": {
+      "L": 16,
+      "I": 1
+    },
+    "S104": {
+      "L": 16,
+      "I": 3
+    },
+    "S105": {
+      "L": 16,
+      "I": 2
+    },
+    "S106": {
+      "L": 17,
+      "I": 0
+    },
+    "S107": {
+      "L": 17,
+      "I": 1
+    },
+    "S108": {
+      "L": 17,
+      "I": 3
+    },
+    "S109": {
+      "L": 17,
+      "I": 2
+    },
+    "S110": {
+      "L": 17,
+      "I": 6
+    },
+    "S111": {
+      "L": 17,
+      "I": 7
+    },
+    "S112": {
+      "L": 17,
+      "I": 5
+    },
+    "S113": {
+      "L": 17,
+      "I": 4
+    },
+    "S114": {
+      "L": 17,
+      "I": 12
+    },
+    "S115": {
+      "L": 17,
+      "I": 13
+    },
+    "S116": {
+      "L": 17,
+      "I": 15
+    },
+    "S117": {
+      "L": 17,
+      "I": 14
+    },
+    "S118": {
+      "L": 17,
+      "I": 10
+    },
+    "S119": {
+      "L": 17,
+      "I": 11
+    },
+    "S120": {
+      "L": 18,
+      "I": 0
+    },
+    "S121": {
+      "L": 18,
+      "I": 1
+    },
+    "S122": {
+      "L": 18,
+      "I": 3
+    },
+    "S123": {
+      "L": 18,
+      "I": 2
+    },
+    "S124": {
+      "L": 18,
+      "I": 6
+    },
+    "S125": {
+      "L": 19,
+      "I": 0
+    },
+    "S126": {
+      "L": 19,
+      "I": 1
+    },
+    "S127": {
+      "L": 19,
+      "I": 3
+    },
+    "S128": {
+      "L": 19,
+      "I": 2
+    },
+    "S129": {
+      "L": 19,
+      "I": 6
+    },
+    "S130": {
+      "L": 20,
+      "I": 0
+    },
+    "S131": {
+      "L": 20,
+      "I": 1
+    },
+    "S132": {
+      "L": 20,
+      "I": 3
+    },
+    "S133": {
+      "L": 20,
+      "I": 2
+    },
+    "S134": {
+      "L": 20,
+      "I": 6
+    },
+    "S135": {
+      "L": 20,
+      "I": 7
+    },
+    "S136": {
+      "L": 21,
+      "I": 0
+    },
+    "S137": {
+      "L": 21,
+      "I": 1
+    },
+    "S138": {
+      "L": 22,
+      "I": 0
+    },
+    "S139": {
+      "L": 23,
+      "I": 0
+    },
+    "S140": {
+      "L": 6,
+      "I": 0
+    },
+    "S141": {
+      "L": 6,
+      "I": 1
+    },
+    "S142": {
+      "L": 5,
+      "I": 0
+    },
+    "S143": {
+      "L": 5,
+      "I": 1
+    },
+    "S144": {
+      "L": 26,
+      "I": 0
+    },
+    "S145": {
+      "L": 26,
+      "I": 1
+    },
+    "S146": {
+      "L": 26,
+      "I": 3
+    },
+    "S147": {
+      "L": 26,
+      "I": 2
+    },
+    "S148": {
+      "L": 26,
+      "I": 6
+    },
+    "S149": {
+      "L": 26,
+      "I": 7
+    },
+    "S150": {
+      "L": 26,
+      "I": 5
+    },
+    "S151": {
+      "L": 26,
+      "I": 4
+    },
+    "S152": {
+      "L": 26,
+      "I": 12
+    },
+    "S153": {
+      "L": 26,
+      "I": 13
+    },
+    "S154": {
+      "L": 26,
+      "I": 15
+    },
+    "S155": {
+      "L": 26,
+      "I": 14
+    },
+    "S156": {
+      "L": 26,
+      "I": 10
+    },
+    "S157": {
+      "L": 26,
+      "I": 11
+    },
+    "S158": {
+      "L": 26,
+      "I": 9
+    },
+    "S159": {
+      "L": 27,
+      "I": 0
+    },
+    "S160": {
+      "L": 25,
+      "I": 0
+    },
+    "S161": {
+      "L": 25,
+      "I": 1
+    },
+    "S162": {
+      "L": 25,
+      "I": 3
+    },
+    "S163": {
+      "L": 25,
+      "I": 2
+    },
+    "S164": {
+      "L": 29,
+      "I": 0
+    },
+    "S165": {
+      "L": 29,
+      "I": 11
+    },
+    "S166": {
+      "L": 29,
+      "I": 3
+    },
+    "S167": {
+      "L": 29,
+      "I": 2
+    },
+    "S168": {
+      "L": 29,
+      "I": 6
+    },
+    "S169": {
+      "L": 29,
+      "I": 7
+    },
+    "S170": {
+      "L": 29,
+      "I": 5
+    },
+    "S171": {
+      "L": 29,
+      "I": 13
+    },
+    "S172": {
+      "L": 29,
+      "I": 12
+    },
+    "S173": {
+      "L": 29,
+      "I": 4
+    },
+    "S174": {
+      "L": 29,
+      "I": 15
+    },
+    "S175": {
+      "L": 29,
+      "I": 14
+    },
+    "S176": {
+      "L": 29,
+      "I": 10
+    },
+    "S177": {
+      "L": 29,
+      "I": 8
+    },
+    "S178": {
+      "L": 29,
+      "I": 9
+    },
+    "S179": {
+      "L": 29,
+      "I": 27
+    },
+    "S180": {
+      "L": 29,
+      "I": 24
+    },
+    "S181": {
+      "L": 29,
+      "I": 25
+    },
+    "S182": {
+      "L": 29,
+      "I": 1
+    },
+    "S183": {
+      "L": 15,
+      "I": 0
+    },
+    "S184": {
+      "L": 15,
+      "I": 1
+    },
+    "S185": {
+      "L": 15,
+      "I": 3
+    },
+    "S186": {
+      "L": 15,
+      "I": 2
+    },
+    "S187": {
+      "L": 15,
+      "I": 6
+    },
+    "S188": {
+      "L": 15,
+      "I": 7
+    },
+    "S189": {
+      "L": 15,
+      "I": 5
+    },
+    "S190": {
+      "L": 15,
+      "I": 4
+    },
+    "S191": {
+      "L": 31,
+      "I": 0
+    },
+    "S192": {
+      "L": 31,
+      "I": 1
+    },
+    "S193": {
+      "L": 31,
+      "I": 3
+    },
+    "S194": {
+      "L": 31,
+      "I": 2
+    },
+    "S195": {
+      "L": 31,
+      "I": 6
+    },
+    "S196": {
+      "L": 0,
+      "I": 0
+    },
+    "S197": {
+      "L": 0,
+      "I": 1
+    },
+    "S198": {
+      "L": 0,
+      "I": 3
+    },
+    "S199": {
+      "L": 0,
+      "I": 2
+    },
+    "S200": {
+      "L": 0,
+      "I": 6
+    },
+    "S201": {
+      "L": 0,
+      "I": 7
+    },
+    "S202": {
+      "L": 0,
+      "I": 5
+    },
+    "S203": {
+      "L": 0,
+      "I": 4
+    },
+    "S204": {
+      "L": 0,
+      "I": 12
+    },
+    "S205": {
+      "L": 33,
+      "I": 0
+    },
+    "S206": {
+      "L": 33,
+      "I": 1
+    },
+    "S207": {
+      "L": 33,
+      "I": 3
+    },
+    "S208": {
+      "L": 33,
+      "I": 2
+    },
+    "S209": {
+      "L": 33,
+      "I": 6
+    },
+    "S210": {
+      "L": 33,
+      "I": 7
+    },
+    "S211": {
+      "L": 33,
+      "I": 5
+    },
+    "S212": {
+      "L": 33,
+      "I": 4
+    },
+    "S213": {
+      "L": 33,
+      "I": 12
+    },
+    "S214": {
+      "L": 33,
+      "I": 13
+    },
+    "S215": {
+      "L": 33,
+      "I": 15
+    },
+    "S216": {
+      "L": 33,
+      "I": 14
+    },
+    "S217": {
+      "L": 33,
+      "I": 10
+    },
+    "S218": {
+      "L": 33,
+      "I": 11
+    },
+    "S219": {
+      "L": 33,
+      "I": 9
+    },
+    "S220": {
+      "L": 33,
+      "I": 8
+    },
+    "S221": {
+      "L": 33,
+      "I": 24
+    },
+    "S222": {
+      "L": 3,
+      "I": 0
+    },
+    "S223": {
+      "L": 2,
+      "I": 0
+    },
+    "S224": {
+      "L": 2,
+      "I": 1
+    },
+    "S225": {
+      "L": 2,
+      "I": 3
+    },
+    "S226": {
+      "L": 10,
+      "I": 0
+    },
+    "S227": {
+      "L": 10,
+      "I": 1
+    },
+    "S228": {
+      "L": 10,
+      "I": 3
+    },
+    "S229": {
+      "L": 37,
+      "I": 0
+    },
+    "S230": {
+      "L": 37,
+      "I": 1
+    },
+    "S231": {
+      "L": 37,
+      "I": 3
+    },
+    "S232": {
+      "L": 37,
+      "I": 2
+    },
+    "S233": {
+      "L": 37,
+      "I": 6
+    }
+  },
+  "instruction_update": "encoded-target",
+  "reset_state": 1024,
+  "unused_state_policy": "recover",
+  "invalid_state_policy": "return to entry using existing update enable",
+  "terminal_policy": "retain existing final instruction/busy behavior"
+}

@@ -7,8 +7,8 @@
  * Main controller of the processor
  */
 
-`include "C:/Users/shing/OneDrive/デスクトップ/FSM-circuit-main/FSM_circuit-main/prim_rtl/prim_assert.sv"
-`include "C:/Users/shing/OneDrive/デスクトップ/FSM-circuit-main/FSM_circuit-main/prim_rtl/dv_fcov_macros.svh"
+`include "C:/Users/shing/OneDrive/デスクトップ/FSM_circuit-main/prim_rtl/prim_assert.sv"
+`include "C:/Users/shing/OneDrive/デスクトップ/FSM_circuit-main/prim_rtl/dv_fcov_macros.svh"
 
 module ibex_controller #(
   parameter bit WritebackStage  = 1'b0,
